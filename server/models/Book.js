@@ -12,13 +12,15 @@ const bookSchema = new Schema(
 		},
 		isbn: {
 			type: String,
-			unique: true,
-			sparse: true,
+			unique: {
+				partialFilterExpression: { isbn: { $type: 'string' } },
+			},
 		},
 		isbn13: {
 			type: String,
-			unique: true,
-			sparse: true,
+			unique: {
+				partialFilterExpression: { isbn: { $type: 'string' } },
+			},
 		},
 		date_pub_sort: {
 			type: String,
@@ -50,7 +52,5 @@ const bookSchema = new Schema(
 );
 
 const Book = model('book', bookSchema);
-
-// console.log(Book);
 
 module.exports = Book;

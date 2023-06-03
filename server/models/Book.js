@@ -7,9 +7,12 @@ const bookSchema = new Schema(
 			type: String,
 			required: true,
 		},
-		author: {
-			type: String,
-		},
+		authors: [
+			{
+				type: Schema.Types.ObjectId,
+				ref: 'Author',
+			},
+		],
 		isbn: {
 			type: String,
 			unique: {
@@ -22,19 +25,10 @@ const bookSchema = new Schema(
 				partialFilterExpression: { isbn: { $type: 'string' } },
 			},
 		},
-		date_pub_sort: {
-			type: String,
-		},
 		date_pub: {
 			type: String,
 		},
 		num_pages: {
-			type: Number,
-		},
-		goodreads_rating_avg: {
-			type: Number,
-		},
-		goodreads_rating_count: {
 			type: Number,
 		},
 		cover_img_url: {
@@ -51,6 +45,6 @@ const bookSchema = new Schema(
 	}
 );
 
-const Book = model('book', bookSchema);
+const Book = model('Book', bookSchema);
 
 module.exports = Book;

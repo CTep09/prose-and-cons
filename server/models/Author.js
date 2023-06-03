@@ -1,11 +1,7 @@
-const { Schema, Types } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const authorSchema = new Schema(
 	{
-		authorId: {
-			type: Schema.Types.ObjectId,
-			default: () => new Types.ObjectId(),
-		},
 		firstName: {
 			type: String,
 		},
@@ -41,3 +37,5 @@ authorSchema
 authorSchema.virtual('sortName').get(function () {
 	return `${this.lastName}, ${this.firstName}`;
 });
+
+const Author = model('Author', authorSchema);

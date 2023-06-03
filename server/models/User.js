@@ -10,6 +10,7 @@ const userSchema = new Schema(
 		},
 		email: {
 			type: String,
+			required: true,
 			unique: true,
 			validate: {
 				validator: function (v) {
@@ -19,7 +20,10 @@ const userSchema = new Schema(
 				},
 				message: (props) => `${props.value} is not a valid email address!`,
 			},
-			required: [true, 'User email address required'],
+		},
+		password: {
+			type: String,
+			required: true,
 		},
 		library: [
 			{
@@ -35,7 +39,7 @@ const userSchema = new Schema(
 		friends: [
 			{
 				type: Schema.Types.ObjectId,
-				ref: 'user',
+				ref: 'User',
 			},
 		],
 	},
@@ -49,13 +53,10 @@ const userSchema = new Schema(
 	}
 );
 
-userSchema
-	.virtual('friendCount')
-	// Getter
-	.get(function () {
-		return this.friends.length;
-	});
+userSchema.virtual('friendCount').get(function () {
+	return this.friends.length;
+});
 
-const User = model('user', userSchema);
+const User = model('User', userSchema);
 
 module.exports = User;

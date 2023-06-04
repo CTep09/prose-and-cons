@@ -44,6 +44,7 @@ const userSchema = new Schema(
         ref: "User",
       },
     ],
+    // TODO: Add Recommendations to this model
   },
   {
     toJSON: {

@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
     type User {
@@ -73,6 +73,8 @@ const typeDefs = gql`
         users: [User]
         user(username: String!): User
         book: Book
+        books: [Book]
+        recs(recipient:ID!): [Recommendation]
     }
 
     type Mutation {
@@ -86,8 +88,4 @@ const typeDefs = gql`
         removeFriend(username: String!): User
         updateRating(rating: Int!, bookId: ID!): Rating
     }
-
-
-
-
 `;

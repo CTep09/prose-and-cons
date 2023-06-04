@@ -19,7 +19,14 @@ const typeDefs = gql`
         token: ID!
         user: User
       }
-
+    
+    type Author {
+        _id: ID
+        firstName: String
+        lastName: String
+        sortName: String
+        displayName: String
+    }
 	type Book {
 		_id: ID
 		title: String
@@ -29,15 +36,24 @@ const typeDefs = gql`
 		date_pub: String
 		num_pages: Int
 		cover_img_url: String
+        ratings: [Rating]!
 	}
 
-    type Author {
-        _id: ID
+    input AuthorInput {
         firstName: String
-        lastName: String
-        sortName: String
-        displayName: String
-    }
+        lastName: String  
+        displayName: String      
+      }
+    
+    input BookInput {
+        title: String
+		authors: [AuthorInput]
+		isbn: String
+		isbn13: String
+		date_pub: String
+		num_pages: Int
+		cover_img_url: String
+      }
 
     type Rating {
         user: User
@@ -49,16 +65,26 @@ const typeDefs = gql`
         sender: User
         recipient: User
         book: Book
-        rating: Rating
         timestamp: String
     }
 
     type Query {
-
+        me: User
+        users: [User]
+        user(username: String!): User
+        book: Book
     }
 
     type Mutation {
-
+        addUser(username: String!, email: String!, password: String!): Auth
+        login(email: String!, password: String!): Auth
+        addBook(input: BookInput!): Book
+        addFriend(username: String!): User
+        addRating(rating: Int!, bookId: ID!): Rating
+        makeRec(username:String!, bookId: ID!): Recommendation
+        saveBook(bookId: ID!,readStatus: String): User
+        removeFriend(username: String!): User
+        updateRating(rating: Int!, bookId: ID!): Rating
     }
 
 

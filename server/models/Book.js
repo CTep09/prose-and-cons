@@ -7,6 +7,9 @@ const bookSchema = new Schema(
       type: String,
       required: true,
     },
+    description: {
+      type: String
+    },
     authors: [
       {
         type: Schema.Types.ObjectId,
@@ -34,6 +37,11 @@ const bookSchema = new Schema(
     cover_img_url: {
       type: String,
     },
+    ratings: [{
+      type: Schema.Types.ObjectId,
+      ref: "Rating",
+
+    }]
   },
   {
     toJSON: {

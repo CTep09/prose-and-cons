@@ -42,7 +42,8 @@ const typeDefs = gql`
     input AuthorInput {
         firstName: String
         lastName: String  
-        displayName: String      
+        displayName: String
+        sortName: String      
       }
     
     input BookInput {

@@ -8,6 +8,12 @@ const authorSchema = new Schema(
     lastName: {
       type: String,
     },
+    books: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Book",
+      },
+    ],
   },
   {
     toJSON: {
@@ -34,9 +40,20 @@ authorSchema
     });
   });
 
-authorSchema.virtual("sortName").get(function () {
-  return `${this.lastName}, ${this.firstName}`;
-});
+authorSchema
+  .virtual("sortName")
+  .get(function () {
+    return `${this.lastName}, ${this.firstName}`;
+  })
+  .set(function (strArg) {
+    const nameArray = strArg.split(",");
+    const firstName = nameArray[1].trim();
+    const lastName = nameArray[0].trim();
+    this.set({
+      firstName: firstName,
+      lastName: lastName,
+    });
+  });
 
 const Author = model("Author", authorSchema);
 

@@ -51,9 +51,19 @@ connection.once("open", async () => {
         cover_img_url: book.cover_img_url,
       };
 
-      await Book.findOneAndUpdate({ ...newBook }, newBook, {
+      const createdBook = await Book.findOneAndUpdate({ ...newBook }, newBook, {
         upsert: true,
         new: true,
+      });
+
+      const createdBookAuthors = createdBook.authors;
+
+      createdBookAuthors.forEach(async (authorId) => {
+        await Author.findOneAndUpdate(
+          { _id: authorId },
+          { $addToSet: { books: createdBook._id } },
+          { new: true }
+        );
       });
     }
 

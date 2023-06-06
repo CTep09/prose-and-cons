@@ -130,20 +130,23 @@ const resolvers = {
     // saveBook(bookId: ID!,readStatus: String): User
     saveBook: async (parent, { bookId, readStatus }, context) => {
       if (context.user) {
-        return User.findOneAndUpdate(
-          { _id: context.user._id },
-          {
-            $addToSet: {
-              library: { book: bookId, readStatus: readStatus },
-            },
-          },
-          {
-            new: true,
-            runValidators: true,
-          }
+        const user = await User.findById(context.user._id);
+        if (!user) {
+          throw new Error("User not found!");
+        }
+
+        const bookExists = user.library.some(
+          (userBook) => userBook.book.toString() === bookId
         );
+        if (bookExists) {
+          throw new Error("Book already exists in the library!");
+        }
+
+        user.library.push({ book: bookId, readStatus: readStatus });
+        await user.save();
+        return user.populate("library.book");
       }
-      // If user attempts to execute this mutation and isn't logged in, throw an error
+
       throw new AuthenticationError("You need to be logged in!");
     },
     // addRating(ratingValue: Int!, bookId: ID!): Rating

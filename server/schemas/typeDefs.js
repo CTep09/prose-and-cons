@@ -32,6 +32,7 @@ const typeDefs = gql`
   type Book {
     _id: ID
     title: String
+    description: String
     authors: [Author]
     isbn: String
     isbn13: String
@@ -50,6 +51,7 @@ const typeDefs = gql`
 
   input BookInput {
     title: String
+    description: String
     authors: [AuthorInput]
     isbn: String
     isbn13: String

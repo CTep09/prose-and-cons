@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 
+import { Input, InputGroup, InputRightElement, Button, Stack } from "@chakra-ui/react";
+
+
 import AuthService from "../utils/auth";
 
 const Login = (props) => {
@@ -40,8 +43,12 @@ const Login = (props) => {
     });
   };
 
+  const [show, setShow] = React.useState(false)
+  const handleClick = () => setShow(!show)
+
   return (
-    <main className="flex-row justify-center mb-4">
+    
+    <main>
       <div className="col-12 col-lg-10">
         <div className="card">
           <h4 className="card-header bg-dark text-light p-2">Login</h4>
@@ -53,29 +60,37 @@ const Login = (props) => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
+                
+                <Input w='250px'
                   placeholder="Your email"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
                 />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
+                <InputGroup w='250px' >
+                <Input
+                pr='4.5rem'
+                type={show ? 'text' : 'password'}
+                placeholder='Enter password'
+                name="password"
+                value={formState.password}
+                onChange={handleChange}
                 />
-                <button
-                  className="btn btn-block btn-primary"
+                <InputRightElement width='4.5rem'>
+                  <Button h='1.75rem' size='sm' onClick={handleClick}>
+                      {show ? 'Hide' : 'Show'}
+                  </Button>
+                </InputRightElement>
+                </InputGroup>
+
+                <Button
+                  colorScheme='teal'
                   style={{ cursor: "pointer" }}
                   type="submit"
-                >
-                  Submit
-                </button>
+                >Submit
+                </Button>
+
               </form>
             )}
 

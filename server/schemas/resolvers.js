@@ -158,12 +158,20 @@ const resolvers = {
           ratingValue: ratingValue,
         });
         const user = await User.findById(context.user._id);
-        const index = user.library.findIndex((obj) => obj.book === bookId);
+        user.library.forEach((obj) => {
+          console.log(obj.book.toString());
+          console.log(`new ObjectId("${bookId}")`);
+        });
+
+        const index = user.library.findIndex(
+          (obj) => obj.book.toString() === bookId
+        );
+        console.log(index);
         user.library[index].rating = rating._id;
         user.library[index].ratingStatus = "Rated";
         const book = await Book.findById(bookId);
         book.ratings.push(rating._id);
-        return rating;
+        return rating.populate("book");
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError("You need to be logged in!");

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 
-import { Input, InputGroup, InputRightElement, Button, Stack, Center } from "@chakra-ui/react";
+import { Input, InputGroup, InputRightElement, Button, Center } from "@chakra-ui/react";
 
 
 import AuthService from "../utils/auth";
@@ -74,7 +74,6 @@ const Login = (props) => {
                 <Center>
                 <InputGroup w='250px' >
                 <Input
-                
                 pr='4.5rem'
                 type={show ? 'text' : 'password'}
                 placeholder='Enter password'
@@ -89,8 +88,9 @@ const Login = (props) => {
                 </InputRightElement>
                 </InputGroup>
                 </Center>
+                <br></br>
                 <Center>
-                <Button
+                <Button w='250px'
                   colorScheme='teal'
                   style={{ cursor: "pointer" }}
                   type="submit"
@@ -99,12 +99,15 @@ const Login = (props) => {
                 </Center>
               </form>
             )}
-
+            <br></br>
+            <Center>
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 {error.message}
               </div>
             )}
+            </Center>
+            
           </div>
         </div>
       </div>

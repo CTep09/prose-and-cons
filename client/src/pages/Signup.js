@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
-import { ChakraProvider, FormControl, FormLabel, FormErrorMessage, FormHelperText, Input, Button } from "@chakra-ui/react";
+import { ChakraProvider, FormControl, FormLabel, FormErrorMessage, FormHelperText, Input, Button, Center } from "@chakra-ui/react";
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -52,9 +52,13 @@ const Signup = () => {
                 </p>
               ) : (
                 <form onSubmit={handleFormSubmit}>
+
                   <FormControl>
+                  <Center>
                     <FormHelperText>We'll never share your email.</FormHelperText>
-                    <Input
+                    </Center>
+                    <Center>
+                    <Input w='250px'
                       className="form-input"
                       placeholder="Your username"
                       name="username"
@@ -62,7 +66,10 @@ const Signup = () => {
                       value={formState.username} // corrected value name
                       onChange={handleChange}
                     />
-                    <Input
+                    </Center>
+
+                    <Center>
+                    <Input w='250px'
                       className="form-input"
                       placeholder="Your email"
                       name="email"
@@ -70,7 +77,10 @@ const Signup = () => {
                       value={formState.email}
                       onChange={handleChange}
                     />
-                    <Input
+                    </Center>
+
+                    <Center>
+                    <Input w='250px'
                       className="form-input"
                       placeholder="******"
                       name="password"
@@ -78,15 +88,19 @@ const Signup = () => {
                       value={formState.password}
                       onChange={handleChange}
                     />
-                    <Button
-                      colorScheme="blue"
-                      className="btn btn-block btn-primary"
-                      style={{ cursor: "pointer" }}
-                      type="submit"
-                    >
-                      Submit
-                    </Button>
+                    </Center>
+                    
+                    <Center>
+                <Button w='250px'
+                  colorScheme='teal'
+                  style={{ cursor: "pointer" }}
+                  type="submit"
+                >Submit
+                </Button>
+                </Center>
+                
                   </FormControl>
+
                 </form>
               )}
               {error && (

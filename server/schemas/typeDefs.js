@@ -32,6 +32,7 @@ const typeDefs = gql`
   type Book {
     _id: ID
     title: String
+    description: String
     authors: [Author]
     isbn: String
     isbn13: String
@@ -50,6 +51,7 @@ const typeDefs = gql`
 
   input BookInput {
     title: String
+    description: String
     authors: [AuthorInput]
     isbn: String
     isbn13: String
@@ -84,7 +86,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addBook(input: BookInput!): Book
-    addFriend(username: String!): User
+    addFriend(friendId: ID!): User
     addRating(ratingValue: Int!, bookId: ID!): Rating
     makeRec(username: String!, bookId: ID!): Recommendation
     saveBook(bookId: ID!, readStatus: String): User

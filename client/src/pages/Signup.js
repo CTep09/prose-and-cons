@@ -68,7 +68,7 @@ const Signup = () => {
                 </p>
               ) : (
                 <form onSubmit={handleFormSubmit}>
-                  <FormControl>
+                  <FormControl isInvalid={error}>
                     <Center>
                       <FormHelperText>
                         We'll never share your email.
@@ -81,7 +81,7 @@ const Signup = () => {
                         placeholder="Username"
                         name="username"
                         type="text"
-                        value={formState.username} // corrected value name
+                        value={formState.username}
                         onChange={handleChange}
                       />
                     </Center>
@@ -108,6 +108,7 @@ const Signup = () => {
                           value={formState.password}
                           onChange={handleChange}
                         />
+                    <FormErrorMessage>{error && error.message}</FormErrorMessage>
                         <InputRightElement width="4.5rem">
                           <Button h="1.75rem" size="sm" onClick={handleClick}>
                             {show ? "Hide" : "Show"}

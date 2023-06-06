@@ -1,4607 +1,712 @@
 [
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8c3"
-		},
-		"title": "The Goose Girl (The Books of Bayern, #1)",
-		"author": "Hale, Shannon",
-		"isbn": "1582349908",
-		"isbn13": "9781582349909",
-		"date_pub_sort": "2003-08-04",
-		"date_pub": "8/4/2003",
-		"num_pages": 383,
-		"goodreads_rating_avg": 4.13,
-		"goodreads_rating_count": 141049,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1617553319l/179064.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8c4"
-		},
-		"title": "Harrow the Ninth (The Locked Tomb, #2)",
-		"author": "Muir, Tamsyn",
-		"isbn": "1250313228",
-		"isbn13": "9781250313225",
-		"date_pub_sort": "2020-10-14",
-		"date_pub": "10/14/2020",
-		"num_pages": 510,
-		"goodreads_rating_avg": 4.3,
-		"goodreads_rating_count": 50212,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1602323622l/39325105.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8c5"
-		},
-		"title": "Gideon the Ninth (The Locked Tomb, #1)",
-		"author": "Muir, Tamsyn",
-		"isbn": "1250313198",
-		"isbn13": "9781250313195",
-		"date_pub_sort": "2019-09-10",
-		"date_pub": "9/10/2019",
-		"num_pages": 448,
-		"goodreads_rating_avg": 4.23,
-		"goodreads_rating_count": 104160,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546870952l/42036538.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8c6"
-		},
-		"title": "The Magician's Land (The Magicians, #3)",
-		"author": "Grossman, Lev",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2014-08-05",
-		"date_pub": "8/5/2014",
-		"num_pages": 402,
-		"goodreads_rating_avg": 4.14,
-		"goodreads_rating_count": 73932,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1455089828l/19103097.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8c7"
-		},
-		"title": "The Magician King (The Magicians, #2)",
-		"author": "Grossman, Lev",
-		"isbn": "043402080X",
-		"isbn13": "9780434020805",
-		"date_pub_sort": "2011-08-09",
-		"date_pub": "8/9/2011",
-		"num_pages": 548,
-		"goodreads_rating_avg": 3.92,
-		"goodreads_rating_count": 95973,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1316177353l/10079321.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8c8"
-		},
-		"title": "The Magicians (The Magicians, #1)",
-		"author": "Grossman, Lev",
-		"isbn": "0670020559",
-		"isbn13": "9780670020553",
-		"date_pub_sort": "2009-08-11",
-		"date_pub": "8/11/2009",
-		"num_pages": 402,
-		"goodreads_rating_avg": 3.53,
-		"goodreads_rating_count": 255714,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1313772941l/6101718.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8c9"
-		},
-		"title": "A Deadly Education (The Scholomance, #1)",
-		"author": "Novik, Naomi",
-		"isbn": "0593128486",
-		"isbn13": "9780593128480",
-		"date_pub_sort": "2020-09-29",
-		"date_pub": "9/29/2020",
-		"num_pages": 336,
-		"goodreads_rating_avg": 4,
-		"goodreads_rating_count": 130850,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1596909044l/50548197.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8ca"
-		},
-		"title": "Brave New World / Brave New World Revisited",
-		"author": "Huxley, Aldous",
-		"isbn": "0060776099",
-		"isbn13": "9780060776091",
-		"date_pub_sort": "1958-01-01",
-		"date_pub": "1/1/1958",
-		"num_pages": 340,
-		"goodreads_rating_avg": 4.16,
-		"goodreads_rating_count": 159682,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1331315450l/5479.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8cb"
-		},
-		"title": "V for Vendetta",
-		"author": "Moore, Alan",
-		"isbn": "1401207928",
-		"isbn13": "9781401207922",
-		"date_pub_sort": "1990-01-01",
-		"date_pub": "1/1/1990",
-		"num_pages": 296,
-		"goodreads_rating_avg": 4.26,
-		"goodreads_rating_count": 300208,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1343668985l/5805.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8cc"
-		},
-		"title": "Perdido Street Station (New Crobuzon, #1)",
-		"author": "Miéville, China",
-		"isbn": "0345459407",
-		"isbn13": "9780345459404",
-		"date_pub_sort": "2000-03-01",
-		"date_pub": "3/1/2000",
-		"num_pages": 710,
-		"goodreads_rating_avg": 3.97,
-		"goodreads_rating_count": 67156,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1680461055l/68494.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8cd"
-		},
-		"title": "Startide Rising (The Uplift Saga, #2)",
-		"author": "Brin, David",
-		"isbn": "055327418X",
-		"isbn13": "9780553274189",
-		"date_pub_sort": "1983-09-01",
-		"date_pub": "9/1/1983",
-		"num_pages": 458,
-		"goodreads_rating_avg": 4.04,
-		"goodreads_rating_count": 31333,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1476445711l/234501.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8ce"
-		},
-		"title": "The Way of Kings (The Stormlight Archive, #1)",
-		"author": "Sanderson, Brandon",
-		"isbn": "0765326353",
-		"isbn13": "9780765326355",
-		"date_pub_sort": "2010-08-31",
-		"date_pub": "8/31/2010",
-		"num_pages": 1007,
-		"goodreads_rating_avg": 4.65,
-		"goodreads_rating_count": 429843,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659905828l/7235533.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8cf"
-		},
-		"title": "The Lathe of Heaven",
-		"author": "Le Guin, Ursula K.",
-		"isbn": "0060512741",
-		"isbn13": "9780060512743",
-		"date_pub_sort": "1971-05-01",
-		"date_pub": "5/1/1971",
-		"num_pages": 176,
-		"goodreads_rating_avg": 4.12,
-		"goodreads_rating_count": 67409,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1433084322l/59924.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8d0"
-		},
-		"title": "Red Mars (Mars Trilogy, #1)",
-		"author": "Robinson, Kim Stanley",
-		"isbn": "0553560735",
-		"isbn13": "9780553560732",
-		"date_pub_sort": "1992-01-01",
-		"date_pub": "1/1/1992",
-		"num_pages": 572,
-		"goodreads_rating_avg": 3.86,
-		"goodreads_rating_count": 78331,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1660272828l/77507.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8d1"
-		},
-		"title": "The Two Towers (The Lord of the Rings, #2)",
-		"author": "Tolkien, J.R.R.",
-		"isbn": "0618346260",
-		"isbn13": "9780618346264",
-		"date_pub_sort": "1954-11-11",
-		"date_pub": "11/11/1954",
-		"num_pages": 322,
-		"goodreads_rating_avg": 4.47,
-		"goodreads_rating_count": 893890,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1661031399l/15241.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8d2"
-		},
-		"title": "The Return of the King (The Lord of the Rings, #3)",
-		"author": "Tolkien, J.R.R.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1955-10-20",
-		"date_pub": "10/20/1955",
-		"num_pages": 404,
-		"goodreads_rating_avg": 4.56,
-		"goodreads_rating_count": 833104,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1520258755l/18512.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8d3"
-		},
-		"title": "Oryx and Crake (MaddAddam, #1)",
-		"author": "Atwood, Margaret",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2003-04-22",
-		"date_pub": "4/22/2003",
-		"num_pages": 389,
-		"goodreads_rating_avg": 4.01,
-		"goodreads_rating_count": 255644,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1668379066l/46756.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8d4"
-		},
-		"title": "The Andromeda Strain (Andromeda, #1)",
-		"author": "Crichton, Michael",
-		"isbn": "0060541814",
-		"isbn13": "9780060541811",
-		"date_pub_sort": "1969-09-01",
-		"date_pub": "9/1/1969",
-		"num_pages": 327,
-		"goodreads_rating_avg": 3.91,
-		"goodreads_rating_count": 247768,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1587497243l/7670.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8d5"
-		},
-		"title": "The Dispossessed: An Ambiguous Utopia",
-		"author": "Le Guin, Ursula K.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1974-05-01",
-		"date_pub": "5/1/1974",
-		"num_pages": 387,
-		"goodreads_rating_avg": 4.24,
-		"goodreads_rating_count": 113815,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1353467455l/13651.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8d6"
-		},
-		"title": "Dragonflight (Dragonriders of Pern, #1)",
-		"author": "McCaffrey, Anne",
-		"isbn": "0345484266",
-		"isbn13": "9780345484260",
-		"date_pub_sort": "1968-07-01",
-		"date_pub": "7/1/1968",
-		"num_pages": 299,
-		"goodreads_rating_avg": 4.09,
-		"goodreads_rating_count": 133892,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388182243l/61975.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8d7"
-		},
-		"title": "A Canticle for Leibowitz (St. Leibowitz, #1)",
-		"author": "Miller Jr., Walter M.",
-		"isbn": "0060892994",
-		"isbn13": "9780060892999",
-		"date_pub_sort": "1959-10-01",
-		"date_pub": "10/1/1959",
-		"num_pages": 334,
-		"goodreads_rating_avg": 3.98,
-		"goodreads_rating_count": 104949,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1450516880l/164154.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8d8"
-		},
-		"title": "The Left Hand of Darkness",
-		"author": "Le Guin, Ursula K.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1969-01-01",
-		"date_pub": "1/1/1969",
-		"num_pages": 304,
-		"goodreads_rating_avg": 4.09,
-		"goodreads_rating_count": 163047,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1488213612l/18423.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8d9"
-		},
-		"title": "The Lord of the Rings",
-		"author": "Tolkien, J.R.R.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1955-10-20",
-		"date_pub": "10/20/1955",
-		"num_pages": 1216,
-		"goodreads_rating_avg": 4.52,
-		"goodreads_rating_count": 646054,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566425108l/33.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8da"
-		},
-		"title": "The Handmaid’s Tale (The Handmaid's Tale, #1)",
-		"author": "Atwood, Margaret",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1985-01-01",
-		"date_pub": "1/1/1985",
-		"num_pages": 314,
-		"goodreads_rating_avg": 4.13,
-		"goodreads_rating_count": 1898451,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1578028274l/38447.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8db"
-		},
-		"title": "The Foundation Trilogy (Foundation, #1-3)",
-		"author": "Asimov, Isaac",
-		"isbn": "0380508567",
-		"isbn13": "9780380508563",
-		"date_pub_sort": "1953-01-01",
-		"date_pub": "1/1/1953",
-		"num_pages": 679,
-		"goodreads_rating_avg": 4.41,
-		"goodreads_rating_count": 99778,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1316412178l/46654.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8dc"
-		},
-		"title": "Paradise Lost",
-		"author": "Milton, John",
-		"isbn": "0140424393",
-		"isbn13": "9780140424393",
-		"date_pub_sort": "1667-01-01",
-		"date_pub": "1/1/1667",
-		"num_pages": 453,
-		"goodreads_rating_avg": 3.83,
-		"goodreads_rating_count": 158157,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1526070678l/15997.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8dd"
-		},
-		"title": "King Lear",
-		"author": "Shakespeare, William",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1605-01-01",
-		"date_pub": "1/1/1605",
-		"num_pages": 338,
-		"goodreads_rating_avg": 3.91,
-		"goodreads_rating_count": 208966,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1331563731l/12938.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8de"
-		},
-		"title": "The Complete Calvin and Hobbes",
-		"author": "Watterson, Bill",
-		"isbn": "0740748475",
-		"isbn13": "9780740748479",
-		"date_pub_sort": "2005-09-06",
-		"date_pub": "9/6/2005",
-		"num_pages": 1456,
-		"goodreads_rating_avg": 4.8,
-		"goodreads_rating_count": 39108,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1607384975l/24812.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8df"
-		},
-		"title": "Howl’s Moving Castle (Howl’s Moving Castle, #1)",
-		"author": "Jones, Diana Wynne",
-		"isbn": "006441034X",
-		"isbn13": "9780064410342",
-		"date_pub_sort": "1986-04-01",
-		"date_pub": "4/1/1986",
-		"num_pages": 329,
-		"goodreads_rating_avg": 4.29,
-		"goodreads_rating_count": 308496,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1630502935l/6294.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8e0"
-		},
-		"title": "A Clash of Kings  (A Song of Ice and Fire, #2)",
-		"author": "Martin, George R.R.",
-		"isbn": "0553381695",
-		"isbn13": "9780553381696",
-		"date_pub_sort": "1998-11-16",
-		"date_pub": "11/16/1998",
-		"num_pages": 969,
-		"goodreads_rating_avg": 4.41,
-		"goodreads_rating_count": 892493,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1567840212l/10572.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8e1"
-		},
-		"title": "The Wind-Up Bird Chronicle",
-		"author": "Murakami, Haruki",
-		"isbn": "0965341984",
-		"isbn13": "9780965341981",
-		"date_pub_sort": "1994-04-12",
-		"date_pub": "4/12/1994",
-		"num_pages": 607,
-		"goodreads_rating_avg": 4.15,
-		"goodreads_rating_count": 266126,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327872639l/11275.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8e2"
-		},
-		"title": "Beloved",
-		"author": "Morrison, Toni",
-		"isbn": "",
-		"isbn13": "9781400033416",
-		"date_pub_sort": "1987-09-16",
-		"date_pub": "9/16/1987",
-		"num_pages": 324,
-		"goodreads_rating_avg": 3.93,
-		"goodreads_rating_count": 406491,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1632283781l/6149.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8e3"
-		},
-		"title": "His Dark Materials (His Dark Materials #1-3)",
-		"author": "Pullman, Philip",
-		"isbn": "0440238609",
-		"isbn13": "9780440238607",
-		"date_pub_sort": "2000-11-01",
-		"date_pub": "11/1/2000",
-		"num_pages": 1088,
-		"goodreads_rating_avg": 4.28,
-		"goodreads_rating_count": 157318,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442329494l/18116.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8e4"
-		},
-		"title": "Wicked: The Life and Times of the Wicked Witch of the West (The Wicked Years, #1)",
-		"author": "Maguire, Gregory",
-		"isbn": "0060987103",
-		"isbn13": "9780060987107",
-		"date_pub_sort": "1995-09-29",
-		"date_pub": "9/29/1995",
-		"num_pages": 406,
-		"goodreads_rating_avg": 3.54,
-		"goodreads_rating_count": 589515,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1437733293l/37442.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8e5"
-		},
-		"title": "A Storm of Swords (A Song of Ice and Fire, #3)",
-		"author": "Martin, George R.R.",
-		"isbn": "055357342X",
-		"isbn13": "9780553573428",
-		"date_pub_sort": "2000-08-08",
-		"date_pub": "8/8/2000",
-		"num_pages": 1177,
-		"goodreads_rating_avg": 4.54,
-		"goodreads_rating_count": 745165,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1571318786l/62291.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8e6"
-		},
-		"title": "Fifty Shades of Grey (Fifty Shades, #1)",
-		"author": "James, E.L.",
-		"isbn": "1612130291",
-		"isbn13": "9781612130293",
-		"date_pub_sort": "2011-05-25",
-		"date_pub": "5/25/2011",
-		"num_pages": 356,
-		"goodreads_rating_avg": 3.66,
-		"goodreads_rating_count": 2441062,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1385207843l/10818853.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8e7"
-		},
-		"title": "The Neverending Story",
-		"author": "Ende, Michael",
-		"isbn": "0525457585",
-		"isbn13": "9780525457589",
-		"date_pub_sort": "1979-09-01",
-		"date_pub": "9/1/1979",
-		"num_pages": 396,
-		"goodreads_rating_avg": 4.18,
-		"goodreads_rating_count": 191946,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1554230952l/27712.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8e8"
-		},
-		"title": "Cloud Atlas",
-		"author": "Mitchell, David",
-		"isbn": "0375507256",
-		"isbn13": "9780375507250",
-		"date_pub_sort": "2004-03-01",
-		"date_pub": "3/1/2004",
-		"num_pages": 509,
-		"goodreads_rating_avg": 4.01,
-		"goodreads_rating_count": 240932,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1563042852l/49628.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8e9"
-		},
-		"title": "The Dream-Quest of Vellitt Boe",
-		"author": "Johnson, Kij",
-		"isbn": "0765386518",
-		"isbn13": "9780765386519",
-		"date_pub_sort": "2016-08-16",
-		"date_pub": "8/16/2016",
-		"num_pages": 166,
-		"goodreads_rating_avg": 3.87,
-		"goodreads_rating_count": 4500,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1460207637l/29635545.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8ea"
-		},
-		"title": "Piranesi",
-		"author": "Clarke, Susanna",
-		"isbn": "163557563X",
-		"isbn13": "9781635575637",
-		"date_pub_sort": "2020-09-15",
-		"date_pub": "9/15/2020",
-		"num_pages": 245,
-		"goodreads_rating_avg": 4.24,
-		"goodreads_rating_count": 216670,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1609095173l/50202953.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8eb"
-		},
-		"title": "Troy (Stephen Fry's Great Mythology, #3)",
-		"author": "Fry, Stephen",
-		"isbn": "0241424585",
-		"isbn13": "9780241424582",
-		"date_pub_sort": "2020-10-29",
-		"date_pub": "10/29/2020",
-		"num_pages": 414,
-		"goodreads_rating_avg": 4.36,
-		"goodreads_rating_count": 24178,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1589888687l/53443339.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8ec"
-		},
-		"title": "Heroes: Mortals and Monsters, Quests and Adventures (Stephen Fry's Great Mythology, #2)",
-		"author": "Stephen, Fry",
-		"isbn": "0241380375",
-		"isbn13": "9780241380376",
-		"date_pub_sort": "2018-11-01",
-		"date_pub": "11/1/2018",
-		"num_pages": 415,
-		"goodreads_rating_avg": 4.32,
-		"goodreads_rating_count": 38679,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1536766389l/41433634.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8ed"
-		},
-		"title": "Mythos: The Greek Myths Retold (Stephen Fry's Great Mythology, #1)",
-		"author": "Fry, Stephen",
-		"isbn": "0718188721",
-		"isbn13": "9780718188726",
-		"date_pub_sort": "2017-11-02",
-		"date_pub": "11/2/2017",
-		"num_pages": 416,
-		"goodreads_rating_avg": 4.27,
-		"goodreads_rating_count": 108070,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1502518360l/35074096.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8ee"
-		},
-		"title": "Mexican Gothic",
-		"author": "Moreno-Garcia, Silvia",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2020-06-30",
-		"date_pub": "6/30/2020",
-		"num_pages": 320,
-		"goodreads_rating_avg": 3.68,
-		"goodreads_rating_count": 297156,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1607462569l/53152636.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8ef"
-		},
-		"title": "How Much of These Hills Is Gold",
-		"author": "Zhang, C Pam",
-		"isbn": "0525537201",
-		"isbn13": "9780525537205",
-		"date_pub_sort": "2020-04-07",
-		"date_pub": "4/7/2020",
-		"num_pages": 288,
-		"goodreads_rating_avg": 3.8,
-		"goodreads_rating_count": 21495,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566270729l/45895362.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8f0"
-		},
-		"title": "The Arrival",
-		"author": "Tan, Shaun",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2007-10-12",
-		"date_pub": "10/12/2007",
-		"num_pages": 132,
-		"goodreads_rating_avg": 4.34,
-		"goodreads_rating_count": 54672,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1312827620l/920607.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8f1"
-		},
-		"title": "The Complete Persepolis",
-		"author": "Satrapi, Marjane",
-		"isbn": "0375714839",
-		"isbn13": "9780375714832",
-		"date_pub_sort": "2003-01-01",
-		"date_pub": "1/1/2003",
-		"num_pages": 341,
-		"goodreads_rating_avg": 4.39,
-		"goodreads_rating_count": 168423,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327876995l/991197.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8f2"
-		},
-		"title": "V for Vendetta #1",
-		"author": "Moore, Alan",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1982-01-01",
-		"date_pub": "1/1/1982",
-		"num_pages": 29,
-		"goodreads_rating_avg": 4.19,
-		"goodreads_rating_count": 63840,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1385507527l/18981933.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8f3"
-		},
-		"title": "Angels & Demons (Robert Langdon, #1)",
-		"author": "Brown, Dan",
-		"isbn": "1416524797",
-		"isbn13": "9781416524793",
-		"date_pub_sort": "2000-05-01",
-		"date_pub": "5/1/2000",
-		"num_pages": 736,
-		"goodreads_rating_avg": 3.93,
-		"goodreads_rating_count": 3079010,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1639587647l/960.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8f4"
-		},
-		"title": "The Amber Spyglass (His Dark Materials, #3)",
-		"author": "Pullman, Philip",
-		"isbn": "0440238153",
-		"isbn13": "9780440238157",
-		"date_pub_sort": "2000-10-10",
-		"date_pub": "10/10/2000",
-		"num_pages": 465,
-		"goodreads_rating_avg": 4.1,
-		"goodreads_rating_count": 346879,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1329189152l/18122.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8f5"
-		},
-		"title": "The Tripods Trilogy (The Tripods, #1-3)",
-		"author": "Christopher, John",
-		"isbn": "0020425716",
-		"isbn13": "9780020425717",
-		"date_pub_sort": "1967-01-01",
-		"date_pub": "1/1/1967",
-		"num_pages": 224,
-		"goodreads_rating_avg": 4.2,
-		"goodreads_rating_count": 2874,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1326400815l/101942.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8f6"
-		},
-		"title": "Mrs. Frisby and the Rats of NIMH (Rats of NIMH, #1)",
-		"author": "O'Brien, Robert C.",
-		"isbn": "0689862202",
-		"isbn13": "9780689862205",
-		"date_pub_sort": "1971-01-01",
-		"date_pub": "1/1/1971",
-		"num_pages": 240,
-		"goodreads_rating_avg": 4.16,
-		"goodreads_rating_count": 174679,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1351191064l/9822.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8f7"
-		},
-		"title": "The Subtle Knife (His Dark Materials, #2)",
-		"author": "Pullman, Philip",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1997-07-22",
-		"date_pub": "7/22/1997",
-		"num_pages": 370,
-		"goodreads_rating_avg": 4.14,
-		"goodreads_rating_count": 420918,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535965085l/41637836.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8f8"
-		},
-		"title": "Pretties (Uglies, #2)",
-		"author": "Westerfeld, Scott",
-		"isbn": "0689865392",
-		"isbn13": "9780689865398",
-		"date_pub_sort": "2005-11-01",
-		"date_pub": "11/1/2005",
-		"num_pages": 370,
-		"goodreads_rating_avg": 3.84,
-		"goodreads_rating_count": 253964,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388314207l/24768.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8f9"
-		},
-		"title": "Guards! Guards! (Discworld, #8; City Watch, #1)",
-		"author": "Pratchett, Terry",
-		"isbn": "0061020648",
-		"isbn13": "9780061020643",
-		"date_pub_sort": "1989-01-01",
-		"date_pub": "1/1/1989",
-		"num_pages": 376,
-		"goodreads_rating_avg": 4.33,
-		"goodreads_rating_count": 193884,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1431127356l/64216.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8fa"
-		},
-		"title": "Hogfather (Discworld, #20; Death, #4)",
-		"author": "Pratchett, Terry",
-		"isbn": "0552154288",
-		"isbn13": "9780552154284",
-		"date_pub_sort": "1996-01-01",
-		"date_pub": "1/1/1996",
-		"num_pages": 432,
-		"goodreads_rating_avg": 4.25,
-		"goodreads_rating_count": 89457,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1416342611l/34532.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8fb"
-		},
-		"title": "Words of Radiance (The Stormlight Archive, #2)",
-		"author": "Sanderson, Brandon",
-		"isbn": "0765326361",
-		"isbn13": "9780765326362",
-		"date_pub_sort": "2014-03-04",
-		"date_pub": "3/4/2014",
-		"num_pages": 1087,
-		"goodreads_rating_avg": 4.76,
-		"goodreads_rating_count": 301945,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659905768l/17332218.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8fc"
-		},
-		"title": "The Tombs of Atuan (Earthsea Cycle, #2)",
-		"author": "Le Guin, Ursula K.",
-		"isbn": "0689845367",
-		"isbn13": "9780689845369",
-		"date_pub_sort": "1970-01-01",
-		"date_pub": "1/1/1970",
-		"num_pages": 180,
-		"goodreads_rating_avg": 4.12,
-		"goodreads_rating_count": 109397,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659761935l/13662.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8fd"
-		},
-		"title": "The Word for World Is Forest",
-		"author": "Le Guin, Ursula K.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1972-03-17",
-		"date_pub": "3/17/1972",
-		"num_pages": 160,
-		"goodreads_rating_avg": 4.03,
-		"goodreads_rating_count": 27366,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1283091038l/276767.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8fe"
-		},
-		"title": "The Last Unicorn (The Last Unicorn, #1)",
-		"author": "Beagle, Peter S.",
-		"isbn": "0451450523",
-		"isbn13": "9780451450524",
-		"date_pub_sort": "1968-01-01",
-		"date_pub": "1/1/1968",
-		"num_pages": 294,
-		"goodreads_rating_avg": 4.16,
-		"goodreads_rating_count": 104720,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1524764327l/29127.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b8ff"
-		},
-		"title": "The League of Extraordinary Gentlemen, Vol. 1",
-		"author": "Moore, Alan",
-		"isbn": "1563898586",
-		"isbn13": "9781563898587",
-		"date_pub_sort": "2000-09-01",
-		"date_pub": "9/1/2000",
-		"num_pages": 192,
-		"goodreads_rating_avg": 3.94,
-		"goodreads_rating_count": 53246,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1552295653l/297627.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b900"
-		},
-		"title": "The Anubis Gates",
-		"author": "Powers, Tim",
-		"isbn": "0441004016",
-		"isbn13": "9780441004010",
-		"date_pub_sort": "1983-12-01",
-		"date_pub": "12/1/1983",
-		"num_pages": 387,
-		"goodreads_rating_avg": 3.91,
-		"goodreads_rating_count": 15724,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1344409006l/142296.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b901"
-		},
-		"title": "The Gate to Women's Country",
-		"author": "Tepper, Sheri S.",
-		"isbn": "0006482708",
-		"isbn13": "9780006482703",
-		"date_pub_sort": "1987-11-01",
-		"date_pub": "11/1/1987",
-		"num_pages": 315,
-		"goodreads_rating_avg": 4.06,
-		"goodreads_rating_count": 13061,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1171511056l/104344.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b902"
-		},
-		"title": "A Dance with Dragons (A Song of Ice and Fire, #5)",
-		"author": "Martin, George R.R.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2011-07-12",
-		"date_pub": "7/12/2011",
-		"num_pages": 1125,
-		"goodreads_rating_avg": 4.33,
-		"goodreads_rating_count": 624871,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1581625286l/10664113.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b903"
-		},
-		"title": "The Island of Dr. Moreau",
-		"author": "Wells, H.G.",
-		"isbn": "0553214322",
-		"isbn13": "9780553214321",
-		"date_pub_sort": "1896-01-01",
-		"date_pub": "1/1/1896",
-		"num_pages": 160,
-		"goodreads_rating_avg": 3.73,
-		"goodreads_rating_count": 114060,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388230211l/29981.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b904"
-		},
-		"title": "Shadow & Claw",
-		"author": "Wolfe, Gene",
-		"isbn": "0312890176",
-		"isbn13": "9780312890179",
-		"date_pub_sort": "1994-10-15",
-		"date_pub": "10/15/1994",
-		"num_pages": 413,
-		"goodreads_rating_avg": 4.03,
-		"goodreads_rating_count": 18492,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388180510l/40992.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b905"
-		},
-		"title": "Roadside Picnic",
-		"author": "Strugatsky, Arkady",
-		"isbn": "0575070536",
-		"isbn13": "9780575070530",
-		"date_pub_sort": "1972-01-01",
-		"date_pub": "1/1/1972",
-		"num_pages": 145,
-		"goodreads_rating_avg": 4.15,
-		"goodreads_rating_count": 60118,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1173812259l/331256.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b906"
-		},
-		"title": "The Girl Who Played with Fire (Millennium, #2)",
-		"author": "Larsson, Stieg",
-		"isbn": "0307269981",
-		"isbn13": "9780307269980",
-		"date_pub_sort": "2006-06-01",
-		"date_pub": "6/1/2006",
-		"num_pages": 503,
-		"goodreads_rating_avg": 4.25,
-		"goodreads_rating_count": 894125,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1351778881l/5060378.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b907"
-		},
-		"title": "A Midsummer Night's Dream",
-		"author": "Shakespeare, William",
-		"isbn": "0743477545",
-		"isbn13": "9780743477543",
-		"date_pub_sort": "1595-01-01",
-		"date_pub": "1/1/1595",
-		"num_pages": 240,
-		"goodreads_rating_avg": 3.95,
-		"goodreads_rating_count": 516020,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327874534l/1622.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b908"
-		},
-		"title": "The Lorax",
-		"author": "Dr. Seuss",
-		"isbn": "0679889108",
-		"isbn13": "9780679889106",
-		"date_pub_sort": "1971-01-01",
-		"date_pub": "1/1/1971",
-		"num_pages": 72,
-		"goodreads_rating_avg": 4.34,
-		"goodreads_rating_count": 330046,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327879938l/7784.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b909"
-		},
-		"title": "Goodnight Moon",
-		"author": "Brown, Margaret Wise",
-		"isbn": "0060775858",
-		"isbn13": "9780060775858",
-		"date_pub_sort": "1947-09-03",
-		"date_pub": "9/3/1947",
-		"num_pages": 32,
-		"goodreads_rating_avg": 4.3,
-		"goodreads_rating_count": 359382,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1439223893l/32929.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b90a"
-		},
-		"title": "The Importance of Being Earnest",
-		"author": "Wilde, Oscar",
-		"isbn": "158049580X",
-		"isbn13": "9781580495806",
-		"date_pub_sort": "1895-02-14",
-		"date_pub": "2/14/1895",
-		"num_pages": 76,
-		"goodreads_rating_avg": 4.18,
-		"goodreads_rating_count": 352420,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1298438452l/92303.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b90b"
-		},
-		"title": "The Ultimate Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide to the Galaxy, #1-5)",
-		"author": "Adams, Douglas",
-		"isbn": "0345453743",
-		"isbn13": "9780345453747",
-		"date_pub_sort": "1996-01-17",
-		"date_pub": "1/17/1996",
-		"num_pages": 815,
-		"goodreads_rating_avg": 4.38,
-		"goodreads_rating_count": 314102,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1404613595l/13.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b90c"
-		},
-		"title": "The Divine Comedy",
-		"author": "Alighieri, Dante",
-		"isbn": "0679433139",
-		"isbn13": "9780679433132",
-		"date_pub_sort": "1320-01-01",
-		"date_pub": "1/1/1320",
-		"num_pages": 798,
-		"goodreads_rating_avg": 4.07,
-		"goodreads_rating_count": 143296,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1657540227l/6656.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b90d"
-		},
-		"title": "Watchmen (Watchmen, #1-12)",
-		"author": "Moore, Alan",
-		"isbn": "0930289234",
-		"isbn13": "9780930289232",
-		"date_pub_sort": "1987-01-01",
-		"date_pub": "1/1/1987",
-		"num_pages": 416,
-		"goodreads_rating_avg": 4.37,
-		"goodreads_rating_count": 538800,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442239711l/472331.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b90e"
-		},
-		"title": "Fight Club",
-		"author": "Palahniuk, Chuck",
-		"isbn": "0393355942",
-		"isbn13": "9780393355949",
-		"date_pub_sort": "1996-08-01",
-		"date_pub": "8/1/1996",
-		"num_pages": 224,
-		"goodreads_rating_avg": 4.19,
-		"goodreads_rating_count": 563518,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1558216416l/36236124.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b90f"
-		},
-		"title": "Where the Red Fern Grows",
-		"author": "Rawls, Wilson",
-		"isbn": "0375806814",
-		"isbn13": "9780375806810",
-		"date_pub_sort": "1961-01-01",
-		"date_pub": "1/1/1961",
-		"num_pages": 272,
-		"goodreads_rating_avg": 4.1,
-		"goodreads_rating_count": 389353,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1518702249l/10365.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b910"
-		},
-		"title": "Harry Potter and the Chamber of Secrets (Harry Potter, #2)",
-		"author": "Rowling, J.K.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1998-07-02",
-		"date_pub": "7/2/1998",
-		"num_pages": 341,
-		"goodreads_rating_avg": 4.43,
-		"goodreads_rating_count": 3610646,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474169725l/15881.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b911"
-		},
-		"title": "Harry Potter and the Half-Blood Prince (Harry Potter, #6)",
-		"author": "Rowling, J.K.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2005-07-16",
-		"date_pub": "7/16/2005",
-		"num_pages": 652,
-		"goodreads_rating_avg": 4.58,
-		"goodreads_rating_count": 3057453,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1587697303l/1.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b912"
-		},
-		"title": "Harry Potter and the Goblet of Fire (Harry Potter, #4)",
-		"author": "Rowling, J.K.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2000-07-08",
-		"date_pub": "7/8/2000",
-		"num_pages": 734,
-		"goodreads_rating_avg": 4.56,
-		"goodreads_rating_count": 3409323,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1554006152l/6.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b913"
-		},
-		"title": "Interview with the Vampire (The Vampire Chronicles, #1)",
-		"author": "Rice, Anne",
-		"isbn": "0345476875",
-		"isbn13": "9780345476876",
-		"date_pub_sort": "1976-04-12",
-		"date_pub": "4/12/1976",
-		"num_pages": 346,
-		"goodreads_rating_avg": 4.01,
-		"goodreads_rating_count": 559342,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1380631642l/43763.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b914"
-		},
-		"title": "Winnie-the-Pooh (Winnie-the-Pooh #1)",
-		"author": "Milne, A.A.",
-		"isbn": "0525467564",
-		"isbn13": "9780525467564",
-		"date_pub_sort": "1926-10-14",
-		"date_pub": "10/14/1926",
-		"num_pages": 161,
-		"goodreads_rating_avg": 4.35,
-		"goodreads_rating_count": 314515,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1298440130l/99107.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b915"
-		},
-		"title": "Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)",
-		"author": "Rowling, J.K.",
-		"isbn": "043965548X",
-		"isbn13": "9780439655484",
-		"date_pub_sort": "1999-07-08",
-		"date_pub": "7/8/1999",
-		"num_pages": 435,
-		"goodreads_rating_avg": 4.58,
-		"goodreads_rating_count": 3823266,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1630547330l/5.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b916"
-		},
-		"title": "A Clockwork Orange",
-		"author": "Burgess, Anthony",
-		"isbn": "0393341763",
-		"isbn13": "9780393341768",
-		"date_pub_sort": "1962-01-01",
-		"date_pub": "1/1/1962",
-		"num_pages": 240,
-		"goodreads_rating_avg": 4,
-		"goodreads_rating_count": 683036,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1549260060l/41817486.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b917"
-		},
-		"title": "Watership Down (Watership Down, #1)",
-		"author": "Adams, Richard",
-		"isbn": "038039586X",
-		"isbn13": "9780380395866",
-		"date_pub_sort": "1972-11-01",
-		"date_pub": "11/1/1972",
-		"num_pages": 478,
-		"goodreads_rating_avg": 4.08,
-		"goodreads_rating_count": 468102,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1405136931l/76620.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b918"
-		},
-		"title": "The Adventures of Sherlock Holmes (Sherlock Holmes, #3)",
-		"author": "Doyle, Arthur Conan",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1892-10-14",
-		"date_pub": "10/14/1892",
-		"num_pages": 389,
-		"goodreads_rating_avg": 4.3,
-		"goodreads_rating_count": 286070,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1164045516l/3590.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b919"
-		},
-		"title": "Harry Potter and the Deathly Hallows (Harry Potter, #7)",
-		"author": "Rowling, J.K.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2007-07-21",
-		"date_pub": "7/21/2007",
-		"num_pages": 759,
-		"goodreads_rating_avg": 4.62,
-		"goodreads_rating_count": 3477956,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1663805647l/136251.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b91a"
-		},
-		"title": "Slaughterhouse-Five",
-		"author": "Vonnegut Jr., Kurt",
-		"isbn": "0385333846",
-		"isbn13": "9780385333849",
-		"date_pub_sort": "1969-03-31",
-		"date_pub": "3/31/1969",
-		"num_pages": 275,
-		"goodreads_rating_avg": 4.09,
-		"goodreads_rating_count": 1305948,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440319389l/4981.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b91b"
-		},
-		"title": "Green Eggs and Ham",
-		"author": "Dr. Seuss",
-		"isbn": "0394800168",
-		"isbn13": "9780394800165",
-		"date_pub_sort": "1960-06-01",
-		"date_pub": "6/1/1960",
-		"num_pages": 64,
-		"goodreads_rating_avg": 4.3,
-		"goodreads_rating_count": 736960,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1673212751l/23772.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b91c"
-		},
-		"title": "The Odyssey",
-		"author": "Homer",
-		"isbn": "0143039954",
-		"isbn13": "9780143039952",
-		"date_pub_sort": "700-01-01",
-		"date_pub": "1/1/700",
-		"num_pages": 541,
-		"goodreads_rating_avg": 3.8,
-		"goodreads_rating_count": 1020082,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1390173285l/1381.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b91d"
-		},
-		"title": "A Wrinkle in Time (Time Quintet, #1)",
-		"author": "L'Engle, Madeleine",
-		"isbn": "1250153271",
-		"isbn13": "9781250153272",
-		"date_pub_sort": "1962-01-01",
-		"date_pub": "1/1/1962",
-		"num_pages": 218,
-		"goodreads_rating_avg": 3.99,
-		"goodreads_rating_count": 1155751,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1507963312l/33574273.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b91e"
-		},
-		"title": "One Hundred Years of Solitude",
-		"author": "García Márquez, Gabriel",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1967-05-01",
-		"date_pub": "5/1/1967",
-		"num_pages": 417,
-		"goodreads_rating_avg": 4.11,
-		"goodreads_rating_count": 914275,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327881361l/320.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b91f"
-		},
-		"title": "Crime and Punishment",
-		"author": "Dostoevsky, Fyodor",
-		"isbn": "0143058142",
-		"isbn13": "9780143058144",
-		"date_pub_sort": "1866-01-01",
-		"date_pub": "1/1/1866",
-		"num_pages": 671,
-		"goodreads_rating_avg": 4.26,
-		"goodreads_rating_count": 824323,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1382846449l/7144.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b920"
-		},
-		"title": "Romeo and Juliet",
-		"author": "Shakespeare, William",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1597-01-01",
-		"date_pub": "1/1/1597",
-		"num_pages": 281,
-		"goodreads_rating_avg": 3.74,
-		"goodreads_rating_count": 2475638,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1629680008l/18135.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b921"
-		},
-		"title": "Alice's Adventures in Wonderland / Through the Looking-Glass",
-		"author": "Carroll, Lewis",
-		"isbn": "0451527747",
-		"isbn13": "9780451527745",
-		"date_pub_sort": "1871-12-27",
-		"date_pub": "12/27/1871",
-		"num_pages": 239,
-		"goodreads_rating_avg": 4.06,
-		"goodreads_rating_count": 537962,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1630487234l/24213.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b922"
-		},
-		"title": "The Da Vinci Code (Robert Langdon, #2)",
-		"author": "Brown, Dan",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2003-03-18",
-		"date_pub": "3/18/2003",
-		"num_pages": 489,
-		"goodreads_rating_avg": 3.9,
-		"goodreads_rating_count": 2253596,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1579621267l/968.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b923"
-		},
-		"title": "The Giving Tree",
-		"author": "Silverstein, Shel",
-		"isbn": "0060256656",
-		"isbn13": "9780060256654",
-		"date_pub_sort": "1964-01-01",
-		"date_pub": "1/1/1964",
-		"num_pages": 64,
-		"goodreads_rating_avg": 4.38,
-		"goodreads_rating_count": 1069732,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1174210942l/370493.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b924"
-		},
-		"title": "Saga, Volume 2",
-		"author": "Vaughan, Brian K.",
-		"isbn": "1607066920",
-		"isbn13": "9781607066927",
-		"date_pub_sort": "2013-06-19",
-		"date_pub": "6/19/2013",
-		"num_pages": 144,
-		"goodreads_rating_avg": 4.5,
-		"goodreads_rating_count": 107746,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1486028954l/17131869.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b925"
-		},
-		"title": "Exit Strategy (The Murderbot Diaries, #4)",
-		"author": "Wells, Martha",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2018-10-02",
-		"date_pub": "10/2/2018",
-		"num_pages": 176,
-		"goodreads_rating_avg": 4.39,
-		"goodreads_rating_count": 76095,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1518642623l/35519109.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b926"
-		},
-		"title": "The Lost World (Jurassic Park, #2)",
-		"author": "Crichton, Michael",
-		"isbn": "0752224417",
-		"isbn13": "9780752224411",
-		"date_pub_sort": "1995-09-17",
-		"date_pub": "9/17/1995",
-		"num_pages": 448,
-		"goodreads_rating_avg": 3.83,
-		"goodreads_rating_count": 145496,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386864575l/8650.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b927"
-		},
-		"title": "Artificial Condition (The Murderbot Diaries, #2)",
-		"author": "Wells, Martha",
-		"isbn": "1250186927",
-		"isbn13": "9781250186928",
-		"date_pub_sort": "2018-05-08",
-		"date_pub": "5/8/2018",
-		"num_pages": 158,
-		"goodreads_rating_avg": 4.28,
-		"goodreads_rating_count": 106151,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1505590203l/36223860.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b928"
-		},
-		"title": "Flowers for Algernon",
-		"author": "Keyes, Daniel",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1959-04-01",
-		"date_pub": "4/1/1959",
-		"num_pages": 216,
-		"goodreads_rating_avg": 4.19,
-		"goodreads_rating_count": 617059,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1510416245l/36576608.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b929"
-		},
-		"title": "Foundation and Empire (Foundation, #2)",
-		"author": "Asimov, Isaac",
-		"isbn": "0553803727",
-		"isbn13": "9780553803723",
-		"date_pub_sort": "1952-01-01",
-		"date_pub": "1/1/1952",
-		"num_pages": 256,
-		"goodreads_rating_avg": 4.22,
-		"goodreads_rating_count": 192363,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1391454612l/29581.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b92a"
-		},
-		"title": "Divergent (Divergent, #1)",
-		"author": "Roth, Veronica",
-		"isbn": "0062024035",
-		"isbn13": "9780062024039",
-		"date_pub_sort": "2011-04-25",
-		"date_pub": "4/25/2011",
-		"num_pages": 487,
-		"goodreads_rating_avg": 4.15,
-		"goodreads_rating_count": 3717897,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1618526890l/13335037.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b92b"
-		},
-		"title": "Nova",
-		"author": "Delany, Samuel R.",
-		"isbn": "0375706704",
-		"isbn13": "9780375706707",
-		"date_pub_sort": "1968-01-01",
-		"date_pub": "1/1/1968",
-		"num_pages": 241,
-		"goodreads_rating_avg": 3.8,
-		"goodreads_rating_count": 7666,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320491578l/85863.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b92c"
-		},
-		"title": "Conjure Wife",
-		"author": "Leiber, Fritz",
-		"isbn": "0899684351",
-		"isbn13": "9780899684352",
-		"date_pub_sort": "1943-04-01",
-		"date_pub": "4/1/1943",
-		"num_pages": 188,
-		"goodreads_rating_avg": 3.81,
-		"goodreads_rating_count": 2398,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1383855099l/722251.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b92d"
-		},
-		"title": "Serpentine (His Dark Materials, #3.6)",
-		"author": "Pullman, Philip",
-		"isbn": "0241475244",
-		"isbn13": "9780241475249",
-		"date_pub_sort": "2020-10-15",
-		"date_pub": "10/15/2020",
-		"num_pages": 67,
-		"goodreads_rating_avg": 3.8,
-		"goodreads_rating_count": 8004,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1594320828l/53369413.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b92e"
-		},
-		"title": "Worlds of Exile and Illusion: Rocannon’s World, Planet of Exile, City of Illusions (Hainish Cycle, #1-3)",
-		"author": "Le Guin, Ursula K.",
-		"isbn": "0312862113",
-		"isbn13": "9780312862114",
-		"date_pub_sort": "1966-01-01",
-		"date_pub": "1/1/1966",
-		"num_pages": 370,
-		"goodreads_rating_avg": 4.24,
-		"goodreads_rating_count": 3738,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386920605l/67999.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b92f"
-		},
-		"title": "The 15 Commitments of Conscious Leadership: A New Paradigm for Sustainable Success",
-		"author": "Dethmer, Jim",
-		"isbn": "0990976904",
-		"isbn13": "9780990976905",
-		"date_pub_sort": "2015-01-10",
-		"date_pub": "1/10/2015",
-		"num_pages": 375,
-		"goodreads_rating_avg": 4.22,
-		"goodreads_rating_count": 2165,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1422156586l/24679417.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b930"
-		},
-		"title": "Sammy Keyes and the Wild Things",
-		"author": "Van Draanen, Wendelin",
-		"isbn": "0440421128",
-		"isbn13": "9780440421122",
-		"date_pub_sort": "2007-05-08",
-		"date_pub": "5/8/2007",
-		"num_pages": 293,
-		"goodreads_rating_avg": 4.24,
-		"goodreads_rating_count": 1685,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320551745l/5960604.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b931"
-		},
-		"title": "Sammy Keyes and the Cold Hard Cash",
-		"author": "Van Draanen, Wendelin",
-		"isbn": "0440421136",
-		"isbn13": "9780440421139",
-		"date_pub_sort": "2008-10-14",
-		"date_pub": "10/14/2008",
-		"num_pages": 320,
-		"goodreads_rating_avg": 4.14,
-		"goodreads_rating_count": 1364,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320545563l/7495063.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b932"
-		},
-		"title": "Sammy Keyes and the Night of Skulls",
-		"author": "Van Draanen, Wendelin",
-		"isbn": "0375854576",
-		"isbn13": "9780375854576",
-		"date_pub_sort": "2011-10-11",
-		"date_pub": "10/11/2011",
-		"num_pages": 336,
-		"goodreads_rating_avg": 4.21,
-		"goodreads_rating_count": 968,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1333577896l/12904175.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b933"
-		},
-		"title": "Sammy Keyes and the Curse of Moustache Mary (Sammy Keyes, #5)",
-		"author": "Van Draanen, Wendelin",
-		"isbn": "0440416434",
-		"isbn13": "9780440416432",
-		"date_pub_sort": "2000-01-01",
-		"date_pub": "1/1/2000",
-		"num_pages": 272,
-		"goodreads_rating_avg": 4.16,
-		"goodreads_rating_count": 2140,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320540822l/1033227.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b934"
-		},
-		"title": "The Murderbot Diaries #1-4: : All Systems Red, Artificial Condition, Rogue Protocol, Exit Strategy",
-		"author": "Wells, Martha",
-		"isbn": "1250784271",
-		"isbn13": "9781250784278",
-		"date_pub_sort": "2019-10-14",
-		"date_pub": "10/14/2019",
-		"num_pages": null,
-		"goodreads_rating_avg": 4.29,
-		"goodreads_rating_count": 807,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1592884333l/53427947.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b935"
-		},
-		"title": "Sammy Keyes and the Sisters of Mercy",
-		"author": "Van Draanen, Wendelin",
-		"isbn": "0375801839",
-		"isbn13": "9780375801839",
-		"date_pub_sort": "1999-04-20",
-		"date_pub": "4/20/1999",
-		"num_pages": 210,
-		"goodreads_rating_avg": 4.08,
-		"goodreads_rating_count": 2698,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320407067l/1279977.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b936"
-		},
-		"title": "Sammy Keyes and the Skeleton Man",
-		"author": "Van Draanen, Wendelin",
-		"isbn": "0375800549",
-		"isbn13": "9780375800542",
-		"date_pub_sort": "1998-01-01",
-		"date_pub": "1/1/1998",
-		"num_pages": 172,
-		"goodreads_rating_avg": 4.08,
-		"goodreads_rating_count": 2625,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320402704l/889013.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b937"
-		},
-		"title": "Sammy Keyes and the Hotel Thief (Sammy Keyes #1)",
-		"author": "Van Draanen, Wendelin",
-		"isbn": "0679892648",
-		"isbn13": "9780679892649",
-		"date_pub_sort": "1998-04-14",
-		"date_pub": "4/14/1998",
-		"num_pages": 163,
-		"goodreads_rating_avg": 3.98,
-		"goodreads_rating_count": 6125,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320548725l/823124.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b938"
-		},
-		"title": "The Person You Mean to Be: How Good People Fight Bias",
-		"author": "Chugh, Dolly",
-		"isbn": "0062692143",
-		"isbn13": "9780062692146",
-		"date_pub_sort": "2018-09-04",
-		"date_pub": "9/4/2018",
-		"num_pages": 320,
-		"goodreads_rating_avg": 4.3,
-		"goodreads_rating_count": 2381,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1531197927l/37486214.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b939"
-		},
-		"title": "Children's Literature: A Reader's History, from Aesop to Harry Potter",
-		"author": "Lerer, Professor Seth",
-		"isbn": "0226473015",
-		"isbn13": "9780226473017",
-		"date_pub_sort": "2008-06-15",
-		"date_pub": "6/15/2008",
-		"num_pages": 400,
-		"goodreads_rating_avg": 3.67,
-		"goodreads_rating_count": 285,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328831360l/6752652.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b93a"
-		},
-		"title": "Algorithms to Live By: The Computer Science of Human Decisions",
-		"author": "Christian, Brian",
-		"isbn": "1627790365",
-		"isbn13": "9781627790369",
-		"date_pub_sort": "2016-04-19",
-		"date_pub": "4/19/2016",
-		"num_pages": 368,
-		"goodreads_rating_avg": 4.13,
-		"goodreads_rating_count": 28751,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1454296875l/25666050.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b93b"
-		},
-		"title": "Contact",
-		"author": "Sagan, Carl",
-		"isbn": "2266079999",
-		"isbn13": "9782266079990",
-		"date_pub_sort": "1986-10-01",
-		"date_pub": "10/1/1986",
-		"num_pages": 580,
-		"goodreads_rating_avg": 4.14,
-		"goodreads_rating_count": 137573,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1602082958l/61666.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b93c"
-		},
-		"title": "Norse Mythology",
-		"author": "Gaiman, Neil",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2017-02-07",
-		"date_pub": "2/7/2017",
-		"num_pages": 301,
-		"goodreads_rating_avg": 4.1,
-		"goodreads_rating_count": 296784,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1516128292l/37903770.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b93d"
-		},
-		"title": "Harry Potter and the Order of the Phoenix (Harry Potter, #5, Part 1)",
-		"author": "Rowling, J.K.",
-		"isbn": "185549664X",
-		"isbn13": "9781855496644",
-		"date_pub_sort": "2003-07-01",
-		"date_pub": "7/1/2003",
-		"num_pages": 412,
-		"goodreads_rating_avg": 4.61,
-		"goodreads_rating_count": 222961,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1182710609l/1317181.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b93e"
-		},
-		"title": "Fairy Tales from the Brothers Grimm: A New English Version",
-		"author": "Pullman, Philip",
-		"isbn": "067002497X",
-		"isbn13": "9780670024971",
-		"date_pub_sort": "2012-09-27",
-		"date_pub": "9/27/2012",
-		"num_pages": 405,
-		"goodreads_rating_avg": 4.06,
-		"goodreads_rating_count": 22116,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1339554952l/13554713.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b93f"
-		},
-		"title": "The Goblin Emperor (The Goblin Emperor, #1)",
-		"author": "Addison, Katherine",
-		"isbn": "076532699X",
-		"isbn13": "9780765326997",
-		"date_pub_sort": "2014-04-01",
-		"date_pub": "4/1/2014",
-		"num_pages": 446,
-		"goodreads_rating_avg": 4.07,
-		"goodreads_rating_count": 41161,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1373039517l/17910048.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b940"
-		},
-		"title": "The Eye of the World (The Wheel of Time, #1)",
-		"author": "Jordan, Robert",
-		"isbn": "0812511816",
-		"isbn13": "9780812511819",
-		"date_pub_sort": "1990-01-15",
-		"date_pub": "1/15/1990",
-		"num_pages": 800,
-		"goodreads_rating_avg": 4.19,
-		"goodreads_rating_count": 499821,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659905815l/228665.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b941"
-		},
-		"title": "The Hating Game",
-		"author": "Thorne, Sally",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2016-08-09",
-		"date_pub": "8/9/2016",
-		"num_pages": 387,
-		"goodreads_rating_avg": 3.93,
-		"goodreads_rating_count": 623622,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1467138679l/25883848.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b942"
-		},
-		"title": "The Hunger Games (The Hunger Games, #1)",
-		"author": "Collins, Suzanne",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2008-09-14",
-		"date_pub": "9/14/2008",
-		"num_pages": 374,
-		"goodreads_rating_avg": 4.33,
-		"goodreads_rating_count": 7991839,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722975l/2767052.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b943"
-		},
-		"title": "The Girl with the Dragon Tattoo (Millennium, #1)",
-		"author": "Larsson, Stieg",
-		"isbn": "0670069019",
-		"isbn13": "9780670069019",
-		"date_pub_sort": "2005-08-01",
-		"date_pub": "8/1/2005",
-		"num_pages": 480,
-		"goodreads_rating_avg": 4.16,
-		"goodreads_rating_count": 3036310,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1684638853l/2429135.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b944"
-		},
-		"title": "Emma",
-		"author": "Austen, Jane",
-		"isbn": "0141439580",
-		"isbn13": "9780141439587",
-		"date_pub_sort": "1815-12-23",
-		"date_pub": "12/23/1815",
-		"num_pages": 474,
-		"goodreads_rating_avg": 4.04,
-		"goodreads_rating_count": 825978,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1373627931l/6969.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b945"
-		},
-		"title": "The Great Gatsby",
-		"author": "Fitzgerald, F. Scott",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1925-04-10",
-		"date_pub": "4/10/1925",
-		"num_pages": 180,
-		"goodreads_rating_avg": 3.93,
-		"goodreads_rating_count": 4856405,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1490528560l/4671.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b946"
-		},
-		"title": "Animal Farm",
-		"author": "Orwell, George",
-		"isbn": "0451526341",
-		"isbn13": "9780451526342",
-		"date_pub_sort": "1945-08-17",
-		"date_pub": "8/17/1945",
-		"num_pages": 128,
-		"goodreads_rating_avg": 3.98,
-		"goodreads_rating_count": 3588861,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1325861570l/170448.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b947"
-		},
-		"title": "To Kill a Mockingbird",
-		"author": "Lee, Harper",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1960-01-01",
-		"date_pub": "1/1/1960",
-		"num_pages": 323,
-		"goodreads_rating_avg": 4.27,
-		"goodreads_rating_count": 5709211,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b948"
-		},
-		"title": "Pride and Prejudice",
-		"author": "Austen, Jane",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1813-01-28",
-		"date_pub": "1/28/1813",
-		"num_pages": 279,
-		"goodreads_rating_avg": 4.28,
-		"goodreads_rating_count": 3957857,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320399351l/1885.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b949"
-		},
-		"title": "Y: The Last Man, Vol. 1: Unmanned",
-		"author": "Vaughan, Brian K.",
-		"isbn": "1563899809",
-		"isbn13": "9781563899805",
-		"date_pub_sort": "2003-01-02",
-		"date_pub": "1/2/2003",
-		"num_pages": 130,
-		"goodreads_rating_avg": 4.08,
-		"goodreads_rating_count": 113765,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388178315l/156534.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b94a"
-		},
-		"title": "Saga, Volume 1",
-		"author": "Vaughan, Brian K.",
-		"isbn": "1607066017",
-		"isbn13": "9781607066019",
-		"date_pub_sort": "2012-10-10",
-		"date_pub": "10/10/2012",
-		"num_pages": 160,
-		"goodreads_rating_avg": 4.17,
-		"goodreads_rating_count": 315310,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1486028947l/15704307.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b94b"
-		},
-		"title": "Watchmen #1 of 12: At Midnight, All The Agents....",
-		"author": "Moore, Alan",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1986-01-01",
-		"date_pub": "1/1/1986",
-		"num_pages": 34,
-		"goodreads_rating_avg": 4.32,
-		"goodreads_rating_count": 172148,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1367119027l/17856572.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b94c"
-		},
-		"title": "Matilda",
-		"author": "Dahl, Roald",
-		"isbn": "0141301066",
-		"isbn13": "9780141301068",
-		"date_pub_sort": "1988-10-01",
-		"date_pub": "10/1/1988",
-		"num_pages": 240,
-		"goodreads_rating_avg": 4.33,
-		"goodreads_rating_count": 875491,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388793265l/39988.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b94d"
-		},
-		"title": "Where the Wild Things Are",
-		"author": "Sendak, Maurice",
-		"isbn": "0099408392",
-		"isbn13": "9780099408390",
-		"date_pub_sort": "1963-04-09",
-		"date_pub": "4/9/1963",
-		"num_pages": 38,
-		"goodreads_rating_avg": 4.24,
-		"goodreads_rating_count": 965345,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1384434560l/19543.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b94e"
-		},
-		"title": "Charlotte's Web",
-		"author": "White, E.B.",
-		"isbn": "0064410935",
-		"isbn13": "9780064410939",
-		"date_pub_sort": "1952-10-15",
-		"date_pub": "10/15/1952",
-		"num_pages": 184,
-		"goodreads_rating_avg": 4.19,
-		"goodreads_rating_count": 1729069,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1628267712l/24178.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b94f"
-		},
-		"title": "Harry Potter and the Sorcerer's Stone (Harry Potter, #1)",
-		"author": "Rowling, J.K.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1997-06-26",
-		"date_pub": "6/26/1997",
-		"num_pages": 309,
-		"goodreads_rating_avg": 4.47,
-		"goodreads_rating_count": 9307870,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474154022l/3.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b950"
-		},
-		"title": "Circe",
-		"author": "Miller, Madeline",
-		"isbn": "0316556343",
-		"isbn13": "9780316556347",
-		"date_pub_sort": "2018-04-10",
-		"date_pub": "4/10/2018",
-		"num_pages": 393,
-		"goodreads_rating_avg": 4.25,
-		"goodreads_rating_count": 875194,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1565909496l/35959740.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b951"
-		},
-		"title": "The Raven Tower",
-		"author": "Leckie, Ann",
-		"isbn": "0356506991",
-		"isbn13": "9780356506999",
-		"date_pub_sort": "2019-02-26",
-		"date_pub": "2/26/2019",
-		"num_pages": 416,
-		"goodreads_rating_avg": 3.92,
-		"goodreads_rating_count": 17887,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1523646507l/39395857.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b952"
-		},
-		"title": "Provenance (Imperial Radch)",
-		"author": "Leckie, Ann",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2017-09-26",
-		"date_pub": "9/26/2017",
-		"num_pages": 481,
-		"goodreads_rating_avg": 3.83,
-		"goodreads_rating_count": 17306,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1656608941l/25353286.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b953"
-		},
-		"title": "Ancillary Mercy (Imperial Radch, #3)",
-		"author": "Leckie, Ann",
-		"isbn": "0356502422",
-		"isbn13": "9780356502427",
-		"date_pub_sort": "2015-10-06",
-		"date_pub": "10/6/2015",
-		"num_pages": 330,
-		"goodreads_rating_avg": 4.21,
-		"goodreads_rating_count": 40737,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1493642929l/23533039.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b954"
-		},
-		"title": "Ancillary Sword (Imperial Radch, #2)",
-		"author": "Leckie, Ann",
-		"isbn": "0316246654",
-		"isbn13": "9780316246651",
-		"date_pub_sort": "2014-10-07",
-		"date_pub": "10/7/2014",
-		"num_pages": 359,
-		"goodreads_rating_avg": 4.07,
-		"goodreads_rating_count": 50226,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1597476183l/20706284.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b955"
-		},
-		"title": "Ancillary Justice (Imperial Radch, #1)",
-		"author": "Leckie, Ann",
-		"isbn": "031624662X",
-		"isbn13": "9780316246620",
-		"date_pub_sort": "2013-10-01",
-		"date_pub": "10/1/2013",
-		"num_pages": 416,
-		"goodreads_rating_avg": 3.98,
-		"goodreads_rating_count": 98977,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1597476110l/17333324.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b956"
-		},
-		"title": "A Desolation Called Peace (Teixcalaan, #2)",
-		"author": "Martine, Arkady",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2021-03-02",
-		"date_pub": "3/2/2021",
-		"num_pages": 496,
-		"goodreads_rating_avg": 4.34,
-		"goodreads_rating_count": 22107,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1654565596l/45154547.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b957"
-		},
-		"title": "A Memory Called Empire (Teixcalaan, #1)",
-		"author": "Martine, Arkady",
-		"isbn": "1529001587",
-		"isbn13": "9781529001587",
-		"date_pub_sort": "2019-03-26",
-		"date_pub": "3/26/2019",
-		"num_pages": 462,
-		"goodreads_rating_avg": 4.13,
-		"goodreads_rating_count": 47341,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1526486698l/37794149.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b958"
-		},
-		"title": "A Closed and Common Orbit (Wayfarers, #2)",
-		"author": "Chambers, Becky",
-		"isbn": "1473621445",
-		"isbn13": "9781473621442",
-		"date_pub_sort": "2016-10-20",
-		"date_pub": "10/20/2016",
-		"num_pages": 365,
-		"goodreads_rating_avg": 4.36,
-		"goodreads_rating_count": 61380,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1457598923l/29475447.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b959"
-		},
-		"title": "The Long Way to a Small, Angry Planet (Wayfarers, #1)",
-		"author": "Chambers, Becky",
-		"isbn": "1500453307",
-		"isbn13": "9781500453305",
-		"date_pub_sort": "2014-07-29",
-		"date_pub": "7/29/2014",
-		"num_pages": 518,
-		"goodreads_rating_avg": 4.18,
-		"goodreads_rating_count": 126960,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1405532474l/22733729.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b95a"
-		},
-		"title": "Last Argument of Kings (The First Law, #3)",
-		"author": "Abercrombie, Joe",
-		"isbn": "0575077905",
-		"isbn13": "9780575077904",
-		"date_pub_sort": "2008-03-20",
-		"date_pub": "3/20/2008",
-		"num_pages": 536,
-		"goodreads_rating_avg": 4.32,
-		"goodreads_rating_count": 142483,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659900550l/944076.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b95b"
-		},
-		"title": "Before They Are Hanged (The First Law, #2)",
-		"author": "Abercrombie, Joe",
-		"isbn": "0575077883",
-		"isbn13": "9780575077881",
-		"date_pub_sort": "2007-03-15",
-		"date_pub": "3/15/2007",
-		"num_pages": 441,
-		"goodreads_rating_avg": 4.33,
-		"goodreads_rating_count": 153591,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1179318094l/902715.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b95c"
-		},
-		"title": "The Blade Itself (The First Law, #1)",
-		"author": "Abercrombie, Joe",
-		"isbn": "0575079797",
-		"isbn13": "9780575079793",
-		"date_pub_sort": "2006-05-04",
-		"date_pub": "5/4/2006",
-		"num_pages": 515,
-		"goodreads_rating_avg": 4.2,
-		"goodreads_rating_count": 220332,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1284167912l/944073SY75"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b95d"
-		},
-		"title": "The Winter of the Witch (The Winternight Trilogy, #3)",
-		"author": "Arden, Katherine",
-		"isbn": "1101886005",
-		"isbn13": "9781101886007",
-		"date_pub_sort": "2019-01-08",
-		"date_pub": "1/8/2019",
-		"num_pages": 384,
-		"goodreads_rating_avg": 4.5,
-		"goodreads_rating_count": 68831,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1517001188l/36621586.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b95e"
-		},
-		"title": "The Girl in the Tower (The Winternight Trilogy, #2)",
-		"author": "Arden, Katherine",
-		"isbn": "1101885963",
-		"isbn13": "9781101885963",
-		"date_pub_sort": "2017-12-05",
-		"date_pub": "12/5/2017",
-		"num_pages": 360,
-		"goodreads_rating_avg": 4.36,
-		"goodreads_rating_count": 88445,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1612901466l/34050917.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b95f"
-		},
-		"title": "The Bear and the Nightingale (The Winternight Trilogy, #1)",
-		"author": "Arden, Katherine",
-		"isbn": "1101885939",
-		"isbn13": "9781101885932",
-		"date_pub_sort": "2017-01-10",
-		"date_pub": "1/10/2017",
-		"num_pages": 319,
-		"goodreads_rating_avg": 4.1,
-		"goodreads_rating_count": 181269,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1611440212l/25489134.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b960"
-		},
-		"title": "The Song of Achilles",
-		"author": "Miller, Madeline",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2011-09-20",
-		"date_pub": "9/20/2011",
-		"num_pages": 378,
-		"goodreads_rating_avg": 4.36,
-		"goodreads_rating_count": 1188982,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1357177533l/13623848.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b961"
-		},
-		"title": "Saga #1",
-		"author": "Vaughan, Brian K.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2012-03-14",
-		"date_pub": "3/14/2012",
-		"num_pages": 66,
-		"goodreads_rating_avg": 4.19,
-		"goodreads_rating_count": 48244,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1642153774l/18867493.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b962"
-		},
-		"title": "Locke & Key: Crown of Shadows #1",
-		"author": "Hill, Joe",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "Invalid Date-Invalid Date-Invalid Date",
-		"date_pub": "Invalid Date",
-		"num_pages": null,
-		"goodreads_rating_avg": 4.31,
-		"goodreads_rating_count": 545,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1393285001l/20898117.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b963"
-		},
-		"title": "Hawkeye #1",
-		"author": "Fraction, Matt",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2012-08-01",
-		"date_pub": "8/1/2012",
-		"num_pages": 32,
-		"goodreads_rating_avg": 4.36,
-		"goodreads_rating_count": 2463,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1385786483l/19057336.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b964"
-		},
-		"title": "Ms. Marvel (2014-2015) #1",
-		"author": "Wilson, G. Willow",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2014-02-05",
-		"date_pub": "2/5/2014",
-		"num_pages": 24,
-		"goodreads_rating_avg": 4.09,
-		"goodreads_rating_count": 28885,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436796610l/25756608.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b965"
-		},
-		"title": "Rat Queens #1",
-		"author": "Wiebe, Kurtis J.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2013-09-25",
-		"date_pub": "9/25/2013",
-		"num_pages": 32,
-		"goodreads_rating_avg": 4.03,
-		"goodreads_rating_count": 5686,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1465434115l/18491493.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b966"
-		},
-		"title": "The Sandman Vol. 1: Preludes & Nocturnes",
-		"author": "Gaiman, Neil",
-		"isbn": "1563892278",
-		"isbn13": "9781563892271",
-		"date_pub_sort": "1988-01-01",
-		"date_pub": "1/1/1988",
-		"num_pages": 233,
-		"goodreads_rating_avg": 4.25,
-		"goodreads_rating_count": 256922,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1411609637l/23754.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b967"
-		},
-		"title": "The Witches",
-		"author": "Dahl, Roald",
-		"isbn": "0590032496",
-		"isbn13": "9780590032490",
-		"date_pub_sort": "1983-10-27",
-		"date_pub": "10/27/1983",
-		"num_pages": 208,
-		"goodreads_rating_avg": 4.17,
-		"goodreads_rating_count": 378510,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1351707720l/6327.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b968"
-		},
-		"title": "The Runaway Bunny",
-		"author": "Brown, Margaret Wise",
-		"isbn": "0060775823",
-		"isbn13": "9780060775827",
-		"date_pub_sort": "1942-06-05",
-		"date_pub": "6/5/1942",
-		"num_pages": 48,
-		"goodreads_rating_avg": 4.07,
-		"goodreads_rating_count": 79836,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1468816103l/58922.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b969"
-		},
-		"title": "Pete the Cat: I Love My White Shoes",
-		"author": "Litwin, Eric",
-		"isbn": "0061906220",
-		"isbn13": "9780061906220",
-		"date_pub_sort": "2010-03-02",
-		"date_pub": "3/2/2010",
-		"num_pages": 40,
-		"goodreads_rating_avg": 4.33,
-		"goodreads_rating_count": 53083,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1319030278l/6871646.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b96a"
-		},
-		"title": "The Silver Chair (Chronicles of Narnia, #4)",
-		"author": "Lewis, C.S.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1953-09-07",
-		"date_pub": "9/7/1953",
-		"num_pages": 243,
-		"goodreads_rating_avg": 3.96,
-		"goodreads_rating_count": 281901,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1661032839l/65641.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b96b"
-		},
-		"title": "The Horse and His Boy (Chronicles of Narnia, #5)",
-		"author": "Lewis, C.S.",
-		"isbn": "0439861365",
-		"isbn13": "9780439861366",
-		"date_pub_sort": "1954-09-06",
-		"date_pub": "9/6/1954",
-		"num_pages": 224,
-		"goodreads_rating_avg": 3.91,
-		"goodreads_rating_count": 330814,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1661032718l/84119.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b96c"
-		},
-		"title": "The Voyage of the Dawn Treader (Chronicles of Narnia, #3)",
-		"author": "Lewis, C.S.",
-		"isbn": "006112527X",
-		"isbn13": "9780061125270",
-		"date_pub_sort": "1952-09-15",
-		"date_pub": "9/15/1952",
-		"num_pages": 248,
-		"goodreads_rating_avg": 4.09,
-		"goodreads_rating_count": 449883,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1661032500l/140225.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b96d"
-		},
-		"title": "The Magician's Nephew (Chronicles of Narnia, #6)",
-		"author": "Lewis, C.S.",
-		"isbn": "0060764902",
-		"isbn13": "9780060764906",
-		"date_pub_sort": "1955-05-02",
-		"date_pub": "5/2/1955",
-		"num_pages": 221,
-		"goodreads_rating_avg": 4.05,
-		"goodreads_rating_count": 507816,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1308814770l/65605.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b96e"
-		},
-		"title": "The Final Empire (Mistborn, #1)",
-		"author": "Sanderson, Brandon",
-		"isbn": "",
-		"isbn13": "9780765311788",
-		"date_pub_sort": "2006-07-17",
-		"date_pub": "7/17/2006",
-		"num_pages": 537,
-		"goodreads_rating_avg": 4.47,
-		"goodreads_rating_count": 590130,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1617768316l/68428.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b96f"
-		},
-		"title": "The Ruby in the Smoke (Sally Lockhart, #1)",
-		"author": "Pullman, Philip",
-		"isbn": "0394895894",
-		"isbn13": "9780394895895",
-		"date_pub_sort": "1985-01-01",
-		"date_pub": "1/1/1985",
-		"num_pages": 230,
-		"goodreads_rating_avg": 3.77,
-		"goodreads_rating_count": 27455,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1424038246l/114982.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b970"
-		},
-		"title": "Once Upon a Time in the North (His Dark Materials, #0.5)",
-		"author": "Pullman, Philip",
-		"isbn": "0375845100",
-		"isbn13": "9780375845109",
-		"date_pub_sort": "2008-04-08",
-		"date_pub": "4/8/2008",
-		"num_pages": 104,
-		"goodreads_rating_avg": 3.85,
-		"goodreads_rating_count": 15826,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1331317426l/2225238.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b971"
-		},
-		"title": "The Shadow in the North (Sally Lockhart, #2)",
-		"author": "Pullman, Philip",
-		"isbn": "0394825993",
-		"isbn13": "9780394825991",
-		"date_pub_sort": "1986-01-01",
-		"date_pub": "1/1/1986",
-		"num_pages": 361,
-		"goodreads_rating_avg": 3.86,
-		"goodreads_rating_count": 15294,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388192223l/210919.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b972"
-		},
-		"title": "Lyra's Oxford (His Dark Materials, #3.5)",
-		"author": "Pullman, Philip",
-		"isbn": "0375828192",
-		"isbn13": "9780375828195",
-		"date_pub_sort": "2003-10-28",
-		"date_pub": "10/28/2003",
-		"num_pages": 64,
-		"goodreads_rating_avg": 3.61,
-		"goodreads_rating_count": 26639,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1524742342l/531197.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b973"
-		},
-		"title": "The Secret Commonwealth (The Book of Dust, #2)",
-		"author": "Pullman, Philip",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2019-10-03",
-		"date_pub": "10/3/2019",
-		"num_pages": 784,
-		"goodreads_rating_avg": 4.04,
-		"goodreads_rating_count": 50622,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1563043403l/19034943.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b974"
-		},
-		"title": "La Belle Sauvage (The Book of Dust, #1)",
-		"author": "Pullman, Philip",
-		"isbn": "0375815309",
-		"isbn13": "9780375815300",
-		"date_pub_sort": "2017-10-19",
-		"date_pub": "10/19/2017",
-		"num_pages": 449,
-		"goodreads_rating_avg": 4.15,
-		"goodreads_rating_count": 97100,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1498930382l/34128219.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b975"
-		},
-		"title": "The Long Goodbye (Philip Marlowe, #6)",
-		"author": "Chandler, Raymond",
-		"isbn": "0394757688",
-		"isbn13": "9780394757681",
-		"date_pub_sort": "1953-01-01",
-		"date_pub": "1/1/1953",
-		"num_pages": 379,
-		"goodreads_rating_avg": 4.19,
-		"goodreads_rating_count": 40364,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1655478371l/2054.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b976"
-		},
-		"title": "Miss Peregrine's Home for Peculiar Children (Miss Peregrine's Peculiar Children, #1)",
-		"author": "Riggs, Ransom",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2011-06-07",
-		"date_pub": "6/7/2011",
-		"num_pages": 352,
-		"goodreads_rating_avg": 3.92,
-		"goodreads_rating_count": 1200062,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1623449170l/9460487.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b977"
-		},
-		"title": "The Wicked + The Divine, Vol. 2: Fandemonium",
-		"author": "Gillen, Kieron",
-		"isbn": "1632153270",
-		"isbn13": "9781632153272",
-		"date_pub_sort": "2015-07-01",
-		"date_pub": "7/1/2015",
-		"num_pages": 200,
-		"goodreads_rating_avg": 4.12,
-		"goodreads_rating_count": 21896,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1435757838l/24666002.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b978"
-		},
-		"title": "The Wicked + The Divine, Vol. 1: The Faust Act",
-		"author": "Gillen, Kieron",
-		"isbn": "1632150190",
-		"isbn13": "9781632150196",
-		"date_pub_sort": "2014-11-12",
-		"date_pub": "11/12/2014",
-		"num_pages": 176,
-		"goodreads_rating_avg": 3.82,
-		"goodreads_rating_count": 57956,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1415565992l/23093359.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b979"
-		},
-		"title": "Harry Potter and the Cursed Child: Parts One and Two (Harry Potter, #8)",
-		"author": "Rowling, J.K.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2016-07-31",
-		"date_pub": "7/31/2016",
-		"num_pages": 343,
-		"goodreads_rating_avg": 3.51,
-		"goodreads_rating_count": 947633,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1470082995l/29056083.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b97a"
-		},
-		"title": "Saga, Volume 3",
-		"author": "Vaughan, Brian K.",
-		"isbn": "1607069318",
-		"isbn13": "9781607069317",
-		"date_pub_sort": "2014-03-19",
-		"date_pub": "3/19/2014",
-		"num_pages": 144,
-		"goodreads_rating_avg": 4.49,
-		"goodreads_rating_count": 91931,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1642320769l/19358975.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b97b"
-		},
-		"title": "Specials (Uglies, #3)",
-		"author": "Westerfeld, Scott",
-		"isbn": "0689865406",
-		"isbn13": "9780689865404",
-		"date_pub_sort": "2006-05-09",
-		"date_pub": "5/9/2006",
-		"num_pages": 384,
-		"goodreads_rating_avg": 3.76,
-		"goodreads_rating_count": 184840,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1390340887l/24765.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b97c"
-		},
-		"title": "Network Effect (The Murderbot Diaries, #5)",
-		"author": "Wells, Martha",
-		"isbn": "1250229863",
-		"isbn13": "9781250229861",
-		"date_pub_sort": "2020-05-05",
-		"date_pub": "5/5/2020",
-		"num_pages": 350,
-		"goodreads_rating_avg": 4.48,
-		"goodreads_rating_count": 63827,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1640597293l/52381770.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b97d"
-		},
-		"title": "We Are Legion (We Are Bob) (Bobiverse, #1)",
-		"author": "Taylor, Dennis E.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2016-09-20",
-		"date_pub": "9/20/2016",
-		"num_pages": 400,
-		"goodreads_rating_avg": 4.28,
-		"goodreads_rating_count": 82304,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474344826l/32109569.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b97e"
-		},
-		"title": "J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings",
-		"author": "Tolkien, J.R.R.",
-		"isbn": "0345538374",
-		"isbn13": "9780345538376",
-		"date_pub_sort": "1955-10-20",
-		"date_pub": "10/20/1955",
-		"num_pages": 1728,
-		"goodreads_rating_avg": 4.61,
-		"goodreads_rating_count": 127629,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1656625315l/30.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b97f"
-		},
-		"title": "The Chronicles of Narnia (Chronicles of Narnia, #1-7)",
-		"author": "Lewis, C.S.",
-		"isbn": "0066238501",
-		"isbn13": "9780066238500",
-		"date_pub_sort": "1956-01-01",
-		"date_pub": "1/1/1956",
-		"num_pages": 767,
-		"goodreads_rating_avg": 4.27,
-		"goodreads_rating_count": 618511,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1661032875l/11127.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b980"
-		},
-		"title": "Harry Potter and the Order of the Phoenix (Harry Potter, #5)",
-		"author": "Rowling, J.K.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2003-06-21",
-		"date_pub": "6/21/2003",
-		"num_pages": 912,
-		"goodreads_rating_avg": 4.5,
-		"goodreads_rating_count": 3157322,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546910265l/2.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b981"
-		},
-		"title": "The Cider House Rules",
-		"author": "Irving, John",
-		"isbn": "0786226749",
-		"isbn13": "9780786226740",
-		"date_pub_sort": "1985-05-10",
-		"date_pub": "5/10/1985",
-		"num_pages": 1064,
-		"goodreads_rating_avg": 4.15,
-		"goodreads_rating_count": 179058,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327962519l/4687.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b982"
-		},
-		"title": "A Prayer for Owen Meany",
-		"author": "Irving, John",
-		"isbn": "0552135399",
-		"isbn13": "9780552135399",
-		"date_pub_sort": "1989-03-28",
-		"date_pub": "3/28/1989",
-		"num_pages": 637,
-		"goodreads_rating_avg": 4.24,
-		"goodreads_rating_count": 311674,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1260470010l/4473.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b983"
-		},
-		"title": "Let the Right One In",
-		"author": "Ajvide Lindqvist, John",
-		"isbn": "1847241697",
-		"isbn13": "9781847241696",
-		"date_pub_sort": "2004-05-01",
-		"date_pub": "5/1/2004",
-		"num_pages": 513,
-		"goodreads_rating_avg": 4.04,
-		"goodreads_rating_count": 105563,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327893384l/943402.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b984"
-		},
-		"title": "Locke & Key: Head Games #1",
-		"author": "Hill, Joe",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "Invalid Date-Invalid Date-Invalid Date",
-		"date_pub": "Invalid Date",
-		"num_pages": 23,
-		"goodreads_rating_avg": 4.32,
-		"goodreads_rating_count": 703,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1412898659l/23349982.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b985"
-		},
-		"title": "Coraline",
-		"author": "Russell, P. Craig",
-		"isbn": "006082543X",
-		"isbn13": "9780060825430",
-		"date_pub_sort": "2002-01-24",
-		"date_pub": "1/24/2002",
-		"num_pages": 192,
-		"goodreads_rating_avg": 4.06,
-		"goodreads_rating_count": 33973,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348347289l/1967070.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b986"
-		},
-		"title": "Dracula 1",
-		"author": "Stoker, Bram",
-		"isbn": "9795117084",
-		"isbn13": "",
-		"date_pub_sort": "1897-01-01",
-		"date_pub": "1/1/1897",
-		"num_pages": 382,
-		"goodreads_rating_avg": 4.17,
-		"goodreads_rating_count": 1047,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1248055250l/6629567.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b987"
-		},
-		"title": "Days Gone Bye (The Walking Dead #1)",
-		"author": "Kirkman, Robert",
-		"isbn": "1582406723",
-		"isbn13": "9781582406725",
-		"date_pub_sort": "2004-05-01",
-		"date_pub": "5/1/2004",
-		"num_pages": 144,
-		"goodreads_rating_avg": 4.27,
-		"goodreads_rating_count": 223526,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1389233242l/138398.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b988"
-		},
-		"title": "The Big Sleep (Philip Marlowe, #1)",
-		"author": "Chandler, Raymond",
-		"isbn": "0394758285",
-		"isbn13": "9780394758282",
-		"date_pub_sort": "1939-02-06",
-		"date_pub": "2/6/1939",
-		"num_pages": 231,
-		"goodreads_rating_avg": 3.96,
-		"goodreads_rating_count": 148577,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1371584712l/2052.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b989"
-		},
-		"title": "The Curious Incident of the Dog in the Night-Time",
-		"author": "Haddon, Mark",
-		"isbn": "1400032717",
-		"isbn13": "9781400032716",
-		"date_pub_sort": "2003-07-31",
-		"date_pub": "7/31/2003",
-		"num_pages": 226,
-		"goodreads_rating_avg": 3.89,
-		"goodreads_rating_count": 1415307,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479863624l/1618.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b98a"
-		},
-		"title": "Uglies (Uglies, #1)",
-		"author": "Westerfeld, Scott",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2005-02-08",
-		"date_pub": "2/8/2005",
-		"num_pages": 425,
-		"goodreads_rating_avg": 3.85,
-		"goodreads_rating_count": 638403,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1654202671l/24770.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b98b"
-		},
-		"title": "The Perks of Being a Wallflower",
-		"author": "Chbosky, Stephen",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1999-02-01",
-		"date_pub": "2/1/1999",
-		"num_pages": 213,
-		"goodreads_rating_avg": 4.22,
-		"goodreads_rating_count": 1665049,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1650033115l/22628.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b98c"
-		},
-		"title": "The Lightning Thief (Percy Jackson and the Olympians, #1)",
-		"author": "Riordan, Rick",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2005-07-28",
-		"date_pub": "7/28/2005",
-		"num_pages": 377,
-		"goodreads_rating_avg": 4.29,
-		"goodreads_rating_count": 2705522,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1400602609l/28187.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b98d"
-		},
-		"title": "The Forever War (The Forever War, #1)",
-		"author": "Haldeman, Joe",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1974-12-01",
-		"date_pub": "12/1/1974",
-		"num_pages": 278,
-		"goodreads_rating_avg": 4.14,
-		"goodreads_rating_count": 159167,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386852511l/21611.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b98e"
-		},
-		"title": "The Giver (The Giver, #1)",
-		"author": "Lowry, Lois",
-		"isbn": "0385732554",
-		"isbn13": "9780385732550",
-		"date_pub_sort": "1993-04-26",
-		"date_pub": "4/26/1993",
-		"num_pages": 208,
-		"goodreads_rating_avg": 4.12,
-		"goodreads_rating_count": 2293296,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1342493368l/3636.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b98f"
-		},
-		"title": "The Three-Body Problem (Remembrance of Earth’s Past, #1)",
-		"author": "Liu, Cixin",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2006-05-01",
-		"date_pub": "5/1/2006",
-		"num_pages": 399,
-		"goodreads_rating_avg": 4.09,
-		"goodreads_rating_count": 264734,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1415428227l/20518872.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b990"
-		},
-		"title": "Stranger in a Strange Land",
-		"author": "Heinlein, Robert A.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1961-07-01",
-		"date_pub": "7/1/1961",
-		"num_pages": 525,
-		"goodreads_rating_avg": 3.92,
-		"goodreads_rating_count": 303844,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1156897088l/350.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b991"
-		},
-		"title": "Bossypants",
-		"author": "Fey, Tina",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2011-04-05",
-		"date_pub": "4/5/2011",
-		"num_pages": 283,
-		"goodreads_rating_avg": 3.96,
-		"goodreads_rating_count": 968162,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1481509554l/9418327.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b992"
-		},
-		"title": "Sabriel (Abhorsen,  #1)",
-		"author": "Nix, Garth",
-		"isbn": "0064471837",
-		"isbn13": "9780064471831",
-		"date_pub_sort": "1995-05-01",
-		"date_pub": "5/1/1995",
-		"num_pages": 491,
-		"goodreads_rating_avg": 4.16,
-		"goodreads_rating_count": 202275,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1293655399l/518848.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b993"
-		},
-		"title": "Coraline",
-		"author": "Gaiman, Neil",
-		"isbn": "0061139378",
-		"isbn13": "9780061139376",
-		"date_pub_sort": "2002-07-02",
-		"date_pub": "7/2/2002",
-		"num_pages": 176,
-		"goodreads_rating_avg": 4.1,
-		"goodreads_rating_count": 631749,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1493497435l/17061.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b994"
-		},
-		"title": "Jonathan Strange & Mr Norrell",
-		"author": "Clarke, Susanna",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2004-09-08",
-		"date_pub": "9/8/2004",
-		"num_pages": 1006,
-		"goodreads_rating_avg": 3.85,
-		"goodreads_rating_count": 227647,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1357027589l/14201.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b995"
-		},
-		"title": "The Lies of Locke Lamora (Gentleman Bastard, #1)",
-		"author": "Lynch, Scott",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2006-06-01",
-		"date_pub": "6/1/2006",
-		"num_pages": 752,
-		"goodreads_rating_avg": 4.3,
-		"goodreads_rating_count": 275692,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1458646334l/29588376.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b996"
-		},
-		"title": "Mockingjay (The Hunger Games, #3)",
-		"author": "Collins, Suzanne",
-		"isbn": "0439023513",
-		"isbn13": "9780439023511",
-		"date_pub_sort": "2010-08-24",
-		"date_pub": "8/24/2010",
-		"num_pages": 390,
-		"goodreads_rating_avg": 4.07,
-		"goodreads_rating_count": 2957874,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722918l/7260188.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b997"
-		},
-		"title": "Catching Fire (The Hunger Games, #2)",
-		"author": "Collins, Suzanne",
-		"isbn": "0439023491",
-		"isbn13": "9780439023498",
-		"date_pub_sort": "2009-09-01",
-		"date_pub": "9/1/2009",
-		"num_pages": 391,
-		"goodreads_rating_avg": 4.31,
-		"goodreads_rating_count": 3250391,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722941l/6148028.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b998"
-		},
-		"title": "The Outsiders",
-		"author": "Hinton, S.E.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1967-04-24",
-		"date_pub": "4/24/1967",
-		"num_pages": 192,
-		"goodreads_rating_avg": 4.12,
-		"goodreads_rating_count": 1225701,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442129426l/231804.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b999"
-		},
-		"title": "The Count of Monte Cristo",
-		"author": "Dumas, Alexandre",
-		"isbn": "0140449264",
-		"isbn13": "9780140449266",
-		"date_pub_sort": "1844-08-28",
-		"date_pub": "8/28/1844",
-		"num_pages": 1276,
-		"goodreads_rating_avg": 4.29,
-		"goodreads_rating_count": 869973,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1611834134l/7126.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b99a"
-		},
-		"title": "Dracula",
-		"author": "Stoker, Bram",
-		"isbn": "0393970124",
-		"isbn13": "9780393970128",
-		"date_pub_sort": "1897-05-26",
-		"date_pub": "5/26/1897",
-		"num_pages": 488,
-		"goodreads_rating_avg": 4.01,
-		"goodreads_rating_count": 1178995,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1387151694l/17245.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b99b"
-		},
-		"title": "Sense and Sensibility",
-		"author": "Austen, Jane",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1811-10-30",
-		"date_pub": "10/30/1811",
-		"num_pages": 409,
-		"goodreads_rating_avg": 4.08,
-		"goodreads_rating_count": 1132733,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1397245675l/14935.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b99c"
-		},
-		"title": "All Systems Red (The Murderbot Diaries, #1)",
-		"author": "Wells, Martha",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2017-05-02",
-		"date_pub": "5/2/2017",
-		"num_pages": 144,
-		"goodreads_rating_avg": 4.16,
-		"goodreads_rating_count": 179502,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1631585309l/32758901.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b99d"
-		},
-		"title": "Dune (Dune, #1)",
-		"author": "Herbert, Frank",
-		"isbn": "059309932X",
-		"isbn13": "9780593099322",
-		"date_pub_sort": "1965-06-01",
-		"date_pub": "6/1/1965",
-		"num_pages": 658,
-		"goodreads_rating_avg": 4.26,
-		"goodreads_rating_count": 1209781,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1555447414l/44767458.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b99e"
-		},
-		"title": "A Study in Scarlet (Sherlock Holmes, #1)",
-		"author": "Doyle, Arthur Conan",
-		"isbn": "1420925539",
-		"isbn13": "9781420925531",
-		"date_pub_sort": "1887-11-01",
-		"date_pub": "11/1/1887",
-		"num_pages": 123,
-		"goodreads_rating_avg": 4.14,
-		"goodreads_rating_count": 415954,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1519031842l/102868.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b99f"
-		},
-		"title": "The Hitchhiker's Guide to the Galaxy (The Hitchhiker's Guide to the Galaxy, #1)",
-		"author": "Adams, Douglas",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1979-10-12",
-		"date_pub": "10/12/1979",
-		"num_pages": 193,
-		"goodreads_rating_avg": 4.23,
-		"goodreads_rating_count": 1744270,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1559986152l/386162SY75"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9a0"
-		},
-		"title": "Rat Queens, Vol. 1: Sass & Sorcery",
-		"author": "Wiebe, Kurtis J.",
-		"isbn": "1607069458",
-		"isbn13": "9781607069454",
-		"date_pub_sort": "2014-03-26",
-		"date_pub": "3/26/2014",
-		"num_pages": 128,
-		"goodreads_rating_avg": 4.08,
-		"goodreads_rating_count": 44084,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1489284113l/20299683.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9a1"
-		},
-		"title": "Batman: Year One",
-		"author": "Miller, Frank",
-		"isbn": "1401207529",
-		"isbn13": "9781401207526",
-		"date_pub_sort": "1987-02-01",
-		"date_pub": "2/1/1987",
-		"num_pages": 144,
-		"goodreads_rating_avg": 4.23,
-		"goodreads_rating_count": 239509,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1574630214l/59980.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9a2"
-		},
-		"title": "Monstress, Vol. 1: Awakening",
-		"author": "Liu, Marjorie M.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2016-07-19",
-		"date_pub": "7/19/2016",
-		"num_pages": 202,
-		"goodreads_rating_avg": 3.96,
-		"goodreads_rating_count": 59141,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1471648131l/29396738.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9a3"
-		},
-		"title": "The Wicked + The Divine #1",
-		"author": "Gillen, Kieron",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2014-06-18",
-		"date_pub": "6/18/2014",
-		"num_pages": 39,
-		"goodreads_rating_avg": 3.97,
-		"goodreads_rating_count": 4002,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1447734474l/27844101.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9a4"
-		},
-		"title": "Locke & Key: Welcome to Lovecraft #1",
-		"author": "Hill, Joe",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "Invalid Date-Invalid Date-Invalid Date",
-		"date_pub": "Invalid Date",
-		"num_pages": 32,
-		"goodreads_rating_avg": 4.22,
-		"goodreads_rating_count": 6038,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1631896572l/22085618.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9a5"
-		},
-		"title": "American Born Chinese",
-		"author": "Yang, Gene Luen",
-		"isbn": "1596431520",
-		"isbn13": "9781596431522",
-		"date_pub_sort": "2006-09-01",
-		"date_pub": "9/1/2006",
-		"num_pages": 240,
-		"goodreads_rating_avg": 3.89,
-		"goodreads_rating_count": 88651,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1317066615l/118944.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9a6"
-		},
-		"title": "Paper Girls, Volume 1",
-		"author": "Vaughan, Brian K.",
-		"isbn": "1632156741",
-		"isbn13": "9781632156747",
-		"date_pub_sort": "2016-03-30",
-		"date_pub": "3/30/2016",
-		"num_pages": 144,
-		"goodreads_rating_avg": 3.88,
-		"goodreads_rating_count": 94450,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1656764541l/28204534.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9a7"
-		},
-		"title": "Fables, Vol. 1: Legends in Exile (Fables, #1)",
-		"author": "Willingham, Bill",
-		"isbn": "1563899426",
-		"isbn13": "9781563899423",
-		"date_pub_sort": "2002-01-01",
-		"date_pub": "1/1/2002",
-		"num_pages": 128,
-		"goodreads_rating_avg": 3.98,
-		"goodreads_rating_count": 138369,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1375392441l/21326.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9a8"
-		},
-		"title": "Persepolis, Volume 1",
-		"author": "Satrapi, Marjane",
-		"isbn": "2844140580",
-		"isbn13": "9782844140586",
-		"date_pub_sort": "2000-01-01",
-		"date_pub": "1/1/2000",
-		"num_pages": 76,
-		"goodreads_rating_avg": 4.29,
-		"goodreads_rating_count": 85513,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1375777630l/9522.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9a9"
-		},
-		"title": "Holes (Holes, #1)",
-		"author": "Sachar, Louis",
-		"isbn": "0439244196",
-		"isbn13": "9780439244190",
-		"date_pub_sort": "1998-08-20",
-		"date_pub": "8/20/1998",
-		"num_pages": 272,
-		"goodreads_rating_avg": 3.99,
-		"goodreads_rating_count": 1141183,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1618269830l/38709.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9aa"
-		},
-		"title": "The Graveyard Book",
-		"author": "Gaiman, Neil",
-		"isbn": "0060530928",
-		"isbn13": "9780060530921",
-		"date_pub_sort": "2008-09-30",
-		"date_pub": "9/30/2008",
-		"num_pages": 312,
-		"goodreads_rating_avg": 4.15,
-		"goodreads_rating_count": 513070,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1531295292l/2213661.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9ab"
-		},
-		"title": "The Hobbit (The Lord of the Rings, #0)",
-		"author": "Tolkien, J.R.R.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1937-09-21",
-		"date_pub": "9/21/1937",
-		"num_pages": 366,
-		"goodreads_rating_avg": 4.28,
-		"goodreads_rating_count": 3674920,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546071216l/5907.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9ac"
-		},
-		"title": "A Wizard of Earthsea (Earthsea Cycle, #1)",
-		"author": "Le Guin, Ursula K.",
-		"isbn": "0553383043",
-		"isbn13": "9780553383041",
-		"date_pub_sort": "1968-01-01",
-		"date_pub": "1/1/1968",
-		"num_pages": 183,
-		"goodreads_rating_avg": 4.01,
-		"goodreads_rating_count": 295133,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1353424536l/13642.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9ad"
-		},
-		"title": "Uprooted",
-		"author": "Novik, Naomi",
-		"isbn": "0804179034",
-		"isbn13": "9780804179034",
-		"date_pub_sort": "2015-05-19",
-		"date_pub": "5/19/2015",
-		"num_pages": 438,
-		"goodreads_rating_avg": 4.04,
-		"goodreads_rating_count": 220052,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1550135418l/22544764.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9ae"
-		},
-		"title": "The Color of Magic (Discworld, #1; Rincewind, #1)",
-		"author": "Pratchett, Terry",
-		"isbn": "0060855924",
-		"isbn13": "9780060855925",
-		"date_pub_sort": "1983-12-01",
-		"date_pub": "12/1/1983",
-		"num_pages": 228,
-		"goodreads_rating_avg": 4,
-		"goodreads_rating_count": 368339,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407111017l/34497.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9af"
-		},
-		"title": "The Princess Bride",
-		"author": "Goldman, William",
-		"isbn": "0345418263",
-		"isbn13": "9780345418265",
-		"date_pub_sort": "1973-09-01",
-		"date_pub": "9/1/1973",
-		"num_pages": 429,
-		"goodreads_rating_avg": 4.26,
-		"goodreads_rating_count": 871761,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327903636l/21787.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9b0"
-		},
-		"title": "Neverwhere (London Below, #1)",
-		"author": "Gaiman, Neil",
-		"isbn": "0060557818",
-		"isbn13": "9780060557812",
-		"date_pub_sort": "1996-09-16",
-		"date_pub": "9/16/1996",
-		"num_pages": 370,
-		"goodreads_rating_avg": 4.17,
-		"goodreads_rating_count": 502930,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348747943l/14497.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9b1"
-		},
-		"title": "Stardust",
-		"author": "Gaiman, Neil",
-		"isbn": "0061142026",
-		"isbn13": "9780061142024",
-		"date_pub_sort": "1998-01-01",
-		"date_pub": "1/1/1998",
-		"num_pages": 248,
-		"goodreads_rating_avg": 4.1,
-		"goodreads_rating_count": 427494,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1459127484l/16793.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9b2"
-		},
-		"title": "Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch",
-		"author": "Pratchett, Terry",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1990-01-01",
-		"date_pub": "1/1/1990",
-		"num_pages": 491,
-		"goodreads_rating_avg": 4.25,
-		"goodreads_rating_count": 683878,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1615552073l/12067.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9b3"
-		},
-		"title": "American Gods (American Gods, #1)",
-		"author": "Gaiman, Neil",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2001-06-19",
-		"date_pub": "6/19/2001",
-		"num_pages": 635,
-		"goodreads_rating_avg": 4.11,
-		"goodreads_rating_count": 884835,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1462924585l/30165203.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9b4"
-		},
-		"title": "The Golden Compass (His Dark Materials, #1)",
-		"author": "Pullman, Philip",
-		"isbn": "0679879242",
-		"isbn13": "9780679879244",
-		"date_pub_sort": "1995-07-01",
-		"date_pub": "7/1/1995",
-		"num_pages": 399,
-		"goodreads_rating_avg": 4.01,
-		"goodreads_rating_count": 1468470,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1505766203l/119322.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9b5"
-		},
-		"title": "The Lion, the Witch and the Wardrobe (Chronicles of Narnia, #1)",
-		"author": "Lewis, C.S.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1950-10-16",
-		"date_pub": "10/16/1950",
-		"num_pages": 206,
-		"goodreads_rating_avg": 4.23,
-		"goodreads_rating_count": 2627325,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1353029077l/100915.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9b6"
-		},
-		"title": "The Name of the Wind (The Kingkiller Chronicle, #1)",
-		"author": "Rothfuss, Patrick",
-		"isbn": "075640407X",
-		"isbn13": "9780756404079",
-		"date_pub_sort": "2007-03-27",
-		"date_pub": "3/27/2007",
-		"num_pages": 662,
-		"goodreads_rating_avg": 4.52,
-		"goodreads_rating_count": 894976,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1270352123l/186074.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9b7"
-		},
-		"title": "The Fellowship of the Ring (The Lord of the Rings, #1)",
-		"author": "Tolkien, J.R.R.",
-		"isbn": "",
-		"isbn13": "9780345015339",
-		"date_pub_sort": "1954-07-29",
-		"date_pub": "7/29/1954",
-		"num_pages": 527,
-		"goodreads_rating_avg": 4.38,
-		"goodreads_rating_count": 2692297,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1486871542l/3263607.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9b8"
-		},
-		"title": "A Game of Thrones (A Song of Ice and Fire, #1)",
-		"author": "Martin, George R.R.",
-		"isbn": "0553588486",
-		"isbn13": "9780553588484",
-		"date_pub_sort": "1996-08-06",
-		"date_pub": "8/6/1996",
-		"num_pages": 835,
-		"goodreads_rating_avg": 4.44,
-		"goodreads_rating_count": 2361127,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1562726234l/13496.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9b9"
-		},
-		"title": "Twilight (The Twilight Saga, #1)",
-		"author": "Meyer, Stephenie",
-		"isbn": "0316015849",
-		"isbn13": "9780316015844",
-		"date_pub_sort": "2005-10-05",
-		"date_pub": "10/5/2005",
-		"num_pages": 498,
-		"goodreads_rating_avg": 3.64,
-		"goodreads_rating_count": 6174677,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1361039443l/41865.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9ba"
-		},
-		"title": "The Catcher in the Rye",
-		"author": "Salinger, J.D.",
-		"isbn": "0316769177",
-		"isbn13": "9780316769174",
-		"date_pub_sort": "1951-07-16",
-		"date_pub": "7/16/1951",
-		"num_pages": 277,
-		"goodreads_rating_avg": 3.81,
-		"goodreads_rating_count": 3324531,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1398034300l/5107.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9bb"
-		},
-		"title": "Treasure Island",
-		"author": "Stevenson, Robert Louis",
-		"isbn": "0753453800",
-		"isbn13": "9780753453803",
-		"date_pub_sort": "1882-01-28",
-		"date_pub": "1/28/1882",
-		"num_pages": 311,
-		"goodreads_rating_avg": 3.84,
-		"goodreads_rating_count": 465709,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1485248909l/295.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9bc"
-		},
-		"title": "The Wind in the Willows",
-		"author": "Grahame, Kenneth",
-		"isbn": "0143039091",
-		"isbn13": "9780143039099",
-		"date_pub_sort": "1908-01-01",
-		"date_pub": "1/1/1908",
-		"num_pages": 197,
-		"goodreads_rating_avg": 4,
-		"goodreads_rating_count": 206290,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1630642716l/5659.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9bd"
-		},
-		"title": "The Phantom Tollbooth",
-		"author": "Juster, Norton",
-		"isbn": "0394820371",
-		"isbn13": "9780394820378",
-		"date_pub_sort": "1961-01-01",
-		"date_pub": "1/1/1961",
-		"num_pages": 248,
-		"goodreads_rating_avg": 4.19,
-		"goodreads_rating_count": 276279,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1558858485l/378.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9be"
-		},
-		"title": "Peter Pan",
-		"author": "Barrie, J.M.",
-		"isbn": "0805072454",
-		"isbn13": "9780805072457",
-		"date_pub_sort": "1911-12-27",
-		"date_pub": "12/27/1911",
-		"num_pages": 176,
-		"goodreads_rating_avg": 4.04,
-		"goodreads_rating_count": 332210,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1337714526l/34268.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9bf"
-		},
-		"title": "The Wonderful Wizard of Oz (Oz, #1)",
-		"author": "Baum, L. Frank",
-		"isbn": "0140621679",
-		"isbn13": "9780140621679",
-		"date_pub_sort": "1900-05-17",
-		"date_pub": "5/17/1900",
-		"num_pages": 154,
-		"goodreads_rating_avg": 3.99,
-		"goodreads_rating_count": 433358,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1398003737l/236093.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9c0"
-		},
-		"title": "How the Grinch Stole Christmas!",
-		"author": "Dr. Seuss",
-		"isbn": "0007173040",
-		"isbn13": "9780007173044",
-		"date_pub_sort": "1957-10-12",
-		"date_pub": "10/12/1957",
-		"num_pages": 64,
-		"goodreads_rating_avg": 4.37,
-		"goodreads_rating_count": 393993,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327958149l/113946.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9c1"
-		},
-		"title": "The Very Hungry Caterpillar",
-		"author": "Carle, Eric",
-		"isbn": "0241003008",
-		"isbn13": "9780241003008",
-		"date_pub_sort": "1969-06-03",
-		"date_pub": "6/3/1969",
-		"num_pages": 26,
-		"goodreads_rating_avg": 4.32,
-		"goodreads_rating_count": 481915,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1603739265l/4948.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9c2"
-		},
-		"title": "James and the Giant Peach",
-		"author": "Dahl, Roald",
-		"isbn": "0375814248",
-		"isbn13": "9780375814242",
-		"date_pub_sort": "1961-11-01",
-		"date_pub": "11/1/1961",
-		"num_pages": 146,
-		"goodreads_rating_avg": 4.03,
-		"goodreads_rating_count": 451452,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320412586l/6689.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9c3"
-		},
-		"title": "The Cat in the Hat (The Cat in the Hat, #1)",
-		"author": "Dr. Seuss",
-		"isbn": "039480001X",
-		"isbn13": "9780394800011",
-		"date_pub_sort": "1957-03-12",
-		"date_pub": "3/12/1957",
-		"num_pages": 61,
-		"goodreads_rating_avg": 4.18,
-		"goodreads_rating_count": 516253,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1468890477l/233093.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9c4"
-		},
-		"title": "Where the Sidewalk Ends",
-		"author": "Silverstein, Shel",
-		"isbn": "0060513039",
-		"isbn13": "9780060513030",
-		"date_pub_sort": "1974-01-01",
-		"date_pub": "1/1/1974",
-		"num_pages": 176,
-		"goodreads_rating_avg": 4.33,
-		"goodreads_rating_count": 1338771,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1168052448l/30119.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9c5"
-		},
-		"title": "The Little Prince",
-		"author": "Saint-Exupéry, Antoine de",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1943-04-06",
-		"date_pub": "4/6/1943",
-		"num_pages": 96,
-		"goodreads_rating_avg": 4.32,
-		"goodreads_rating_count": 1931930,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1367545443l/157993.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9c6"
-		},
-		"title": "Charlie and the Chocolate Factory (Charlie Bucket, #1)",
-		"author": "Dahl, Roald",
-		"isbn": "0142403881",
-		"isbn13": "9780142403884",
-		"date_pub_sort": "1964-01-17",
-		"date_pub": "1/17/1964",
-		"num_pages": 176,
-		"goodreads_rating_avg": 4.15,
-		"goodreads_rating_count": 805466,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1309211401l/6310.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9c7"
-		},
-		"title": "The Wild Robot (The Wild Robot, #1)",
-		"author": "Brown, Peter",
-		"isbn": "0316381993",
-		"isbn13": "9780316381994",
-		"date_pub_sort": "2016-04-05",
-		"date_pub": "4/5/2016",
-		"num_pages": 279,
-		"goodreads_rating_avg": 4.07,
-		"goodreads_rating_count": 51842,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1441052184l/26030734.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9c8"
-		},
-		"title": "The Witch Boy (The Witch Boy, #1)",
-		"author": "Ostertag, Molly Knox",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2017-10-28",
-		"date_pub": "10/28/2017",
-		"num_pages": 224,
-		"goodreads_rating_avg": 4.22,
-		"goodreads_rating_count": 24397,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1488508665l/31193426.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9c9"
-		},
-		"title": "The Sparrow (The Sparrow, #1)",
-		"author": "Russell, Mary Doria",
-		"isbn": "0449912558",
-		"isbn13": "9780449912553",
-		"date_pub_sort": "1996-09-09",
-		"date_pub": "9/9/1996",
-		"num_pages": 419,
-		"goodreads_rating_avg": 4.13,
-		"goodreads_rating_count": 71998,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1230829367l/334176.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9ca"
-		},
-		"title": "Speaker for the Dead (Ender's Saga, #2)",
-		"author": "Card, Orson Scott",
-		"isbn": "0812550757",
-		"isbn13": "9780812550757",
-		"date_pub_sort": "1986-03-01",
-		"date_pub": "3/1/1986",
-		"num_pages": 382,
-		"goodreads_rating_avg": 4.09,
-		"goodreads_rating_count": 245981,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295660894l/7967.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9cb"
-		},
-		"title": "Ender’s Game (Ender's Saga, #1)",
-		"author": "Card, Orson Scott",
-		"isbn": "0812550706",
-		"isbn13": "9780812550702",
-		"date_pub_sort": "1985-01-15",
-		"date_pub": "1/15/1985",
-		"num_pages": 324,
-		"goodreads_rating_avg": 4.31,
-		"goodreads_rating_count": 1312042,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1408303130l/375802.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9cc"
-		},
-		"title": "Lord of Light",
-		"author": "Zelazny, Roger",
-		"isbn": "0060567236",
-		"isbn13": "9780060567231",
-		"date_pub_sort": "1967-01-01",
-		"date_pub": "1/1/1967",
-		"num_pages": 296,
-		"goodreads_rating_avg": 4.07,
-		"goodreads_rating_count": 31739,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1330127327l/13821.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9cd"
-		},
-		"title": "The Song of Achilles",
-		"author": "Miller, Madeline",
-		"isbn": "1408816032",
-		"isbn13": "9781408816035",
-		"date_pub_sort": "2011-09-20",
-		"date_pub": "9/20/2011",
-		"num_pages": 352,
-		"goodreads_rating_avg": 4.36,
-		"goodreads_rating_count": 1188982,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1331154660l/11250317.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9ce"
-		},
-		"title": "Old Man's War (Old Man's War, #1)",
-		"author": "Scalzi, John",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2005-12-27",
-		"date_pub": "12/27/2005",
-		"num_pages": 318,
-		"goodreads_rating_avg": 4.23,
-		"goodreads_rating_count": 185681,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1509467059l/36510196.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9cf"
-		},
-		"title": "The Fifth Season (The Broken Earth, #1)",
-		"author": "Jemisin, N.K.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2015-08-04",
-		"date_pub": "8/4/2015",
-		"num_pages": 468,
-		"goodreads_rating_avg": 4.31,
-		"goodreads_rating_count": 236024,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386803701l/19161852.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9d0"
-		},
-		"title": "Rocannon's World",
-		"author": "Le Guin, Ursula K.",
-		"isbn": "0441732968",
-		"isbn13": "9780441732968",
-		"date_pub_sort": "1966-01-01",
-		"date_pub": "1/1/1966",
-		"num_pages": 258,
-		"goodreads_rating_avg": 3.78,
-		"goodreads_rating_count": 18060,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1300039756l/92610.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9d1"
-		},
-		"title": "Hyperion (Hyperion Cantos, #1)",
-		"author": "Simmons, Dan",
-		"isbn": "0553283685",
-		"isbn13": "9780553283686",
-		"date_pub_sort": "1989-05-26",
-		"date_pub": "5/26/1989",
-		"num_pages": 500,
-		"goodreads_rating_avg": 4.25,
-		"goodreads_rating_count": 232175,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1405546838l/77566.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9d2"
-		},
-		"title": "The Martian Chronicles",
-		"author": "Bradbury, Ray",
-		"isbn": "0553278223",
-		"isbn13": "9780553278224",
-		"date_pub_sort": "1950-01-01",
-		"date_pub": "1/1/1950",
-		"num_pages": 182,
-		"goodreads_rating_avg": 4.15,
-		"goodreads_rating_count": 249584,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1661016554l/76778.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9d3"
-		},
-		"title": "Jurassic Park (Jurassic Park, #1)",
-		"author": "Crichton, Michael",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1990-11-07",
-		"date_pub": "11/7/1990",
-		"num_pages": 466,
-		"goodreads_rating_avg": 4.08,
-		"goodreads_rating_count": 915748,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1529604411l/40604658.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9d4"
-		},
-		"title": "The Time Machine",
-		"author": "Wells, H.G.",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1895-01-01",
-		"date_pub": "1/1/1895",
-		"num_pages": 118,
-		"goodreads_rating_avg": 3.9,
-		"goodreads_rating_count": 493342,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327942880l/2493.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9d5"
-		},
-		"title": "Foundation (Foundation, #1)",
-		"author": "Asimov, Isaac",
-		"isbn": "0553803719",
-		"isbn13": "9780553803716",
-		"date_pub_sort": "1951-08-30",
-		"date_pub": "8/30/1951",
-		"num_pages": 244,
-		"goodreads_rating_avg": 4.17,
-		"goodreads_rating_count": 507102,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1417900846l/29579.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9d6"
-		},
-		"title": "Brave New World",
-		"author": "Huxley, Aldous",
-		"isbn": "0060929871",
-		"isbn13": "9780060929879",
-		"date_pub_sort": "1932-01-01",
-		"date_pub": "1/1/1932",
-		"num_pages": 268,
-		"goodreads_rating_avg": 3.99,
-		"goodreads_rating_count": 1747793,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1575509280l/5129.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9d7"
-		},
-		"title": "Ready Player One (Ready Player One, #1)",
-		"author": "Cline, Ernest",
-		"isbn": "030788743X",
-		"isbn13": "9780307887436",
-		"date_pub_sort": "2011-08-16",
-		"date_pub": "8/16/2011",
-		"num_pages": 374,
-		"goodreads_rating_avg": 4.23,
-		"goodreads_rating_count": 1091678,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1500930947l/9969571.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9d8"
-		},
-		"title": "The Red (The Godwicks, #1)",
-		"author": "Reisz, Tiffany",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2017-07-11",
-		"date_pub": "7/11/2017",
-		"num_pages": 226,
-		"goodreads_rating_avg": 3.82,
-		"goodreads_rating_count": 7963,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1492125699l/34853896.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9d9"
-		},
-		"title": "Dawn (Xenogenesis, #1)",
-		"author": "Butler, Octavia E.",
-		"isbn": "0446603775",
-		"isbn13": "9780446603775",
-		"date_pub_sort": "1987-05-01",
-		"date_pub": "5/1/1987",
-		"num_pages": 248,
-		"goodreads_rating_avg": 4.15,
-		"goodreads_rating_count": 45230,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388290339l/60929.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9da"
-		},
-		"title": "The Stonekeeper (Amulet, #1)",
-		"author": "Kibuishi, Kazu",
-		"isbn": "0439846803",
-		"isbn13": "9780439846806",
-		"date_pub_sort": "2008-01-01",
-		"date_pub": "1/1/2008",
-		"num_pages": 192,
-		"goodreads_rating_avg": 4.17,
-		"goodreads_rating_count": 92616,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327866356l/1238684.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9db"
-		},
-		"title": "The Corrections",
-		"author": "Franzen, Jonathan",
-		"isbn": "1841156736",
-		"isbn13": "9781841156736",
-		"date_pub_sort": "2001-01-01",
-		"date_pub": "1/1/2001",
-		"num_pages": 653,
-		"goodreads_rating_avg": 3.82,
-		"goodreads_rating_count": 176458,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1355011305l/3805.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9dc"
-		},
-		"title": "Bone, Vol. 8: Treasure Hunters (Bone, #8)",
-		"author": "Smith, Jeff",
-		"isbn": "1888963131",
-		"isbn13": "9781888963137",
-		"date_pub_sort": "2002-01-01",
-		"date_pub": "1/1/2002",
-		"num_pages": 144,
-		"goodreads_rating_avg": 4.35,
-		"goodreads_rating_count": 10040,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327992619l/286130.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9dd"
-		},
-		"title": "Bone, Vol. 5: Rock Jaw Master of the Eastern Border (Bone, #5)",
-		"author": "Smith, Jeff",
-		"isbn": "043970636X",
-		"isbn13": "9780439706360",
-		"date_pub_sort": "1998-06-01",
-		"date_pub": "6/1/1998",
-		"num_pages": 116,
-		"goodreads_rating_avg": 4.31,
-		"goodreads_rating_count": 11880,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1562408413l/92144.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9de"
-		},
-		"title": "Bone, Vol. 7: Ghost Circles (Bone, #7)",
-		"author": "Smith, Jeff",
-		"isbn": "1888963093",
-		"isbn13": "9781888963090",
-		"date_pub_sort": "2001-01-01",
-		"date_pub": "1/1/2001",
-		"num_pages": 184,
-		"goodreads_rating_avg": 4.37,
-		"goodreads_rating_count": 11831,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328005107l/142309.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9df"
-		},
-		"title": "Bone, Vol. 6: Old Man's Cave (Bone, #6)",
-		"author": "Smith, Jeff",
-		"isbn": "1888963050",
-		"isbn13": "9781888963052",
-		"date_pub_sort": "1997-01-01",
-		"date_pub": "1/1/1997",
-		"num_pages": 128,
-		"goodreads_rating_avg": 4.38,
-		"goodreads_rating_count": 11876,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327992012l/106130.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9e0"
-		},
-		"title": "Bone, Vol. 3: Eyes of the Storm (Bone, #3)",
-		"author": "Smith, Jeff",
-		"isbn": "0439706386",
-		"isbn13": "9780439706384",
-		"date_pub_sort": "1994-08-01",
-		"date_pub": "8/1/1994",
-		"num_pages": 174,
-		"goodreads_rating_avg": 4.33,
-		"goodreads_rating_count": 14125,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1429122296l/106125.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9e1"
-		},
-		"title": "Bone, Vol. 9: Crown of Horns (Bone, #9)",
-		"author": "Smith, Jeff",
-		"isbn": "1888963166",
-		"isbn13": "9781888963168",
-		"date_pub_sort": "2004-01-01",
-		"date_pub": "1/1/2004",
-		"num_pages": 184,
-		"goodreads_rating_avg": 4.48,
-		"goodreads_rating_count": 14486,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327937469l/286131.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9e2"
-		},
-		"title": "Bone, Vol. 2: The Great Cow Race (Bone, #2)",
-		"author": "Smith, Jeff",
-		"isbn": "0439706394",
-		"isbn13": "9780439706391",
-		"date_pub_sort": "1993-12-01",
-		"date_pub": "12/1/1993",
-		"num_pages": 132,
-		"goodreads_rating_avg": 4.29,
-		"goodreads_rating_count": 16762,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1497683827l/106126.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9e3"
-		},
-		"title": "Bone, Vol. 4: The Dragonslayer (Bone, #4)",
-		"author": "Smith, Jeff",
-		"isbn": "0439706378",
-		"isbn13": "9780439706377",
-		"date_pub_sort": "1996-05-01",
-		"date_pub": "5/1/1996",
-		"num_pages": 168,
-		"goodreads_rating_avg": 4.35,
-		"goodreads_rating_count": 16975,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1497684403l/106124.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9e4"
-		},
-		"title": "Bone: The Complete Edition",
-		"author": "Smith, Jeff",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1991-01-01",
-		"date_pub": "1/1/1991",
-		"num_pages": 1332,
-		"goodreads_rating_avg": 4.45,
-		"goodreads_rating_count": 35925,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1614067887l/92143.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9e5"
-		},
-		"title": "Bone, Vol. 1: Out from Boneville (Bone, #1)",
-		"author": "Smith, Jeff",
-		"isbn": "0439706408",
-		"isbn13": "9780439706407",
-		"date_pub_sort": "1991-07-03",
-		"date_pub": "7/3/1991",
-		"num_pages": 138,
-		"goodreads_rating_avg": 4.19,
-		"goodreads_rating_count": 86534,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327921261l/106134.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9e6"
-		},
-		"title": "Pyramids (Discworld, #7)",
-		"author": "Pratchett, Terry",
-		"isbn": "0061020656",
-		"isbn13": "9780061020650",
-		"date_pub_sort": "1989-01-01",
-		"date_pub": "1/1/1989",
-		"num_pages": 341,
-		"goodreads_rating_avg": 3.92,
-		"goodreads_rating_count": 81336,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1439098306l/64217.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9e7"
-		},
-		"title": "Sourcery (Discworld, #5; Rincewind, #3)",
-		"author": "Pratchett, Terry",
-		"isbn": "0061020672",
-		"isbn13": "9780061020674",
-		"date_pub_sort": "1988-01-01",
-		"date_pub": "1/1/1988",
-		"num_pages": 276,
-		"goodreads_rating_avg": 3.9,
-		"goodreads_rating_count": 94062,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1439607843l/34499.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9e8"
-		},
-		"title": "Witches Abroad (Discworld, #12; Witches, #3)",
-		"author": "Pratchett, Terry",
-		"isbn": "0061020613",
-		"isbn13": "9780061020612",
-		"date_pub_sort": "1991-01-01",
-		"date_pub": "1/1/1991",
-		"num_pages": 374,
-		"goodreads_rating_avg": 4.24,
-		"goodreads_rating_count": 84875,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1403326937l/2442.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9e9"
-		},
-		"title": "Reaper Man (Discworld, #11; Death, #2)",
-		"author": "Pratchett, Terry",
-		"isbn": "0552152951",
-		"isbn13": "9780552152952",
-		"date_pub_sort": "1991-01-01",
-		"date_pub": "1/1/1991",
-		"num_pages": 289,
-		"goodreads_rating_avg": 4.28,
-		"goodreads_rating_count": 96491,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1389211958l/34517.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9ea"
-		},
-		"title": "Wyrd Sisters (Discworld, #6; Witches, #2)",
-		"author": "Pratchett, Terry",
-		"isbn": "0061020664",
-		"isbn13": "9780061020667",
-		"date_pub_sort": "1988-01-01",
-		"date_pub": "1/1/1988",
-		"num_pages": 265,
-		"goodreads_rating_avg": 4.15,
-		"goodreads_rating_count": 110820,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1275974472l/34504.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9eb"
-		},
-		"title": "Moving Pictures (Discworld, #10; Industrial Revolution, #1)",
-		"author": "Pratchett, Terry",
-		"isbn": "0552152943",
-		"isbn13": "9780552152945",
-		"date_pub_sort": "1990-01-01",
-		"date_pub": "1/1/1990",
-		"num_pages": 396,
-		"goodreads_rating_avg": 3.96,
-		"goodreads_rating_count": 77309,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320456553l/34510.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9ec"
-		},
-		"title": "Mort (Discworld, #4; Death, #1)",
-		"author": "Pratchett, Terry",
-		"isbn": "0061020680",
-		"isbn13": "9780061020681",
-		"date_pub_sort": "1987-01-01",
-		"date_pub": "1/1/1987",
-		"num_pages": 243,
-		"goodreads_rating_avg": 4.24,
-		"goodreads_rating_count": 232144,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388181166l/386372.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9ed"
-		},
-		"title": "The 7½ Deaths of Evelyn Hardcastle",
-		"author": "Turton, Stuart",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2018-02-08",
-		"date_pub": "2/8/2018",
-		"num_pages": 432,
-		"goodreads_rating_avg": 3.85,
-		"goodreads_rating_count": 305852,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1506896221l/36337550.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9ee"
-		},
-		"title": "The Light Fantastic (Discworld, #2; Rincewind, #2)",
-		"author": "Pratchett, Terry",
-		"isbn": "0061020702",
-		"isbn13": "9780061020704",
-		"date_pub_sort": "1986-01-01",
-		"date_pub": "1/1/1986",
-		"num_pages": 277,
-		"goodreads_rating_avg": 3.99,
-		"goodreads_rating_count": 143675,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1389554927l/34506.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9ef"
-		},
-		"title": "Equal Rites (Discworld, #3; Witches, #1)",
-		"author": "Pratchett, Terry",
-		"isbn": "0060855908",
-		"isbn13": "9780060855901",
-		"date_pub_sort": "1987-01-01",
-		"date_pub": "1/1/1987",
-		"num_pages": 240,
-		"goodreads_rating_avg": 4.05,
-		"goodreads_rating_count": 169392,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407706800l/34507.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9f0"
-		},
-		"title": "The City in the Middle of the Night",
-		"author": "Anders, Charlie Jane",
-		"isbn": "0765379961",
-		"isbn13": "9780765379962",
-		"date_pub_sort": "2019-02-12",
-		"date_pub": "2/12/2019",
-		"num_pages": 366,
-		"goodreads_rating_avg": 3.5,
-		"goodreads_rating_count": 10920,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1532447389l/37534907.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9f1"
-		},
-		"title": "A Master of Djinn (Dead Djinn Universe, #1)",
-		"author": "Clark, P. Djèlí",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "2021-05-11",
-		"date_pub": "5/11/2021",
-		"num_pages": 396,
-		"goodreads_rating_avg": 4.06,
-		"goodreads_rating_count": 20569,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1600715136l/52504334.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9f2"
-		},
-		"title": "Tuck Everlasting",
-		"author": "Babbitt, Natalie",
-		"isbn": "0374480095",
-		"isbn13": "9780374480097",
-		"date_pub_sort": "1975-01-01",
-		"date_pub": "1/1/1975",
-		"num_pages": 148,
-		"goodreads_rating_avg": 3.89,
-		"goodreads_rating_count": 263327,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1661030663l/84981.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9f3"
-		},
-		"title": "The Borrowers (The Borrowers, #1)",
-		"author": "Norton, Mary",
-		"isbn": "0152047379",
-		"isbn13": "9780152047375",
-		"date_pub_sort": "1952-01-01",
-		"date_pub": "1/1/1952",
-		"num_pages": 180,
-		"goodreads_rating_avg": 4.03,
-		"goodreads_rating_count": 95408,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1308945559l/348573.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9f4"
-		},
-		"title": "Neil Gaiman's Neverwhere",
-		"author": "Carey, Mike",
-		"isbn": "1401210074",
-		"isbn13": "9781401210076",
-		"date_pub_sort": "1996-01-01",
-		"date_pub": "1/1/1996",
-		"num_pages": 224,
-		"goodreads_rating_avg": 4.28,
-		"goodreads_rating_count": 42843,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1309582431l/14498.jpg"
-	},
-	{
-		"_id": {
-			"$oid": "646dac51ffedc069de67b9f5"
-		},
-		"title": "Neil Gaiman and Charles Vess' Stardust #1",
-		"author": "Gaiman, Neil",
-		"isbn": "",
-		"isbn13": "",
-		"date_pub_sort": "1997-12-01",
-		"date_pub": "12/1/1997",
-		"num_pages": 50,
-		"goodreads_rating_avg": 4.5,
-		"goodreads_rating_count": 1791,
-		"cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1421381820l/24520334.jpg"
-	}
+  {
+    "title": "Ask, Tell (Ask, Tell Series Book 1)",
+    "description": "",
+    "authors": ["Noyes, E.J."],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2017-01-15",
+    "num_pages": 283,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1488605037l/34459391.jpg"
+  },
+  {
+    "title": "I Can't Think Straight",
+    "description": "",
+    "authors": ["Sarif, Shamim"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2008-11-11",
+    "num_pages": 218,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388430801l/8709604.jpg"
+  },
+  {
+    "title": "Rubyfruit Jungle",
+    "description": "",
+    "authors": ["Brown, Rita Mae"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "1973-01-01",
+    "num_pages": 220,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407100670l/22847585.jpg"
+  },
+  {
+    "title": "The Book of James",
+    "description": "",
+    "authors": ["Green, Ellen J."],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2012-03-10",
+    "num_pages": 389,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1432145036l/25138297.jpg"
+  },
+  {
+    "title": "New Moon: The Complete Illustrated Movie Companion (The Twilight Saga: The Official Illustrated Movie Companion, #2)",
+    "description": "",
+    "authors": ["Cotta Vaz, Mark"],
+    "isbn": "0316075809",
+    "isbn13": "9780316075800",
+    "date_pub": "2009-01-01",
+    "num_pages": 144,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1343724104l/6466909.jpg"
+  },
+  {
+    "title": "Twilight (The Twilight Saga, #1)",
+    "description": "",
+    "authors": ["Meyer, Stephenie"],
+    "isbn": "0316015849",
+    "isbn13": "9780316015844",
+    "date_pub": "2005-10-05",
+    "num_pages": 498,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1361039443l/41865.jpg"
+  },
+  {
+    "title": "The Great Gatsby",
+    "description": "",
+    "authors": ["Fitzgerald, F. Scott"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "1925-04-10",
+    "num_pages": 180,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1490528560l/4671.jpg"
+  },
+  {
+    "title": "The Golden Compass (His Dark Materials, #1)",
+    "description": "",
+    "authors": ["Pullman, Philip"],
+    "isbn": "0679879242",
+    "isbn13": "9780679879244",
+    "date_pub": "1995-07-01",
+    "num_pages": 399,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1505766203l/119322.jpg"
+  },
+  {
+    "title": "Angels & Demons (Robert Langdon, #1)",
+    "description": "",
+    "authors": ["Brown, Dan"],
+    "isbn": "1416524797",
+    "isbn13": "9781416524793",
+    "date_pub": "2000-05-01",
+    "num_pages": 736,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1639587647l/960.jpg"
+  },
+  {
+    "title": "The Hunger Games (The Hunger Games, #1)",
+    "description": "",
+    "authors": ["Collins, Suzanne"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2008-09-14",
+    "num_pages": 374,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722975l/2767052.jpg"
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone (Harry Potter, #1)",
+    "description": "",
+    "authors": ["Rowling, J.K."],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "1997-06-26",
+    "num_pages": 322,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1598823299l/42844155.jpg"
+  },
+  {
+    "title": "The Last Precinct (Kay Scarpetta, #11)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2000-10-16",
+    "num_pages": 476,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1632945852l/59116435.jpg"
+  },
+  {
+    "title": "Black Notice (Kay Scarpetta, #10)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "0425175405",
+    "isbn13": "9780425175408",
+    "date_pub": "1999-08-02",
+    "num_pages": 441,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388461944l/123598.jpg"
+  },
+  {
+    "title": "Point of Origin (Kay Scarpetta, #9)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "0751530484",
+    "isbn13": "9780751530483",
+    "date_pub": "1998-07-06",
+    "num_pages": 440,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1399629118l/6531.jpg"
+  },
+  {
+    "title": "Unnatural Exposure (Kay Scarpetta, #8)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "0751530492",
+    "isbn13": "9780751530490",
+    "date_pub": "1997-08-01",
+    "num_pages": 370,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1383293921l/232145.jpg"
+  },
+  {
+    "title": "Cause of Death (Kay Scarpetta, #7)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "0425213382",
+    "isbn13": "9780425213384",
+    "date_pub": "1996-08-01",
+    "num_pages": 356,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327632787l/6541.jpg"
+  },
+  {
+    "title": "From Potter's Field (Kay Scarpetta, #6)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "1995-08-02",
+    "num_pages": 428,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328301711l/6067038.jpg"
+  },
+  {
+    "title": "The Adventures of Huckleberry Finn",
+    "description": "",
+    "authors": ["Twain, Mark"],
+    "isbn": "0142437174",
+    "isbn13": "9780142437179",
+    "date_pub": "1884-02-18",
+    "num_pages": 327,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546096879l/2956.jpg"
+  },
+  {
+    "title": "The Odyssey",
+    "description": "",
+    "authors": ["Homer"],
+    "isbn": "0143039954",
+    "isbn13": "9780143039952",
+    "date_pub": "700-01-01",
+    "num_pages": 541,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1390173285l/1381.jpg"
+  },
+  {
+    "title": "The Outsiders",
+    "description": "",
+    "authors": ["Hinton, S.E."],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "1967-04-24",
+    "num_pages": 192,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442129426l/231804.jpg"
+  },
+  {
+    "title": "Of Mice and Men",
+    "description": "",
+    "authors": ["Steinbeck, John"],
+    "isbn": "0142000671",
+    "isbn13": "9780142000670",
+    "date_pub": "1937-02-25",
+    "num_pages": 107,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1511302904l/890.jpg"
+  },
+  {
+    "title": "The Da Vinci Code (Robert Langdon, #2)",
+    "description": "",
+    "authors": ["Brown, Dan"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2003-03-18",
+    "num_pages": 489,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1579621267l/968.jpg"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "description": "",
+    "authors": ["Lee, Harper"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "1960-01-01",
+    "num_pages": 323,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg"
+  },
+  {
+    "title": "The Body Farm (Kay Scarpetta, #5)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "1994-09-01",
+    "num_pages": 372,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328364908l/9804467.jpg"
+  },
+  {
+    "title": "Cruel and Unusual (Kay Scarpetta, #4)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "1993-06-10",
+    "num_pages": 417,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1527635128l/40237572.jpg"
+  },
+  {
+    "title": "All That Remains (Kay Scarpetta, #3)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "1992-06-11",
+    "num_pages": 481,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1527550410l/40230468.jpg"
+  },
+  {
+    "title": "Body of Evidence (Kay Scarpetta, #2)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "1991-02-05",
+    "num_pages": 452,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1522727483l/39707928.jpg"
+  },
+  {
+    "title": "The Butcher and the Wren (The Butcher and the Wren, #1)",
+    "description": "",
+    "authors": ["Urquhart, Alaina"],
+    "isbn": "1638930147",
+    "isbn13": "9781638930143",
+    "date_pub": "2022-09-13",
+    "num_pages": 242,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1647971124l/60672388.jpg"
+  },
+  {
+    "title": "Postmortem (Kay Scarpetta, #1)",
+    "description": "",
+    "authors": ["Cornwell, Patricia Daniels"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "1990-01-09",
+    "num_pages": 449,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1632945441l/59116406.jpg"
+  },
+  {
+    "title": "One Clean Shot (The Rookie Club #2)",
+    "description": "",
+    "authors": ["Girard, Danielle"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2012-09-01",
+    "num_pages": 396,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1428523425l/25323065.jpg"
+  },
+  {
+    "title": "Harry Potter and the Deathly Hallows (Harry Potter, #7)",
+    "description": "",
+    "authors": ["Rowling, J.K."],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2007-07-21",
+    "num_pages": 784,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1449590443l/28143118.jpg"
+  },
+  {
+    "title": "Harry Potter and the Half-Blood Prince (Harry Potter #6)",
+    "description": "",
+    "authors": ["Rowling, J.K."],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2005-07-16",
+    "num_pages": 691,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1660910990l/28139880.jpg"
+  },
+  {
+    "title": "Harry Potter and the Order of the Phoenix (Harry Potter, #5)",
+    "description": "",
+    "authors": ["Rowling, J.K."],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2003-06-21",
+    "num_pages": 815,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1457035165l/29411529.jpg"
+  },
+  {
+    "title": "Smart Meal Prep for Beginners: Recipes and Weekly Plans for Healthy, Ready-to-Go Meals",
+    "description": "",
+    "authors": ["Amidor, Toby"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2018-07-01",
+    "num_pages": 285,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1531092924l/40751758.jpg"
+  },
+  {
+    "title": "Dead Center (The Rookie Club #1)",
+    "description": "",
+    "authors": ["Girard, Danielle"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2006-06-01",
+    "num_pages": 340,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1437694851l/25337689.jpg"
+  },
+  {
+    "title": "Instant Pot Cookbook For Beginners: 600 Easy and Delicious Instant Pot Recipes For Fast and Healthy Meals",
+    "description": "",
+    "authors": ["Mitchell, Emilia"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "Invalid Date-Invalid Date-Invalid Date",
+    "num_pages": 260,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1567725932l/50784055SY75"
+  },
+  {
+    "title": "Harry Potter and the Goblet of Fire (Harry Potter, #4)",
+    "description": "",
+    "authors": ["Rowling, J.K."],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2000-07-08",
+    "num_pages": 735,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659085624l/28137887.jpg"
+  },
+  {
+    "title": "Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)",
+    "description": "",
+    "authors": ["Rowling, J.K."],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "1999-07-08",
+    "num_pages": 475,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1598823559l/28143415.jpg"
+  },
+  {
+    "title": "Wanting Her",
+    "description": "",
+    "authors": ["Leon, Raquel De"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2019-04-10",
+    "num_pages": 319,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1554976072l/45020228.jpg"
+  },
+  {
+    "title": "Just Married?",
+    "description": "",
+    "authors": ["West, Natasha"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2019-02-15",
+    "num_pages": 213,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1549672221l/43895726.jpg"
+  },
+  {
+    "title": "Pretend Girlfriend",
+    "description": "",
+    "authors": ["Craig, Lily"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2018-09-13",
+    "num_pages": 210,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1536903599l/41826615.jpg"
+  },
+  {
+    "title": "Storm Front (The Dresden Files, #1)",
+    "description": "",
+    "authors": ["Butcher, Jim"],
+    "isbn": "0451457811",
+    "isbn13": "9780451457813",
+    "date_pub": "2000-04-01",
+    "num_pages": 355,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1572991273l/47212.jpg"
+  },
+  {
+    "title": "All Systems Red (The Murderbot Diaries, #1)",
+    "description": "",
+    "authors": ["Wells, Martha"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2017-05-02",
+    "num_pages": 144,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1631585309l/32758901.jpg"
+  },
+  {
+    "title": "The Turn of the Key",
+    "description": "",
+    "authors": ["Ware, Ruth"],
+    "isbn": "1501188771",
+    "isbn13": "9781501188770",
+    "date_pub": "2019-08-06",
+    "num_pages": 337,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1548204800l/42080142.jpg"
+  },
+  {
+    "title": "The Odyssey: A Graphic Novel",
+    "description": "",
+    "authors": ["Hinds, Gareth"],
+    "isbn": "0763642665",
+    "isbn13": "9780763642662",
+    "date_pub": "2010-10-12",
+    "num_pages": 248,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320548855l/7989499.jpg"
+  },
+  {
+    "title": "Eclipse (The Twilight Saga, #3)",
+    "description": "",
+    "authors": ["Meyer, Stephenie"],
+    "isbn": "0316160202",
+    "isbn13": "9780316160209",
+    "date_pub": "2007-08-07",
+    "num_pages": 629,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1361038355l/428263.jpg"
+  },
+  {
+    "title": "New Moon (The Twilight Saga, #2)",
+    "description": "",
+    "authors": ["Meyer, Stephenie"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2006-09-06",
+    "num_pages": 563,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1630592760l/49041.jpg"
+  },
+  {
+    "title": "Breaking Dawn (The Twilight Saga, #4)",
+    "description": "",
+    "authors": ["Meyer, Stephenie"],
+    "isbn": "031606792X",
+    "isbn13": "9780316067928",
+    "date_pub": "2008-08-02",
+    "num_pages": 756,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1361039438l/1162543.jpg"
+  },
+  {
+    "title": "Mockingjay (The Hunger Games, #3)",
+    "description": "",
+    "authors": ["Collins, Suzanne"],
+    "isbn": "0439023513",
+    "isbn13": "9780439023511",
+    "date_pub": "2010-08-24",
+    "num_pages": 390,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722918l/7260188.jpg"
+  },
+  {
+    "title": "Catching Fire (The Hunger Games, #2)",
+    "description": "",
+    "authors": ["Collins, Suzanne"],
+    "isbn": "0439023491",
+    "isbn13": "9780439023498",
+    "date_pub": "2009-09-01",
+    "num_pages": 391,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722941l/6148028.jpg"
+  },
+  {
+    "title": "Allegiant (Divergent, #3)",
+    "description": "",
+    "authors": ["Roth, Veronica"],
+    "isbn": "0007524277",
+    "isbn13": "9780007524273",
+    "date_pub": "2013-10-22",
+    "num_pages": 531,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1395582745l/18710190.jpg"
+  },
+  {
+    "title": "The Greek and Roman Myths: A Guide to the Classical Stories",
+    "description": "",
+    "authors": ["Matyszak, Philip"],
+    "isbn": "0500251738",
+    "isbn13": "9780500251737",
+    "date_pub": "2010-11-15",
+    "num_pages": 220,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347608416l/8583388.jpg"
+  },
+  {
+    "title": "Insurgent (Divergent, #2)",
+    "description": "",
+    "authors": ["Roth, Veronica"],
+    "isbn": "0007442912",
+    "isbn13": "9780007442911",
+    "date_pub": "2012-05-01",
+    "num_pages": 525,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1618525340l/11735983.jpg"
+  },
+  {
+    "title": "The Last Lavender Sister",
+    "description": "",
+    "authors": ["Brayden, Melissa"],
+    "isbn": "1636791301",
+    "isbn13": "9781636791302",
+    "date_pub": "2022-06-21",
+    "num_pages": 264,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1632672181l/59079941.jpg"
+  },
+  {
+    "title": "Divergent (Divergent, #1)",
+    "description": "",
+    "authors": ["Roth, Veronica"],
+    "isbn": "0062024035",
+    "isbn13": "9780062024039",
+    "date_pub": "2011-04-25",
+    "num_pages": 487,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1618526890l/13335037.jpg"
+  },
+  {
+    "title": "The Book Thief",
+    "description": "",
+    "authors": ["Zusak, Markus"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2006-03-01",
+    "num_pages": 552,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1522157426l/19063.jpg"
+  },
+  {
+    "title": "Harry Potter and the Chamber of Secrets (Harry Potter, #2)",
+    "description": "",
+    "authors": ["Rowling, J.K."],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "1998-07-02",
+    "num_pages": 341,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474169725l/15881.jpg"
+  },
+  {
+    "title": "The Golden Enclaves (The Scholomance, #3)",
+    "description": "",
+    "authors": ["Novik, Naomi"],
+    "isbn": "0593158369",
+    "isbn13": "9780593158364",
+    "date_pub": "2022-09-27",
+    "num_pages": 407,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1642265345l/55858638.jpg"
+  },
+  {
+    "title": "The Last Graduate (The Scholomance, #2)",
+    "description": "",
+    "authors": ["Novik, Naomi"],
+    "isbn": "0593128869",
+    "isbn13": "9780593128862",
+    "date_pub": "2021-09-28",
+    "num_pages": 388,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1604391810l/55559887.jpg"
+  },
+  {
+    "title": "The Bone Bed (Kay Scarpetta, #20)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2012-10-16",
+    "num_pages": 513,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1350633250l/16090755.jpg"
+  },
+  {
+    "title": "The Surgeon (Rizzoli & Isles, #1)",
+    "description": "",
+    "authors": ["Gerritsen, Tess"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2001-10-02",
+    "num_pages": 416,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1277923728l/32263.jpg"
+  },
+  {
+    "title": "A Deadly Education (The Scholomance, #1)",
+    "description": "",
+    "authors": ["Novik, Naomi"],
+    "isbn": "0593128486",
+    "isbn13": "9780593128480",
+    "date_pub": "2020-09-29",
+    "num_pages": 336,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1596909044l/50548197.jpg"
+  },
+  {
+    "title": "Red Mist (Kay Scarpetta, #19)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2011-12-06",
+    "num_pages": 544,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328311789l/12364884.jpg"
+  },
+  {
+    "title": "The House of the Spirits",
+    "description": "",
+    "authors": ["Allende, Isabel"],
+    "isbn": "0553383809",
+    "isbn13": "9780553383805",
+    "date_pub": "1982-01-01",
+    "num_pages": 448,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1621672028l/9328.jpg"
+  },
+  {
+    "title": "Port Mortuary (Kay Scarpetta, #18)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2010-11-30",
+    "num_pages": 505,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1632946140l/59116464.jpg"
+  },
+  {
+    "title": "The Scarpetta Factor (Kay Scarpetta, #17)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2009-10-20",
+    "num_pages": 545,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1527636434l/40237647.jpg"
+  },
+  {
+    "title": "Scarpetta (Kay Scarpetta, #16)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2008-11-25",
+    "num_pages": 513,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1632945974l/59116451.jpg"
+  },
+  {
+    "title": "Book of the Dead (Kay Scarpetta, #15)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "0399153934",
+    "isbn13": "9780399153938",
+    "date_pub": "2007-11-01",
+    "num_pages": 511,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442534083l/6526.jpg"
+  },
+  {
+    "title": "Predator (Kay Scarpetta, #14)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "0425210278",
+    "isbn13": "9780425210277",
+    "date_pub": "2005-10-25",
+    "num_pages": 453,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1310552145l/6528.jpg"
+  },
+  {
+    "title": "Trace (Kay Scarpetta, #13)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "0425204200",
+    "isbn13": "9780425204207",
+    "date_pub": "2004-09-02",
+    "num_pages": 401,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1310723816l/6530.jpg"
+  },
+  {
+    "title": "Blow Fly (Kay Scarpetta, #12)",
+    "description": "",
+    "authors": ["Cornwell, Patricia"],
+    "isbn": "",
+    "isbn13": "",
+    "date_pub": "2003-10-13",
+    "num_pages": 498,
+    "cover_img_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1534038402l/41124032.jpg"
+  }
 ]

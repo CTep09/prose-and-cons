@@ -1,15 +1,11 @@
 const connection = require("../config/connection");
-const { Book } = require("../models");
-console.log(Book);
+const { Book, Author } = require("../models");
 const fs = require("fs");
 const path = require("path");
 const bookDataPath = path.resolve(__dirname, "bookData.json");
 const bookData = fs.readFileSync(bookDataPath, "utf-8");
 
-const booksWithId = JSON.parse(bookData);
-
-// Remove the _id field from the data
-const books = booksWithId.map(({ _id, ...rest }) => rest);
+const books = JSON.parse(bookData);
 
 // Iterate over each book object
 for (const book of books) {
@@ -28,25 +24,47 @@ connection.once("open", async () => {
 
   try {
     await Book.deleteMany({});
-
-    const uniqueBooks = new Set();
+    await Author.deleteMany({});
 
     for (const book of books) {
-      const { title, author } = book;
-      const bookIdentifier = `${title}_${author}`;
+      const authors = [];
 
-      // Check if the book is already in the set (duplicate)
-      if (uniqueBooks.has(bookIdentifier)) {
-        console.log(`Skipping duplicate book: ${title} by ${author}`);
-        continue;
+      for (const authorName of book.authors) {
+        const [lastName, firstName] = authorName.split(", ");
+        const author = await Author.findOneAndUpdate(
+          { firstName, lastName },
+          { firstName, lastName },
+          { upsert: true, new: true }
+        );
+
+        authors.push(author._id);
       }
 
-      // Save the book to the database
-      const newBook = new Book(book);
-      await newBook.save();
+      const newBook = {
+        title: book.title,
+        description: book.description,
+        authors,
+        isbn: book.isbn,
+        isbn13: book.isbn13,
+        date_pub: book.date_pub,
+        num_pages: book.num_pages,
+        cover_img_url: book.cover_img_url,
+      };
 
-      // Add the book identifier to the set
-      uniqueBooks.add(bookIdentifier);
+      const createdBook = await Book.findOneAndUpdate({ ...newBook }, newBook, {
+        upsert: true,
+        new: true,
+      });
+
+      const createdBookAuthors = createdBook.authors;
+
+      createdBookAuthors.forEach(async (authorId) => {
+        await Author.findOneAndUpdate(
+          { _id: authorId },
+          { $addToSet: { books: createdBook._id } },
+          { new: true }
+        );
+      });
     }
 
     console.info("Seeding complete! 🌱");

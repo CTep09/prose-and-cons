@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Book, Rating, Recommendation } = require("../models");
+const { User, Book, Rating, Recommendation, Author } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -50,9 +50,22 @@ const resolvers = {
 
     // addBook(input: BookInput!): Book
     addBook: async (parent, args) => {
-      const book = await Book.create({ ...args });
-      return book;
+      const authorsArr = args.authors;
+      if (authorsArr) {
+        authorsArr.forEach(async (author) => {
+          const nameArray = author.displayName.split(" ");
+          const nameLength = nameArray.length;
+          const firstName = nameArray.slice(0, nameLength - 1).join(" ");
+          const lastName = nameArray[nameLength - 1];
+          const newAuthor = await Author.findOneAndUpdate(
+            { firstName, lastName },
+            { firstName, lastName },
+            { upsert: true, new: true }
+          );
+        });
+      }
     },
+
     // addFriend(username: String!): User
     addFriend: async (parent, { friendId }, context) => {
       if (context.user) {

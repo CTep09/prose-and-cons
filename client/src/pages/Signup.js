@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
-import { ChakraProvider, FormControl, FormLabel, FormErrorMessage, FormHelperText, Input, Button } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Input,
+  Button,
+} from "@chakra-ui/react";
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -52,14 +60,14 @@ const Signup = () => {
                 </p>
               ) : (
                 <form onSubmit={handleFormSubmit}>
-                  <FormControl>
+                  <FormControl isInvalid={error}>
                     <FormHelperText>We'll never share your email.</FormHelperText>
                     <Input
                       className="form-input"
                       placeholder="Your username"
                       name="username"
                       type="text"
-                      value={formState.username} // corrected value name
+                      value={formState.username}
                       onChange={handleChange}
                     />
                     <Input
@@ -78,6 +86,7 @@ const Signup = () => {
                       value={formState.password}
                       onChange={handleChange}
                     />
+                    <FormErrorMessage>{error && error.message}</FormErrorMessage>
                     <Button
                       colorScheme="blue"
                       className="btn btn-block btn-primary"

@@ -50,20 +50,47 @@ const resolvers = {
 
     // addBook(input: BookInput!): Book
     addBook: async (parent, args) => {
-      const authorsArr = args.authors;
+      console.log(args);
+
+      const bookData = {
+        title: args.input.title,
+        description: args.input.description,
+        isbn: args.input.isbn,
+        isbn13: args.input.isbn13,
+        date_pub: args.input.date_pub,
+        num_pages: args.input.num_pages,
+        cover_img_url: args.input.cover_img_url,
+      };
+      const authorsArr = [...args.input.authors];
+
+      const newBook = await Book.findOneAndUpdate(
+        { title: bookData.title, isbn: bookData.isbn },
+        { ...bookData },
+        { upsert: true, new: true }
+      );
+
+      console.log(newBook);
+
       if (authorsArr) {
         authorsArr.forEach(async (author) => {
           const nameArray = author.displayName.split(" ");
           const nameLength = nameArray.length;
           const firstName = nameArray.slice(0, nameLength - 1).join(" ");
           const lastName = nameArray[nameLength - 1];
+
           const newAuthor = await Author.findOneAndUpdate(
             { firstName, lastName },
-            { firstName, lastName },
+            { firstName, lastName, $addToSet: { books: newBook._id } },
             { upsert: true, new: true }
           );
+
+          newBook.authors.push(newAuthor._id);
+          console.log(newAuthor);
+          console.log(newBook);
         });
       }
+
+      return newBook;
     },
 
     // addFriend(username: String!): User

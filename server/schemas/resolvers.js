@@ -106,31 +106,31 @@ const resolvers = {
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError("You need to be logged in!");
     },
-    // addRating(rating: Int!, bookId: ID!): Rating
+    // addRating(ratingValue: Int!, bookId: ID!): Rating
     addRating: async (parent, { bookId, ratingValue }, context) => {
       if (context.user) {
-        const rating = Rating.create({
+        const rating = await Rating.create({
           user: context.user._id,
           book: bookId,
-          rating: ratingValue,
+          ratingValue: ratingValue,
         });
-        const user = User.findById(context.user._id);
+        const user = await User.findById(context.user._id);
         const index = user.library.findIndex((obj) => obj.book === bookId);
-        user.library[index].rating = rating;
+        user.library[index].rating = rating._id;
         user.library[index].ratingStatus = "Rated";
-        const book = Book.findById(bookId);
-        book.ratings.push(rating);
+        const book = await Book.findById(bookId);
+        book.ratings.push(rating._id);
         return rating;
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError("You need to be logged in!");
     },
-    // updateRating(rating: Int!, bookId: ID!): Rating
+    // updateRating(ratingValue: Int!, ratingId: ID!): Rating
     updateRating: async (parent, { ratingId, ratingValue }, context) => {
       if (context.user) {
         const rating = Rating.findOneAndUpdate(
           { _id: ratingId },
-          { rating: ratingValue },
+          { ratingValue: ratingValue },
           { new: true }
         );
         return rating;

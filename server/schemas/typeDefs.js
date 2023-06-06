@@ -59,7 +59,7 @@ const typeDefs = gql`
     type Rating {
         user: User
         book: Book
-        rating: Int
+        ratingValue: Int
     }
 
     type Recommendation {
@@ -73,8 +73,8 @@ const typeDefs = gql`
         me: User
         users: [User]
         user(username: String!): User
-        book: Book
         books: [Book]
+        book(bookId: ID!): Book
         recs(recipient:ID!): [Recommendation]
     }
 
@@ -90,3 +90,5 @@ const typeDefs = gql`
         updateRating(rating: Int!, bookId: ID!): Rating
     }
 `;
+
+module.exports = typeDefs;

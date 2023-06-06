@@ -44,16 +44,20 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <ChakraProvider>
-        <div className="App">
-          <Navbar />
-          <BookCard />
-        <h1>Hello World.</h1>
-          <p>This is Prose and Cons.</p>
-        </div>
-        <main>
-          <Login></Login>
-          <Signup></Signup>
-        </main>
+      <Router>
+          <div className="App">
+            <Navbar />
+            <BookCard />
+            <h1>Hello World.</h1>
+            <p>This is Prose and Cons.</p>
+          </div>
+          <main>
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+            </Routes>
+          </main>
+        </Router>
       </ChakraProvider>
     </ApolloProvider>
   );

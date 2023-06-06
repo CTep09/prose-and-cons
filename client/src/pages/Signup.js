@@ -52,6 +52,7 @@ const Signup = () => {
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
 
+  // added
   return (
     <ChakraProvider>
       <main className="flex-row justify-center mb-4">

@@ -122,7 +122,7 @@ const resolvers = {
             new: true,
             runValidators: true,
           }
-        );
+        ).populate("friends");
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError("You need to be logged in!");

@@ -86,7 +86,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addBook(input: BookInput!): Book
-    addFriend(username: String!): User
+    addFriend(friendId: ID!): User
     addRating(ratingValue: Int!, bookId: ID!): Rating
     makeRec(username: String!, bookId: ID!): Recommendation
     saveBook(bookId: ID!, readStatus: String): User

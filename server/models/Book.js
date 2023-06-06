@@ -5,10 +5,10 @@ const bookSchema = new Schema(
   {
     title: {
       type: String,
-      required: true,
+      // required: true,
     },
     description: {
-      type: String
+      type: String,
     },
     authors: [
       {
@@ -37,11 +37,12 @@ const bookSchema = new Schema(
     cover_img_url: {
       type: String,
     },
-    ratings: [{
-      type: Schema.Types.ObjectId,
-      ref: "Rating",
-
-    }]
+    ratings: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Rating",
+      },
+    ],
   },
   {
     toJSON: {

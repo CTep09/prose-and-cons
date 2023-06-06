@@ -64,7 +64,7 @@ const Login = (props) => {
               <form onSubmit={handleFormSubmit}>
                  <Center>
                 <Input w='250px'
-                  placeholder="Your email"
+                  placeholder="Enter email"
                   name="email"
                   type="email"
                   value={formState.email}

@@ -11,6 +11,9 @@ import {
   FormHelperText,
   Input,
   Button,
+  Center,
+  InputGroup,
+  InputRightElement,
 } from "@chakra-ui/react";
 
 const Signup = () => {
@@ -46,12 +49,18 @@ const Signup = () => {
     }
   };
 
+  const [show, setShow] = React.useState(false);
+  const handleClick = () => setShow(!show);
+
+  // added
   return (
     <ChakraProvider>
       <main className="flex-row justify-center mb-4">
         <div className="col-12 col-lg-10">
           <div className="card">
+            <Center>
             <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+            </Center>
             <div className="card-body">
               {data ? (
                 <p>
@@ -61,40 +70,65 @@ const Signup = () => {
               ) : (
                 <form onSubmit={handleFormSubmit}>
                   <FormControl isInvalid={error}>
-                    <FormHelperText>We'll never share your email.</FormHelperText>
-                    <Input
-                      className="form-input"
-                      placeholder="Your username"
-                      name="username"
-                      type="text"
-                      value={formState.username}
-                      onChange={handleChange}
-                    />
-                    <Input
-                      className="form-input"
-                      placeholder="Your email"
-                      name="email"
-                      type="email"
-                      value={formState.email}
-                      onChange={handleChange}
-                    />
-                    <Input
-                      className="form-input"
-                      placeholder="******"
-                      name="password"
-                      type="password"
-                      value={formState.password}
-                      onChange={handleChange}
-                    />
+                    <Center>
+                      <FormHelperText>
+                        We'll never share your email.
+                      </FormHelperText>
+                    </Center>
+                    <Center>
+                      <Input
+                        w="250px"
+                        className="form-input"
+                        placeholder="Username"
+                        name="username"
+                        type="text"
+                        value={formState.username}
+                        onChange={handleChange}
+                      />
+                    </Center>
+
+                    <Center>
+                      <Input
+                        w="250px"
+                        className="form-input"
+                        placeholder="Email"
+                        name="email"
+                        type="email"
+                        value={formState.email}
+                        onChange={handleChange}
+                      />
+                    </Center>
+
+                    <Center>
+                      <InputGroup w="250px">
+                        <Input
+                          pr="4.5rem"
+                          type={show ? "text" : "password"}
+                          placeholder="Password"
+                          name="password"
+                          value={formState.password}
+                          onChange={handleChange}
+                        />
                     <FormErrorMessage>{error && error.message}</FormErrorMessage>
-                    <Button
-                      colorScheme="blue"
-                      className="btn btn-block btn-primary"
-                      style={{ cursor: "pointer" }}
-                      type="submit"
-                    >
-                      Submit
-                    </Button>
+                        <InputRightElement width="4.5rem">
+                          <Button h="1.75rem" size="sm" onClick={handleClick}>
+                            {show ? "Hide" : "Show"}
+                          </Button>
+                        </InputRightElement>
+                      </InputGroup>
+                    </Center>
+                    <br></br>
+
+                    <Center>
+                      <Button
+                        w="250px"
+                        colorScheme="teal"
+                        style={{ cursor: "pointer" }}
+                        type="submit"
+                      >
+                        Submit
+                      </Button>
+                    </Center>
                   </FormControl>
                 </form>
               )}

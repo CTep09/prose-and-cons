@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 
-import Auth from "../utils/auth";
+import { Input, InputGroup, InputRightElement, Button, Center } from "@chakra-ui/react";
+
+
+import AuthService from "../utils/auth";
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -28,7 +31,7 @@ const Login = (props) => {
         variables: { ...formState },
       });
 
-      Auth.login(data.login.token);
+      AuthService.login(data.login.token);
     } catch (e) {
       console.error(e);
     }
@@ -40,11 +43,17 @@ const Login = (props) => {
     });
   };
 
+  const [show, setShow] = React.useState(false)
+  const handleClick = () => setShow(!show)
+
   return (
-    <main className="flex-row justify-center mb-4">
+    
+    <main>
       <div className="col-12 col-lg-10">
         <div className="card">
+        <Center>
           <h4 className="card-header bg-dark text-light p-2">Login</h4>
+          </Center>
           <div className="card-body">
             {data ? (
               <p>
@@ -53,37 +62,52 @@ const Login = (props) => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
+                 <Center>
+                <Input w='250px'
                   placeholder="Your email"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
                 />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
+                </Center>
+                <Center>
+                <InputGroup w='250px' >
+                <Input
+                pr='4.5rem'
+                type={show ? 'text' : 'password'}
+                placeholder='Enter password'
+                name="password"
+                value={formState.password}
+                onChange={handleChange}
                 />
-                <button
-                  className="btn btn-block btn-primary"
+                <InputRightElement width='4.5rem'>
+                  <Button h='1.75rem' size='sm' onClick={handleClick}>
+                      {show ? 'Hide' : 'Show'}
+                  </Button>
+                </InputRightElement>
+                </InputGroup>
+                </Center>
+                <br></br>
+                <Center>
+                <Button w='250px'
+                  colorScheme='teal'
                   style={{ cursor: "pointer" }}
                   type="submit"
-                >
-                  Submit
-                </button>
+                >Submit
+                </Button>
+                </Center>
               </form>
             )}
-
+            <br></br>
+            <Center>
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 {error.message}
               </div>
             )}
+            </Center>
+            
           </div>
         </div>
       </div>

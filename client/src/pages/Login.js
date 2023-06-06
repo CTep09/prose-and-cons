@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 
-import { Input, InputGroup, InputRightElement, Button, Stack } from "@chakra-ui/react";
+import { Input, InputGroup, InputRightElement, Button, Stack, Center } from "@chakra-ui/react";
 
 
 import AuthService from "../utils/auth";
@@ -51,7 +51,9 @@ const Login = (props) => {
     <main>
       <div className="col-12 col-lg-10">
         <div className="card">
+        <Center>
           <h4 className="card-header bg-dark text-light p-2">Login</h4>
+          </Center>
           <div className="card-body">
             {data ? (
               <p>
@@ -60,7 +62,7 @@ const Login = (props) => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
-                
+                 <Center>
                 <Input w='250px'
                   placeholder="Your email"
                   name="email"
@@ -68,8 +70,11 @@ const Login = (props) => {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                </Center>
+                <Center>
                 <InputGroup w='250px' >
                 <Input
+                
                 pr='4.5rem'
                 type={show ? 'text' : 'password'}
                 placeholder='Enter password'
@@ -83,14 +88,15 @@ const Login = (props) => {
                   </Button>
                 </InputRightElement>
                 </InputGroup>
-
+                </Center>
+                <Center>
                 <Button
                   colorScheme='teal'
                   style={{ cursor: "pointer" }}
                   type="submit"
                 >Submit
                 </Button>
-
+                </Center>
               </form>
             )}
 

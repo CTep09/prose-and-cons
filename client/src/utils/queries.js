@@ -24,6 +24,7 @@ export const QUERY_ME = gql`
         readStatus
         ratingStatus
         rating {
+          _id
           ratingValue
         }
       }
@@ -70,6 +71,7 @@ export const QUERY_SINGLE_USER = gql`
         readStatus
         ratingStatus
         rating {
+          _id
           ratingValue
         }
       }
@@ -106,7 +108,7 @@ export const QUERY_BOOKS = gql`
 
 export const QUERY_SINGLE_BOOK = gql`
   query getSingleBook($bookId: ID!) {
-    book(bookId: $thoughtId) {
+    book(bookId: $bookId) {
       _id
       title
       authors {
@@ -122,6 +124,31 @@ export const QUERY_SINGLE_BOOK = gql`
         _id
         ratingValue
       }
+    }
+  }
+`;
+
+export const QUERY_RECS_BY_RECIPIENT = gql`
+  query getRecsByRecipient($recipientId: ID!) {
+    recs(recipient: $recipientId) {
+      sender {
+        _id
+        username
+      }
+      book {
+        _id
+        title
+        authors {
+          firstName
+          lastName
+        }
+        isbn
+        isbn13
+        date_pub
+        num_pages
+        cover_img_url
+      }
+      timestamp
     }
   }
 `;

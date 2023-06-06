@@ -12,12 +12,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import BookCard from "./components/BookCard";
+import Signup from "./pages/Signup";
 
 import { ChakraProvider } from "@chakra-ui/react";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: 'http://localhost:3001/graphql',
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
@@ -51,6 +52,7 @@ function App() {
         </div>
         <main>
           <Login></Login>
+          <Signup></Signup>
         </main>
       </ChakraProvider>
     </ApolloProvider>

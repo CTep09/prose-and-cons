@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
+import BookCard from "./components/BookCard";
 
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -44,7 +45,8 @@ function App() {
       <ChakraProvider>
         <div className="App">
           <Navbar />
-          <h1>Hello World.</h1>
+          <BookCard />
+        <h1>Hello World.</h1>
           <p>This is Prose and Cons.</p>
         </div>
         <main>

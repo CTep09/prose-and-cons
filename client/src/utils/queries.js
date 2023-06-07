@@ -152,3 +152,15 @@ export const QUERY_RECS_BY_RECIPIENT = gql`
     }
   }
 `;
+
+export const GET_FRIENDS = gql`
+  query me {
+    me {
+      friends {
+        _id
+        username
+        email
+      }
+    }
+  }
+`;

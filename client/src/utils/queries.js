@@ -7,7 +7,6 @@ export const QUERY_ME = gql`
       username
       email
       library {
-        _id
         book {
           _id
           title
@@ -24,7 +23,6 @@ export const QUERY_ME = gql`
         readStatus
         ratingStatus
         rating {
-          _id
           ratingValue
         }
       }

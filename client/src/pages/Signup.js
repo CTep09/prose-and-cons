@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
@@ -15,6 +15,8 @@ import {
   InputRightElement,
   useToast,
   Box,
+  Text,
+  Link,
 } from "@chakra-ui/react";
 
 const Signup = () => {
@@ -70,74 +72,83 @@ const Signup = () => {
               </p>
             ) : (
               <Box>
-              <form onSubmit={handleFormSubmit}>
-                <FormControl isInvalid={error}>
-                <Center>
-                  <FormHelperText>We'll never share your email.</FormHelperText>
-                  </Center>
+                <form onSubmit={handleFormSubmit}>
+                  <FormControl isInvalid={error}>
+                    <Center>
+                      <FormHelperText>
+                        We'll never share your email.
+                      </FormHelperText>
+                    </Center>
 
-                  <Input
-                    w="250px"
-                    className="form-input"
-                    placeholder="Username"
-                    name="username"
-                    type="text"
-                    value={formState.username}
-                    onChange={handleChange}
-                  />
-                  <Center>
-                  <Input
-                    w="250px"
-                    className="form-input"
-                    placeholder="Email"
-                    name="email"
-                    type="email"
-                    value={formState.email}
-                    onChange={handleChange}
-                  />
-                  </Center>
-                  <Center>
-                  <InputGroup w="250px">
                     <Input
-                      pr="4.5rem"
-                      type={show ? "text" : "password"}
-                      placeholder="Password"
-                      name="password"
-                      value={formState.password}
+                      w="250px"
+                      className="form-input"
+                      placeholder="Username"
+                      name="username"
+                      type="text"
+                      value={formState.username}
                       onChange={handleChange}
                     />
-                    <FormErrorMessage>
-                      {error && error.message}
-                    </FormErrorMessage>
-                    <InputRightElement width="4.5rem">
-                      <Button h="1.75rem" size="sm" onClick={handleClick}>
-                        {show ? "Hide" : "Show"}
+                    <Center>
+                      <Input
+                        w="250px"
+                        className="form-input"
+                        placeholder="Email"
+                        name="email"
+                        type="email"
+                        value={formState.email}
+                        onChange={handleChange}
+                      />
+                    </Center>
+                    <Center>
+                      <InputGroup w="250px">
+                        <Input
+                          pr="4.5rem"
+                          type={show ? "text" : "password"}
+                          placeholder="Password"
+                          name="password"
+                          value={formState.password}
+                          onChange={handleChange}
+                        />
+                        <FormErrorMessage>
+                          {error && error.message}
+                        </FormErrorMessage>
+                        <InputRightElement width="4.5rem">
+                          <Button h="1.75rem" size="sm" onClick={handleClick}>
+                            {show ? "Hide" : "Show"}
+                          </Button>
+                        </InputRightElement>
+                      </InputGroup>
+                    </Center>
+
+                    <br></br>
+                    <Center>
+                      <Button
+                        w="250px"
+                        colorScheme="teal"
+                        style={{ cursor: "pointer" }}
+                        type="submit"
+                        onClick={() =>
+                          toast({
+                            title: "Account created.",
+                            status: "success",
+                            duration: 9000,
+                            isClosable: true,
+                          })
+                        }
+                      >
+                        Submit
                       </Button>
-                    </InputRightElement>
-                  </InputGroup>
-                  </Center>
-                
-                  <br></br>
-                  <Center>
-                  <Button
-                    w="250px"
-                    colorScheme="teal"
-                    style={{ cursor: "pointer" }}
-                    type="submit"
-                    onClick={() =>
-                      toast({
-                        title: "Account created.",
-                        status: "success",
-                        duration: 9000,
-                        isClosable: true,
-                      })
-                    }
-                  >
-                    Submit
-                  </Button>
-                  </Center>
-                </FormControl>
-              </form>
+                    </Center>
+                  </FormControl>
+                </form>
+                <br></br>
+                <Text>
+                  Already have an account?{" "}
+                  <Link color="teal.500" href="/">
+                    Login
+                  </Link>
+                </Text>
               </Box>
             )}
             {error && (

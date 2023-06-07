@@ -280,6 +280,6 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Recommendations",
-    href: "#",
+    href: "/recommendations",
   },
 ];

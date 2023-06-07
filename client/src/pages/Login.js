@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
-import  App  from "../App";
+// import  App  from "../App";
 import {
   Input,
   InputGroup,
@@ -11,6 +11,7 @@ import {
   Center,
   Box,
   Text,
+  Link,
 } from "@chakra-ui/react";
 
 import AuthService from "../utils/auth";

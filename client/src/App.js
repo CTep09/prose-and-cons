@@ -7,7 +7,7 @@ import {
 } from "@apollo/client";
 
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
@@ -15,7 +15,7 @@ import BookCard from "./components/BookCard";
 import Signup from "./pages/Signup";
 import Recommendations from "./pages/Recommendations";
 
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Text, Link } from "@chakra-ui/react";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({

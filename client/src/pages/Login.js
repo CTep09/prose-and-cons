@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
-
+import  App  from "../App";
 import {
   Input,
   InputGroup,
@@ -10,6 +10,7 @@ import {
   Button,
   Center,
   Box,
+  Text,
 } from "@chakra-ui/react";
 
 import AuthService from "../utils/auth";
@@ -104,12 +105,20 @@ const Login = (props) => {
               </form>
             )}
             <br></br>
+
+
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 {error.message}
               </div>
             )}
           </div>
+            <Text>
+              Don't have an account? {' '} 
+            <Link color='teal.500' href='/signup'>
+            Sign up
+            </Link>
+            </Text>
         </Box>
       </Center>
     </main>

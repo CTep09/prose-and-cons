@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import BookCard from "./components/BookCard";
 import Signup from "./pages/Signup";
+import FriendLibrary from "./pages/FriendLibrary"
 
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -56,6 +57,7 @@ function App() {
               <Route path="/" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
             </Routes>
+            {/* <FriendLibrary></FriendLibrary> */}
           </main>
         </Router>
       </ChakraProvider>

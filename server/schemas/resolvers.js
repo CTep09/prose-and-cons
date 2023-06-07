@@ -39,7 +39,10 @@ const resolvers = {
     },
     books: async () => {
       return Book.find();
-    },
+    }
+    // friends: async () => {
+    //   User.find({ friend[username]})
+    // }
   },
 
   Mutation: {

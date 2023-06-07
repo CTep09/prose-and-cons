@@ -7,15 +7,17 @@ import {
 } from "@apollo/client";
 
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import BookCard from "./components/BookCard";
 import Signup from "./pages/Signup";
 import FriendLibrary from "./pages/FriendLibrary"
+import Recommendations from "./pages/Recommendations";
+import UserLibrary from "./pages/UserLibrary";
 
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Text, Link } from "@chakra-ui/react";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -56,6 +58,10 @@ function App() {
             <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/recommendations" element={<Recommendations />} />
+              <Route path="/friendLibrary" element={<FriendLibrary />} />
+              <Route path="/userLibrary" element={<UserLibrary />} />
+
             </Routes>
             {/* <FriendLibrary></FriendLibrary> */}
           </main>

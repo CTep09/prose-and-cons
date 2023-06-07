@@ -60,8 +60,11 @@ export default function WithSubnavigation() {
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
-          >
+            href={"/"}
+            >
+            <Link href="/">
             Prose & Cons
+            </Link>
           </Text>
           <Icon as={GiBurningBook}></Icon>
 

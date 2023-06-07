@@ -14,6 +14,7 @@ import {
   Center,
   InputGroup,
   InputRightElement,
+  useToast,
 } from "@chakra-ui/react";
 
 const Signup = () => {
@@ -51,6 +52,7 @@ const Signup = () => {
 
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
+  const toast = useToast()
 
   // added
   return (
@@ -125,6 +127,14 @@ const Signup = () => {
                         colorScheme="teal"
                         style={{ cursor: "pointer" }}
                         type="submit"
+                        onClick={() =>
+                          toast({
+                            title: 'Account created.',
+                            status: 'success',
+                            duration: 9000,
+                            isClosable: true,
+                          })
+                        }
                       >
                         Submit
                       </Button>

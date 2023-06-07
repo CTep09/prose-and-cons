@@ -3,8 +3,14 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 
-import { Input, InputGroup, InputRightElement, Button, Center } from "@chakra-ui/react";
-
+import {
+  Input,
+  InputGroup,
+  InputRightElement,
+  Button,
+  Center,
+  Box,
+} from "@chakra-ui/react";
 
 import AuthService from "../utils/auth";
 
@@ -43,16 +49,15 @@ const Login = (props) => {
     });
   };
 
-  const [show, setShow] = React.useState(false)
-  const handleClick = () => setShow(!show)
+  const [show, setShow] = React.useState(false);
+  const handleClick = () => setShow(!show);
 
   return (
-    
     <main>
-      <div className="col-12 col-lg-10">
-        <div className="card">
-        <Center>
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+      <Center>
+        <Box maxW="sm" borderWidth="1px" borderRadius="lg" padding="25px">
+          <Center>
+            <h4>Login</h4>
           </Center>
           <div className="card-body">
             {data ? (
@@ -62,55 +67,50 @@ const Login = (props) => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
-                 <Center>
-                <Input w='250px'
+                <Input
+                  w="250px"
                   placeholder="Your email"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
                 />
-                </Center>
-                <Center>
-                <InputGroup w='250px' >
-                <Input
-                pr='4.5rem'
-                type={show ? 'text' : 'password'}
-                placeholder='Enter password'
-                name="password"
-                value={formState.password}
-                onChange={handleChange}
-                />
-                <InputRightElement width='4.5rem'>
-                  <Button h='1.75rem' size='sm' onClick={handleClick}>
-                      {show ? 'Hide' : 'Show'}
-                  </Button>
-                </InputRightElement>
+
+                <InputGroup w="250px">
+                  <Input
+                    pr="4.5rem"
+                    type={show ? "text" : "password"}
+                    placeholder="Enter password"
+                    name="password"
+                    value={formState.password}
+                    onChange={handleChange}
+                  />
+                  <InputRightElement width="4.5rem">
+                    <Button h="1.75rem" size="sm" onClick={handleClick}>
+                      {show ? "Hide" : "Show"}
+                    </Button>
+                  </InputRightElement>
                 </InputGroup>
-                </Center>
                 <br></br>
-                <Center>
-                <Button w='250px'
-                  colorScheme='teal'
+                <Button
+                  w="250px"
+                  colorScheme="teal"
                   style={{ cursor: "pointer" }}
                   type="submit"
-                >Submit
+                >
+                  Submit
                 </Button>
-                </Center>
               </form>
             )}
             <br></br>
-            <Center>
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 {error.message}
               </div>
             )}
-            </Center>
-            
           </div>
-        </div>
-      </div>
+        </Box>
+      </Center>
     </main>
   );
 };

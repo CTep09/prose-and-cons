@@ -91,7 +91,6 @@ const typeDefs = gql`
     makeRec(username: String!, bookId: ID!): Recommendation
     saveBook(bookId: ID!, readStatus: String): User
     removeFriend(friendId: ID!): User
-    updateRating(ratingId: ID!, ratingValue: Int!): Rating
   }
 `;
 

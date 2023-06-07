@@ -191,18 +191,7 @@ const resolvers = {
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError("You need to be logged in!");
     },
-    // updateRating(ratingValue: Int!, ratingId: ID!): Rating
-    // updateRating: async (parent, { ratingId, ratingValue }, context) => {
-    //   if (context.user) {
-    //     const rating = Rating.findOneAndUpdate(
-    //       { _id: ratingId },
-    //       { ratingValue: ratingValue },
-    //       { new: true }
-    //     );
-    //     return rating;
-    //   }
-    //   throw new AuthenticationError("You need to be logged in!");
-    // },
+
     // makeRec(username:String!, bookId: ID!): Recommendation
     makeRec: async (parent, { userId, bookId }, context) => {
       const rec = await Recommendation.findOneAndUpdate(
@@ -224,6 +213,25 @@ const resolvers = {
         .populate("sender")
         .populate("recipient")
         .populate("book");
+
+      const sender = await User.findOneAndUpdate(
+        {
+          _id: context.user._id,
+        },
+        {
+          $addToSet: { sentRecs: rec._id },
+        },
+        { new: true }
+      );
+      const recipient = await User.findOneAndUpdate(
+        {
+          _id: userId,
+        },
+        {
+          $addToSet: { receivedRecs: rec._id },
+        },
+        { new: true }
+      );
       return rec;
     },
   },

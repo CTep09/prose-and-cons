@@ -44,7 +44,18 @@ const userSchema = new Schema(
         ref: "User",
       },
     ],
-    // TODO: Add Recommendations to this model
+    sentRecs: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Recommendation",
+      },
+    ],
+    receivedRecs: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Recommendation",
+      },
+    ],
   },
   {
     toJSON: {

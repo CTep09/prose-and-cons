@@ -6,7 +6,25 @@ const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id });
+        return User.findOne({ _id: context.user._id })
+          .populate({
+            path: "library.book",
+            populate: {
+              path: "authors",
+              model: "Author",
+            },
+          })
+          .populate({
+            path: "library",
+            populate: {
+              path: "book",
+              model: "Book",
+            },
+          })
+          .populate({
+            path: "friends",
+            model: "User",
+          });
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -21,7 +39,10 @@ const resolvers = {
     },
     books: async () => {
       return Book.find();
-    },
+    }
+    // friends: async () => {
+    //   User.find({ friend[username]})
+    // }
   },
 
   Mutation: {
@@ -152,41 +173,86 @@ const resolvers = {
     // addRating(ratingValue: Int!, bookId: ID!): Rating
     addRating: async (parent, { bookId, ratingValue }, context) => {
       if (context.user) {
-        const rating = await Rating.create({
-          user: context.user._id,
-          book: bookId,
-          ratingValue: ratingValue,
-        });
+        // Locate the rating as it currently exists and update the value
+        // If it doesn't exist, then create it
+        const rating = await Rating.findOneAndUpdate(
+          {
+            user: context.user._id,
+            book: bookId,
+          },
+          {
+            user: context.user._id,
+            book: bookId,
+            ratingValue: ratingValue,
+          },
+          { upsert: true, new: true }
+        );
+
+        // Locate the user by ID
         const user = await User.findById(context.user._id);
-        const index = user.library.findIndex((obj) => obj.book === bookId);
+        // Find the book in the User's library
+        const index = user.library.findIndex(
+          (obj) => obj.book.toString() === bookId
+        );
+        // Update the ratingValue and ratingStatus of that book
         user.library[index].rating = rating._id;
         user.library[index].ratingStatus = "Rated";
-        const book = await Book.findById(bookId);
-        book.ratings.push(rating._id);
-        return rating;
+        await user.save();
+
+        // Find the book that's been rated and add the rating to
+        // its ratings set
+        const book = await Book.findOneAndUpdate(
+          { _id: bookId },
+          { $addToSet: { ratings: rating._id } },
+          { new: true }
+        );
+
+        return { rating, user, book };
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError("You need to be logged in!");
     },
-    // updateRating(ratingValue: Int!, ratingId: ID!): Rating
-    updateRating: async (parent, { ratingId, ratingValue }, context) => {
-      if (context.user) {
-        const rating = Rating.findOneAndUpdate(
-          { _id: ratingId },
-          { ratingValue: ratingValue },
-          { new: true }
-        );
-        return rating;
-      }
-      throw new AuthenticationError("You need to be logged in!");
-    },
+
     // makeRec(username:String!, bookId: ID!): Recommendation
     makeRec: async (parent, { userId, bookId }, context) => {
-      const rec = await Recommendation.create({
-        sender: context.user._id,
-        recipient: userId,
-        book: bookId,
-      });
+      const rec = await Recommendation.findOneAndUpdate(
+        {
+          sender: context.user._id,
+          recipient: userId,
+          book: bookId,
+        },
+        {
+          sender: context.user._id,
+          recipient: userId,
+          book: bookId,
+        },
+        {
+          upsert: true,
+          new: true,
+        }
+      )
+        .populate("sender")
+        .populate("recipient")
+        .populate("book");
+
+      const sender = await User.findOneAndUpdate(
+        {
+          _id: context.user._id,
+        },
+        {
+          $addToSet: { sentRecs: rec._id },
+        },
+        { new: true }
+      );
+      const recipient = await User.findOneAndUpdate(
+        {
+          _id: userId,
+        },
+        {
+          $addToSet: { receivedRecs: rec._id },
+        },
+        { new: true }
+      );
       return rec;
     },
   },

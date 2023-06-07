@@ -7,7 +7,6 @@ export const QUERY_ME = gql`
       username
       email
       library {
-        _id
         book {
           _id
           title
@@ -24,7 +23,6 @@ export const QUERY_ME = gql`
         readStatus
         ratingStatus
         rating {
-          _id
           ratingValue
         }
       }
@@ -149,6 +147,18 @@ export const QUERY_RECS_BY_RECIPIENT = gql`
         cover_img_url
       }
       timestamp
+    }
+  }
+`;
+
+export const GET_FRIENDS = gql`
+  query me {
+    me {
+      friends {
+        _id
+        username
+        email
+      }
     }
   }
 `;

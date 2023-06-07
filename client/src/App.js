@@ -14,6 +14,8 @@ import Login from "./pages/Login";
 import BookCard from "./components/BookCard";
 import Signup from "./pages/Signup";
 import Recommendations from "./pages/Recommendations";
+import Friends from "./pages/FriendLibrary";
+import Library from "./pages/UserLibrary";
 
 import { ChakraProvider, Text, Link } from "@chakra-ui/react";
 
@@ -57,6 +59,9 @@ function App() {
               <Route path="/" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/recommendations" element={<Recommendations />} />
+              <Route path="/freinds" element={<Friends />} />
+              <Route path="/library" element={<Library />} />
+
             </Routes>
           </main>
         </Router>

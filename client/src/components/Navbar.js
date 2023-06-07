@@ -272,11 +272,11 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Library",
-    href: "#",
+    href: "/library",
   },
   {
     label: "Friends",
-    href: "#",
+    href: "/friends",
   },
   {
     label: "Recommendations",

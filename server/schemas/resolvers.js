@@ -6,7 +6,25 @@ const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id });
+        return User.findOne({ _id: context.user._id })
+          .populate({
+            path: "library.book",
+            populate: {
+              path: "authors",
+              model: "Author",
+            },
+          })
+          .populate({
+            path: "library",
+            populate: {
+              path: "book",
+              model: "Book",
+            },
+          })
+          .populate({
+            path: "friends",
+            model: "User",
+          });
       }
       throw new AuthenticationError("You need to be logged in!");
     },

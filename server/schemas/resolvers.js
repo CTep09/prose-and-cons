@@ -205,11 +205,25 @@ const resolvers = {
     // },
     // makeRec(username:String!, bookId: ID!): Recommendation
     makeRec: async (parent, { userId, bookId }, context) => {
-      const rec = await Recommendation.create({
-        sender: context.user._id,
-        recipient: userId,
-        book: bookId,
-      });
+      const rec = await Recommendation.findOneAndUpdate(
+        {
+          sender: context.user._id,
+          recipient: userId,
+          book: bookId,
+        },
+        {
+          sender: context.user._id,
+          recipient: userId,
+          book: bookId,
+        },
+        {
+          upsert: true,
+          new: true,
+        }
+      )
+        .populate("sender")
+        .populate("recipient")
+        .populate("book");
       return rec;
     },
   },

@@ -47,6 +47,7 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
+      window.location.href = "/userLibrary";
     } catch (e) {
       console.error(e);
     }

@@ -22,7 +22,7 @@ import { searchGoogleBooks } from "../utils/api";
 import { useMutation } from "@apollo/client";
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
 
-const SearchBooksForm = ({ initialRef }) => {
+const SearchBooksForm = () => {
   // create state for holding returned google api data
   const [searchedBooks, setSearchedBooks] = useState([]);
   // create state for holding our search field data
@@ -50,8 +50,6 @@ const SearchBooksForm = ({ initialRef }) => {
         title: book.volumeInfo.title,
         description: book.volumeInfo.description,
         image: book.volumeInfo.imageLinks?.thumbnail || "",
-        isbn: book.volumeInfo.industryIdentifiers[0].indentifier,
-        isbn13: book.volumeInfo.industryIdentifiers[1].indentifier,
         num_pages: book.volumeInfo.pageCount,
         date_pub: book.volumeInfo.publishedDate,
       }));
@@ -65,11 +63,11 @@ const SearchBooksForm = ({ initialRef }) => {
 
   return (
     <>
-      <FormControl onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit}>
+      <FormControl>
         <FormLabel>Search by ...</FormLabel>
         <InputGroup>
           <Input
-            ref={initialRef}
             placeholder="Book title"
             name="searchInput"
             value={searchInput}
@@ -80,18 +78,20 @@ const SearchBooksForm = ({ initialRef }) => {
             <Search2Icon />
           </InputRightElement>
         </InputGroup>
+        <Button type="submit">Search</Button>
       </FormControl>
+      </form>
       <Flex>
-        <h2 className="pt-5">
-          {searchedBooks.length
-            ? `Viewing ${searchedBooks.length} results:`
-            : "Search for a book to begin"}
-        </h2>
+         
         <div>
           {searchedBooks.map((book) => {
             return (
               <div key={book.bookId}>
-                <p>{book.title}</p>
+                <h2>{book.title}</h2>
+                {book.authors ? <p>{ book.authors.join(", ")}</p> : <p>""</p>}
+                {book.date_pub}
+                    
+
               </div>
             );
           })}
@@ -100,3 +100,6 @@ const SearchBooksForm = ({ initialRef }) => {
     </>
   );
 };
+
+
+export default SearchBooksForm

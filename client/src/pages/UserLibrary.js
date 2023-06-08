@@ -43,7 +43,8 @@ const UserLibrary = () => {
           <Icon as={AddIcon} boxSize={3} ml={4} />
         </Button>
       </Flex>
-      <Modal initialFocusRef={initialRef}  
+      <SearchBooksForm/>
+      {/* <Modal initialFocusRef={initialRef}  
         isOpen={isOpen}
         onClose={onClose}
       >
@@ -61,7 +62,7 @@ const UserLibrary = () => {
                 </InputRightElement>
                 </InputGroup>
               </FormControl> */}
-              <SearchBooksForm ref={initialRef}/>
+              {/* <SearchBooksForm ref={initialRef}/>
             </ModalBody>
 
             <ModalFooter>
@@ -70,8 +71,8 @@ const UserLibrary = () => {
               </Button>
               <Button onClick={onClose}>Cancel</Button>
             </ModalFooter>
-          </ModalContent>
-        </Modal>
+          </ModalContent> */}
+        {/* </Modal> */} 
       </>
       <br/>
 

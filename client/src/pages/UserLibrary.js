@@ -1,5 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
+import { useNavigate } from "react-router-dom";
+import Auth from "../utils/auth";
 
 import {
   Button,
@@ -34,8 +36,14 @@ const UserLibrary = () => {
   // const library = data?.library || [];
   // console.log(library);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const navigate = useNavigate();
 
   const initialRef = React.useRef(null);
+
+  if (!Auth.loggedIn()) {
+    navigate("/login");
+    return null;
+  }
 
   return (
     <main>

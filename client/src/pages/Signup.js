@@ -47,6 +47,7 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
+      window.location.href = "/userLibrary";
     } catch (e) {
       console.error(e);
     }
@@ -56,7 +57,6 @@ const Signup = () => {
   const handleClick = () => setShow(!show);
   const toast = useToast();
 
-  // added
   return (
     <main>
       <Center>
@@ -128,14 +128,14 @@ const Signup = () => {
                         colorScheme="teal"
                         style={{ cursor: "pointer" }}
                         type="submit"
-                        onClick={() =>
-                          toast({
-                            title: "Account created.",
-                            status: "success",
-                            duration: 9000,
-                            isClosable: true,
-                          })
-                        }
+                        // onClick={() =>
+                        //   toast({
+                        //     title: "Account created.",
+                        //     status: "success",
+                        //     duration: 3000,
+                        //     isClosable: true,
+                        //   })
+                        // }
                       >
                         Submit
                       </Button>

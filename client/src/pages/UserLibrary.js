@@ -25,6 +25,8 @@ import {AddIcon, Search2Icon} from "@chakra-ui/icons";
 import { QUERY_ME } from "../utils/queries";
 import BookCard from "../components/BookCard";
 
+import SearchBooksForm from "../components/SearchBooksForm"
+
 const UserLibrary = () => {
   const { loading, data } = useQuery(QUERY_ME);
   const library = data?.library || [];
@@ -50,7 +52,7 @@ const UserLibrary = () => {
             <ModalHeader>Find your next adventure</ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={3}>
-              <FormControl>
+              {/* <FormControl>
                 <FormLabel>Search by ...</FormLabel>
                 <InputGroup>
                 <Input ref={initialRef} placeholder="Book title" />
@@ -58,7 +60,8 @@ const UserLibrary = () => {
                 <Search2Icon />
                 </InputRightElement>
                 </InputGroup>
-              </FormControl>
+              </FormControl> */}
+              <SearchBooksForm ref={initialRef}/>
             </ModalBody>
 
             <ModalFooter>

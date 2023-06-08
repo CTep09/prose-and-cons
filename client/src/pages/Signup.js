@@ -47,9 +47,7 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
-      window.setTimeout(() => {
       window.location.href = "/userLibrary";
-      }, 3000);
     } catch (e) {
       console.error(e);
     }
@@ -130,14 +128,14 @@ const Signup = () => {
                         colorScheme="teal"
                         style={{ cursor: "pointer" }}
                         type="submit"
-                        onClick={() =>
-                          toast({
-                            title: "Account created.",
-                            status: "success",
-                            duration: 9000,
-                            isClosable: true,
-                          })
-                        }
+                        // onClick={() =>
+                        //   toast({
+                        //     title: "Account created.",
+                        //     status: "success",
+                        //     duration: 3000,
+                        //     isClosable: true,
+                        //   })
+                        // }
                       >
                         Submit
                       </Button>

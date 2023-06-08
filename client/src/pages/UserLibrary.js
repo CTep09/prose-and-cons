@@ -1,5 +1,6 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
+import Auth from "../utils/auth";
 
 import {
   Button,
@@ -34,6 +35,10 @@ const UserLibrary = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const initialRef = React.useRef(null);
+
+  if (!Auth.loggedIn()) {
+    return <div>You must be logged in to view this page.</div>;
+  }
 
   return (
     <main>

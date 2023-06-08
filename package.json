@@ -20,6 +20,7 @@
   "dependencies": {
     "@apollo/client": "^3.7.15",
     "jwt-decode": "^3.1.2",
+    "react-auth": "^1.0.0",
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.11.2"
   }

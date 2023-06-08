@@ -1,4 +1,8 @@
 import React from "react";
+
+import { GiBookshelf, GiSpellBook } from "react-icons/gi";
+import { FaUserFriends } from "react-icons/fa";
+
 import {
   Box,
   Flex,
@@ -61,10 +65,8 @@ export default function WithSubnavigation() {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
             href={"/"}
-            >
-            <Link href="/">
-            Prose & Cons
-            </Link>
+          >
+            <Link href="/">Prose & Cons</Link>
           </Text>
           <Icon as={GiBurningBook}></Icon>
 
@@ -134,6 +136,7 @@ const DesktopNav = () => {
                   color: linkHoverColor,
                 }}
               >
+                {navItem.icon && <Icon as={navItem.icon} w={5} h={5} mr={2} />}
                 {navItem.label}
               </Link>
             </PopoverTrigger>
@@ -276,13 +279,17 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Library",
     href: "/userLibrary",
+    icon: GiBookshelf,
   },
+
   {
     label: "Friends",
     href: "/friendLibrary",
+    icon: FaUserFriends,
   },
   {
     label: "Recommendations",
     href: "/recommendations",
+    icon: GiSpellBook,
   },
 ];

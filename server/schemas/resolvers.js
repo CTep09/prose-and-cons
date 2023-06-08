@@ -39,7 +39,7 @@ const resolvers = {
     },
     books: async () => {
       return Book.find();
-    }
+    },
     // friends: async () => {
     //   User.find({ friend[username]})
     // }
@@ -112,17 +112,10 @@ const resolvers = {
         });
       }
       const currentUser = await User.findOneAndUpdate(
-        {
-          _id: context.user._id
-
-        },
-        {
-          $addToSet: { library: { book: newBook._id}}
-        },
-        {
-          new: true 
-        }
-      )
+        { _id: context.user._id },
+        { $addToSet: { library: { book: newBook._id } } },
+        { new: true }
+      );
 
       return newBook;
     },

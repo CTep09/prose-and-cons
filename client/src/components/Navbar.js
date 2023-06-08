@@ -3,6 +3,8 @@ import React from "react";
 import { GiBookshelf, GiSpellBook } from "react-icons/gi";
 import { FaUserFriends } from "react-icons/fa";
 
+import Auth from "../utils/auth";
+
 import {
   Box,
   Flex,
@@ -31,6 +33,12 @@ import { GiBurningBook } from "react-icons/gi";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const isLoggedIn = Auth.loggedIn();
+  const handleSignOut = () => {
+    Auth.logout(); 
+    window.location.href = "/login"
+  };
+  
 
   return (
     <Box>
@@ -66,12 +74,12 @@ export default function WithSubnavigation() {
             color={useColorModeValue("gray.800", "white")}
             href={"/"}
           >
-            <Link href="/">Prose & Cons</Link>
+            <Link href="/userLibrary">Prose & Cons</Link>
           </Text>
           <Icon as={GiBurningBook}></Icon>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav />
+            {isLoggedIn && <DesktopNav />}
           </Flex>
         </Flex>
 
@@ -81,12 +89,24 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={6}
         >
+          {isLoggedIn ? (
+             <Button
+             as={"a"}
+             fontSize={"sm"}
+             fontWeight={400}
+             variant={"link"}
+             onClick={handleSignOut}
+           >
+             Sign Out
+           </Button>
+         ) : (
+           <>
           <Button
             as={"a"}
             fontSize={"sm"}
             fontWeight={400}
             variant={"link"}
-            href={"/"}
+            href={"/login"}
           >
             Sign In
           </Button>
@@ -104,11 +124,13 @@ export default function WithSubnavigation() {
           >
             Sign Up
           </Button>
+          </>
+         )}
         </Stack>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+        <MobileNav isLoggedIn={isLoggedIn}  />
       </Collapse>
     </Box>
   );
@@ -201,14 +223,15 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   );
 };
 
-const MobileNav = () => {
+const MobileNav = ({isLoggedIn}) => {
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
       p={4}
       display={{ md: "none" }}
     >
-      {NAV_ITEMS.map((navItem) => (
+      {isLoggedIn &&
+       NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>

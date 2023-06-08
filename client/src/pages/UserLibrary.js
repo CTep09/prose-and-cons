@@ -3,7 +3,6 @@ import { useQuery } from "@apollo/client";
 import {
   Button,
   Modal,
-  Center,
   ModalOverlay,
   ModalContent,
   ModalHeader,
@@ -18,7 +17,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 
-import {AddIcon} from "@chakra-ui/icons";
+import {AddIcon, Search2Icon} from "@chakra-ui/icons";
 
 import { QUERY_ME } from "../utils/queries";
 import BookCard from "../components/BookCard";
@@ -29,32 +28,25 @@ const UserLibrary = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const initialRef = React.useRef(null);
-  // const finalRef = React.useRef(null)
 
   return (
     <main>
       <>
       <Flex direction="column" align="center">
-  <Button onClick={onOpen}>
-    Add Book
-    <Icon as={AddIcon} boxSize={3} ml={4} />
-  </Button>
-</Flex>
-        {/* <Button ml={4} ref={finalRef}>
-        I'll receive focus on close
-      </Button> */}
-
-        <Modal
-          initialFocusRef={initialRef}
-          // finalFocusRef={finalRef}
-          isOpen={isOpen}
-          onClose={onClose}
-        >
-          <ModalOverlay />
+        <Button onClick={onOpen}>
+          Add Book
+          <Icon as={AddIcon} boxSize={3} ml={4} />
+        </Button>
+      </Flex>
+      <Modal initialFocusRef={initialRef}  
+        isOpen={isOpen}
+        onClose={onClose}
+      >
+        <ModalOverlay />
           <ModalContent>
             <ModalHeader>Find your next adventure</ModalHeader>
             <ModalCloseButton />
-            <ModalBody pb={6}>
+            <ModalBody pb={3}>
               <FormControl>
                 <FormLabel>Enter a title</FormLabel>
                 <Input ref={initialRef} placeholder="Book title" />
@@ -70,6 +62,7 @@ const UserLibrary = () => {
           </ModalContent>
         </Modal>
       </>
+
 
       <div className="flex-row justify-center">
         <div

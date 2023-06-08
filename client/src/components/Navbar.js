@@ -38,6 +38,9 @@ export default function WithSubnavigation() {
     Auth.logout(); 
   };
   
+  // if (isLoggedIn) {
+  //   window.location.href = "/userLibrary";
+  // }
 
   return (
     <Box>
@@ -129,7 +132,7 @@ export default function WithSubnavigation() {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        {isLoggedIn && <MobileNav />}
+        <MobileNav isLoggedIn={isLoggedIn}  />
       </Collapse>
     </Box>
   );
@@ -222,14 +225,15 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   );
 };
 
-const MobileNav = () => {
+const MobileNav = ({isLoggedIn}) => {
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
       p={4}
       display={{ md: "none" }}
     >
-      {NAV_ITEMS.map((navItem) => (
+      {isLoggedIn &&
+       NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>

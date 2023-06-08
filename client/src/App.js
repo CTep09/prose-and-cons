@@ -77,7 +77,7 @@ function App() {
               <Route path="/userLibrary" element={<UserLibrary />} />
 
             </Routes>
-            {/* <FriendLibrary></FriendLibrary> */}
+            <FriendLibrary></FriendLibrary>
           </main>
         </Router>
       </ChakraProvider>

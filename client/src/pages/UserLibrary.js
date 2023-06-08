@@ -23,16 +23,18 @@ import {
   InputRightElement,
 } from "@chakra-ui/react";
 
-import {AddIcon, Search2Icon} from "@chakra-ui/icons";
+import { AddIcon, Search2Icon } from "@chakra-ui/icons";
 
 import { QUERY_ME } from "../utils/queries";
 import BookCard from "../components/BookCard";
 
-import SearchBooksForm from "../components/SearchBooksForm"
+import SearchBooksForm from "../components/SearchBooksForm";
 
 const UserLibrary = () => {
   const { loading, data } = useQuery(QUERY_ME);
-  const library = data?.library || [];
+  // console.log(data);
+  // const library = data?.library || [];
+  // console.log(library);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
 
@@ -46,14 +48,14 @@ const UserLibrary = () => {
   return (
     <main>
       <>
-      <Flex direction="column" align="center">
-        <Button onClick={onOpen}>
-          Add Book
-          <Icon as={AddIcon} boxSize={3} ml={4} />
-        </Button>
-      </Flex>
-      <SearchBooksForm/>
-      {/* <Modal initialFocusRef={initialRef}  
+        <Flex direction="column" align="center">
+          <Button onClick={onOpen}>
+            Add Book
+            <Icon as={AddIcon} boxSize={3} ml={4} />
+          </Button>
+        </Flex>
+        <SearchBooksForm />
+        {/* <Modal initialFocusRef={initialRef}  
         isOpen={isOpen}
         onClose={onClose}
       >
@@ -71,7 +73,7 @@ const UserLibrary = () => {
                 </InputRightElement>
                 </InputGroup>
               </FormControl> */}
-              {/* <SearchBooksForm ref={initialRef}/>
+        {/* <SearchBooksForm ref={initialRef}/>
             </ModalBody>
 
             <ModalFooter>
@@ -81,10 +83,9 @@ const UserLibrary = () => {
               <Button onClick={onClose}>Cancel</Button>
             </ModalFooter>
           </ModalContent> */}
-        {/* </Modal> */} 
+        {/* </Modal> */}
       </>
-      <br/>
-
+      <br />
 
       <div className="flex-row justify-center">
         <div
@@ -92,9 +93,24 @@ const UserLibrary = () => {
           style={{ border: "1px dotted #1a1a1a" }}
         ></div>
 
-        <Text fontSize='20px' align="center">Your Collection</Text>
+        <Text fontSize="20px" align="center">
+          Your Collection
+        </Text>
         <div className="col-12 col-md-8 mb-3">
-          {loading ? <div>Loading...</div> : <BookCard library={library} />}
+          {loading ? (
+            <div>Loading...</div>
+          ) : (
+            data.me.library.map((book) => {
+              return (
+                <BookCard
+                  img={book.book.cover_img_url}
+                  authors={book.book.author}
+                  title={book.book.title}
+                  review={book.rating?.ratingValue}
+                />
+              );
+            })
+          )}
         </div>
       </div>
     </main>

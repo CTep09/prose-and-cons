@@ -114,12 +114,14 @@ const Login = (props) => {
               </div>
             )}
           </div>
+          <Center>
             <Text>
               Don't have an account? {' '} 
-            <Link color='teal.500' href='/signup'>
-            Sign up
-            </Link>
+              <Link color='teal.500' href='/signup'>
+                Sign up
+              </Link>
             </Text>
+          </Center>
         </Box>
       </Center>
     </main>

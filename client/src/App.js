@@ -50,10 +50,11 @@ function App() {
       <Router>
           <div className="App">
             <Navbar />
-            <BookCard />
-            <h1>Hello World.</h1>
-            <p>This is Prose and Cons.</p>
+            {/* <BookCard /> */}
+            <h1 align="center">Hello World.</h1>
+            <p align="center">This is Prose and Cons.</p>
           </div>
+          <br />
           <main>
             <Routes>
               <Route path="/" element={<Login />} />

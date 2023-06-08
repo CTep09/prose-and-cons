@@ -143,12 +143,14 @@ const Signup = () => {
                   </FormControl>
                 </form>
                 <br></br>
+                <Center>
                 <Text>
                   Already have an account?{" "}
                   <Link color="teal.500" href="/">
                     Login
                   </Link>
                 </Text>
+                </Center>
               </Box>
             )}
             {error && (

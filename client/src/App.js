@@ -14,7 +14,7 @@ import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import BookCard from "./components/BookCard";
 import Signup from "./pages/Signup";
-import FriendLibrary from "./pages/FriendLibrary"
+// import FriendLibrary from "./pages/FriendLibrary"
 import Recommendations from "./pages/Recommendations";
 import UserLibrary from "./pages/UserLibrary";
 
@@ -73,11 +73,11 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/recommendations" element={<Recommendations />} />
-              <Route path="/friendLibrary" element={<FriendLibrary />} />
+              {/* <Route path="/friendLibrary" element={<FriendLibrary />} /> */}
               <Route path="/userLibrary" element={<UserLibrary />} />
 
             </Routes>
-            <FriendLibrary></FriendLibrary>
+            {/* <FriendLibrary></FriendLibrary> */}
           </main>
         </Router>
       </ChakraProvider>

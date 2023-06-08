@@ -32,7 +32,7 @@ export default function BookCard(props) {
           _after={{
             transition: "all .3s ease",
             content: '""',
-            w: "full",
+            w: "170px",
             h: "full",
             pos: "absolute",
             top: 5,
@@ -50,7 +50,7 @@ export default function BookCard(props) {
           <Image
             rounded={"lg"}
             height={230}
-            width={282}
+            width={150}
             objectFit={"cover"}
             src={props.img}
           />

@@ -129,7 +129,7 @@ export default function WithSubnavigation() {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+        {isLoggedIn && <MobileNav />}
       </Collapse>
     </Box>
   );

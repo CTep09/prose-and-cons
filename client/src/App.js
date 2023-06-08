@@ -50,7 +50,7 @@ function App() {
       <Router>
           <div className="App">
             <Navbar />
-            <BookCard />
+            {/* <BookCard /> */}
             <h1>Hello World.</h1>
             <p>This is Prose and Cons.</p>
           </div>

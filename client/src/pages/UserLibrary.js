@@ -1,5 +1,6 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
+import { useNavigate } from "react-router-dom";
 import Auth from "../utils/auth";
 
 import {
@@ -33,11 +34,13 @@ const UserLibrary = () => {
   const { loading, data } = useQuery(QUERY_ME);
   const library = data?.library || [];
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const navigate = useNavigate();
 
   const initialRef = React.useRef(null);
 
   if (!Auth.loggedIn()) {
-    return <div>You must be logged in to view this page.</div>;
+    navigate("/login");
+    return null;
   }
 
   return (

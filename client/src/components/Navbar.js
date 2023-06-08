@@ -33,10 +33,8 @@ import { GiBurningBook } from "react-icons/gi";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-  const isLoggedIn = Auth.loggedIn(); // Replace with your authentication logic
-
+  const isLoggedIn = Auth.loggedIn();
   const handleSignOut = () => {
-    // Implement your sign-out logic here
     Auth.logout(); 
   };
   
@@ -80,7 +78,7 @@ export default function WithSubnavigation() {
           <Icon as={GiBurningBook}></Icon>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav />
+            {isLoggedIn && <DesktopNav />}
           </Flex>
         </Flex>
 

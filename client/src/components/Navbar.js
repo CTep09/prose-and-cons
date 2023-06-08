@@ -3,6 +3,8 @@ import React from "react";
 import { GiBookshelf, GiSpellBook } from "react-icons/gi";
 import { FaUserFriends } from "react-icons/fa";
 
+import Auth from "../utils/auth";
+
 import {
   Box,
   Flex,
@@ -31,6 +33,13 @@ import { GiBurningBook } from "react-icons/gi";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const isLoggedIn = Auth.loggedIn(); // Replace with your authentication logic
+
+  const handleSignOut = () => {
+    // Implement your sign-out logic here
+    Auth.logout(); 
+  };
+  
 
   return (
     <Box>
@@ -81,6 +90,18 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={6}
         >
+          {isLoggedIn ? (
+             <Button
+             as={"a"}
+             fontSize={"sm"}
+             fontWeight={400}
+             variant={"link"}
+             onClick={handleSignOut}
+           >
+             Sign Out
+           </Button>
+         ) : (
+           <>
           <Button
             as={"a"}
             fontSize={"sm"}
@@ -104,6 +125,8 @@ export default function WithSubnavigation() {
           >
             Sign Up
           </Button>
+          </>
+         )}
         </Stack>
       </Flex>
 

@@ -70,7 +70,7 @@ const resolvers = {
     },
 
     // addBook(input: BookInput!): Book
-    addBook: async (parent, args) => {
+    addBook: async (parent, args, context) => {
       console.log(args);
 
       const bookData = {
@@ -106,10 +106,23 @@ const resolvers = {
           );
 
           newBook.authors.push(newAuthor._id);
+          await newBook.save();
           console.log(newAuthor);
           console.log(newBook);
         });
       }
+      const currentUser = await User.findOneAndUpdate(
+        {
+          _id: context.user._id
+
+        },
+        {
+          $addToSet: { library: { book: newBook._id}}
+        },
+        {
+          new: true 
+        }
+      )
 
       return newBook;
     },

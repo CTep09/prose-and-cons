@@ -40,6 +40,7 @@ const Login = (props) => {
       });
 
       AuthService.login(data.login.token);
+      window.location.href = "/userLibrary"
     } catch (e) {
       console.error(e);
     }

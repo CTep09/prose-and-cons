@@ -36,11 +36,9 @@ export default function WithSubnavigation() {
   const isLoggedIn = Auth.loggedIn();
   const handleSignOut = () => {
     Auth.logout(); 
+    window.location.href = "/login"
   };
   
-  // if (isLoggedIn) {
-  //   window.location.href = "/userLibrary";
-  // }
 
   return (
     <Box>
@@ -76,7 +74,7 @@ export default function WithSubnavigation() {
             color={useColorModeValue("gray.800", "white")}
             href={"/"}
           >
-            <Link href="/">Prose & Cons</Link>
+            <Link href="/userLibrary">Prose & Cons</Link>
           </Text>
           <Icon as={GiBurningBook}></Icon>
 
@@ -108,7 +106,7 @@ export default function WithSubnavigation() {
             fontSize={"sm"}
             fontWeight={400}
             variant={"link"}
-            href={"/"}
+            href={"/login"}
           >
             Sign In
           </Button>

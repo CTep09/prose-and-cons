@@ -73,7 +73,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/recommendations" element={<Recommendations />} />
-              <Route path="/friendLibrary" element={<FriendLibrary />} />
+              {/* <Route path="/friendLibrary" element={<FriendLibrary />} /> */}
               <Route path="/userLibrary" element={<UserLibrary />} />
 
             </Routes>

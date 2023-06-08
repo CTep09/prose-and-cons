@@ -4,12 +4,12 @@ import { searchGoogleBooks } from "../utils/api";
 import { useMutation } from "@apollo/client";
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
 import BookCard from "./BookCard";
+import { ADD_BOOK } from "../utils/mutations";
 
 const SearchBooksForm = () => {
-  // create state for holding returned google api data
   const [searchedBooks, setSearchedBooks] = useState([]);
-  // create state for holding our search field data
   const [searchInput, setSearchInput] = useState("");
+  const [addBook, { loading }] = useMutation(ADD_BOOK);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -26,21 +26,67 @@ const SearchBooksForm = () => {
       }
 
       const { items } = await response.json();
-
-      const bookData = items.map((book) => ({
-        bookId: book.id,
-        authors: book.volumeInfo.authors || [],
-        title: book.volumeInfo.title,
-        description: book.volumeInfo.description,
-        image: book.volumeInfo.imageLinks?.smallThumbnail || "",
-        num_pages: book.volumeInfo.pageCount,
-        date_pub: book.volumeInfo.publishedDate,
-      }));
+        const bookData = []
+        for (const book of items){
+            let isbn = "";
+            let isbn13 = "";
+            let industryIds = book.volumeInfo?.industryIdentifiers
+            industryIds.forEach(id => {
+                if(id.type == "ISBN_10"){
+                    isbn = id.identifier
+                }
+                if(id.type == "ISBN_13"){
+                    isbn13 = id.identifier
+                }
+            })
+            const bookObject = {
+                bookId: book.id,
+                authors: book.volumeInfo.authors || [],
+                title: book.volumeInfo.title,
+                description: book.volumeInfo.description,
+                image: book.volumeInfo.imageLinks?.smallThumbnail || "",
+                num_pages: book.volumeInfo.pageCount,
+                date_pub: book.volumeInfo.publishedDate,
+                isbn: isbn,
+                isbn13: isbn13
+            }
+            bookData.push(bookObject)
+        }
 
       setSearchedBooks(bookData);
       setSearchInput("");
     } catch (err) {
       console.error(err);
+    }
+  };
+
+  const handleAddToLibrary = async (book) => {
+    console.log(book)
+    const payload = {
+        title: book.title,
+        authors: [
+            {
+              firstName: book.authors[0].firstName,
+            },
+          ],
+        description: book.description,
+        cover_img_url: book.image,
+        num_pages: book.num_pages,
+        date_pub: book.date_pub,
+        isbn: book.isbn,
+        isbn13: book.isbn13
+      }
+    console.log(payload)
+    try {
+      await addBook({
+        variables: {
+          input: payload
+        },
+      });
+     console.log("book added!")
+    } catch (error) {
+      console.error(error);
+      // Handle error, e.g., show an error message
     }
   };
 
@@ -67,13 +113,22 @@ const SearchBooksForm = () => {
       <Flex>
         <div>
           {searchedBooks.map((book) => (
-            <BookCard
-              key={book.bookId}
-              title={book.title}
-              author={book.authors.join(", ")}
-              img={book.image}
-              review={book.date_pub}
-            />
+            <div key={book.bookId}>
+              <BookCard
+                title={book.title}
+                author={book.authors.join(", ")}
+                img={book.image}
+                review={book.date_pub}
+              />
+              <Button
+                mt={4}
+                colorScheme="teal"
+                isLoading={loading}
+                onClick={() => handleAddToLibrary(book)}
+              >
+                Add to Library
+              </Button>
+            </div>
           ))}
         </div>
       </Flex>

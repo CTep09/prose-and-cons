@@ -54,7 +54,7 @@ function App() {
             <h1 align="center">Hello World.</h1>
             <p align="center">This is Prose and Cons.</p>
           </div>
-          <br></br>
+          <br />
           <main>
             <Routes>
               <Route path="/" element={<Login />} />

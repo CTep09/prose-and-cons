@@ -11,10 +11,13 @@ import {
   FormControl,
   FormLabel,
   Input,
+  InputGroup,
   ModalFooter,
   useDisclosure,
   Flex,
   Icon,
+  Text,
+  InputRightElement,
 } from "@chakra-ui/react";
 
 import {AddIcon, Search2Icon} from "@chakra-ui/icons";
@@ -48,8 +51,13 @@ const UserLibrary = () => {
             <ModalCloseButton />
             <ModalBody pb={3}>
               <FormControl>
-                <FormLabel>Enter a title</FormLabel>
+                <FormLabel>Search by ...</FormLabel>
+                <InputGroup>
                 <Input ref={initialRef} placeholder="Book title" />
+                <InputRightElement>
+                <Search2Icon />
+                </InputRightElement>
+                </InputGroup>
               </FormControl>
             </ModalBody>
 
@@ -62,6 +70,7 @@ const UserLibrary = () => {
           </ModalContent>
         </Modal>
       </>
+      <br/>
 
 
       <div className="flex-row justify-center">
@@ -69,6 +78,8 @@ const UserLibrary = () => {
           className="col-12 col-md-10 mb-3 p-3"
           style={{ border: "1px dotted #1a1a1a" }}
         ></div>
+
+        <Text fontSize='20px' align="center">Your Collection</Text>
         <div className="col-12 col-md-8 mb-3">
           {loading ? <div>Loading...</div> : <BookCard library={library} />}
         </div>

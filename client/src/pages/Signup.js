@@ -47,7 +47,9 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
+      window.setTimeout(() => {
       window.location.href = "/userLibrary";
+      }, 3000);
     } catch (e) {
       console.error(e);
     }
@@ -57,7 +59,6 @@ const Signup = () => {
   const handleClick = () => setShow(!show);
   const toast = useToast();
 
-  // added
   return (
     <main>
       <Center>

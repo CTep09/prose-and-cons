@@ -8,6 +8,8 @@ const typeDefs = gql`
     password: String
     library: [UserBook]!
     friends: [User]!
+    sentRecs: [Recommendation]!
+    receivedRecs: [Recommendation]!
   }
 
   type UserBook {

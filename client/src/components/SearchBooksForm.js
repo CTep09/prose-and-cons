@@ -119,60 +119,61 @@ const SearchBooksForm = () => {
   return (
     <>
     <Flex direction="column" align="center">
-          <Button onClick={onOpen}>
-            Add Book
-            <Icon as={AddIcon} boxSize={3} ml={4} />
-          </Button>
-        </Flex>
-      <form onSubmit={handleFormSubmit}>
+      <Button onClick={onOpen}>
+        Add Book
+        <Icon as={AddIcon} boxSize={3} ml={4} />
+      </Button>
+    </Flex>
+    <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Find your next adventure</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody pb={3}>
-        <FormControl>
-          <FormLabel>Search by ...</FormLabel>
-          <InputGroup>
-            <Input
-              placeholder="Book title"
-              name="searchInput"
-              value={searchInput}
-              onChange={(e) => setSearchInput(e.target.value)}
-              type="text"
-            />
-            <InputRightElement>
-              <Search2Icon />
-            </InputRightElement>
-          </InputGroup>
-          <Button type="submit">Search</Button>
-        </FormControl>
-        </ModalBody>
+      <form onSubmit={handleFormSubmit}>
+        <ModalContent>
+          <ModalHeader>Find your next adventure</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody pb={3}>
+            <FormControl>
+              <FormLabel>Search by ...</FormLabel>
+              <InputGroup>
+                <Input
+                  placeholder="Book title"
+                  name="searchInput"
+                  value={searchInput}
+                  onChange={(e) => setSearchInput(e.target.value)}
+                  type="text"
+                />
+                <InputRightElement>
+                  <Search2Icon />
+                </InputRightElement>
+              </InputGroup>
+              <Button type="submit">Search</Button>
+            </FormControl>
+          </ModalBody>
         </ModalContent>
       </form>
-
-      <Flex>
-        <div>
-          {searchedBooks.map((book) => (
-            <div key={book.bookId}>
-              <BookCard
-                title={book.title}
-                author={book.authors.join(", ")}
-                img={book.image}
-                review={book.date_pub}
-              />
-              <Button
-                mt={4}
-                colorScheme="teal"
-                isLoading={loading}
-                onClick={() => handleAddToLibrary(book)}
-              >
-                Add to Library
-              </Button>
-            </div>
-          ))}
-        </div>
-      </Flex>
-    </>
+    </Modal>
+    <Flex>
+      <div>
+        {searchedBooks.map((book) => (
+          <div key={book.bookId}>
+            <BookCard
+              title={book.title}
+              author={book.authors.join(", ")}
+              img={book.image}
+              review={book.date_pub}
+            />
+            <Button
+              mt={4}
+              colorScheme="teal"
+              isLoading={loading}
+              onClick={() => handleAddToLibrary(book)}
+            >
+              Add to Library
+            </Button>
+          </div>
+        ))}
+      </div>
+    </Flex>
+  </>
   );
 };
 

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -31,6 +33,7 @@ const Signup = () => {
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
 
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
@@ -53,7 +56,7 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
-      window.location.href = "/userLibrary";
+      navigate("/userLibrary");
     } catch (e) {
       console.error(e);
     }

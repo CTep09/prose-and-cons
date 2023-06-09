@@ -5,6 +5,7 @@ import {
   Switch,
   Route,
   Link as RouteLink,
+  useNavigate,
 } from "react-router-dom";
 
 import { GiBookshelf, GiSpellBook } from "react-icons/gi";
@@ -42,9 +43,11 @@ import { GiBurningBook } from "react-icons/gi";
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const isLoggedIn = Auth.loggedIn();
+  const navigate = useNavigate();
+
   const handleSignOut = () => {
     Auth.logout();
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   return (

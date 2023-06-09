@@ -9,7 +9,7 @@ import {
   Image,
   Flex,
 } from "@chakra-ui/react";
-import { Flex, Circle, Badge, Icon, chakra, Tooltip } from "@chakra-ui/react";
+// import { Flex, Circle, Badge, Icon, chakra, Tooltip } from "@chakra-ui/react";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 
 export default function BookCard(props) {

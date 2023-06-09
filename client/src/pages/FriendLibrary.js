@@ -1,6 +1,10 @@
 import React from "react";
 import { useQuery, useMutation } from "@apollo/client";
 import { Box, Button, Grid, Spinner } from "@chakra-ui/react";
+import Auth from "../utils/auth";
+import { useNavigate } from "react-router-dom";
+
+
 
 import { GET_FRIENDS } from "../utils/queries";
 import { REMOVE_FRIEND } from "../utils/mutations";
@@ -23,6 +27,13 @@ export default function FriendLibrary() {
       console.error(err);
     }
   };
+
+    const navigate = useNavigate();
+
+    if (!Auth.loggedIn()) {
+    navigate("/login");
+    return null;
+  }
 
   if (loading) {
     return (

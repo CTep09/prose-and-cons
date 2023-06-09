@@ -22,7 +22,7 @@
 
 ## 🚀 Technology
 
-[![My Skills](https://skillicons.dev/icons?i=js,react,express,nodejs,graphql,mongodb,github,vscode&perline=4)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=apollo,babel,express,graphql,github,heroku,js,react,mongodb,nodejs,vscode&perline=3)](https://skillicons.dev)
 
 ## 🧪 Test
 

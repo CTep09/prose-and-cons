@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useQuery } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 import Auth from "../utils/auth";
@@ -29,12 +29,18 @@ import { QUERY_ME } from "../utils/queries";
 import BookCard from "../components/BookCard";
 
 import SearchBooksForm from "../components/SearchBooksForm";
+import FriendCard from "../components/FriendCard";
 
 const UserLibrary = () => {
   const { loading, data } = useQuery(QUERY_ME);
-  // console.log(data);
-  // const library = data?.library || [];
-  // console.log(library);
+
+  useEffect(() => {
+    if (!loading) {
+      // At this point, loading is false, so the data is available.
+      console.log(data);
+    }
+  }, [loading, data]);
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
 
@@ -103,10 +109,40 @@ const UserLibrary = () => {
             data.me.library.map((book) => {
               return (
                 <BookCard
+                  key={book.book._id}
                   img={book.book.cover_img_url}
                   authors={book.book.author}
                   title={book.book.title}
                   review={book.rating?.ratingValue}
+                />
+              );
+            })
+          )}
+        </div>
+      </div>
+
+      {/* Friends Cards */}
+      <div className="flex-row justify-center">
+        <div
+          className="col-12 col-md-10 mb-3 p-3"
+          style={{ border: "1px dotted #1a1a1a" }}
+        ></div>
+
+        <Text fontSize="20px" align="center">
+          Your Friends
+        </Text>
+        <div className="col-12 col-md-8 mb-3">
+          {loading ? (
+            <div>Loading...</div>
+          ) : (
+            data.me.friends.map((friend) => {
+              // return console.log(friend);
+              return (
+                <FriendCard
+                  key={friend._id}
+                  username={friend.username}
+                  // authors={book.book.author}
+                  // title={book.book.title}
                 />
               );
             })

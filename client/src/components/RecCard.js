@@ -47,26 +47,26 @@ export default function RecCard(props) {
             },
           }}
         >
-          {/* <Image
+          <Image
             rounded={"lg"}
             height={230}
             width={282}
             objectFit={"cover"}
             src={props.img}
-          /> */}
+          />
         </Box>
         <Stack pt={10} align={"center"}>
           <Text color={"gray.500"} fontSize={"sm"} textTransform={"uppercase"}>
-            {props.author}
+            {props.authors}
           </Text>
           <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
             {props.title}
           </Heading>
-          <Stack direction={"row"} align={"center"}>
+          {/* <Stack direction={"row"} align={"center"}>
             <Text fontWeight={800} fontSize={"xl"}>
-              {props.review}
+              {props.rating}
             </Text>
-          </Stack>
+          </Stack> */}
         </Stack>
       </Box>
     </Center>

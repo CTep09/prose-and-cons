@@ -113,7 +113,7 @@ const UserLibrary = () => {
                 <BookCard
                   key={book.book._id}
                   img={book.book.cover_img_url}
-                  authors={book.book.author}
+                  author={book.book.authors.join(", ")}
                   title={book.book.title}
                   review={book.rating?.ratingValue}
                 />
@@ -170,10 +170,10 @@ const UserLibrary = () => {
                 <RecCard
                   key={userBook._id}
                   user={userBook.book}
-                  rating={userBook.rating}
-                  review={userBook.review}
-                  // title={book.book.title}
-                  // review={book.rating?.ratingValue}
+                  rating={userBook?.rating?.ratingValue}
+                  img={userBook.book.cover_img_url}
+                  title={userBook.book.title}
+                  author={userBook.book.authors}
                 />
               );
             })

@@ -110,29 +110,32 @@ export default function WithSubnavigation() {
             </Button>
           ) : (
             <>
-              <Button
-                as={"a"}
-                fontSize={"sm"}
-                fontWeight={400}
-                variant={"link"}
-                href={"/login"}
-              >
-                Sign In
-              </Button>
-              <Button
-                as={"a"}
-                display={{ base: "none", md: "inline-flex" }}
-                fontSize={"sm"}
-                fontWeight={600}
-                color={"white"}
-                bg={"pink.400"}
-                href={"/signup"}
-                _hover={{
-                  bg: "pink.300",
-                }}
-              >
-                Sign Up
-              </Button>
+              <RouteLink href={"/login"}>
+                <Button
+                  as={"a"}
+                  fontSize={"sm"}
+                  fontWeight={400}
+                  variant={"link"}
+                >
+                  Sign In
+                </Button>
+              </RouteLink>
+
+              <RouteLink href={"/signup"}>
+                <Button
+                  as={"a"}
+                  display={{ base: "none", md: "inline-flex" }}
+                  fontSize={"sm"}
+                  fontWeight={600}
+                  color={"white"}
+                  bg={"pink.400"}
+                  _hover={{
+                    bg: "pink.300",
+                  }}
+                >
+                  Sign Up
+                </Button>
+              </RouteLink>
             </>
           )}
         </Stack>

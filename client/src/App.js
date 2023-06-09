@@ -29,12 +29,10 @@ import OtherUserLibrary from "./pages/OtherUserLibrary";
 
 import { ChakraProvider, Text, Link } from "@chakra-ui/react";
 
-const uri_string = process.env.REACT_APP_GRAPHQL_URI_DEV || "/graphql";
-
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: "http://localhost:3001/graphql",
-  //uri: "/graphql",
+  // uri: "http://localhost:3001/graphql",
+  uri: "/graphql",
   //uri: uri_string,
 });
 

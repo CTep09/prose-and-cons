@@ -133,6 +133,8 @@ const resolvers = {
 
     // addFriend(username: String!): User
     addFriend: async (parent, { friendId }, context) => {
+      console.log(friendId);
+      console.log(context.user);
       if (context.user) {
         return User.findOneAndUpdate(
           { _id: context.user._id },

@@ -5,7 +5,6 @@
 ## Table of Contents
 
 - [**Description**](#📑-description)
-- [**Installation**](#💾-installation)
 - [**Usage**](#💻-usage)
 - [**Contribution**](#🤝-contribution)
 - [**Technology**](#🚀-technology)
@@ -22,11 +21,7 @@ If a user thinks a friend would enjoy a book they have read, they can easily sen
 
 [Visit Prose & Cons](https://prose-n-cons.herokuapp.com/)
 
-## 💾 Installation
-
 ## 💻 Usage
-
-## 🤝 Contribution
 
 ## 🚀 Technology
 

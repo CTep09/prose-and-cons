@@ -51,23 +51,10 @@ export const ADD_BOOK = gql`
 `;
 
 export const ADD_FRIEND = gql`
-  mutation addFriend($username: String!) {
-    addFriend(username: $username) {
+  mutation addFriend($friendId: ID!) {
+    addFriend(friendId: $friendId) {
       _id
       username
-      email
-      library {
-        book {
-          _id
-          title
-        }
-        readStatus
-        ratingStatus
-        rating {
-          _id
-          ratingValue
-        }
-      }
       friends {
         _id
         username

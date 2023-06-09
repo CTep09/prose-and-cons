@@ -33,7 +33,7 @@ import FriendCard from "../components/FriendCard";
 import RecCard from "../components/RecCard";
 
 const UserLibrary = () => {
-  const { loading, data } = useQuery(QUERY_ME);
+  const { loading, data, error } = useQuery(QUERY_ME);
 
   useEffect(() => {
     if (!loading) {
@@ -108,7 +108,7 @@ const UserLibrary = () => {
           {loading ? (
             <div>Loading...</div>
           ) : (
-            data.me.library.map((book) => {
+            data?.me?.library?.map((book) => {
               return (
                 <BookCard
                   key={book.book._id}
@@ -137,7 +137,7 @@ const UserLibrary = () => {
           {loading ? (
             <div>Loading...</div>
           ) : (
-            data.me.friends.map((friend) => {
+            data?.me?.friends?.map((friend) => {
               // return console.log(friend);
               return (
                 <FriendCard

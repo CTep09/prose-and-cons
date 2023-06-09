@@ -14,6 +14,12 @@
 
 ## 📑 Description
 
+Prose & Cons is a web application designed to cultivate a community around book ratings and recommendations. Every user creates a unique profile, where they add books they've read into their own personal library. Users can also leave a rating on these books, from 1 star (lowest score) to 5 (highest score).
+
+Another exciting feature of Prose and Cons is the ability for users to connect with one another. Users have the capability to peruse their friends' libraries, giving them access to see the book they have read as well as their ratings.
+
+If a user thinks a friend would enjoy a book they have read, they can easily send the recommendation to them with a note if they wish to.
+
 [Visit Prose & Cons](https://prose-n-cons.herokuapp.com/)
 
 ## 💾 Installation

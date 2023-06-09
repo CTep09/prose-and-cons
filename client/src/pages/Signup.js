@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link as RouteLink,
+} from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
@@ -25,6 +33,7 @@ const Signup = () => {
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
 
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
@@ -47,7 +56,7 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
-      window.location.href = "/userLibrary";
+      navigate("/userLibrary");
     } catch (e) {
       console.error(e);
     }
@@ -144,12 +153,12 @@ const Signup = () => {
                 </form>
                 <br></br>
                 <Center>
-                <Text>
-                  Already have an account?{" "}
-                  <Link color="teal.500" href="/">
-                    Login
-                  </Link>
-                </Text>
+                  <Text>
+                    Already have an account?{" "}
+                    <Link color="teal.500" href="/">
+                      Login
+                    </Link>
+                  </Text>
                 </Center>
               </Box>
             )}

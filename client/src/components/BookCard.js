@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import React from "react";
 import {
   Box,
   Center,
@@ -10,8 +9,38 @@ import {
   Image,
   Flex,
 } from "@chakra-ui/react";
+import { Flex, Circle, Badge, Icon, chakra, Tooltip } from "@chakra-ui/react";
+import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 
 export default function BookCard(props) {
+  function Rating({ rating, numReviews }) {
+    return (
+      <Flex alignItems="center">
+        {Array(5)
+          .fill("")
+          .map((_, i) => {
+            const roundedRating = Math.round(rating * 2) / 2;
+            if (roundedRating - i >= 1) {
+              return (
+                <BsStarFill
+                  key={i}
+                  style={{ marginLeft: "1" }}
+                  color={i < rating ? "teal.500" : "gray.300"}
+                />
+              );
+            }
+            if (roundedRating - i === 0.5) {
+              return <BsStarHalf key={i} style={{ marginLeft: "1" }} />;
+            }
+            return <BsStar key={i} style={{ marginLeft: "1" }} />;
+          })}
+        <Box as="span" ml="2" color="gray.600" fontSize="sm">
+          {numReviews} review{numReviews > 1 && "s"}
+        </Box>
+      </Flex>
+    );
+  }
+
   return (
     <Center py={12}>
         <Flex
@@ -64,16 +93,18 @@ export default function BookCard(props) {
           />
         </Box>
         <Stack pt={10} align={"center"}>
-          <Text color={"gray.500"} fontSize={"sm"} textTransform={"uppercase"}>
+          <Text
+            color={"gray.500"}
+            fontSize={"sm"}
+            textTransform={"uppercase"}
+          >
             {props.author}
           </Text>
           <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
             {props.title}
           </Heading>
           <Stack direction={"row"} align={"center"}>
-            <Text fontWeight={800} fontSize={"xl"}>
-              {props.review}
-            </Text>
+            <Rating rating={props.review} numReviews={props.numReviews} />
           </Stack>
         </Stack>
       </Box>

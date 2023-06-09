@@ -83,7 +83,6 @@ function App() {
               <Route path="/friendLibrary" element={<FriendLibrary />} />
               <Route path="/userLibrary" element={<UserLibrary />} />
             </Routes>
-            {/* <FriendLibrary></FriendLibrary> */}
             <Footer />
           </main>
         </Router>

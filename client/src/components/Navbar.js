@@ -28,6 +28,7 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  Container,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -74,12 +75,11 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <RouteLink href="/userLibrary">
+          <RouteLink to="/userLibrary">
             <Text
               textAlign={useBreakpointValue({ base: "center", md: "left" })}
               fontFamily={"heading"}
               color={useColorModeValue("gray.800", "white")}
-              href={"/"}
             >
               <Link>Prose & Cons</Link>
             </Text>
@@ -110,29 +110,26 @@ export default function WithSubnavigation() {
             </Button>
           ) : (
             <>
-              <Button
-                as={"a"}
-                fontSize={"sm"}
-                fontWeight={400}
-                variant={"link"}
-                href={"/login"}
-              >
-                Sign In
-              </Button>
-              <Button
-                as={"a"}
-                display={{ base: "none", md: "inline-flex" }}
-                fontSize={"sm"}
-                fontWeight={600}
-                color={"white"}
-                bg={"pink.400"}
-                href={"/signup"}
-                _hover={{
-                  bg: "pink.300",
-                }}
-              >
-                Sign Up
-              </Button>
+              <RouteLink to={"/login"}>
+                <Button fontSize={"sm"} fontWeight={400} variant={"link"}>
+                  Sign In
+                </Button>
+              </RouteLink>
+
+              <RouteLink to={"/signup"}>
+                <Button
+                  display={{ base: "none", md: "inline-flex" }}
+                  fontSize={"sm"}
+                  fontWeight={600}
+                  color={"white"}
+                  bg={"pink.400"}
+                  _hover={{
+                    bg: "pink.300",
+                  }}
+                >
+                  Sign Up
+                </Button>
+              </RouteLink>
             </>
           )}
         </Stack>
@@ -156,8 +153,8 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <RouteLink href={navItem.href ?? "#"}>
-                <Link
+              <RouteLink to={navItem.href ?? "#"}>
+                <Text
                   p={2}
                   fontSize={"sm"}
                   fontWeight={500}
@@ -171,7 +168,7 @@ const DesktopNav = () => {
                     <Icon as={navItem.icon} w={5} h={5} mr={2} />
                   )}
                   {navItem.label}
-                </Link>
+                </Text>
               </RouteLink>
             </PopoverTrigger>
 
@@ -200,8 +197,8 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
-    <RouteLink href={href}>
-      <Link
+    <RouteLink to={href}>
+      <Container
         role={"group"}
         display={"block"}
         p={2}
@@ -231,7 +228,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
             <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
           </Flex>
         </Stack>
-      </Link>
+      </Container>
     </RouteLink>
   );
 };
@@ -294,10 +291,10 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <RouteLink href={child.href}>
-                <Link key={child.label} py={2}>
+              <RouteLink to={child.href}>
+                <Text key={child.label} py={2}>
                   {child.label}
-                </Link>{" "}
+                </Text>{" "}
               </RouteLink>
             ))}
         </Stack>

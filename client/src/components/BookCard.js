@@ -8,11 +8,18 @@ import {
   Text,
   Stack,
   Image,
+  Flex,
 } from "@chakra-ui/react";
 
 export default function BookCard(props) {
   return (
     <Center py={12}>
+        <Flex
+        direction={["column", "column", "row"]} // Columns on mobile, row on other devices
+        flexWrap="wrap"
+        justifyContent="center"
+      >
+      
       <Box
         role={"group"}
         p={6}
@@ -69,6 +76,7 @@ export default function BookCard(props) {
           </Stack>
         </Stack>
       </Box>
+      </Flex>
     </Center>
   );
 }

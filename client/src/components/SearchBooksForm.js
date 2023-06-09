@@ -7,6 +7,14 @@ import {
   InputGroup,
   InputRightElement,
   Flex,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
   Icon,
   Text,
 } from "@chakra-ui/react";
@@ -103,9 +111,25 @@ const SearchBooksForm = () => {
     }
   };
 
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const navigate = useNavigate();
+
+  const initialRef = React.useRef(null);
+
   return (
     <>
+    <Flex direction="column" align="center">
+          <Button onClick={onOpen}>
+            Add Book
+            <Icon as={AddIcon} boxSize={3} ml={4} />
+          </Button>
+        </Flex>
       <form onSubmit={handleFormSubmit}>
+      <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>Find your next adventure</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody pb={3}>
         <FormControl>
           <FormLabel>Search by ...</FormLabel>
           <InputGroup>
@@ -122,7 +146,10 @@ const SearchBooksForm = () => {
           </InputGroup>
           <Button type="submit">Search</Button>
         </FormControl>
+        </ModalBody>
+        </ModalContent>
       </form>
+
       <Flex>
         <div>
           {searchedBooks.map((book) => (

@@ -54,12 +54,12 @@ const UserLibrary = () => {
   return (
     <main>
       <>
-        <Flex direction="column" align="center">
+        {/* <Flex direction="column" align="center">
           <Button onClick={onOpen}>
             Add Book
             <Icon as={AddIcon} boxSize={3} ml={4} />
           </Button>
-        </Flex>
+        </Flex> */}
         <SearchBooksForm />
         {/* <Modal initialFocusRef={initialRef}  
         isOpen={isOpen}

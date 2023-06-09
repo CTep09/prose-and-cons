@@ -1,6 +1,13 @@
 import React from "react";
 
 import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link as RouteLink,
+} from "react-router-dom";
+
+import {
   Box,
   chakra,
   Container,
@@ -23,25 +30,25 @@ const SocialButton = ({
   href: string,
 }) => {
   return (
-    <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded={"full"}
-      w={8}
-      h={8}
-      cursor={"pointer"}
-      as={"a"}
-      href={href}
-      display={"inline-flex"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      transition={"background 0.3s ease"}
-      _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
-      }}
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
+    <RouteLink to={href}>
+      <chakra.button
+        bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+        rounded={"full"}
+        w={8}
+        h={8}
+        cursor={"pointer"}
+        display={"inline-flex"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        transition={"background 0.3s ease"}
+        _hover={{
+          bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+        }}
+      >
+        <VisuallyHidden>{label}</VisuallyHidden>
+        {children}
+      </chakra.button>
+    </RouteLink>
   );
 };
 
@@ -60,9 +67,9 @@ export default function SmallCentered() {
         align={"center"}
       >
         <Stack direction={"row"} spacing={6}>
-          <Link href={"/userLibrary"}>Library</Link>
-          <Link href={"#"}>Friends</Link>
-          <Link href={"/recommendations"}>Recommendations</Link>
+          <RouteLink to={"/userLibrary"}>Library</RouteLink>
+          <RouteLink to={"/friendLibrary"}>Friends</RouteLink>
+          <RouteLink to={"/recommendations"}>Recommendations</RouteLink>
         </Stack>
       </Container>
 

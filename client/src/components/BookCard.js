@@ -23,7 +23,7 @@ export default function BookCard(props) {
       <Box
         role={"group"}
         p={6}
-        maxW={"330px"}
+        maxW={"280px"}
         w={"full"}
         bg={useColorModeValue("white", "gray.800")}
         boxShadow={"2xl"}
@@ -32,6 +32,7 @@ export default function BookCard(props) {
         zIndex={1}
       >
         <Box
+          align="center"
           rounded={"lg"}
           mt={-12}
           pos={"relative"}
@@ -42,8 +43,8 @@ export default function BookCard(props) {
             w: "170px",
             h: "full",
             pos: "absolute",
-            top: 5,
-            left: 0,
+            top: -1,
+            left: 8,
             backgroundImage: `url(${props.img})`,
             filter: "blur(15px)",
             zIndex: -1,

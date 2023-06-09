@@ -146,36 +146,36 @@ const SearchBooksForm = () => {
                 </InputRightElement>
               </InputGroup>
               <ModalFooter>
-              <Button type="submit">Search</Button>
-              <Button onClick={onClose}>Cancel</Button>
+              <Button colorScheme="blue" mr={3} type="submit">Search</Button>
+              <Button onClick={onClose}>Close</Button>
               </ModalFooter>
+              <Flex direction="column" align="center" justify="center" minHeight="100vh">
+                <div>
+                  {searchedBooks.map((book) => (
+                    <div key={book.bookId}>
+                      <BookCard
+                        title={book.title}
+                        author={book.authors.join(", ")}
+                        img={book.image}
+                        review={book.date_pub}
+                      />
+                      <Button
+                        mt={1}
+                        colorScheme="teal"
+                        isLoading={loading}
+                        onClick={() => handleAddToLibrary(book)}
+                      >
+                        Add to Library
+                      </Button>
+                    </div>
+                  ))}
+                </div>
+              </Flex>
             </FormControl>
           </ModalBody>
         </ModalContent>
       </form>
     </Modal>
-    <Flex>
-      <div>
-        {searchedBooks.map((book) => (
-          <div key={book.bookId}>
-            <BookCard
-              title={book.title}
-              author={book.authors.join(", ")}
-              img={book.image}
-              review={book.date_pub}
-            />
-            <Button
-              mt={4}
-              colorScheme="teal"
-              isLoading={loading}
-              onClick={() => handleAddToLibrary(book)}
-            >
-              Add to Library
-            </Button>
-          </div>
-        ))}
-      </div>
-    </Flex>
   </>
   );
 };

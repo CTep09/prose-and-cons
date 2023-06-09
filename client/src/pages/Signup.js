@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link as RouteLink,
+} from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
@@ -144,12 +150,12 @@ const Signup = () => {
                 </form>
                 <br></br>
                 <Center>
-                <Text>
-                  Already have an account?{" "}
-                  <Link color="teal.500" href="/">
-                    Login
-                  </Link>
-                </Text>
+                  <Text>
+                    Already have an account?{" "}
+                    <Link color="teal.500" href="/">
+                      Login
+                    </Link>
+                  </Text>
                 </Center>
               </Box>
             )}

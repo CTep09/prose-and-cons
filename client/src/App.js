@@ -7,7 +7,13 @@ import {
 } from "@apollo/client";
 
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link as RouteLink,
+} from "react-router-dom";
+
 import Auth from "./utils/auth";
 
 import Navbar from "./components/Navbar";

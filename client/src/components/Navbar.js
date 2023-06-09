@@ -1,5 +1,12 @@
 import React from "react";
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link as RouteLink,
+} from "react-router-dom";
+
 import { GiBookshelf, GiSpellBook } from "react-icons/gi";
 import { FaUserFriends } from "react-icons/fa";
 
@@ -35,10 +42,9 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const isLoggedIn = Auth.loggedIn();
   const handleSignOut = () => {
-    Auth.logout(); 
-    window.location.href = "/login"
+    Auth.logout();
+    window.location.href = "/login";
   };
-  
 
   return (
     <Box>
@@ -68,14 +74,17 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
-            href={"/"}
-          >
-            <Link href="/userLibrary">Prose & Cons</Link>
-          </Text>
+          <RouteLink href="/userLibrary">
+            <Text
+              textAlign={useBreakpointValue({ base: "center", md: "left" })}
+              fontFamily={"heading"}
+              color={useColorModeValue("gray.800", "white")}
+              href={"/"}
+            >
+              <Link>Prose & Cons</Link>
+            </Text>
+          </RouteLink>
+
           <Icon as={GiBurningBook}></Icon>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -90,47 +99,47 @@ export default function WithSubnavigation() {
           spacing={6}
         >
           {isLoggedIn ? (
-             <Button
-             as={"a"}
-             fontSize={"sm"}
-             fontWeight={400}
-             variant={"link"}
-             onClick={handleSignOut}
-           >
-             Sign Out
-           </Button>
-         ) : (
-           <>
-          <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
-            variant={"link"}
-            href={"/login"}
-          >
-            Sign In
-          </Button>
-          <Button
-            as={"a"}
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={"pink.400"}
-            href={"/signup"}
-            _hover={{
-              bg: "pink.300",
-            }}
-          >
-            Sign Up
-          </Button>
-          </>
-         )}
+            <Button
+              as={"a"}
+              fontSize={"sm"}
+              fontWeight={400}
+              variant={"link"}
+              onClick={handleSignOut}
+            >
+              Sign Out
+            </Button>
+          ) : (
+            <>
+              <Button
+                as={"a"}
+                fontSize={"sm"}
+                fontWeight={400}
+                variant={"link"}
+                href={"/login"}
+              >
+                Sign In
+              </Button>
+              <Button
+                as={"a"}
+                display={{ base: "none", md: "inline-flex" }}
+                fontSize={"sm"}
+                fontWeight={600}
+                color={"white"}
+                bg={"pink.400"}
+                href={"/signup"}
+                _hover={{
+                  bg: "pink.300",
+                }}
+              >
+                Sign Up
+              </Button>
+            </>
+          )}
         </Stack>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav isLoggedIn={isLoggedIn}  />
+        <MobileNav isLoggedIn={isLoggedIn} />
       </Collapse>
     </Box>
   );
@@ -147,20 +156,23 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? "#"}
-                fontSize={"sm"}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: "none",
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.icon && <Icon as={navItem.icon} w={5} h={5} mr={2} />}
-                {navItem.label}
-              </Link>
+              <RouteLink href={navItem.href ?? "#"}>
+                <Link
+                  p={2}
+                  fontSize={"sm"}
+                  fontWeight={500}
+                  color={linkColor}
+                  _hover={{
+                    textDecoration: "none",
+                    color: linkHoverColor,
+                  }}
+                >
+                  {navItem.icon && (
+                    <Icon as={navItem.icon} w={5} h={5} mr={2} />
+                  )}
+                  {navItem.label}
+                </Link>
+              </RouteLink>
             </PopoverTrigger>
 
             {navItem.children && (
@@ -188,42 +200,43 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
-    <Link
-      href={href}
-      role={"group"}
-      display={"block"}
-      p={2}
-      rounded={"md"}
-      _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
-    >
-      <Stack direction={"row"} align={"center"}>
-        <Box>
-          <Text
+    <RouteLink href={href}>
+      <Link
+        role={"group"}
+        display={"block"}
+        p={2}
+        rounded={"md"}
+        _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
+      >
+        <Stack direction={"row"} align={"center"}>
+          <Box>
+            <Text
+              transition={"all .3s ease"}
+              _groupHover={{ color: "pink.400" }}
+              fontWeight={500}
+            >
+              {label}
+            </Text>
+            <Text fontSize={"sm"}>{subLabel}</Text>
+          </Box>
+          <Flex
             transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
-            fontWeight={500}
+            transform={"translateX(-10px)"}
+            opacity={0}
+            _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
+            justify={"flex-end"}
+            align={"center"}
+            flex={1}
           >
-            {label}
-          </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
-        </Box>
-        <Flex
-          transition={"all .3s ease"}
-          transform={"translateX(-10px)"}
-          opacity={0}
-          _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
-          justify={"flex-end"}
-          align={"center"}
-          flex={1}
-        >
-          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
-      </Stack>
-    </Link>
+            <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
+          </Flex>
+        </Stack>
+      </Link>
+    </RouteLink>
   );
 };
 
-const MobileNav = ({isLoggedIn}) => {
+const MobileNav = ({ isLoggedIn }) => {
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
@@ -231,9 +244,9 @@ const MobileNav = ({isLoggedIn}) => {
       display={{ md: "none" }}
     >
       {isLoggedIn &&
-       NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
-      ))}
+        NAV_ITEMS.map((navItem) => (
+          <MobileNavItem key={navItem.label} {...navItem} />
+        ))}
     </Stack>
   );
 };
@@ -281,9 +294,11 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Link>
+              <RouteLink href={child.href}>
+                <Link key={child.label} py={2}>
+                  {child.label}
+                </Link>{" "}
+              </RouteLink>
             ))}
         </Stack>
       </Collapse>

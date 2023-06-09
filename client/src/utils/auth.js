@@ -1,5 +1,7 @@
 import decode from "jwt-decode";
 
+// import { useNavigate } from "react-router-dom";
+
 class AuthService {
   // decode the token
   getProfile() {
@@ -30,14 +32,16 @@ class AuthService {
 
   // save the token to local storage and redirect to the homescreen
   login(idToken) {
+    // const navigate = useNavigate();
+
     localStorage.setItem("id_token", idToken);
-    window.location.assign("/");
+    // navigate("/userLibrary");
   }
 
   // remove the token from local storage and reload the page
   logout() {
     localStorage.removeItem("id_token");
-    window.location.reload();
+    // window.location.reload();
   }
 }
 

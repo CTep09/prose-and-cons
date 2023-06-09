@@ -165,12 +165,13 @@ const UserLibrary = () => {
           {loading ? (
             <div>Loading...</div>
           ) : (
-            data.me.rating.map((rating) => {
+            data.me.library.map((userBook) => {
               return (
                 <RecCard
-                  key={rating._id}
-                  // img={book.book.cover_img_url}
-                  // authors={book.book.author}
+                  key={userBook._id}
+                  user={userBook.book}
+                  rating={userBook.rating}
+                  review={userBook.review}
                   // title={book.book.title}
                   // review={book.rating?.ratingValue}
                 />

@@ -47,13 +47,13 @@ export default function RecCard(props) {
             },
           }}
         >
-          <Image
+          {/* <Image
             rounded={"lg"}
             height={230}
             width={282}
             objectFit={"cover"}
             src={props.img}
-          />
+          /> */}
         </Box>
         <Stack pt={10} align={"center"}>
           <Text color={"gray.500"} fontSize={"sm"} textTransform={"uppercase"}>

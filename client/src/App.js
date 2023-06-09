@@ -7,7 +7,7 @@ import {
 } from "@apollo/client";
 
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Auth from "./utils/auth";
 
 import Navbar from "./components/Navbar";
@@ -17,12 +17,13 @@ import Signup from "./pages/Signup";
 // import FriendLibrary from "./pages/FriendLibrary"
 import Recommendations from "./pages/Recommendations";
 import UserLibrary from "./pages/UserLibrary";
+import Footer from "./components/Footer";
 
 import { ChakraProvider, Text, Link } from "@chakra-ui/react";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3001/graphql',
+  uri: "http://localhost:3001/graphql",
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
@@ -47,9 +48,9 @@ const client = new ApolloClient({
 function App() {
   const isLoggedIn = Auth.loggedIn();
   const handleSignOut = () => {
-    Auth.logout(); 
+    Auth.logout();
   };
-  
+
   // if (!isLoggedIn) {
   //   window.location.href = "/login";
   // }
@@ -60,7 +61,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <ChakraProvider>
-      <Router>
+        <Router>
           <div className="App">
             <Navbar />
             {/* <BookCard /> */}
@@ -75,9 +76,9 @@ function App() {
               <Route path="/recommendations" element={<Recommendations />} />
               {/* <Route path="/friendLibrary" element={<FriendLibrary />} /> */}
               <Route path="/userLibrary" element={<UserLibrary />} />
-
             </Routes>
             {/* <FriendLibrary></FriendLibrary> */}
+            <Footer />
           </main>
         </Router>
       </ChakraProvider>

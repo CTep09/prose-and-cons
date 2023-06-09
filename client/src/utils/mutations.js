@@ -128,8 +128,8 @@ export const SAVE_BOOK = gql`
 `;
 
 export const REMOVE_FRIEND = gql`
-  mutation removeFriend($username: String!) {
-    removeFriend(username: $username) {
+  mutation removeFriend($friendId: ID!) {
+    removeFriend(friendId: $friendId) {
       _id
       username
       email

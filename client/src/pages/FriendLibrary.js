@@ -1,12 +1,28 @@
 import React from "react";
-import { useQuery } from "@apollo/client";
+import { useQuery, useMutation } from "@apollo/client";
 import { Box, Button, Grid, Spinner } from "@chakra-ui/react";
 
 import { GET_FRIENDS } from "../utils/queries";
+import { REMOVE_FRIEND } from "../utils/mutations";
 import { SearchUsersForm } from "../components/SearchUsersForm";
 
 export default function FriendLibrary() {
   const { loading, error, data } = useQuery(GET_FRIENDS);
+  const [removeFriend, { loading: removeFriendLoading }] =
+    useMutation(REMOVE_FRIEND);
+
+  const handleRemoveFriend = async (friendId) => {
+    console.log(friendId);
+    try {
+      await removeFriend({
+        variables: { friendId: friendId },
+        refetchQueries: [{ query: GET_FRIENDS }],
+      });
+      console.log("Friend removed");
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   if (loading) {
     return (
@@ -45,7 +61,12 @@ export default function FriendLibrary() {
                 <p>Email: {friend.email}</p>
               </div>
 
-              <Button>Remove Friend</Button>
+              <Button
+                colorScheme="teal"
+                onClick={() => handleRemoveFriend(friend._id)}
+              >
+                Remove Friend
+              </Button>
             </Grid>
           </Box>
         ))}

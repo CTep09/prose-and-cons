@@ -52,7 +52,6 @@ export const QUERY_SINGLE_USER = gql`
       username
       email
       library {
-        _id
         book {
           _id
           title
@@ -69,7 +68,6 @@ export const QUERY_SINGLE_USER = gql`
         readStatus
         ratingStatus
         rating {
-          _id
           ratingValue
         }
       }

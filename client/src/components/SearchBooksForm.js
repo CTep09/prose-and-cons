@@ -124,7 +124,7 @@ const SearchBooksForm = () => {
         <Icon as={AddIcon} boxSize={3} ml={4} />
       </Button>
     </Flex>
-    <Modal isOpen={isOpen} onClose={onClose}>
+    <Modal initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <form onSubmit={handleFormSubmit}>
         <ModalContent>
@@ -134,7 +134,7 @@ const SearchBooksForm = () => {
             <FormControl>
               <FormLabel>Search by ...</FormLabel>
               <InputGroup>
-                <Input
+                <Input ref={initialRef}
                   placeholder="Book title"
                   name="searchInput"
                   value={searchInput}
@@ -145,7 +145,10 @@ const SearchBooksForm = () => {
                   <Search2Icon />
                 </InputRightElement>
               </InputGroup>
+              <ModalFooter>
               <Button type="submit">Search</Button>
+              <Button onClick={onClose}>Cancel</Button>
+              </ModalFooter>
             </FormControl>
           </ModalBody>
         </ModalContent>

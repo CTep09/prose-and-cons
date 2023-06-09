@@ -7,8 +7,9 @@ import {
   Text,
   Stack,
   Image,
+  Flex,
 } from "@chakra-ui/react";
-import { Flex, Circle, Badge, Icon, chakra, Tooltip } from "@chakra-ui/react";
+// import { Flex, Circle, Badge, Icon, chakra, Tooltip } from "@chakra-ui/react";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 
 export default function BookCard(props) {
@@ -42,10 +43,16 @@ export default function BookCard(props) {
 
   return (
     <Center py={12}>
+        <Flex
+        direction={["column", "column", "row"]} // Columns on mobile, row on other devices
+        flexWrap="wrap"
+        justifyContent="center"
+      >
+      
       <Box
         role={"group"}
         p={6}
-        maxW={"330px"}
+        maxW={"280px"}
         w={"full"}
         bg={useColorModeValue("white", "gray.800")}
         boxShadow={"2xl"}
@@ -54,6 +61,7 @@ export default function BookCard(props) {
         zIndex={1}
       >
         <Box
+          align="center"
           rounded={"lg"}
           mt={-12}
           pos={"relative"}
@@ -61,11 +69,11 @@ export default function BookCard(props) {
           _after={{
             transition: "all .3s ease",
             content: '""',
-            w: "full",
+            w: "170px",
             h: "full",
             pos: "absolute",
-            top: 5,
-            left: 0,
+            top: -1,
+            left: 8,
             backgroundImage: `url(${props.img})`,
             filter: "blur(15px)",
             zIndex: -1,
@@ -79,7 +87,7 @@ export default function BookCard(props) {
           <Image
             rounded={"lg"}
             height={230}
-            width={282}
+            width={150}
             objectFit={"cover"}
             src={props.img}
           />
@@ -100,6 +108,7 @@ export default function BookCard(props) {
           </Stack>
         </Stack>
       </Box>
+      </Flex>
     </Center>
   );
 }

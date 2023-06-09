@@ -54,49 +54,49 @@ const UserLibrary = () => {
   return (
     <main>
       <>
-        <Flex direction="column" align="center">
+        {/* <Flex direction="column" align="center">
           <Button onClick={onOpen}>
             Add Book
             <Icon as={AddIcon} boxSize={3} ml={4} />
           </Button>
-        </Flex>
-        <SearchBooksForm />
+        </Flex> */}
         {/* <Modal initialFocusRef={initialRef}  
         isOpen={isOpen}
         onClose={onClose}
-      >
+        >
         <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Find your next adventure</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody pb={3}>
-              {/* <FormControl>
-                <FormLabel>Search by ...</FormLabel>
-                <InputGroup>
-                <Input ref={initialRef} placeholder="Book title" />
-                <InputRightElement>
-                <Search2Icon />
-                </InputRightElement>
-                </InputGroup>
-              </FormControl> */}
+        <ModalContent>
+        <ModalHeader>Find your next adventure</ModalHeader>
+        <ModalCloseButton />
+        <ModalBody pb={3}>
+        {/* <FormControl>
+        <FormLabel>Search by ...</FormLabel>
+        <InputGroup>
+        <Input ref={initialRef} placeholder="Book title" />
+        <InputRightElement>
+        <Search2Icon />
+        </InputRightElement>
+        </InputGroup>
+      </FormControl> */}
         {/* <SearchBooksForm ref={initialRef}/>
             </ModalBody>
-
+            
             <ModalFooter>
-              <Button colorScheme="blue" mr={3}>
-                Search
-              </Button>
-              <Button onClick={onClose}>Cancel</Button>
+            <Button colorScheme="blue" mr={3}>
+            Search
+            </Button>
+            <Button onClick={onClose}>Cancel</Button>
             </ModalFooter>
           </ModalContent> */}
         {/* </Modal> */}
+          <SearchBooksForm />
       </>
       <br />
 
-      <div className="flex-row justify-center">
+      <div >
         <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: "1px dotted #1a1a1a" }}
+         
+          style={{ border: "1px solid #1a1a1a" }}
         ></div>
 
         <Text fontSize="20px" align="center">

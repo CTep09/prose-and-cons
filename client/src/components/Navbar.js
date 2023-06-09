@@ -84,7 +84,7 @@ export default function WithSubnavigation() {
               fontFamily={"heading"}
               color={useColorModeValue("gray.800", "white")}
             >
-              <Link>Prose & Cons</Link>
+              Prose & Cons
             </Text>
           </RouteLink>
 

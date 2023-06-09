@@ -29,6 +29,7 @@ import { QUERY_ME } from "../utils/queries";
 import BookCard from "../components/BookCard";
 
 import SearchBooksForm from "../components/SearchBooksForm";
+import FriendCard from "../components/FriendCard";
 
 const UserLibrary = () => {
   const { loading, data } = useQuery(QUERY_ME);
@@ -113,6 +114,35 @@ const UserLibrary = () => {
                   authors={book.book.author}
                   title={book.book.title}
                   review={book.rating?.ratingValue}
+                />
+              );
+            })
+          )}
+        </div>
+      </div>
+
+      {/* Friends Cards */}
+      <div className="flex-row justify-center">
+        <div
+          className="col-12 col-md-10 mb-3 p-3"
+          style={{ border: "1px dotted #1a1a1a" }}
+        ></div>
+
+        <Text fontSize="20px" align="center">
+          Your Friends
+        </Text>
+        <div className="col-12 col-md-8 mb-3">
+          {loading ? (
+            <div>Loading...</div>
+          ) : (
+            data.me.friends.map((friend) => {
+              // return console.log(friend);
+              return (
+                <FriendCard
+                  key={friend._id}
+                  username={friend.username}
+                  // authors={book.book.author}
+                  // title={book.book.title}
                 />
               );
             })

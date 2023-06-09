@@ -40,9 +40,6 @@ const resolvers = {
     books: async () => {
       return Book.find();
     },
-    // friends: async () => {
-    //   User.find({ friend[username]})
-    // }
   },
 
   Mutation: {
@@ -52,6 +49,7 @@ const resolvers = {
 
       return { token, user };
     },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -69,7 +67,6 @@ const resolvers = {
       return { token, user };
     },
 
-    // addBook(input: BookInput!): Book
     addBook: async (parent, args, context) => {
       console.log(args);
 
@@ -133,8 +130,6 @@ const resolvers = {
 
     // addFriend(username: String!): User
     addFriend: async (parent, { friendId }, context) => {
-      console.log(friendId);
-      console.log(context.user);
       if (context.user) {
         return User.findOneAndUpdate(
           { _id: context.user._id },

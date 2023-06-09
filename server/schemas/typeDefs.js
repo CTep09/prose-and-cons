@@ -87,10 +87,10 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addBook(input: BookInput!): Book
     addFriend(friendId: ID!): User
+    removeFriend(friendId: ID!): User
     addRating(ratingValue: Int!, bookId: ID!): Rating
     makeRec(userId: ID!, bookId: ID!): Recommendation
     saveBook(bookId: ID!, readStatus: String): User
-    removeFriend(friendId: ID!): User
   }
 `;
 

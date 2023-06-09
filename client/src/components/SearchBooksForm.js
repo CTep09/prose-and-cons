@@ -16,6 +16,7 @@ import {
   ModalFooter,
   useDisclosure,
   Icon,
+  Box,
   Text,
 } from "@chakra-ui/react";
 import { searchGoogleBooks } from "../utils/api";
@@ -149,7 +150,7 @@ const SearchBooksForm = () => {
               <Button colorScheme="blue" mr={3} type="submit">Search</Button>
               <Button onClick={onClose}>Close</Button>
               </ModalFooter>
-              <Flex direction="column" align="center" justify="center" minHeight="100vh">
+              <Flex direction="column" align="center" justify="center">
                 <div>
                   {searchedBooks.map((book) => (
                     <div key={book.bookId}>
@@ -159,14 +160,18 @@ const SearchBooksForm = () => {
                         img={book.image}
                         review={book.date_pub}
                       />
+                      <Flex justify="center">
+                      <Box mb={100}>
                       <Button
-                        mt={1}
+                        // mt={1}
                         colorScheme="teal"
                         isLoading={loading}
                         onClick={() => handleAddToLibrary(book)}
                       >
                         Add to Library
                       </Button>
+                      </Box>
+                      </Flex>
                     </div>
                   ))}
                 </div>

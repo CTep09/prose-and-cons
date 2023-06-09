@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useQuery } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 import Auth from "../utils/auth";
@@ -32,9 +32,14 @@ import SearchBooksForm from "../components/SearchBooksForm";
 
 const UserLibrary = () => {
   const { loading, data } = useQuery(QUERY_ME);
-  // console.log(data);
-  // const library = data?.library || [];
-  // console.log(library);
+
+  useEffect(() => {
+    if (!loading) {
+      // At this point, loading is false, so the data is available.
+      console.log(data);
+    }
+  }, [loading, data]);
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
 
@@ -103,6 +108,7 @@ const UserLibrary = () => {
             data.me.library.map((book) => {
               return (
                 <BookCard
+                  key={book.book._id}
                   img={book.book.cover_img_url}
                   authors={book.book.author}
                   title={book.book.title}

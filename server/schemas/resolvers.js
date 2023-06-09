@@ -39,7 +39,7 @@ const resolvers = {
     },
     books: async () => {
       return Book.find();
-    }
+    },
     // friends: async () => {
     //   User.find({ friend[username]})
     // }
@@ -93,7 +93,8 @@ const resolvers = {
       console.log(newBook);
 
       if (authorsArr) {
-        authorsArr.forEach(async (author) => {
+        // Use map to generate an array of promises
+        const authorPromises = authorsArr.map(async (author) => {
           const nameArray = author.displayName.split(" ");
           const nameLength = nameArray.length;
           const firstName = nameArray.slice(0, nameLength - 1).join(" ");
@@ -105,24 +106,27 @@ const resolvers = {
             { upsert: true, new: true }
           );
 
-          newBook.authors.push(newAuthor._id);
-          await newBook.save();
-          console.log(newAuthor);
-          console.log(newBook);
+          return newAuthor._id; // Return the newAuthor's id to be added to newBook's authors list
         });
-      }
-      const currentUser = await User.findOneAndUpdate(
-        {
-          _id: context.user._id
 
-        },
-        {
-          $addToSet: { library: { book: newBook._id}}
-        },
-        {
-          new: true 
-        }
-      )
+        // Wait until all the author updates are done
+        newBook.authors = await Promise.all(authorPromises);
+
+        await newBook.save();
+      }
+
+      const user = await User.findById(context.user._id);
+      if (!user) {
+        throw new Error("User not found!");
+      }
+
+      const bookExists = user.library.some(
+        (userBook) => userBook.book.toString() === newBook._id
+      );
+      if (!bookExists) {
+        user.library.push({ book: newBook._id });
+        await user.save();
+      }
 
       return newBook;
     },

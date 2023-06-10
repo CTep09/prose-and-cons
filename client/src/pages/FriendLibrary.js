@@ -4,24 +4,22 @@ import { Box, Button, Grid, Spinner } from "@chakra-ui/react";
 import Auth from "../utils/auth";
 import { useNavigate } from "react-router-dom";
 
-
-
 import { GET_FRIENDS } from "../utils/queries";
 import { REMOVE_FRIEND } from "../utils/mutations";
 import { SearchUsersForm } from "../components/SearchUsersForm";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export default function FriendLibrary() {
   const navigate = useNavigate();
 
+  const { loading, error, data } = useQuery(GET_FRIENDS);
+  const [removeFriend, { loading: removeFriendLoading }] =
+  useMutation(REMOVE_FRIEND);
+  
   if (!Auth.loggedIn()) {
   navigate("/login");
   return null;
 }
-  const { loading, error, data } = useQuery(GET_FRIENDS);
-  const [removeFriend, { loading: removeFriendLoading }] =
-    useMutation(REMOVE_FRIEND);
-
   const handleRemoveFriend = async (friendId) => {
     console.log(friendId);
     try {

@@ -11,8 +11,7 @@ export const QUERY_ME = gql`
           _id
           title
           authors {
-            firstName
-            lastName
+            displayName
           }
           isbn
           isbn13
@@ -52,13 +51,11 @@ export const QUERY_SINGLE_USER = gql`
       username
       email
       library {
-        _id
         book {
           _id
           title
           authors {
-            firstName
-            lastName
+            displayName
           }
           isbn
           isbn13
@@ -69,7 +66,6 @@ export const QUERY_SINGLE_USER = gql`
         readStatus
         ratingStatus
         rating {
-          _id
           ratingValue
         }
       }

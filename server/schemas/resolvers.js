@@ -22,6 +22,13 @@ const resolvers = {
             },
           })
           .populate({
+            path: "library",
+            populate: {
+              path: "rating",
+              model: "Rating",
+            },
+          })
+          .populate({
             path: "friends",
             model: "User",
           });
@@ -32,7 +39,32 @@ const resolvers = {
       return User.find();
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username: username });
+      return User.findOne({ username: username })
+        .populate({
+          path: "library.book",
+          populate: {
+            path: "authors",
+            model: "Author",
+          },
+        })
+        .populate({
+          path: "library",
+          populate: {
+            path: "book",
+            model: "Book",
+          },
+        })
+        .populate({
+          path: "library",
+          populate: {
+            path: "rating",
+            model: "Rating",
+          },
+        })
+        .populate({
+          path: "friends",
+          model: "User",
+        });
     },
     book: async (parent, { bookId }) => {
       return Book.findOne({ _id: bookId });
@@ -40,9 +72,6 @@ const resolvers = {
     books: async () => {
       return Book.find();
     },
-    // friends: async () => {
-    //   User.find({ friend[username]})
-    // }
   },
 
   Mutation: {
@@ -52,6 +81,7 @@ const resolvers = {
 
       return { token, user };
     },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -69,7 +99,6 @@ const resolvers = {
       return { token, user };
     },
 
-    // addBook(input: BookInput!): Book
     addBook: async (parent, args, context) => {
       console.log(args);
 
@@ -133,8 +162,6 @@ const resolvers = {
 
     // addFriend(username: String!): User
     addFriend: async (parent, { friendId }, context) => {
-      console.log(friendId);
-      console.log(context.user);
       if (context.user) {
         return User.findOneAndUpdate(
           { _id: context.user._id },
@@ -194,6 +221,7 @@ const resolvers = {
       if (context.user) {
         // Locate the rating as it currently exists and update the value
         // If it doesn't exist, then create it
+        console.log(bookId, ratingValue);
         const rating = await Rating.findOneAndUpdate(
           {
             user: context.user._id,
@@ -216,6 +244,9 @@ const resolvers = {
         // Update the ratingValue and ratingStatus of that book
         user.library[index].rating = rating._id;
         user.library[index].ratingStatus = "Rated";
+        user.library[index].readStatus = "Read";
+
+        // console.log(user.library[index].readStatus);
         await user.save();
 
         // Find the book that's been rated and add the rating to
@@ -230,6 +261,22 @@ const resolvers = {
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError("You need to be logged in!");
+    },
+
+    changeReadStatus: async (parent, { bookId, readStatus }, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id);
+
+        // Find the book in the User's library
+        const index = user.library.findIndex(
+          (obj) => obj.book.toString() === bookId
+        );
+
+        user.library[index].readStatus = readStatus;
+        await user.save();
+
+        return user.populate("library.readStatus");
+      }
     },
 
     // makeRec(username:String!, bookId: ID!): Recommendation

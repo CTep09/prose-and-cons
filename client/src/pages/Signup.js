@@ -2,12 +2,6 @@ import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link as RouteLink,
-} from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";

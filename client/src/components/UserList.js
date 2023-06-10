@@ -1,7 +1,5 @@
 import React from "react";
-import { Box, Button, Container, Flex, Text } from "@chakra-ui/react";
-import { useMutation } from "@apollo/client";
-import { ADD_FRIEND } from "../utils/mutations";
+import { Button, Flex, Text } from "@chakra-ui/react";
 
 export function UserList({ results, onAddFriend }) {
   return (

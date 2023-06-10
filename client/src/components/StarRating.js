@@ -1,22 +1,15 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Center,
-  useColorModeValue,
-  Heading,
-  HStack,
-  Radio,
-  Text,
-  Stack,
-  Image,
-  Flex,
-} from "@chakra-ui/react";
-// import { Flex, Circle, Badge, Icon, chakra, Tooltip } from "@chakra-ui/react";
-import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
+import { Box, HStack, Radio } from "@chakra-ui/react";
+import { BsStarFill } from "react-icons/bs";
 
 export default function StarRating({ ratingValue, bookId, addRating }) {
   const [hover, setHover] = useState(null);
   const [rating, setRating] = useState(ratingValue);
+
+  const handleRatingChange = async (newRatingValue) => {
+    setRating(newRatingValue);
+    await addRating(newRatingValue, bookId); // Call the addRating function
+  };
 
   return (
     <HStack spacing={"2px"}>
@@ -26,13 +19,13 @@ export default function StarRating({ ratingValue, bookId, addRating }) {
           <Box
             as="label"
             key={index}
-            color={newRatingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
+            color={newRatingValue <= (hover || rating) ? "#ce5888" : "#e4e5e9"}
             onMouseEnter={() => setHover(newRatingValue)}
             onMouseLeave={() => setHover(null)}
           >
             <Radio
               name="rating"
-              onChange={() => setRating(newRatingValue)}
+              onChange={() => handleRatingChange(newRatingValue)} // Use the new handler here
               value={newRatingValue}
               display="none"
             ></Radio>

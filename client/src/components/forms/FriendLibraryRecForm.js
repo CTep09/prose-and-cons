@@ -26,8 +26,10 @@ import { MAKE_REC } from "../../utils/mutations";
 import { QUERY_ME } from "../../utils/queries";
 
 const FriendLibraryRecForm = ({ meData, otherUserData }) => {
-  const myBooks = meData.library.map((userBook) => userBook.book);
-  const yourBooks = otherUserData.library.map((userBook) => userBook.book);
+  const myBooks = meData?.me.library.map((userBook) => userBook.book);
+  const yourBooks = otherUserData?.user.library.map(
+    (userBook) => userBook.book
+  );
   const yourBooksIds = yourBooks.map((book) => book._id);
 
   const filteredBooks = myBooks.filter(
@@ -46,7 +48,7 @@ const FriendLibraryRecForm = ({ meData, otherUserData }) => {
     } else {
       setResults([...filteredBooks]); // Clear results when search input is empty
     }
-  }, [filteredBooks, meData, myBooks, otherUserData.library, searchInput]);
+  }, [searchInput]);
 
   const handleMakeRec = async (friendId, bookId) => {
     await makeRec(friendId, bookId);
@@ -55,13 +57,14 @@ const FriendLibraryRecForm = ({ meData, otherUserData }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const initialRef = React.useRef(null);
-
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+  };
   return (
     <>
       <Flex direction="column" align="center">
         <Button onClick={onOpen}>
-          Add Book
-          <Icon as={AddIcon} boxSize={3} ml={4} />
+          Recommend a Book <Icon as={AddIcon} boxSize={3} ml={4} />
         </Button>
       </Flex>
       <Modal initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
@@ -70,9 +73,9 @@ const FriendLibraryRecForm = ({ meData, otherUserData }) => {
           <ModalHeader>Find your next adventure</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={3}>
-            <form>
+            <form onSubmit={handleFormSubmit}>
               <FormControl>
-                <FormLabel>Search by ...</FormLabel>
+                <FormLabel>Filter by Title</FormLabel>
                 <InputGroup>
                   <Input
                     placeholder="Search by username"
@@ -87,6 +90,9 @@ const FriendLibraryRecForm = ({ meData, otherUserData }) => {
                 </InputGroup>
               </FormControl>
             </form>
+            {results.map((book) => {
+              return <h2 key={book._id}>{book.title}</h2>;
+            })}
           </ModalBody>
         </ModalContent>
       </Modal>

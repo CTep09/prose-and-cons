@@ -28,10 +28,7 @@ import {
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
 
 import { QUERY_ME, QUERY_SINGLE_USER } from "../utils/queries";
-import BookCard from "../components/cards/BookCard";
-
-import SearchBooksForm from "../components/SearchBooksForm";
-import FriendCard from "../components/cards/FriendCard";
+import FriendBookCard from "../components/cards/FriendBookCard";
 
 const OtherUserLibrary = () => {
   const { username } = useParams();
@@ -72,12 +69,13 @@ const OtherUserLibrary = () => {
         <SimpleGrid minChildWidth="240px" spacing="40px">
           {otherUserData?.user?.library?.map((userBook) => {
             return (
-              <BookCard
+              <FriendBookCard
                 key={userBook.book._id}
                 img={userBook.book.cover_img_url}
                 authors={userBook.book.author}
                 title={userBook.book.title}
-                review={userBook.rating?.ratingValue}
+                ratingValue={userBook.rating?.ratingValue}
+                readStatus={userBook.readStatus}
               />
             );
           })}

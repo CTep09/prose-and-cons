@@ -22,7 +22,7 @@ import {
 import { searchGoogleBooks } from "../utils/api";
 import { useMutation } from "@apollo/client";
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
-import BookCard from "./cards/BookCard";
+import SearchedBookCard from "./cards/SearchedBookCard";
 import { ADD_BOOK, SAVE_BOOK } from "../utils/mutations";
 
 const SearchBooksForm = () => {
@@ -157,7 +157,7 @@ const SearchBooksForm = () => {
                   <div>
                     {searchedBooks.map((book) => (
                       <div key={book.bookId}>
-                        <BookCard
+                        <SearchedBookCard
                           title={book.title}
                           author={book.authors.join(", ")}
                           img={book.image}

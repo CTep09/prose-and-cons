@@ -28,10 +28,10 @@ import {
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
 
 import { QUERY_ME, QUERY_SINGLE_USER } from "../utils/queries";
-import BookCard from "../components/BookCard";
+import BookCard from "../components/cards/BookCard";
 
 import SearchBooksForm from "../components/SearchBooksForm";
-import FriendCard from "../components/FriendCard";
+import FriendCard from "../components/cards/FriendCard";
 
 const OtherUserLibrary = () => {
   const { username } = useParams();

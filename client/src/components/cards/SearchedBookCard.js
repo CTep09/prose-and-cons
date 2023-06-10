@@ -9,40 +9,8 @@ import {
   Image,
   Flex,
 } from "@chakra-ui/react";
-// import { Flex, Circle, Badge, Icon, chakra, Tooltip } from "@chakra-ui/react";
-// import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
-import StarRating from "./widgets/StarRating";
-import ReadStatus from "./widgets/ReadStatus";
 
-export default function BookCard(props) {
-  // function Rating({ rating, numReviews }) {
-  //   return (
-  //     <Flex alignItems="center">
-  //       {Array(5)
-  //         .fill("")
-  //         .map((_, i) => {
-  //           const roundedRating = Math.round(rating * 2) / 2;
-  //           if (roundedRating - i >= 1) {
-  //             return (
-  //               <BsStarFill
-  //                 key={i}
-  //                 style={{ marginLeft: "1" }}
-  //                 color={i < rating ? "teal.500" : "gray.300"}
-  //               />
-  //             );
-  //           }
-  //           if (roundedRating - i === 0.5) {
-  //             return <BsStarHalf key={i} style={{ marginLeft: "1" }} />;
-  //           }
-  //           return <BsStar key={i} style={{ marginLeft: "1" }} />;
-  //         })}
-  //       <Box as="span" ml="2" color="gray.600" fontSize="sm">
-  //         {numReviews} review{numReviews > 1 && "s"}
-  //       </Box>
-  //     </Flex>
-  //   );
-  // }
-
+export default function SearchedBookCard(props) {
   return (
     <Center py={12}>
       <Flex
@@ -104,22 +72,6 @@ export default function BookCard(props) {
             <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
               {props.title}
             </Heading>
-            <Stack direction={"column"} align={"center"}>
-              {/* <Rating
-                rating={props.ratingValue}
-                // numReviews={props.numReviews}
-              /> */}
-              <StarRating
-                ratingValue={props.ratingValue}
-                bookId={props.bookId}
-                addRating={props.addRating}
-              />
-              <ReadStatus
-                readStatus={props.readStatus}
-                bookId={props.bookId}
-                changeReadStatus={props.changeReadStatus}
-              />
-            </Stack>
           </Stack>
         </Box>
       </Flex>

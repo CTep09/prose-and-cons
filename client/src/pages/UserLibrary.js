@@ -28,10 +28,10 @@ import { AddIcon, Search2Icon } from "@chakra-ui/icons";
 
 import { QUERY_ME } from "../utils/queries";
 import { ADD_RATING, CHANGE_READSTATUS } from "../utils/mutations";
-import BookCard from "../components/BookCard";
+import BookCard from "../components/cards/BookCard";
 
 import SearchBooksForm from "../components/SearchBooksForm";
-import FriendCard from "../components/FriendCard";
+import FriendCard from "../components/cards/FriendCard";
 
 const UserLibrary = () => {
   const { loading, data, error } = useQuery(QUERY_ME);

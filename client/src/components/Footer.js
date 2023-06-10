@@ -1,11 +1,6 @@
 import React from "react";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link as RouteLink,
-} from "react-router-dom";
+import { Link as RouteLink } from "react-router-dom";
 
 import {
   Box,
@@ -21,7 +16,6 @@ import { FaGithub, FaTwitter, FaYoutube } from "react-icons/fa";
 import { ReactNode } from "react";
 
 import Auth from "../utils/auth";
-
 
 const SocialButton = ({
   children,
@@ -57,27 +51,27 @@ const SocialButton = ({
 
 export default function SmallCentered() {
   const isLoggedIn = Auth.loggedIn();
-  
+
   return (
     <Box
-    bg={useColorModeValue("gray.50", "gray.900")}
-    color={useColorModeValue("gray.700", "gray.200")}
+      bg={useColorModeValue("gray.50", "gray.900")}
+      color={useColorModeValue("gray.700", "gray.200")}
     >
-    {isLoggedIn && (
-      <Container
-        as={Stack}
-        maxW={"6xl"}
-        py={4}
-        spacing={4}
-        justify={"center"}
-        align={"center"}
+      {isLoggedIn && (
+        <Container
+          as={Stack}
+          maxW={"6xl"}
+          py={4}
+          spacing={4}
+          justify={"center"}
+          align={"center"}
         >
-        <Stack direction={"row"} spacing={6}>
-          <RouteLink to={"/userLibrary"}>Library</RouteLink>
-          <RouteLink to={"/friendLibrary"}>Friends</RouteLink>
-          <RouteLink to={"/recommendations"}>Recommendations</RouteLink>
-        </Stack>
-      </Container>
+          <Stack direction={"row"} spacing={6}>
+            <RouteLink to={"/userLibrary"}>Library</RouteLink>
+            <RouteLink to={"/friendLibrary"}>Friends</RouteLink>
+            <RouteLink to={"/recommendations"}>Recommendations</RouteLink>
+          </Stack>
+        </Container>
       )}
 
       <Box

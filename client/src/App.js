@@ -27,7 +27,7 @@ import UserLibrary from "./pages/UserLibrary";
 import Footer from "./components/Footer";
 import OtherUserLibrary from "./pages/OtherUserLibrary";
 
-import { ChakraProvider, Text, Link } from "@chakra-ui/react";
+import { ChakraProvider, Text, Link, Box } from "@chakra-ui/react";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -72,13 +72,14 @@ function App() {
     <ApolloProvider client={client}>
       <ChakraProvider>
         <Router>
-          <div className="App">
+        <Box minHeight="100vh" display="flex" flexDirection="column">
             <Navbar />
+            <Box flex="1">
             {/* <BookCard /> */}
             <h1 align="center">Hello World.</h1>
             <p align="center">This is Prose and Cons.</p>
-          </div>
-          <br />
+          {/* </div>
+          <br /> */}
           <main>
             <Routes>
               <Route path="/" element={<UserLibrary />} />
@@ -92,8 +93,10 @@ function App() {
                 element={<OtherUserLibrary />}
               />
             </Routes>
-            <Footer />
           </main>
+          </Box>
+            <Footer />
+            </Box>
         </Router>
       </ChakraProvider>
     </ApolloProvider>

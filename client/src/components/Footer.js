@@ -20,6 +20,9 @@ import {
 import { FaGithub, FaTwitter, FaYoutube } from "react-icons/fa";
 import { ReactNode } from "react";
 
+import Auth from "../utils/auth";
+
+
 const SocialButton = ({
   children,
   label,
@@ -53,11 +56,14 @@ const SocialButton = ({
 };
 
 export default function SmallCentered() {
+  const isLoggedIn = Auth.loggedIn();
+  
   return (
     <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
-      color={useColorModeValue("gray.700", "gray.200")}
+    bg={useColorModeValue("gray.50", "gray.900")}
+    color={useColorModeValue("gray.700", "gray.200")}
     >
+    {isLoggedIn && (
       <Container
         as={Stack}
         maxW={"6xl"}
@@ -65,13 +71,14 @@ export default function SmallCentered() {
         spacing={4}
         justify={"center"}
         align={"center"}
-      >
+        >
         <Stack direction={"row"} spacing={6}>
           <RouteLink to={"/userLibrary"}>Library</RouteLink>
           <RouteLink to={"/friendLibrary"}>Friends</RouteLink>
           <RouteLink to={"/recommendations"}>Recommendations</RouteLink>
         </Stack>
       </Container>
+      )}
 
       <Box
         borderTopWidth={1}

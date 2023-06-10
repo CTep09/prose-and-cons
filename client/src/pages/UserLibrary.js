@@ -31,7 +31,7 @@ import { ADD_RATING, CHANGE_READSTATUS } from "../utils/mutations";
 import BookCard from "../components/cards/BookCard";
 
 import SearchBooksForm from "../components/SearchBooksForm";
-import FriendCard from "../components/FriendCard";
+// import FriendCard from "../components/FriendCard";
 import RecCard from "../components/RecCard";
 
 const UserLibrary = () => {
@@ -158,7 +158,7 @@ const UserLibrary = () => {
       </div>
 
       {/* Friends Cards */}
-      <div className="flex-row justify-center">
+      {/* <div className="flex-row justify-center">
         <div
           className="col-12 col-md-10 mb-3 p-3"
           style={{ border: "1px dotted #1a1a1a" }}
@@ -177,14 +177,14 @@ const UserLibrary = () => {
                 <FriendCard
                   key={friend._id}
                   username={friend.username}
-                  // authors={book.book.author}
-                  // title={book.book.title}
+                  authors={book.book.author}
+                  title={book.book.title}
                 />
               );
             })
           )}
         </div>
-      </div>
+      </div> */}
 
       <div className="flex-row justify-center">
         <div

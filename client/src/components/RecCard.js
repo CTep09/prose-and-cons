@@ -62,11 +62,11 @@ export default function RecCard(props) {
           <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
             {props.title}
           </Heading>
-          {/* <Stack direction={"row"} align={"center"}>
+          <Stack direction={"row"} align={"center"}>
             <Text fontWeight={800} fontSize={"xl"}>
               {props.rating}
             </Text>
-          </Stack> */}
+          </Stack>
         </Stack>
       </Box>
     </Center>

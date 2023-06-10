@@ -280,16 +280,16 @@ const resolvers = {
     },
 
     // makeRec(username:String!, bookId: ID!): Recommendation
-    makeRec: async (parent, { userId, bookId }, context) => {
+    makeRec: async (parent, { friendId, bookId }, context) => {
       const rec = await Recommendation.findOneAndUpdate(
         {
           sender: context.user._id,
-          recipient: userId,
+          recipient: friendId,
           book: bookId,
         },
         {
           sender: context.user._id,
-          recipient: userId,
+          recipient: friendId,
           book: bookId,
         },
         {
@@ -312,7 +312,7 @@ const resolvers = {
       );
       const recipient = await User.findOneAndUpdate(
         {
-          _id: userId,
+          _id: friendId,
         },
         {
           $addToSet: { receivedRecs: rec._id },

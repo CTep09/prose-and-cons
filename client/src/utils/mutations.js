@@ -127,8 +127,8 @@ export const CHANGE_READSTATUS = gql`
 `;
 
 export const MAKE_REC = gql`
-  mutation makeRec($username: String!, $bookId: ID!) {
-    makeRec(username: $username, bookId: $bookId) {
+  mutation makeRec($friendId: ID!, $bookId: ID!) {
+    makeRec(friendId: $friendId, bookId: $bookId) {
       _id
       username
       email

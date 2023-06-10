@@ -11,6 +11,8 @@ import {
 } from "@chakra-ui/react";
 // import { Flex, Circle, Badge, Icon, chakra, Tooltip } from "@chakra-ui/react";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
+import StarRating from "./StarRating";
+import ReadStatus from "./ReadStatus";
 
 export default function BookCard(props) {
   function Rating({ rating, numReviews }) {
@@ -43,71 +45,83 @@ export default function BookCard(props) {
 
   return (
     <Center py={12}>
-        <Flex
+      <Flex
         direction={["column", "column", "row"]} // Columns on mobile, row on other devices
         flexWrap="wrap"
         justifyContent="center"
       >
-      
-      <Box
-        role={"group"}
-        p={6}
-        maxW={"280px"}
-        w={"full"}
-        bg={useColorModeValue("white", "gray.800")}
-        boxShadow={"2xl"}
-        rounded={"lg"}
-        pos={"relative"}
-        zIndex={1}
-      >
         <Box
-          align="center"
+          role={"group"}
+          p={6}
+          maxW={"280px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
           rounded={"lg"}
-          mt={-12}
           pos={"relative"}
-          height={"230px"}
-          _after={{
-            transition: "all .3s ease",
-            content: '""',
-            w: "170px",
-            h: "full",
-            pos: "absolute",
-            top: -1,
-            left: 8,
-            backgroundImage: `url(${props.img})`,
-            filter: "blur(15px)",
-            zIndex: -1,
-          }}
-          _groupHover={{
-            _after: {
-              filter: "blur(20px)",
-            },
-          }}
+          zIndex={1}
         >
-          <Image
+          <Box
+            align="center"
             rounded={"lg"}
-            height={230}
-            width={150}
-            objectFit={"cover"}
-            src={props.img}
-          />
-        </Box>
-        <Stack pt={10} align={"center"}>
-          <Text
-            color={"gray.500"}
-            fontSize={"sm"}
-            textTransform={"uppercase"}
+            mt={-12}
+            pos={"relative"}
+            height={"230px"}
+            _after={{
+              transition: "all .3s ease",
+              content: '""',
+              w: "170px",
+              h: "full",
+              pos: "absolute",
+              top: -1,
+              left: 8,
+              backgroundImage: `url(${props.img})`,
+              filter: "blur(15px)",
+              zIndex: -1,
+            }}
+            _groupHover={{
+              _after: {
+                filter: "blur(20px)",
+              },
+            }}
           >
-            {props.author}
-          </Text>
-          <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
-            {props.title}
-          </Heading>
-          <Stack direction={"row"} align={"center"}>
-            <Rating rating={props.review} numReviews={props.numReviews} />
+            <Image
+              rounded={"lg"}
+              height={230}
+              width={150}
+              objectFit={"cover"}
+              src={props.img}
+            />
+          </Box>
+          <Stack pt={10} align={"center"}>
+            <Text
+              color={"gray.500"}
+              fontSize={"sm"}
+              textTransform={"uppercase"}
+            >
+              {props.author}
+            </Text>
+            <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
+              {props.title}
+            </Heading>
+            <Stack direction={"column"} align={"center"}>
+              {/* <Rating
+                rating={props.ratingValue}
+                // numReviews={props.numReviews}
+              /> */}
+              <StarRating
+                ratingValue={props.ratingValue}
+                bookId={props.bookId}
+                addRating={props.addRating}
+              />
+              <ReadStatus
+                readStatus={props.readStatus}
+                bookId={props.bookId}
+                changeReadStatus={props.changeReadStatus}
+              />
+            </Stack>
           </Stack>
-        </Stack>
-      </Box>
+        </Box>
       </Flex>
     </Center>
   );

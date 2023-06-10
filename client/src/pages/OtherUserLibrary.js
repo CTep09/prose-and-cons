@@ -22,6 +22,7 @@ import {
   Icon,
   Text,
   InputRightElement,
+  SimpleGrid,
 } from "@chakra-ui/react";
 
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
@@ -68,7 +69,7 @@ const OtherUserLibrary = () => {
         <Text fontSize="20px" align="center">
           Collection
         </Text>
-        <Grid templateColumns="repeat(5, 1fr)" gap={6}>
+        <SimpleGrid minChildWidth="240px" spacing="40px">
           {otherUserData?.user?.library?.map((userBook) => {
             return (
               <BookCard
@@ -80,7 +81,7 @@ const OtherUserLibrary = () => {
               />
             );
           })}
-        </Grid>
+        </SimpleGrid>
       </div>
     </>
   );

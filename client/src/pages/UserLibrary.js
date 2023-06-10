@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useQuery } from "@apollo/client";
+import { useQuery, useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 import Auth from "../utils/auth";
 
@@ -19,6 +19,7 @@ import {
   useDisclosure,
   Flex,
   Icon,
+  SimpleGrid,
   Text,
   InputRightElement,
 } from "@chakra-ui/react";
@@ -26,6 +27,7 @@ import {
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
 
 import { QUERY_ME } from "../utils/queries";
+import { ADD_RATING, CHANGE_READSTATUS } from "../utils/mutations";
 import BookCard from "../components/BookCard";
 
 import SearchBooksForm from "../components/SearchBooksForm";
@@ -33,6 +35,37 @@ import FriendCard from "../components/FriendCard";
 
 const UserLibrary = () => {
   const { loading, data, error } = useQuery(QUERY_ME);
+  const [addRating, { loading: addRatingLoading }] = useMutation(ADD_RATING);
+  const [changeReadStatus, { loading: changeReadStatusLoading }] =
+    useMutation(CHANGE_READSTATUS);
+
+  const handleAddRating = async (ratingValue, bookId) => {
+    console.log(ratingValue, bookId);
+    try {
+      await addRating({
+        variables: { ratingValue: ratingValue, bookId: bookId },
+        refetchQueries: [{ query: QUERY_ME }],
+      });
+      console.log("Rating added");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleChangeReadStatus = async (readStatus, bookId) => {
+    console.log(readStatus, bookId);
+    try {
+      await changeReadStatus({
+        variables: { readStatus: readStatus, bookId: bookId },
+        refetchQueries: [{ query: QUERY_ME }],
+      });
+      console.log("Read Status changed");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const authorsArr = [];
 
   useEffect(() => {
     if (!loading) {
@@ -43,8 +76,10 @@ const UserLibrary = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
-
   const initialRef = React.useRef(null);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error...</p>;
 
   if (!Auth.loggedIn()) {
     navigate("/login");
@@ -89,36 +124,35 @@ const UserLibrary = () => {
             </ModalFooter>
           </ModalContent> */}
         {/* </Modal> */}
-          <SearchBooksForm />
+        <SearchBooksForm />
       </>
       <br />
 
-      <div >
-        <div
-         
-          style={{ border: "1px solid #1a1a1a" }}
-        ></div>
+      <div>
+        <div style={{ border: "1px solid #1a1a1a" }}></div>
 
         <Text fontSize="20px" align="center">
           Your Collection
         </Text>
-        <div className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            data?.me?.library?.map((book) => {
-              return (
-                <BookCard
-                  key={book.book._id}
-                  img={book.book.cover_img_url}
-                  authors={book.book.author}
-                  title={book.book.title}
-                  review={book.rating?.ratingValue}
-                />
-              );
-            })
-          )}
-        </div>
+        {/* <div className="col-12 col-md-8 mb-3"> */}
+        <SimpleGrid minChildWidth="240px" spacing="40px">
+          {data?.me?.library?.map((userBook) => {
+            return (
+              <BookCard
+                key={userBook.book._id}
+                bookId={userBook.book._id}
+                img={userBook.book.cover_img_url}
+                authors={authorsArr.join(", ")}
+                title={userBook.book.title}
+                ratingValue={userBook.rating?.ratingValue}
+                readStatus={userBook.readStatus}
+                addRating={handleAddRating}
+                changeReadStatus={handleChangeReadStatus}
+              />
+            );
+          })}
+        </SimpleGrid>
+        {/* </div> */}
       </div>
 
       {/* Friends Cards */}

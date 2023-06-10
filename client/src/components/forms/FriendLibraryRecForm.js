@@ -18,6 +18,9 @@ import {
   Icon,
   Box,
   Text,
+  Spacer,
+  SimpleGrid,
+  Grid,
 } from "@chakra-ui/react";
 
 import { useMutation, useQuery } from "@apollo/client";
@@ -91,7 +94,17 @@ const FriendLibraryRecForm = ({ meData, otherUserData }) => {
               </FormControl>
             </form>
             {results.map((book) => {
-              return <h2 key={book._id}>{book.title}</h2>;
+              return (
+                <Box justify="center" padding={4} key={book._id}>
+                  <Flex>
+                    <Box width="240px">
+                      <h2>{book.title}</h2>
+                    </Box>
+                    <Spacer />
+                    <Button> Select </Button>
+                  </Flex>
+                </Box>
+              );
             })}
           </ModalBody>
         </ModalContent>

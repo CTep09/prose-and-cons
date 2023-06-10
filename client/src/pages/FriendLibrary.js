@@ -9,8 +9,15 @@ import { useNavigate } from "react-router-dom";
 import { GET_FRIENDS } from "../utils/queries";
 import { REMOVE_FRIEND } from "../utils/mutations";
 import { SearchUsersForm } from "../components/SearchUsersForm";
+import { useNavigate } from "react-router-dom";
 
 export default function FriendLibrary() {
+  const navigate = useNavigate();
+
+  if (!Auth.loggedIn()) {
+  navigate("/login");
+  return null;
+}
   const { loading, error, data } = useQuery(GET_FRIENDS);
   const [removeFriend, { loading: removeFriendLoading }] =
     useMutation(REMOVE_FRIEND);
@@ -28,12 +35,12 @@ export default function FriendLibrary() {
     }
   };
 
-    const navigate = useNavigate();
+  const viewLibrary = (username) => {
+    console.log(username);
+    navigate(`/friendLibrary/${username}`);
+  };
 
-    if (!Auth.loggedIn()) {
-    navigate("/login");
-    return null;
-  }
+
 
   if (loading) {
     return (
@@ -70,12 +77,15 @@ export default function FriendLibrary() {
               <div>
                 <p>Username: {friend.username}</p>
                 <p>Email: {friend.email}</p>
+                <Button
+                  colorScheme="teal"
+                  onClick={() => viewLibrary(friend.username)}
+                >
+                  View Library
+                </Button>
               </div>
 
-              <Button
-                colorScheme="teal"
-                onClick={() => handleRemoveFriend(friend._id)}
-              >
+              <Button onClick={() => handleRemoveFriend(friend._id)}>
                 Remove Friend
               </Button>
             </Grid>

@@ -22,6 +22,13 @@ const resolvers = {
             },
           })
           .populate({
+            path: "library",
+            populate: {
+              path: "rating",
+              model: "Rating",
+            },
+          })
+          .populate({
             path: "friends",
             model: "User",
           });
@@ -32,7 +39,32 @@ const resolvers = {
       return User.find();
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username: username });
+      return User.findOne({ username: username })
+        .populate({
+          path: "library.book",
+          populate: {
+            path: "authors",
+            model: "Author",
+          },
+        })
+        .populate({
+          path: "library",
+          populate: {
+            path: "book",
+            model: "Book",
+          },
+        })
+        .populate({
+          path: "library",
+          populate: {
+            path: "rating",
+            model: "Rating",
+          },
+        })
+        .populate({
+          path: "friends",
+          model: "User",
+        });
     },
     book: async (parent, { bookId }) => {
       return Book.findOne({ _id: bookId });

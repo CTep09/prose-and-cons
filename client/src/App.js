@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -24,13 +25,15 @@ import FriendLibrary from "./pages/FriendLibrary";
 import Recommendations from "./pages/Recommendations";
 import UserLibrary from "./pages/UserLibrary";
 import Footer from "./components/Footer";
+import OtherUserLibrary from "./pages/OtherUserLibrary";
 
 import { ChakraProvider, Text, Link, Box } from "@chakra-ui/react";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  //uri: "http://localhost:3001/graphql",
+  // uri: "http://localhost:3001/graphql",
   uri: "/graphql",
+  //uri: uri_string,
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
@@ -85,6 +88,10 @@ function App() {
               <Route path="/recommendations" element={<Recommendations />} />
               <Route path="/friendLibrary" element={<FriendLibrary />} />
               <Route path="/userLibrary" element={<UserLibrary />} />
+              <Route
+                path="/friendLibrary/:username"
+                element={<OtherUserLibrary />}
+              />
             </Routes>
           </main>
           </Box>

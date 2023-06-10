@@ -97,19 +97,19 @@ const seedLibraries = async () => {
     for (const book of allBooks) {
       const userNumber = Math.floor(Math.random() * 4);
       const statusNumber = Math.floor(Math.random() * 3);
-      const ratedOrNot = Math.floor(Math.random() * 100);
+      //  const ratedOrNot = Math.floor(Math.random() * 100);
 
       const randomUsername = userList[userNumber];
       const currentUser = await User.findOne({ username: randomUsername });
 
       const randomStatus = readStatusList[statusNumber];
       let ratingStatus = "Unrated";
-      if (randomStatus === "Read" && ratedOrNot > 25) {
+      if (randomStatus === "Read") {
         ratingStatus = "Rated";
       }
       const randomRating = Math.floor(Math.random() * 5 + 1);
 
-      let rating = null;
+      let rating;
 
       if (ratingStatus === "Rated") {
         rating = await Rating.create({

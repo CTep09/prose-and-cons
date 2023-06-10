@@ -1,12 +1,6 @@
 import React from "react";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link as RouteLink,
-  useNavigate,
-} from "react-router-dom";
+import { Link as RouteLink, useNavigate } from "react-router-dom";
 
 import { GiBookshelf, GiSpellBook } from "react-icons/gi";
 import { FaUserFriends } from "react-icons/fa";

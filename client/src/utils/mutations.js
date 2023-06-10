@@ -92,23 +92,70 @@ export const ADD_RATING = gql`
   }
 `;
 
+export const CHANGE_READSTATUS = gql`
+  mutation changeReadStatus($readStatus: String!, $bookId: ID!) {
+    changeReadStatus(readStatus: $readStatus, bookId: $bookId) {
+      _id
+      username
+      email
+      library {
+        book {
+          _id
+          title
+          authors {
+            displayName
+          }
+          isbn
+          isbn13
+          date_pub
+          num_pages
+          cover_img_url
+        }
+        readStatus
+        ratingStatus
+        rating {
+          ratingValue
+        }
+      }
+      friends {
+        _id
+        username
+        email
+      }
+    }
+  }
+`;
+
 export const MAKE_REC = gql`
   mutation makeRec($username: String!, $bookId: ID!) {
     makeRec(username: $username, bookId: $bookId) {
       _id
-      sender {
+      username
+      email
+      library {
+        book {
+          _id
+          title
+          authors {
+            displayName
+          }
+          isbn
+          isbn13
+          date_pub
+          num_pages
+          cover_img_url
+        }
+        readStatus
+        ratingStatus
+        rating {
+          ratingValue
+        }
+      }
+      friends {
         _id
         username
+        email
       }
-      recipient {
-        _id
-        username
-      }
-      book {
-        _id
-        title
-      }
-      timestamp
     }
   }
 `;

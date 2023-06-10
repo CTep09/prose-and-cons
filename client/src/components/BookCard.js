@@ -12,6 +12,7 @@ import {
 // import { Flex, Circle, Badge, Icon, chakra, Tooltip } from "@chakra-ui/react";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import StarRating from "./StarRating";
+import ReadStatus from "./ReadStatus";
 
 export default function BookCard(props) {
   function Rating({ rating, numReviews }) {
@@ -103,7 +104,7 @@ export default function BookCard(props) {
             <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
               {props.title}
             </Heading>
-            <Stack direction={"row"} align={"center"}>
+            <Stack direction={"column"} align={"center"}>
               {/* <Rating
                 rating={props.ratingValue}
                 // numReviews={props.numReviews}
@@ -112,6 +113,11 @@ export default function BookCard(props) {
                 ratingValue={props.ratingValue}
                 bookId={props.bookId}
                 addRating={props.addRating}
+              />
+              <ReadStatus
+                readStatus={props.readStatus}
+                bookId={props.bookId}
+                changeReadStatus={props.changeReadStatus}
               />
             </Stack>
           </Stack>

@@ -27,7 +27,7 @@ import {
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
 
 import { QUERY_ME } from "../utils/queries";
-import { ADD_RATING } from "../utils/mutations";
+import { ADD_RATING, CHANGE_READSTATUS } from "../utils/mutations";
 import BookCard from "../components/BookCard";
 
 import SearchBooksForm from "../components/SearchBooksForm";
@@ -36,6 +36,8 @@ import FriendCard from "../components/FriendCard";
 const UserLibrary = () => {
   const { loading, data, error } = useQuery(QUERY_ME);
   const [addRating, { loading: addRatingLoading }] = useMutation(ADD_RATING);
+  const [changeReadStatus, { loading: changeReadStatusLoading }] =
+    useMutation(CHANGE_READSTATUS);
 
   const handleAddRating = async (ratingValue, bookId) => {
     console.log(ratingValue, bookId);
@@ -45,6 +47,19 @@ const UserLibrary = () => {
         refetchQueries: [{ query: QUERY_ME }],
       });
       console.log("Rating added");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleChangeReadStatus = async (readStatus, bookId) => {
+    console.log(readStatus, bookId);
+    try {
+      await changeReadStatus({
+        variables: { readStatus: readStatus, bookId: bookId },
+        refetchQueries: [{ query: QUERY_ME }],
+      });
+      console.log("Read Status changed");
     } catch (err) {
       console.error(err);
     }
@@ -132,6 +147,7 @@ const UserLibrary = () => {
                 ratingValue={userBook.rating?.ratingValue}
                 readStatus={userBook.readStatus}
                 addRating={handleAddRating}
+                changeReadStatus={handleChangeReadStatus}
               />
             );
           })}

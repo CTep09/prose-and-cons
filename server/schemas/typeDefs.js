@@ -89,6 +89,7 @@ const typeDefs = gql`
     addFriend(friendId: ID!): User
     removeFriend(friendId: ID!): User
     addRating(ratingValue: Int!, bookId: ID!): Rating
+    changeReadStatus(bookId: ID!, readStatus: String!): User
     makeRec(userId: ID!, bookId: ID!): Recommendation
     saveBook(bookId: ID!, readStatus: String): User
   }

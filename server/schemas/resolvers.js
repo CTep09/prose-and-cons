@@ -73,21 +73,9 @@ const resolvers = {
       return Book.find();
     },
     recs: async (parent, { recipientId }) => {
-      return User.findById(recipientId)
-        .populate({
-          path: "receivedRecs",
-          populate: {
-            path: "sender",
-            model: "User",
-          },
-        })
-        .populate({
-          path: "receivedRecs",
-          populate: {
-            path: "book",
-            model: "Book",
-          },
-        });
+      return Recommendation.find({ recipient: recipientId })
+        .populate("sender")
+        .populate("book");
     },
   },
 
@@ -366,7 +354,7 @@ const resolvers = {
         },
         { new: true }
       );
-      return rec;
+      return { rec, sender, recipient };
     },
   },
 };

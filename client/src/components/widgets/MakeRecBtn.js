@@ -25,6 +25,8 @@ import {
   useSafeLayoutEffect,
 } from "@chakra-ui/react";
 
+import { CheckIcon } from "@chakra-ui/icons";
+
 export default function MakeRecBtn({
   book,
   handleMakeRec,
@@ -33,13 +35,11 @@ export default function MakeRecBtn({
 }) {
   const [recommended, setRecommended] = useState(false);
   const makeRecommendation = async (friendId, bookId) => {
-    // await handleMakeRec(friendId, bookId);
-    console.log(friendId);
-    console.log(bookId);
+    await handleMakeRec(friendId, bookId);
     setRecommended(!recommended);
   };
   const removeRecommendation = async (friendId, bookId) => {
-    // await handleRemoveRec(friendId, bookId);
+    await handleRemoveRec(friendId, bookId);
     setRecommended(!recommended);
   };
 
@@ -51,13 +51,19 @@ export default function MakeRecBtn({
         </Box>
         <Spacer />
         {recommended ? (
-          <Button onClick={() => removeRecommendation(friendId, book._id)}>
-            Recommended
+          <Button
+            w="80px"
+            colorScheme={"teal"}
+            onClick={() => removeRecommendation(friendId, book._id)}
+          >
+            <CheckIcon />
           </Button>
         ) : (
-          <Button onClick={() => makeRecommendation(friendId, book._id)}>
-            {" "}
-            Select{" "}
+          <Button
+            w="80px"
+            onClick={() => makeRecommendation(friendId, book._id)}
+          >
+            Select
           </Button>
         )}
       </Flex>

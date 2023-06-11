@@ -3,7 +3,7 @@ import { useQuery, useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 import Auth from "../utils/auth";
 
-import { Box, Button, HStack, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, SimpleGrid, Text, Center } from "@chakra-ui/react";
 
 import { QUERY_ME } from "../utils/queries";
 import { ADD_RATING, CHANGE_READSTATUS } from "../utils/mutations";
@@ -84,16 +84,17 @@ const UserLibrary = () => {
 
   return (
     <>
-      <SearchBooksForm />
       <br />
 
       <div>
-        <div style={{ border: "1px solid #1a1a1a" }}></div>
+        {/* <div style={{ border: "1px solid #1a1a1a" }}></div> */}
 
         <Text fontSize="20px" align="center">
           Your Collection
         </Text>
-        <HStack spacing={4}>
+        <br />
+        <Center>
+        <HStack spacing={4} flexWrap="wrap">
           <Button onClick={() => setSortOrder("title")}>Sort by title</Button>
           <Button onClick={() => setSortOrder("author")}>Sort by author</Button>
           <Button onClick={() => setSortOrder("rating")}>Sort by rating</Button>
@@ -101,6 +102,8 @@ const UserLibrary = () => {
             Sort by read status
           </Button>
         </HStack>
+          </Center>
+        <SearchBooksForm />
         <Box w="100%" p={8}>
           <SimpleGrid minChildWidth="240px" spacing="40px">
             {sortBooks(data?.me?.library)?.map((userBook) => {

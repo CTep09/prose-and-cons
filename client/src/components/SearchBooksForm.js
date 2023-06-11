@@ -119,8 +119,7 @@ const SearchBooksForm = () => {
 
   return (
 <>
-  <br />
-  <Flex direction="column" align="center" >
+  <Flex direction="column" align="center" marginTop="5">
     <Button onClick={onOpen} colorScheme="green">
       Add Book <Icon as={AddIcon} boxSize={3} ml={4} />
     </Button>

@@ -63,10 +63,22 @@ export const ADD_FRIEND = gql`
   }
 `;
 
+export const REMOVE_FRIEND = gql`
+  mutation removeFriend($friendId: ID!) {
+    removeFriend(friendId: $friendId) {
+      _id
+      username
+      friends {
+        _id
+        username
+      }
+    }
+  }
+`;
+
 export const ADD_RATING = gql`
   mutation addRating($ratingValue: Int!, $bookId: ID!) {
     addRating(ratingValue: $ratingValue, bookId: $bookId) {
-      _id
       user {
         _id
         username
@@ -80,30 +92,9 @@ export const ADD_RATING = gql`
   }
 `;
 
-export const MAKE_REC = gql`
-  mutation makeRec($username: String!, $bookId: ID!) {
-    makeRec(username: $username, bookId: $bookId) {
-      _id
-      sender {
-        _id
-        username
-      }
-      recipient {
-        _id
-        username
-      }
-      book {
-        _id
-        title
-      }
-      timestamp
-    }
-  }
-`;
-
-export const SAVE_BOOK = gql`
-  mutation saveBook($bookId: ID!, $readStatus: String) {
-    saveBook(bookId: $bookId, readStatus: $readStatus) {
+export const CHANGE_READSTATUS = gql`
+  mutation changeReadStatus($readStatus: String!, $bookId: ID!) {
+    changeReadStatus(readStatus: $readStatus, bookId: $bookId) {
       _id
       username
       email
@@ -111,25 +102,50 @@ export const SAVE_BOOK = gql`
         book {
           _id
           title
+          authors {
+            displayName
+          }
+          isbn
+          isbn13
+          date_pub
+          num_pages
+          cover_img_url
         }
         readStatus
         ratingStatus
         rating {
-          _id
           ratingValue
         }
       }
       friends {
         _id
         username
+        email
       }
     }
   }
 `;
 
-export const REMOVE_FRIEND = gql`
-  mutation removeFriend($username: String!) {
-    removeFriend(username: $username) {
+export const MAKE_REC = gql`
+  mutation makeRec($friendId: ID!, $bookId: ID!) {
+    makeRec(friendId: $friendId, bookId: $bookId) {
+      book {
+        title
+      }
+      sender {
+        username
+      }
+      timestamp
+      recipient {
+        username
+      }
+    }
+  }
+`;
+
+export const SAVE_BOOK = gql`
+  mutation saveBook($bookId: ID!, $readStatus: String) {
+    saveBook(bookId: $bookId, readStatus: $readStatus) {
       _id
       username
       email
@@ -166,6 +182,22 @@ export const UPDATE_RATING = gql`
         title
       }
       ratingValue
+    }
+  }
+`;
+export const REMOVE_REC = gql`
+  mutation removeRec($friendId: ID!, $bookId: ID!) {
+    removeRec(friendId: $friendId, bookId: $bookId) {
+      book {
+        title
+      }
+      sender {
+        username
+      }
+      timestamp
+      recipient {
+        username
+      }
     }
   }
 `;

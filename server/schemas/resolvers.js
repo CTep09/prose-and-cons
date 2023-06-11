@@ -2,29 +2,39 @@ const { AuthenticationError } = require("apollo-server-express");
 const { User, Book, Rating, Recommendation, Author } = require("../models");
 const { signToken } = require("../utils/auth");
 
+const populateFields = [
+  {
+    path: "library.book",
+    populate: {
+      path: "authors",
+      model: "Author",
+    },
+  },
+  {
+    path: "library",
+    populate: {
+      path: "book",
+      model: "Book",
+    },
+  },
+  {
+    path: "library",
+    populate: {
+      path: "rating",
+      model: "Rating",
+    },
+  },
+  {
+    path: "friends",
+    model: "User",
+  },
+];
+
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id })
-          .populate({
-            path: "library.book",
-            populate: {
-              path: "authors",
-              model: "Author",
-            },
-          })
-          .populate({
-            path: "library",
-            populate: {
-              path: "book",
-              model: "Book",
-            },
-          })
-          .populate({
-            path: "friends",
-            model: "User",
-          });
+        return User.findOne({ _id: context.user._id }).populate(populateFields);
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -32,7 +42,7 @@ const resolvers = {
       return User.find();
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username: username });
+      return User.findOne({ username: username }).populate(populateFields);
     },
     book: async (parent, { bookId }) => {
       return Book.findOne({ _id: bookId });
@@ -40,9 +50,11 @@ const resolvers = {
     books: async () => {
       return Book.find();
     },
-    // friends: async () => {
-    //   User.find({ friend[username]})
-    // }
+    recs: async (parent, { recipientId }) => {
+      return Recommendation.find({ recipient: recipientId })
+        .populate("sender")
+        .populate("book");
+    },
   },
 
   Mutation: {
@@ -52,6 +64,7 @@ const resolvers = {
 
       return { token, user };
     },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -69,7 +82,6 @@ const resolvers = {
       return { token, user };
     },
 
-    // addBook(input: BookInput!): Book
     addBook: async (parent, args, context) => {
       console.log(args);
 
@@ -133,8 +145,6 @@ const resolvers = {
 
     // addFriend(username: String!): User
     addFriend: async (parent, { friendId }, context) => {
-      console.log(friendId);
-      console.log(context.user);
       if (context.user) {
         return User.findOneAndUpdate(
           { _id: context.user._id },
@@ -206,16 +216,27 @@ const resolvers = {
           },
           { upsert: true, new: true }
         );
-
         // Locate the user by ID
         const user = await User.findById(context.user._id);
         // Find the book in the User's library
         const index = user.library.findIndex(
           (obj) => obj.book.toString() === bookId
         );
-        // Update the ratingValue and ratingStatus of that book
-        user.library[index].rating = rating._id;
-        user.library[index].ratingStatus = "Rated";
+        // If book not found in user's library, push it to the library with a readStatus of "Read"
+        if (index === -1) {
+          user.library.push({
+            book: bookId,
+            readStatus: "Read",
+            ratingStatus: "Rated",
+            rating: rating._id,
+          });
+        } else {
+          // If book found, just update its ratingValue, ratingStatus and readStatus
+          user.library[index].rating = rating._id;
+          user.library[index].ratingStatus = "Rated";
+          user.library[index].readStatus = "Read";
+        }
+
         await user.save();
 
         // Find the book that's been rated and add the rating to
@@ -226,23 +247,98 @@ const resolvers = {
           { new: true }
         );
 
+        const recs = await Recommendation.find({
+          recipient: context.user._id,
+          book: bookId,
+        });
+
+        if (recs && recs.length > 0) {
+          await Promise.all(
+            recs.map((rec) =>
+              Recommendation.findByIdAndUpdate(
+                rec._id,
+                {
+                  rating: rating._id,
+                  readStatus: "Read",
+                },
+                { new: true }
+              )
+            )
+          );
+        }
+
         return { rating, user, book };
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError("You need to be logged in!");
     },
 
+    changeReadStatus: async (parent, { bookId, readStatus }, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id);
+
+        // Find the book in the User's library
+        const index = user.library.findIndex(
+          (obj) => obj.book.toString() === bookId
+        );
+
+        // If book not found in user's library, push it to the library with the chosen readStatus
+        if (index === -1) {
+          user.library.push({
+            book: bookId,
+            readStatus: readStatus,
+          });
+        } else {
+          // If book found, just update its readStatus
+          user.library[index].readStatus = readStatus;
+        }
+        await user.save();
+
+        return user.populate("library.readStatus");
+      }
+    },
+
     // makeRec(username:String!, bookId: ID!): Recommendation
-    makeRec: async (parent, { userId, bookId }, context) => {
+    removeRec: async (parent, { friendId, bookId }, context) => {
+      const rec = await Recommendation.findOneAndDelete({
+        sender: context.user._id,
+        recipient: friendId,
+        book: bookId,
+      })
+        .populate("sender")
+        .populate("recipient")
+        .populate("book");
+
+      const sender = await User.findOneAndUpdate(
+        {
+          _id: context.user._id,
+        },
+        {
+          $pull: { sentRecs: rec._id },
+        },
+        { new: true }
+      );
+      const recipient = await User.findOneAndUpdate(
+        {
+          _id: friendId,
+        },
+        {
+          $pull: { receivedRecs: rec._id },
+        },
+        { new: true }
+      );
+      return rec;
+    },
+    makeRec: async (parent, { friendId, bookId }, context) => {
       const rec = await Recommendation.findOneAndUpdate(
         {
           sender: context.user._id,
-          recipient: userId,
+          recipient: friendId,
           book: bookId,
         },
         {
           sender: context.user._id,
-          recipient: userId,
+          recipient: friendId,
           book: bookId,
         },
         {
@@ -265,14 +361,14 @@ const resolvers = {
       );
       const recipient = await User.findOneAndUpdate(
         {
-          _id: userId,
+          _id: friendId,
         },
         {
           $addToSet: { receivedRecs: rec._id },
         },
         { new: true }
       );
-      return rec;
+      return { rec, sender, recipient };
     },
   },
 };

@@ -8,6 +8,8 @@ const typeDefs = gql`
     password: String
     library: [UserBook]!
     friends: [User]!
+    sentRecs: [Recommendation]!
+    receivedRecs: [Recommendation]!
   }
 
   type UserBook {
@@ -71,6 +73,8 @@ const typeDefs = gql`
     recipient: User
     book: Book
     timestamp: String
+    readStatus: String
+    rating: Rating
   }
 
   type Query {
@@ -79,7 +83,7 @@ const typeDefs = gql`
     user(username: String!): User
     books: [Book]
     book(bookId: ID!): Book
-    recs(recipient: ID!): [Recommendation]
+    recs(recipientId: ID!): [Recommendation]
   }
 
   type Mutation {
@@ -87,10 +91,12 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addBook(input: BookInput!): Book
     addFriend(friendId: ID!): User
-    addRating(ratingValue: Int!, bookId: ID!): Rating
-    makeRec(userId: ID!, bookId: ID!): Recommendation
-    saveBook(bookId: ID!, readStatus: String): User
     removeFriend(friendId: ID!): User
+    addRating(ratingValue: Int!, bookId: ID!): Rating
+    changeReadStatus(bookId: ID!, readStatus: String!): User
+    makeRec(friendId: ID!, bookId: ID!): Recommendation
+    removeRec(friendId: ID!, bookId: ID!): Recommendation
+    saveBook(bookId: ID!, readStatus: String): User
   }
 `;
 

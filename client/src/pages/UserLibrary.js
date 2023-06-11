@@ -1,50 +1,81 @@
-import React, { useEffect } from "react";
-import { useQuery } from "@apollo/client";
+import React, { useState } from "react";
+import { useQuery, useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 import Auth from "../utils/auth";
 
-import {
-  Button,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalCloseButton,
-  ModalBody,
-  FormControl,
-  FormLabel,
-  Input,
-  InputGroup,
-  ModalFooter,
-  useDisclosure,
-  Flex,
-  Icon,
-  Text,
-  InputRightElement,
-} from "@chakra-ui/react";
-
-import { AddIcon, Search2Icon } from "@chakra-ui/icons";
+import { Box, Button, HStack, SimpleGrid, Text } from "@chakra-ui/react";
 
 import { QUERY_ME } from "../utils/queries";
-import BookCard from "../components/BookCard";
+import { ADD_RATING, CHANGE_READSTATUS } from "../utils/mutations";
+import BookCard from "../components/cards/BookCard";
 
 import SearchBooksForm from "../components/SearchBooksForm";
-import FriendCard from "../components/FriendCard";
 
 const UserLibrary = () => {
+  // State
+  const [sortOrder, setSortOrder] = useState("title");
+
+  // Queries
   const { loading, data, error } = useQuery(QUERY_ME);
 
-  useEffect(() => {
-    if (!loading) {
-      // At this point, loading is false, so the data is available.
-      console.log(data);
-    }
-  }, [loading, data]);
+  // Mutations
+  const [addRating, { loading: addRatingLoading }] = useMutation(ADD_RATING);
+  const [changeReadStatus, { loading: changeReadStatusLoading }] =
+    useMutation(CHANGE_READSTATUS);
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  // Handlers
+  const handleAddRating = async (ratingValue, bookId) => {
+    console.log(ratingValue, bookId);
+    try {
+      await addRating({
+        variables: { ratingValue: ratingValue, bookId: bookId },
+        refetchQueries: [{ query: QUERY_ME }],
+      });
+      console.log("Rating added");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleChangeReadStatus = async (readStatus, bookId) => {
+    console.log(readStatus, bookId);
+    try {
+      await changeReadStatus({
+        variables: { readStatus: readStatus, bookId: bookId },
+        refetchQueries: [{ query: QUERY_ME }],
+      });
+      console.log("Read Status changed");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  // Helper functions
+  const sortBooks = (books) => {
+    return [...books].sort((a, b) => {
+      if (sortOrder === "title") {
+        return a.book.title.localeCompare(b.book.title);
+      } else if (sortOrder === "author") {
+        // Assuming authors is an array and we're sorting by the first author
+        return a.book.authors[0].sortName.localeCompare(
+          b.book.authors[0].sortName
+        );
+      } else if (sortOrder === "rating") {
+        // Use 0 as a default rating for books without a rating
+        const ratingA = a.rating?.ratingValue || 0;
+        const ratingB = b.rating?.ratingValue || 0;
+        return ratingB - ratingA; // Sorts in descending order
+      } else if (sortOrder === "readStatus") {
+        return a.readStatus.localeCompare(b.readStatus);
+      }
+      return 0;
+    });
+  };
+
   const navigate = useNavigate();
 
-  const initialRef = React.useRef(null);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error...</p>;
 
   if (!Auth.loggedIn()) {
     navigate("/login");
@@ -52,104 +83,45 @@ const UserLibrary = () => {
   }
 
   return (
-    <main>
-      <>
-        <Flex direction="column" align="center">
-          <Button onClick={onOpen}>
-            Add Book
-            <Icon as={AddIcon} boxSize={3} ml={4} />
-          </Button>
-        </Flex>
-        <SearchBooksForm />
-        {/* <Modal initialFocusRef={initialRef}  
-        isOpen={isOpen}
-        onClose={onClose}
-      >
-        <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Find your next adventure</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody pb={3}>
-              {/* <FormControl>
-                <FormLabel>Search by ...</FormLabel>
-                <InputGroup>
-                <Input ref={initialRef} placeholder="Book title" />
-                <InputRightElement>
-                <Search2Icon />
-                </InputRightElement>
-                </InputGroup>
-              </FormControl> */}
-        {/* <SearchBooksForm ref={initialRef}/>
-            </ModalBody>
-
-            <ModalFooter>
-              <Button colorScheme="blue" mr={3}>
-                Search
-              </Button>
-              <Button onClick={onClose}>Cancel</Button>
-            </ModalFooter>
-          </ModalContent> */}
-        {/* </Modal> */}
-      </>
+    <>
+      <SearchBooksForm />
       <br />
 
-      <div className="flex-row justify-center">
-        <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: "1px dotted #1a1a1a" }}
-        ></div>
+      <div>
+        <div style={{ border: "1px solid #1a1a1a" }}></div>
 
         <Text fontSize="20px" align="center">
           Your Collection
         </Text>
-        <div className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            data?.me?.library?.map((book) => {
+        <HStack spacing={4}>
+          <Button onClick={() => setSortOrder("title")}>Sort by title</Button>
+          <Button onClick={() => setSortOrder("author")}>Sort by author</Button>
+          <Button onClick={() => setSortOrder("rating")}>Sort by rating</Button>
+          <Button onClick={() => setSortOrder("readStatus")}>
+            Sort by read status
+          </Button>
+        </HStack>
+        <Box w="100%" p={8}>
+          <SimpleGrid minChildWidth="240px" spacing="40px">
+            {sortBooks(data?.me?.library)?.map((userBook) => {
               return (
                 <BookCard
-                  key={book.book._id}
-                  img={book.book.cover_img_url}
-                  authors={book.book.author}
-                  title={book.book.title}
-                  review={book.rating?.ratingValue}
+                  key={userBook.book._id}
+                  bookId={userBook.book._id}
+                  img={userBook.book.cover_img_url}
+                  authors={userBook.book.authors}
+                  title={userBook.book.title}
+                  ratingValue={userBook.rating?.ratingValue}
+                  readStatus={userBook.readStatus}
+                  addRating={handleAddRating}
+                  changeReadStatus={handleChangeReadStatus}
                 />
               );
-            })
-          )}
-        </div>
+            })}
+          </SimpleGrid>
+        </Box>
       </div>
-
-      {/* Friends Cards */}
-      <div className="flex-row justify-center">
-        <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: "1px dotted #1a1a1a" }}
-        ></div>
-
-        <Text fontSize="20px" align="center">
-          Your Friends
-        </Text>
-        <div className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            data?.me?.friends?.map((friend) => {
-              // return console.log(friend);
-              return (
-                <FriendCard
-                  key={friend._id}
-                  username={friend.username}
-                  // authors={book.book.author}
-                  // title={book.book.title}
-                />
-              );
-            })
-          )}
-        </div>
-      </div>
-    </main>
+    </>
   );
 };
 

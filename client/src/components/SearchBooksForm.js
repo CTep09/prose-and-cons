@@ -7,13 +7,22 @@ import {
   InputGroup,
   InputRightElement,
   Flex,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
   Icon,
+  Box,
   Text,
 } from "@chakra-ui/react";
 import { searchGoogleBooks } from "../utils/api";
 import { useMutation } from "@apollo/client";
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
-import BookCard from "./BookCard";
+import SearchedBookCard from "./cards/SearchedBookCard";
 import { ADD_BOOK, SAVE_BOOK } from "../utils/mutations";
 
 const SearchBooksForm = () => {
@@ -103,48 +112,78 @@ const SearchBooksForm = () => {
     }
   };
 
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const navigate = useNavigate();
+
+  const initialRef = React.useRef(null);
+
   return (
     <>
-      <form onSubmit={handleFormSubmit}>
-        <FormControl>
-          <FormLabel>Search by ...</FormLabel>
-          <InputGroup>
-            <Input
-              placeholder="Book title"
-              name="searchInput"
-              value={searchInput}
-              onChange={(e) => setSearchInput(e.target.value)}
-              type="text"
-            />
-            <InputRightElement>
-              <Search2Icon />
-            </InputRightElement>
-          </InputGroup>
-          <Button type="submit">Search</Button>
-        </FormControl>
-      </form>
-      <Flex>
-        <div>
-          {searchedBooks.map((book) => (
-            <div key={book.bookId}>
-              <BookCard
-                title={book.title}
-                author={book.authors.join(", ")}
-                img={book.image}
-                review={book.date_pub}
-              />
-              <Button
-                mt={4}
-                colorScheme="teal"
-                isLoading={loading}
-                onClick={() => handleAddToLibrary(book)}
-              >
-                Add to Library
-              </Button>
-            </div>
-          ))}
-        </div>
+      <Flex direction="column" align="center">
+        <Button onClick={onOpen}>
+          Add Book
+          <Icon as={AddIcon} boxSize={3} ml={4} />
+        </Button>
       </Flex>
+      <Modal initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <form onSubmit={handleFormSubmit}>
+          <ModalContent>
+            <ModalHeader>Find your next adventure</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody pb={3}>
+              <FormControl>
+                <FormLabel>Search by ...</FormLabel>
+                <InputGroup>
+                  <Input
+                    ref={initialRef}
+                    placeholder="Book title"
+                    name="searchInput"
+                    value={searchInput}
+                    onChange={(e) => setSearchInput(e.target.value)}
+                    type="text"
+                  />
+                  <InputRightElement>
+                    <Search2Icon />
+                  </InputRightElement>
+                </InputGroup>
+                <ModalFooter>
+                  <Button colorScheme="blue" mr={3} type="submit">
+                    Search
+                  </Button>
+                  <Button onClick={onClose}>Close</Button>
+                </ModalFooter>
+                <Flex direction="column" align="center" justify="center">
+                  <div>
+                    {searchedBooks.map((book) => (
+                      <div key={book.bookId}>
+                        <SearchedBookCard
+                          title={book.title}
+                          author={book.authors.join(", ")}
+                          img={book.image}
+                          review={book.date_pub}
+                        />
+                        <Flex justify="center">
+                          <Box mb={100}>
+                            <Button
+                              // mt={1}
+                              colorScheme="teal"
+                              isLoading={loading}
+                              onClick={() => handleAddToLibrary(book)}
+                            >
+                              Add to Library
+                            </Button>
+                          </Box>
+                        </Flex>
+                      </div>
+                    ))}
+                  </div>
+                </Flex>
+              </FormControl>
+            </ModalBody>
+          </ModalContent>
+        </form>
+      </Modal>
     </>
   );
 };

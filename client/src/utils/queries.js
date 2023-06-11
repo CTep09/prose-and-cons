@@ -11,8 +11,8 @@ export const QUERY_ME = gql`
           _id
           title
           authors {
-            firstName
-            lastName
+            displayName
+            sortName
           }
           isbn
           isbn13
@@ -52,13 +52,11 @@ export const QUERY_SINGLE_USER = gql`
       username
       email
       library {
-        _id
         book {
           _id
           title
           authors {
-            firstName
-            lastName
+            displayName
           }
           isbn
           isbn13
@@ -69,7 +67,6 @@ export const QUERY_SINGLE_USER = gql`
         readStatus
         ratingStatus
         rating {
-          _id
           ratingValue
         }
       }
@@ -128,7 +125,7 @@ export const QUERY_SINGLE_BOOK = gql`
 
 export const QUERY_RECS_BY_RECIPIENT = gql`
   query getRecsByRecipient($recipientId: ID!) {
-    recs(recipient: $recipientId) {
+    recs(recipientId: $recipientId) {
       sender {
         _id
         username

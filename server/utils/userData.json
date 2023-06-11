@@ -18,5 +18,45 @@
     "username": "user4",
     "email": "user4@seed.com",
     "password": "password4"
+  },
+  {
+    "username": "alice1",
+    "email": "alice1@seed.com",
+    "password": "passworda"
+  },
+  {
+    "username": "bob2",
+    "email": "bob2@seed.com",
+    "password": "passwordb"
+  },
+  {
+    "username": "charlie3",
+    "email": "charlie3@seed.com",
+    "password": "passwordc"
+  },
+  {
+    "username": "david4",
+    "email": "david4@seed.com",
+    "password": "passwordd"
+  },
+  {
+    "username": "emily5",
+    "email": "emily5@seed.com",
+    "password": "passworde"
+  },
+  {
+    "username": "frank6",
+    "email": "frank6@seed.com",
+    "password": "passwordf"
+  },
+  {
+    "username": "george7",
+    "email": "george7@seed.com",
+    "password": "passwordg"
+  },
+  {
+    "username": "hannah8",
+    "email": "hannah8@seed.com",
+    "password": "passwordh"
   }
 ]

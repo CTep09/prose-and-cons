@@ -1,9 +1,17 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 import Auth from "../utils/auth";
 
-import { Box, Button, HStack, SimpleGrid, Text, Center } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  HStack,
+  SimpleGrid,
+  Text,
+  Center,
+} from "@chakra-ui/react";
 
 import { QUERY_ME } from "../utils/queries";
 import { ADD_RATING, CHANGE_READSTATUS } from "../utils/mutations";
@@ -12,18 +20,14 @@ import BookCard from "../components/cards/BookCard";
 import SearchBooksForm from "../components/SearchBooksForm";
 
 const UserLibrary = () => {
-  // State
   const [sortOrder, setSortOrder] = useState("title");
 
-  // Queries
   const { loading, data, error } = useQuery(QUERY_ME);
 
-  // Mutations
   const [addRating, { loading: addRatingLoading }] = useMutation(ADD_RATING);
   const [changeReadStatus, { loading: changeReadStatusLoading }] =
     useMutation(CHANGE_READSTATUS);
 
-  // Handlers
   const handleAddRating = async (ratingValue, bookId) => {
     console.log(ratingValue, bookId);
     try {
@@ -94,15 +98,19 @@ const UserLibrary = () => {
         </Text>
         <br />
         <Center>
-        <HStack spacing={4} flexWrap="wrap">
-          <Button onClick={() => setSortOrder("title")}>Sort by title</Button>
-          <Button onClick={() => setSortOrder("author")}>Sort by author</Button>
-          <Button onClick={() => setSortOrder("rating")}>Sort by rating</Button>
-          <Button onClick={() => setSortOrder("readStatus")}>
-            Sort by read status
-          </Button>
-        </HStack>
-          </Center>
+          <HStack spacing={4} flexWrap="wrap">
+            <Button onClick={() => setSortOrder("title")}>Sort by title</Button>
+            <Button onClick={() => setSortOrder("author")}>
+              Sort by author
+            </Button>
+            <Button onClick={() => setSortOrder("rating")}>
+              Sort by rating
+            </Button>
+            <Button onClick={() => setSortOrder("readStatus")}>
+              Sort by read status
+            </Button>
+          </HStack>
+        </Center>
         <SearchBooksForm />
         <Box w="100%" p={8}>
           <SimpleGrid minChildWidth="240px" spacing="40px">

@@ -66,8 +66,6 @@ const UserLibrary = () => {
     }
   };
 
-  const authorsArr = [];
-
   useEffect(() => {
     if (!loading) {
       // At this point, loading is false, so the data is available.
@@ -144,7 +142,7 @@ const UserLibrary = () => {
                 key={userBook.book._id}
                 bookId={userBook.book._id}
                 img={userBook.book.cover_img_url}
-                authors={authorsArr.join(", ")}
+                authors={userBook.book.authors}
                 title={userBook.book.title}
                 ratingValue={userBook.rating?.ratingValue}
                 readStatus={userBook.readStatus}

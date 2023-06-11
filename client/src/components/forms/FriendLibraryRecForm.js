@@ -25,8 +25,9 @@ import {
 
 import { useMutation, useQuery } from "@apollo/client";
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
-import { MAKE_REC } from "../../utils/mutations";
+import { MAKE_REC, REMOVE_REC } from "../../utils/mutations";
 import { QUERY_ME } from "../../utils/queries";
+import MakeRecBtn from "../widgets/MakeRecBtn";
 
 const FriendLibraryRecForm = ({ meData, otherUserData }) => {
   const myBooks = meData?.me.library.map((userBook) => userBook.book);
@@ -41,6 +42,7 @@ const FriendLibraryRecForm = ({ meData, otherUserData }) => {
   const [results, setResults] = useState([...filteredBooks]);
   const [searchInput, setSearchInput] = useState("");
   const [makeRec, { loading: makeRecLoading }] = useMutation(MAKE_REC);
+  const [removeRec, { loading: removeRecLoading }] = useMutation(REMOVE_REC);
 
   useEffect(() => {
     if (searchInput.length > 0) {
@@ -54,7 +56,22 @@ const FriendLibraryRecForm = ({ meData, otherUserData }) => {
   }, [searchInput]);
 
   const handleMakeRec = async (friendId, bookId) => {
-    await makeRec(friendId, bookId);
+    try {
+      await makeRec({
+        variables: { friendId: friendId, bookId: bookId },
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  const handleRemoveRec = async (friendId, bookId) => {
+    try {
+      await removeRec({
+        variables: { friendId: friendId, bookId: bookId },
+      });
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -95,15 +112,22 @@ const FriendLibraryRecForm = ({ meData, otherUserData }) => {
             </form>
             {results.map((book) => {
               return (
-                <Box justify="center" padding={4} key={book._id}>
-                  <Flex>
-                    <Box width="240px">
-                      <h2>{book.title}</h2>
-                    </Box>
-                    <Spacer />
-                    <Button> Select </Button>
-                  </Flex>
-                </Box>
+                <MakeRecBtn
+                  key={book._id}
+                  book={book}
+                  friendId={otherUserData.user._id}
+                  handleMakeRec={handleMakeRec}
+                  handleRemoveRec={handleRemoveRec}
+                />
+                // <Box justify="center" padding={4} key={book._id}>
+                //   <Flex>
+                //     <Box width="240px">
+                //       <h2>{book.title}</h2>
+                //     </Box>
+                //     <Spacer />
+                //     <Button> Select </Button>
+                //   </Flex>
+                // </Box>
               );
             })}
           </ModalBody>

@@ -81,7 +81,7 @@ const typeDefs = gql`
     user(username: String!): User
     books: [Book]
     book(bookId: ID!): Book
-    recs(recipient: ID!): [Recommendation]
+    recs(recipientId: ID!): [Recommendation]
   }
 
   type Mutation {
@@ -93,6 +93,7 @@ const typeDefs = gql`
     addRating(ratingValue: Int!, bookId: ID!): Rating
     changeReadStatus(bookId: ID!, readStatus: String!): User
     makeRec(friendId: ID!, bookId: ID!): Recommendation
+    removeRec(friendId: ID!, bookId: ID!): Recommendation
     saveBook(bookId: ID!, readStatus: String): User
   }
 `;

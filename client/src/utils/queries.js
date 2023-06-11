@@ -124,7 +124,7 @@ export const QUERY_SINGLE_BOOK = gql`
 
 export const QUERY_RECS_BY_RECIPIENT = gql`
   query getRecsByRecipient($recipientId: ID!) {
-    recs(recipient: $recipientId) {
+    recs(recipientId: $recipientId) {
       sender {
         _id
         username

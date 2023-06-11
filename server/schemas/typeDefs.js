@@ -63,6 +63,7 @@ const typeDefs = gql`
   }
 
   type Rating {
+    _id: ID
     user: User
     book: Book
     ratingValue: Int

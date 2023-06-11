@@ -40,11 +40,12 @@ const UserLibrary = () => {
           console.log(updatedLibrary)
           // Find the book in the library that matches the book in the addRating result
           const bookIndex = updatedLibrary.findIndex(userBook => userBook.book._id === addRating.book._id);
-      
-          // If the book was found in the library, update its rating field
-          if (bookIndex !== -1) {
-            updatedLibrary[bookIndex].rating = addRating;
-          }
+
+            if (bookIndex !== -1) {
+                const updatedBook = { ...updatedLibrary[bookIndex], rating: addRating};
+                updatedLibrary[bookIndex] = updatedBook;
+}
+
       
           // Then we update the cache by combining existing profile data with the newly updated library
           cache.writeQuery({

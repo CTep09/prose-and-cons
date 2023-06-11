@@ -5,7 +5,6 @@
 ## Table of Contents
 
 - [**Description**](#📑-description)
-- [**Installation**](#💾-installation)
 - [**Usage**](#💻-usage)
 - [**Contribution**](#🤝-contribution)
 - [**Technology**](#🚀-technology)
@@ -14,17 +13,19 @@
 
 ## 📑 Description
 
-[Visit Prose & Cons](https://prose-n-cons.herokuapp.com/)
+Prose & Cons is a web application designed to cultivate a community around book ratings and recommendations. Every user creates a unique profile, where they add books they've read into their own personal library. Users can also leave a rating on these books, from 1 star (lowest score) to 5 (highest score).
 
-## 💾 Installation
+Another exciting feature of Prose and Cons is the ability for users to connect with one another. Users have the capability to peruse their friends' libraries, giving them access to see the book they have read as well as their ratings.
+
+If a user thinks a friend would enjoy a book they have read, they can easily send the recommendation to them with a note if they wish to.
+
+[Visit Prose & Cons](https://prose-n-cons.herokuapp.com/)
 
 ## 💻 Usage
 
-## 🤝 Contribution
-
 ## 🚀 Technology
 
-[![My Skills](https://skillicons.dev/icons?i=apollo,babel,express,graphql,github,heroku,js,react,mongodb,nodejs,vscode&perline=3)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=apollo,babel,express,graphql,github,heroku,js,react,mongodb,nodejs,vscode&perline=4)](https://skillicons.dev)
 
 ## 🧪 Test
 
@@ -32,22 +33,22 @@
 
 🖐 Meet the team! If you have any question about us or the project, feel free to reach out:
 
-#### Austin
+#### **Austin Zumbro**
 
-- Github: [austinzumbro](https://github.com/austinzumbro)
-- Email: [azumbro@gmail.com](mailto:azumbro@gmail.com)
+[![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/austinzumbro)
+[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/austinzumbro/)
 
-#### Brian
+#### **Brian Alberson**
 
-- Github: [bdalberson](https://github.com/bdalberson)
-- Email: [@gmail.com](mailto:)
+[![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/bdalberson)
+[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/brian-alberson-swe/)
 
-#### Cassie
+#### **Cassie Tepper**
 
-- Github: [CTep09](https://github.com/CTep09)
-- Email: [CassandraY9@gmail.com](mailto:cassandray9@gmail.com)
+[![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/CTep09n)
+[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/cassie-tepper/)
 
-#### Jonny
+#### **Jonny Borroell**
 
-- Github: [jonnyboy808](https://github.com/jonnyboy808)
-- Email: [jonny.boy.925@gmail.com](mailto:jonny.boy.925@gmail.com)
+[![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/jonnyboy808)
+[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://github.com/jonnyboy808)

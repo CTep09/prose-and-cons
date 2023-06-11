@@ -78,10 +78,11 @@ export const SearchUsersForm = () => {
   return (
     <>
       <form>
-        <FormControl>
+        <FormControl marginTop="5">
           <FormLabel>Search by ...</FormLabel>
           <InputGroup>
             <Input
+              marginBottom="5"
               placeholder="Search by username"
               name="searchInput"
               value={searchInput}

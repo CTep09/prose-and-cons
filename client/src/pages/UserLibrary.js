@@ -139,17 +139,13 @@ const UserLibrary = () => {
 
   return (
     <>
-      <br />
-
       <div>
         {/* <div style={{ border: "1px solid #1a1a1a" }}></div> */}
-
-        <Text fontSize="20px" align="center">
+        <Text fontSize="20px" align="center" marginTop="5" marginBottom="5">
           Your Collection
         </Text>
-        <br />
-        <Center>
-          <HStack spacing={4} flexWrap="wrap">
+        {/* <Center> */}
+          <HStack spacing={4} flexWrap="wrap" justifyContent="center">
             <Button onClick={() => setSortOrder("title")}>Sort by title</Button>
             <Button onClick={() => setSortOrder("author")}>
               Sort by author
@@ -161,7 +157,7 @@ const UserLibrary = () => {
               Sort by read status
             </Button>
           </HStack>
-        </Center>
+        {/* </Center> */}
         <SearchBooksForm />
         <Box w="100%" p={8}>
           <SimpleGrid minChildWidth="240px" spacing="40px">

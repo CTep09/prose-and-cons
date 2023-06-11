@@ -82,7 +82,7 @@ export default function WithSubnavigation() {
             </Text>
           </RouteLink>
 
-          <Icon as={GiBurningBook}></Icon>
+          <Icon as={GiBurningBook} boxSize={6} marginLeft="1"></Icon>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             {isLoggedIn && <DesktopNav />}
@@ -97,7 +97,7 @@ export default function WithSubnavigation() {
         >
           {isLoggedIn ? (
             <Button
-              // as={"a"}
+              as={"a"}
               fontSize={"sm"}
               fontWeight={400}
               variant={"link"}
@@ -108,9 +108,7 @@ export default function WithSubnavigation() {
           ) : (
             <>
               <RouteLink to={"/login"}>
-                <Button 
-                marginTop="3"
-                fontSize={"sm"} fontWeight={400} variant={"link"}>
+                <Button marginTop="3" fontSize={"sm"} fontWeight={400} variant={"link"}>
                   Sign In
                 </Button>
               </RouteLink>

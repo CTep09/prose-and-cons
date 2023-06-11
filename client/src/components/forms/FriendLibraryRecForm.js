@@ -57,9 +57,10 @@ const FriendLibraryRecForm = ({ meData, otherUserData }) => {
 
   const handleMakeRec = async (friendId, bookId) => {
     try {
-      await makeRec({
+      const makeRecResult = await makeRec({
         variables: { friendId: friendId, bookId: bookId },
       });
+      console.log(makeRecResult);
     } catch (err) {
       console.error(err);
     }

@@ -6,15 +6,17 @@ import { QUERY_RECS_BY_RECIPIENT } from "../utils/queries";
 import { useNavigate } from "react-router-dom";
 import Auth from "../utils/auth";
 
-import { SimpleGrid, Text, InputRightElement } from "@chakra-ui/react";
-import auth from "../utils/auth";
+import { Center, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 
 const Recommendations = () => {
   const currentUserId = Auth.getProfile().data._id;
+
   console.log(currentUserId);
+
   const { loading, data, error } = useQuery(QUERY_RECS_BY_RECIPIENT, {
     variables: { recipientId: currentUserId },
   });
+
   const [addRating, { loading: addRatingLoading }] = useMutation(ADD_RATING);
   const [changeReadStatus, { loading: changeReadStatusLoading }] =
     useMutation(CHANGE_READSTATUS);
@@ -24,7 +26,6 @@ const Recommendations = () => {
     try {
       await addRating({
         variables: { ratingValue: ratingValue, bookId: bookId },
-        refetchQueries: [{ query: QUERY_RECS_BY_RECIPIENT }],
       });
       console.log("Rating added");
     } catch (err) {
@@ -37,7 +38,6 @@ const Recommendations = () => {
     try {
       await changeReadStatus({
         variables: { readStatus: readStatus, bookId: bookId },
-        refetchQueries: [{ query: QUERY_RECS_BY_RECIPIENT }],
       });
       console.log("Read Status changed");
     } catch (err) {
@@ -45,7 +45,6 @@ const Recommendations = () => {
     }
   };
   const navigate = useNavigate();
-  const initialRef = React.useRef(null);
 
   useEffect(() => {
     if (!loading) {
@@ -63,23 +62,31 @@ const Recommendations = () => {
   }
   return (
     <div>
-      <Text fontSize="20px" align="center">
-        Your Collection
-      </Text>
+      <Center>
+        <Flex direction="column">
+          <Text fontSize="20px" align="center">
+            Books Recommended to You
+          </Text>
+          <Text>
+            Give the books a rating or status to add them to your library.
+          </Text>
+        </Flex>
+      </Center>
       {/* <div className="col-12 col-md-8 mb-3"> */}
       <SimpleGrid minChildWidth="240px" spacing="40px">
-        {data?.recs?.library?.map((userBook) => {
+        {data?.recs?.map((rec, index) => {
           return (
             <BookCard
-              key={userBook.book._id}
-              bookId={userBook.book._id}
-              img={userBook.book.cover_img_url}
-              authors={userBook.book.authors}
-              title={userBook.book.title}
-              ratingValue={userBook.rating?.ratingValue}
-              readStatus={userBook.readStatus}
+              key={`${rec.book_id}-${index}`}
+              bookId={rec.book._id}
+              img={rec.book.cover_img_url}
+              authors={rec.book.authors}
+              title={rec.book.title}
+              ratingValue={rec.rating?.ratingValue}
+              readStatus={rec?.readStatus}
               addRating={handleAddRating}
               changeReadStatus={handleChangeReadStatus}
+              sender={rec.sender.username}
             />
           );
         })}

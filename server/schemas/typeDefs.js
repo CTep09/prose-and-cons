@@ -73,6 +73,8 @@ const typeDefs = gql`
     recipient: User
     book: Book
     timestamp: String
+    readStatus: String
+    rating: Rating
   }
 
   type Query {

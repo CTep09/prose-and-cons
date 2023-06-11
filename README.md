@@ -35,6 +35,10 @@ If a user thinks a friend would enjoy a book they have read, they can easily sen
 
 ![User Library](./images/userLibrary.gif)
 
+**Read Status and Rating**
+
+![Read Status and Rating](./images/reading-status-and-rating.gif)
+
 **Responsive Design**
 
 ![Resonsive Design](./images/responsive-design.gif)

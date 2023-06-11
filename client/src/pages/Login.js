@@ -59,75 +59,74 @@ const Login = (props) => {
   const handleClick = () => setShow(!show);
 
   return (
-      <Flex justifyContent="center" alignItems="center" height="80vh">
-        <Box maxW="sm" borderWidth="1px" borderRadius="lg" p="25px">
-          <Center>
-            <Heading as="h4" size="md">
-              Login
-            </Heading>
-          </Center>
-          <br></br>
-          <div className="card-body">
-            {data ? (
-              <p>
-                Success! You may now head <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
+    <Flex justifyContent="center" alignItems="center" height="80vh">
+      <Box maxW="sm" borderWidth="1px" borderRadius="lg" p="25px">
+        <Center>
+          <Heading as="h4" size="md">
+            Login
+          </Heading>
+        </Center>
+        <br></br>
+        <div className="card-body">
+          {data ? (
+            <p>
+              Success! You may now head{" "}
+              <Link to="/">back to the homepage.</Link>
+            </p>
+          ) : (
+            <form onSubmit={handleFormSubmit}>
+              <Input
+                w="250px"
+                placeholder="Your email"
+                name="email"
+                type="email"
+                value={formState.email}
+                onChange={handleChange}
+              />
+
+              <InputGroup w="250px">
                 <Input
-                  w="250px"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
+                  pr="4.5rem"
+                  type={show ? "text" : "password"}
+                  placeholder="Enter password"
+                  name="password"
+                  value={formState.password}
                   onChange={handleChange}
                 />
-    
-                <InputGroup w="250px">
-                  <Input
-                    pr="4.5rem"
-                    type={show ? "text" : "password"}
-                    placeholder="Enter password"
-                    name="password"
-                    value={formState.password}
-                    onChange={handleChange}
-                  />
-                  <InputRightElement width="4.5rem">
-                    <Button h="1.75rem" size="sm" onClick={handleClick}>
-                      {show ? "Hide" : "Show"}
-                    </Button>
-                  </InputRightElement>
-                </InputGroup>
-                <br></br>
-                <Button
-                  w="250px"
-                  colorScheme="teal"
-                  style={{ cursor: "pointer" }}
-                  type="submit"
-                >
-                  Submit
-                </Button>
-              </form>
-            )}
-            <br></br>
-    
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
-          <Center>
-            <Text>
-              Don't have an account?{" "}
-              <Link color="teal.500" href="/signup">
-                Sign up
-              </Link>
-            </Text>
-          </Center>
-        </Box>
-      </Flex>
-    );
+                <InputRightElement width="4.5rem">
+                  <Button h="1.75rem" size="sm" onClick={handleClick}>
+                    {show ? "Hide" : "Show"}
+                  </Button>
+                </InputRightElement>
+              </InputGroup>
+              <br></br>
+              <Button
+                w="250px"
+                colorScheme="teal"
+                style={{ cursor: "pointer" }}
+                type="submit"
+              >
+                Submit
+              </Button>
+            </form>
+          )}
+          <br></br>
+
+          {error && (
+            <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
+          )}
+        </div>
+        <Center>
+          <Text>
+            Don't have an account?{" "}
+            <Link color="teal.500" href="/signup">
+              Sign up
+            </Link>
+          </Text>
+        </Center>
+      </Box>
+    </Flex>
+  );
 };
 
 export default Login;

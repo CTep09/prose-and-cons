@@ -13,7 +13,7 @@ import StarRating from "../widgets/StarRating";
 import ReadStatus from "../widgets/ReadStatus";
 
 export default function BookCard(props) {
-  const authors = props.authors.map((author) => author.displayName);
+  const authors = props?.authors?.map((author) => author.displayName);
   return (
     <Center py={12}>
       <Flex
@@ -70,7 +70,7 @@ export default function BookCard(props) {
               fontSize={"sm"}
               textTransform={"uppercase"}
             >
-              {authors.join(", ")}
+              {authors ? authors.join(", ") : ""}
             </Text>
             <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
               {props.title}

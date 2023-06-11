@@ -215,7 +215,8 @@ const resolvers = {
             ratingValue: ratingValue,
           },
           { upsert: true, new: true }
-        );
+        ).populate("user").populate("book");
+        console.log(rating)
         // Locate the user by ID
         const user = await User.findById(context.user._id);
         // Find the book in the User's library
@@ -267,7 +268,7 @@ const resolvers = {
           );
         }
 
-        return { rating, user, book };
+        return { rating };
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError("You need to be logged in!");
@@ -294,7 +295,7 @@ const resolvers = {
         }
         await user.save();
 
-        return user.populate("library.readStatus");
+        return user.populate(populateFields);
       }
     },
 

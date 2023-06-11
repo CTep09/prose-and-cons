@@ -104,6 +104,7 @@ export const CHANGE_READSTATUS = gql`
           title
           authors {
             displayName
+            sortName
           }
           isbn
           isbn13

@@ -4,6 +4,8 @@ import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 // import  App  from "../App";
 import {
+  Flex,
+  Heading,
   Input,
   InputGroup,
   InputRightElement,
@@ -57,18 +59,18 @@ const Login = (props) => {
   const handleClick = () => setShow(!show);
 
   return (
-    <main>
-      <Center>
-        <Box maxW="sm" borderWidth="1px" borderRadius="lg" padding="25px">
+      <Flex justifyContent="center" alignItems="center" height="80vh">
+        <Box maxW="sm" borderWidth="1px" borderRadius="lg" p="25px">
           <Center>
-            <h4>Login</h4>
+            <Heading as="h4" size="md">
+              Login
+            </Heading>
           </Center>
           <br></br>
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{" "}
-                <Link to="/">back to the homepage.</Link>
+                Success! You may now head <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
@@ -80,7 +82,7 @@ const Login = (props) => {
                   value={formState.email}
                   onChange={handleChange}
                 />
-
+    
                 <InputGroup w="250px">
                   <Input
                     pr="4.5rem"
@@ -108,7 +110,7 @@ const Login = (props) => {
               </form>
             )}
             <br></br>
-
+    
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 {error.message}
@@ -124,9 +126,8 @@ const Login = (props) => {
             </Text>
           </Center>
         </Box>
-      </Center>
-    </main>
-  );
+      </Flex>
+    );
 };
 
 export default Login;

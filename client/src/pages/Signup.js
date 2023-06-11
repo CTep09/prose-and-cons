@@ -19,6 +19,8 @@ import {
   Box,
   Text,
   Link,
+  Flex,
+  Heading,
 } from "@chakra-ui/react";
 
 const Signup = () => {
@@ -61,12 +63,14 @@ const Signup = () => {
   const toast = useToast();
 
   return (
-    <main>
+      <Flex justifyContent="center" alignItems="center" height="80vh">
       <Center>
         <Box maxW="sm" borderWidth="1px" borderRadius="lg" padding="25px">
           <Center>
-            <h4>Sign Up</h4>
-          </Center>
+            <Heading as="h4" size="md">
+              Sign Up
+           </Heading>
+           </Center>
           <div className="card-body">
             {data ? (
               <p>
@@ -149,7 +153,7 @@ const Signup = () => {
                 <Center>
                   <Text>
                     Already have an account?{" "}
-                    <Link color="teal.500" href="/">
+                    <Link color="teal.500" href="/login">
                       Login
                     </Link>
                   </Text>
@@ -164,7 +168,7 @@ const Signup = () => {
           </div>
         </Box>
       </Center>
-    </main>
+    </Flex>
   );
 };
 

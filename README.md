@@ -23,6 +23,18 @@ If a user thinks a friend would enjoy a book they have read, they can easily sen
 
 ## 💻 Usage
 
+**Sign-up Form**
+
+![Sign-up Form](./images/signup.gif)
+
+**User Login Form**
+
+![Login Form](./images/login.gif)
+
+**User Library**
+
+![Login Form](./images/userLibrary.gif)
+
 ## 🚀 Technology
 
 [![My Skills](https://skillicons.dev/icons?i=apollo,babel,express,graphql,github,heroku,js,react,mongodb,nodejs,vscode&perline=4)](https://skillicons.dev)

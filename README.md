@@ -33,7 +33,11 @@ If a user thinks a friend would enjoy a book they have read, they can easily sen
 
 **User Library**
 
-![Login Form](./images/userLibrary.gif)
+![User Library](./images/userLibrary.gif)
+
+**Responsive Design**
+
+![Resonsive Design](./images/responsive-design.gif)
 
 ## 🚀 Technology
 
@@ -60,7 +64,7 @@ If a user thinks a friend would enjoy a book they have read, they can easily sen
 [![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/CTep09n)
 [![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/cassie-tepper/)
 
-#### **Jonny Borroell**
+#### **Jonny Borroel**
 
 [![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/jonnyboy808)
 [![My Skills](https://skillicons.dev/icons?i=linkedin)](https://github.com/jonnyboy808)

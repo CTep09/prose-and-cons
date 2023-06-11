@@ -82,12 +82,13 @@ const Signup = () => {
                 <form onSubmit={handleFormSubmit}>
                   <FormControl isInvalid={error}>
                     <Center>
-                      <FormHelperText>
+                      <FormHelperText marginBottom="1">
                         We'll never share your email.
                       </FormHelperText>
                     </Center>
 
                     <Input
+                    marginBottom="5"
                       w="250px"
                       className="form-input"
                       placeholder="Username"
@@ -98,6 +99,7 @@ const Signup = () => {
                     />
                     <Center>
                       <Input
+                      marginBottom="5"
                         w="250px"
                         className="form-input"
                         placeholder="Email"
@@ -110,6 +112,7 @@ const Signup = () => {
                     <Center>
                       <InputGroup w="250px">
                         <Input
+                        marginBottom="5"
                           pr="4.5rem"
                           type={show ? "text" : "password"}
                           placeholder="Password"
@@ -127,10 +130,9 @@ const Signup = () => {
                         </InputRightElement>
                       </InputGroup>
                     </Center>
-
-                    <br></br>
                     <Center>
                       <Button
+                      marginBottom="5"
                         w="250px"
                         colorScheme="teal"
                         style={{ cursor: "pointer" }}
@@ -149,7 +151,6 @@ const Signup = () => {
                     </Center>
                   </FormControl>
                 </form>
-                <br></br>
                 <Center>
                   <Text>
                     Already have an account?{" "}

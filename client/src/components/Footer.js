@@ -81,9 +81,9 @@ export default function SmallCentered() {
       >
         <Container
           as={Stack}
-          maxW={"6xl"}
+          // maxW={"6xl"}
           py={4}
-          direction={{ base: "column", md: "row" }}
+          // direction={{ base: "column", md: "row" }}
           spacing={4}
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}

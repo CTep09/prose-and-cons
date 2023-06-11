@@ -62,11 +62,10 @@ const Login = (props) => {
       <Flex justifyContent="center" alignItems="center" height="80vh">
         <Box maxW="sm" borderWidth="1px" borderRadius="lg" p="25px">
           <Center>
-            <Heading as="h4" size="md">
+            <Heading as="h4" size="md" marginBottom="5">
               Login
             </Heading>
           </Center>
-          <br></br>
           <div className="card-body">
             {data ? (
               <p>
@@ -75,8 +74,9 @@ const Login = (props) => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <Input
+                marginBottom="5"
                   w="250px"
-                  placeholder="Your email"
+                  placeholder="Enter email"
                   name="email"
                   type="email"
                   value={formState.email}
@@ -98,8 +98,9 @@ const Login = (props) => {
                     </Button>
                   </InputRightElement>
                 </InputGroup>
-                <br></br>
                 <Button
+                marginTop="5"
+                marginBottom="5"
                   w="250px"
                   colorScheme="teal"
                   style={{ cursor: "pointer" }}
@@ -108,9 +109,7 @@ const Login = (props) => {
                   Submit
                 </Button>
               </form>
-            )}
-            <br></br>
-    
+            )}    
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 {error.message}

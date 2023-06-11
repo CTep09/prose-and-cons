@@ -30,12 +30,23 @@ const UserLibrary = () => {
     useMutation(ADD_RATING, {
       update(cache, { data: { addRating } }) {
         try {
-          // First we retrieve existing profile data that is stored in the cache under the `QUERY_PROFILES` query
+          console.log(addRating)
+          // First we retrieve existing profile data that is stored in the cache under the `QUERY_ME` query
           // Could potentially not exist yet, so wrap in a try/catch
           const { me } = cache.readQuery({ query: QUERY_ME });
-          const updatedLibrary = [...me.library, addRating];
-
-          // Then we update the cache by combining existing profile data with the newly created data returned from the mutation
+      
+          // Create a copy of the existing library array
+          const updatedLibrary = [...me.library];
+          console.log(updatedLibrary)
+          // Find the book in the library that matches the book in the addRating result
+          const bookIndex = updatedLibrary.findIndex(userBook => userBook.book._id === addRating.book._id);
+      
+          // If the book was found in the library, update its rating field
+          if (bookIndex !== -1) {
+            updatedLibrary[bookIndex].rating = addRating;
+          }
+      
+          // Then we update the cache by combining existing profile data with the newly updated library
           cache.writeQuery({
             query: QUERY_ME,
             // If we want new data to show up before or after existing data, adjust the order of this array
@@ -45,32 +56,18 @@ const UserLibrary = () => {
           console.error(e);
         }
       },
-    });
-
+    })
   const [
     changeReadStatus,
     { loading: changeReadStatusLoading, error: addReadStatusError },
   ] = useMutation(CHANGE_READSTATUS, {
     update(cache, { data: { changeReadStatus } }) {
-      console.log(changeReadStatus);
       try {
-        // First we retrieve existing profile data that is stored in the cache under the `QUERY_PROFILES` query
-        // Could potentially not exist yet, so wrap in a try/catch
+       
         const { me } = cache.readQuery({ query: QUERY_ME });
-
-        // const updatedLibrary = [...me.library];
-
-        // const bookIndex = updatedLibrary.findIndex(
-        //   (userBook) => userBook.book._id === changeReadStatus.book._id
-        // );
-        // if (bookIndex !== -1) {
-        //   updatedLibrary[bookIndex].readStatus = changeReadStatus;
-        // }
-
-        // Then we update the cache by combining existing profile data with the newly created data returned from the mutation
+        
         cache.writeQuery({
           query: QUERY_ME,
-          // If we want new data to show up before or after existing data, adjust the order of this array
           data: { me: { ...me, ...changeReadStatus } },
         });
       } catch (e) {
@@ -79,7 +76,6 @@ const UserLibrary = () => {
     },
   });
 
-  // Handlers
   const handleAddRating = async (ratingValue, bookId) => {
     console.log(ratingValue, bookId);
     try {

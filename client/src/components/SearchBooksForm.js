@@ -17,7 +17,6 @@ import {
   useDisclosure,
   Icon,
   Box,
-  Text,
 } from "@chakra-ui/react";
 import { searchGoogleBooks } from "../utils/api";
 import { useMutation } from "@apollo/client";

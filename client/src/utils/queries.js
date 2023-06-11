@@ -12,6 +12,7 @@ export const QUERY_ME = gql`
           title
           authors {
             displayName
+            sortName
           }
           isbn
           isbn13

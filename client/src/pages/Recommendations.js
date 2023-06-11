@@ -26,7 +26,6 @@ const Recommendations = () => {
     try {
       await addRating({
         variables: { ratingValue: ratingValue, bookId: bookId },
-        refetchQueries: [{ query: QUERY_RECS_BY_RECIPIENT }],
       });
       console.log("Rating added");
     } catch (err) {
@@ -39,7 +38,6 @@ const Recommendations = () => {
     try {
       await changeReadStatus({
         variables: { readStatus: readStatus, bookId: bookId },
-        refetchQueries: [{ query: QUERY_RECS_BY_RECIPIENT }],
       });
       console.log("Read Status changed");
     } catch (err) {

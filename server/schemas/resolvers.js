@@ -2,36 +2,39 @@ const { AuthenticationError } = require("apollo-server-express");
 const { User, Book, Rating, Recommendation, Author } = require("../models");
 const { signToken } = require("../utils/auth");
 
+const populateFields = [
+  {
+    path: "library.book",
+    populate: {
+      path: "authors",
+      model: "Author",
+    },
+  },
+  {
+    path: "library",
+    populate: {
+      path: "book",
+      model: "Book",
+    },
+  },
+  {
+    path: "library",
+    populate: {
+      path: "rating",
+      model: "Rating",
+    },
+  },
+  {
+    path: "friends",
+    model: "User",
+  },
+];
+
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id })
-          .populate({
-            path: "library.book",
-            populate: {
-              path: "authors",
-              model: "Author",
-            },
-          })
-          .populate({
-            path: "library",
-            populate: {
-              path: "book",
-              model: "Book",
-            },
-          })
-          .populate({
-            path: "library",
-            populate: {
-              path: "rating",
-              model: "Rating",
-            },
-          })
-          .populate({
-            path: "friends",
-            model: "User",
-          });
+        return User.findOne({ _id: context.user._id }).populate(populateFields);
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -39,32 +42,7 @@ const resolvers = {
       return User.find();
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username: username })
-        .populate({
-          path: "library.book",
-          populate: {
-            path: "authors",
-            model: "Author",
-          },
-        })
-        .populate({
-          path: "library",
-          populate: {
-            path: "book",
-            model: "Book",
-          },
-        })
-        .populate({
-          path: "library",
-          populate: {
-            path: "rating",
-            model: "Rating",
-          },
-        })
-        .populate({
-          path: "friends",
-          model: "User",
-        });
+      return User.findOne({ username: username }).populate(populateFields);
     },
     book: async (parent, { bookId }) => {
       return Book.findOne({ _id: bookId });
@@ -226,7 +204,6 @@ const resolvers = {
       if (context.user) {
         // Locate the rating as it currently exists and update the value
         // If it doesn't exist, then create it
-        console.log(bookId, ratingValue);
         const rating = await Rating.findOneAndUpdate(
           {
             user: context.user._id,
@@ -239,19 +216,27 @@ const resolvers = {
           },
           { upsert: true, new: true }
         );
-
         // Locate the user by ID
         const user = await User.findById(context.user._id);
         // Find the book in the User's library
         const index = user.library.findIndex(
           (obj) => obj.book.toString() === bookId
         );
-        // Update the ratingValue and ratingStatus of that book
-        user.library[index].rating = rating._id;
-        user.library[index].ratingStatus = "Rated";
-        user.library[index].readStatus = "Read";
+        // If book not found in user's library, push it to the library with a readStatus of "Read"
+        if (index === -1) {
+          user.library.push({
+            book: bookId,
+            readStatus: "Read",
+            ratingStatus: "Rated",
+            rating: rating._id,
+          });
+        } else {
+          // If book found, just update its ratingValue, ratingStatus and readStatus
+          user.library[index].rating = rating._id;
+          user.library[index].ratingStatus = "Rated";
+          user.library[index].readStatus = "Read";
+        }
 
-        // console.log(user.library[index].readStatus);
         await user.save();
 
         // Find the book that's been rated and add the rating to
@@ -261,6 +246,26 @@ const resolvers = {
           { $addToSet: { ratings: rating._id } },
           { new: true }
         );
+
+        const recs = await Recommendation.find({
+          recipient: context.user._id,
+          book: bookId,
+        });
+
+        if (recs && recs.length > 0) {
+          await Promise.all(
+            recs.map((rec) =>
+              Recommendation.findByIdAndUpdate(
+                rec._id,
+                {
+                  rating: rating._id,
+                  readStatus: "Read",
+                },
+                { new: true }
+              )
+            )
+          );
+        }
 
         return { rating, user, book };
       }
@@ -277,7 +282,16 @@ const resolvers = {
           (obj) => obj.book.toString() === bookId
         );
 
-        user.library[index].readStatus = readStatus;
+        // If book not found in user's library, push it to the library with the chosen readStatus
+        if (index === -1) {
+          user.library.push({
+            book: bookId,
+            readStatus: readStatus,
+          });
+        } else {
+          // If book found, just update its readStatus
+          user.library[index].readStatus = readStatus;
+        }
         await user.save();
 
         return user.populate("library.readStatus");

@@ -89,8 +89,8 @@ const UserLibrary = () => {
         <Text fontSize="20px" align="center" marginTop="5" marginBottom="5">
           Your Collection
         </Text>
-        <Center>
-        <HStack spacing={4} flexWrap="wrap">
+        {/* <Center> */}
+        <HStack spacing={4} flexWrap="wrap" justifyContent="center">
           <Button onClick={() => setSortOrder("title")}>Sort by title</Button>
           <Button onClick={() => setSortOrder("author")}>Sort by author</Button>
           <Button onClick={() => setSortOrder("rating")}>Sort by rating</Button>
@@ -98,7 +98,7 @@ const UserLibrary = () => {
             Sort by read status
           </Button>
         </HStack>
-          </Center>
+          {/* </Center> */}
         <SearchBooksForm />
         <Box w="100%" p={8}>
           <SimpleGrid minChildWidth="240px" spacing="40px">

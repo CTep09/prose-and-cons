@@ -33,7 +33,11 @@ If a user thinks a friend would enjoy a book they have read, they can easily sen
 
 **User Library**
 
-![Login Form](./images/userLibrary.gif)
+![User Library](./images/userLibrary.gif)
+
+**Responsive Design**
+
+![Resonsive Design](./images/responsive-design.gif)
 
 ## 🚀 Technology
 

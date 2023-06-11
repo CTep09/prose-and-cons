@@ -84,15 +84,11 @@ const UserLibrary = () => {
 
   return (
     <>
-      <br />
-
       <div>
         {/* <div style={{ border: "1px solid #1a1a1a" }}></div> */}
-
-        <Text fontSize="20px" align="center">
+        <Text fontSize="20px" align="center" marginTop="5" marginBottom="5">
           Your Collection
         </Text>
-        <br />
         <Center>
         <HStack spacing={4} flexWrap="wrap">
           <Button onClick={() => setSortOrder("title")}>Sort by title</Button>

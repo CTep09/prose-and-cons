@@ -268,7 +268,7 @@ const resolvers = {
           );
         }
 
-        return { rating };
+        return rating ;
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError("You need to be logged in!");

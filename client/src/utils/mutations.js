@@ -79,6 +79,7 @@ export const REMOVE_FRIEND = gql`
 export const ADD_RATING = gql`
   mutation addRating($ratingValue: Int!, $bookId: ID!) {
     addRating(ratingValue: $ratingValue, bookId: $bookId) {
+      _id
       user {
         _id
         username
@@ -104,6 +105,7 @@ export const CHANGE_READSTATUS = gql`
           title
           authors {
             displayName
+            sortName
           }
           isbn
           isbn13

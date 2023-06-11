@@ -31,8 +31,8 @@ export const ADD_BOOK = gql`
       title
       authors {
         _id
-        firstName
-        lastName
+        displayName
+        sortName
       }
       isbn
       isbn13

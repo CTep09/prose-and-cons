@@ -65,7 +65,7 @@ const OtherUserLibrary = () => {
     <>
       <div className="flex-row justify-center">
         <Text fontSize="20px" align="center">
-          Collection
+          {username}'s Collection
         </Text>
 
         <FriendLibraryRecForm meData={meData} otherUserData={otherUserData} />

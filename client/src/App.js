@@ -20,6 +20,7 @@ import Recommendations from "./pages/Recommendations";
 import UserLibrary from "./pages/UserLibrary";
 import Footer from "./components/Footer";
 import OtherUserLibrary from "./pages/OtherUserLibrary";
+import Homescreen from "./pages/Homescreen";
 
 import { ChakraProvider, Text, Link, Box } from "@chakra-ui/react";
 
@@ -56,11 +57,9 @@ function App() {
           <Box minHeight="100vh" display="flex" flexDirection="column">
             <Navbar />
             <Box flex="1">
-              <h1 align="center">Hello World.</h1>
-              <p align="center">This is Prose and Cons.</p>
               <main>
                 <Routes>
-                  <Route path="/" element={<UserLibrary />} />
+                  <Route path="/" element={<Homescreen />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<Signup />} />
                   <Route

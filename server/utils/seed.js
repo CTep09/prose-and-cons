@@ -91,11 +91,24 @@ const seedLibraries = async () => {
 
     const allBooks = await Book.find({});
 
-    const userList = ["user1", "user2", "user3", "user4"];
+    const userList = [
+      "user1",
+      "user2",
+      "user3",
+      "user4",
+      "alice1",
+      "bob2",
+      "charlie3",
+      "david4",
+      "emily5",
+      "frank6",
+      "george7",
+      "hannah8",
+    ];
     const readStatusList = ["Read", "Want to Read", "Not Interested"];
 
     for (const book of allBooks) {
-      const userNumber = Math.floor(Math.random() * 4);
+      const userNumber = Math.floor(Math.random() * userList.length);
       const statusNumber = Math.floor(Math.random() * 3);
       //  const ratedOrNot = Math.floor(Math.random() * 100);
 

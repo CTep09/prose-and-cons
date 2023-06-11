@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Auth from "../utils/auth";
 
 import {
-  Button,
+  Box,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -87,45 +87,8 @@ const UserLibrary = () => {
   }
 
   return (
-    <main>
-      <>
-        {/* <Flex direction="column" align="center">
-          <Button onClick={onOpen}>
-            Add Book
-            <Icon as={AddIcon} boxSize={3} ml={4} />
-          </Button>
-        </Flex> */}
-        {/* <Modal initialFocusRef={initialRef}  
-        isOpen={isOpen}
-        onClose={onClose}
-        >
-        <ModalOverlay />
-        <ModalContent>
-        <ModalHeader>Find your next adventure</ModalHeader>
-        <ModalCloseButton />
-        <ModalBody pb={3}>
-        {/* <FormControl>
-        <FormLabel>Search by ...</FormLabel>
-        <InputGroup>
-        <Input ref={initialRef} placeholder="Book title" />
-        <InputRightElement>
-        <Search2Icon />
-        </InputRightElement>
-        </InputGroup>
-      </FormControl> */}
-        {/* <SearchBooksForm ref={initialRef}/>
-            </ModalBody>
-            
-            <ModalFooter>
-            <Button colorScheme="blue" mr={3}>
-            Search
-            </Button>
-            <Button onClick={onClose}>Cancel</Button>
-            </ModalFooter>
-          </ModalContent> */}
-        {/* </Modal> */}
-        <SearchBooksForm />
-      </>
+    <>
+      <SearchBooksForm />
       <br />
 
       <div>
@@ -135,24 +98,25 @@ const UserLibrary = () => {
           Your Collection
         </Text>
         {/* <div className="col-12 col-md-8 mb-3"> */}
-        <SimpleGrid minChildWidth="240px" spacing="40px">
-          {data?.me?.library?.map((userBook) => {
-            return (
-              <BookCard
-                key={userBook.book._id}
-                bookId={userBook.book._id}
-                img={userBook.book.cover_img_url}
-                authors={userBook.book.authors}
-                title={userBook.book.title}
-                ratingValue={userBook.rating?.ratingValue}
-                readStatus={userBook.readStatus}
-                addRating={handleAddRating}
-                changeReadStatus={handleChangeReadStatus}
-              />
-            );
-          })}
-        </SimpleGrid>
-        {/* </div> */}
+        <Box w="100%" p={8}>
+          <SimpleGrid minChildWidth="240px" spacing="40px">
+            {data?.me?.library?.map((userBook) => {
+              return (
+                <BookCard
+                  key={userBook.book._id}
+                  bookId={userBook.book._id}
+                  img={userBook.book.cover_img_url}
+                  authors={userBook.book.authors}
+                  title={userBook.book.title}
+                  ratingValue={userBook.rating?.ratingValue}
+                  readStatus={userBook.readStatus}
+                  addRating={handleAddRating}
+                  changeReadStatus={handleChangeReadStatus}
+                />
+              );
+            })}
+          </SimpleGrid>
+        </Box>
       </div>
 
       {/* Friends Cards */}
@@ -212,7 +176,7 @@ const UserLibrary = () => {
           )}
         </div>
       </div>
-    </main>
+    </>
   );
 };
 

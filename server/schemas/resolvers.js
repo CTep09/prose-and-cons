@@ -294,7 +294,7 @@ const resolvers = {
         }
         await user.save();
 
-        return user.populate("library.readStatus");
+        return user.populate(populateFields);
       }
     },
 

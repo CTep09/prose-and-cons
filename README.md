@@ -25,7 +25,7 @@ If a user thinks a friend would enjoy a book they have read, they can easily sen
 
 ## 🚀 Technology
 
-[![My Skills](https://skillicons.dev/icons?i=apollo,babel,express,graphql,github,heroku,js,react,mongodb,nodejs,vscode&perline=3)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=apollo,babel,express,graphql,github,heroku,js,react,mongodb,nodejs,vscode&perline=4)](https://skillicons.dev)
 
 ## 🧪 Test
 
@@ -33,22 +33,22 @@ If a user thinks a friend would enjoy a book they have read, they can easily sen
 
 🖐 Meet the team! If you have any question about us or the project, feel free to reach out:
 
-#### Austin
+#### **Austin Zumbro**
 
-- Github: [austinzumbro](https://github.com/austinzumbro)
-- Email: [azumbro@gmail.com](mailto:azumbro@gmail.com)
+[![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/austinzumbro)
+[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/austinzumbro/)
 
-#### Brian
+#### **Brian Alberson**
 
-- Github: [bdalberson](https://github.com/bdalberson)
-- Email: [@gmail.com](mailto:)
+[![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/bdalberson)
+[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/brian-alberson-swe/)
 
-#### Cassie
+#### **Cassie Tepper**
 
-- Github: [CTep09](https://github.com/CTep09)
-- Email: [CassandraY9@gmail.com](mailto:cassandray9@gmail.com)
+[![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/CTep09n)
+[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/cassie-tepper/)
 
-#### Jonny
+#### **Jonny Borroell**
 
-- Github: [jonnyboy808](https://github.com/jonnyboy808)
-- Email: [jonny.boy.925@gmail.com](mailto:jonny.boy.925@gmail.com)
+[![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/jonnyboy808)
+[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://github.com/jonnyboy808)

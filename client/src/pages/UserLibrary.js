@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
@@ -19,10 +20,8 @@ import BookCard from "../components/cards/BookCard";
 import SearchBooksForm from "../components/SearchBooksForm";
 
 const UserLibrary = () => {
-  // State
   const [sortOrder, setSortOrder] = useState("title");
 
-  // Queries
   const { loading, data, error } = useQuery(QUERY_ME);
 
   // Mutations
@@ -30,22 +29,24 @@ const UserLibrary = () => {
     useMutation(ADD_RATING, {
       update(cache, { data: { addRating } }) {
         try {
-          console.log(addRating)
+          console.log(addRating);
           // First we retrieve existing profile data that is stored in the cache under the `QUERY_ME` query
           // Could potentially not exist yet, so wrap in a try/catch
           const { me } = cache.readQuery({ query: QUERY_ME });
-      
+
           // Create a copy of the existing library array
           const updatedLibrary = [...me.library];
-          console.log(updatedLibrary)
+          console.log(updatedLibrary);
           // Find the book in the library that matches the book in the addRating result
-          const bookIndex = updatedLibrary.findIndex(userBook => userBook.book._id === addRating.book._id);
-      
+          const bookIndex = updatedLibrary.findIndex(
+            (userBook) => userBook.book._id === addRating.book._id
+          );
+
           // If the book was found in the library, update its rating field
           if (bookIndex !== -1) {
             updatedLibrary[bookIndex].rating = addRating;
           }
-      
+
           // Then we update the cache by combining existing profile data with the newly updated library
           cache.writeQuery({
             query: QUERY_ME,
@@ -56,16 +57,15 @@ const UserLibrary = () => {
           console.error(e);
         }
       },
-    })
+    });
   const [
     changeReadStatus,
     { loading: changeReadStatusLoading, error: addReadStatusError },
   ] = useMutation(CHANGE_READSTATUS, {
     update(cache, { data: { changeReadStatus } }) {
       try {
-       
         const { me } = cache.readQuery({ query: QUERY_ME });
-        
+
         cache.writeQuery({
           query: QUERY_ME,
           data: { me: { ...me, ...changeReadStatus } },

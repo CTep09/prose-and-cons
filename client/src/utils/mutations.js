@@ -127,34 +127,17 @@ export const CHANGE_READSTATUS = gql`
 `;
 
 export const MAKE_REC = gql`
-  mutation makeRec($username: String!, $bookId: ID!) {
-    makeRec(username: $username, bookId: $bookId) {
-      _id
-      username
-      email
-      library {
-        book {
-          _id
-          title
-          authors {
-            displayName
-          }
-          isbn
-          isbn13
-          date_pub
-          num_pages
-          cover_img_url
-        }
-        readStatus
-        ratingStatus
-        rating {
-          ratingValue
-        }
+  mutation makeRec($friendId: ID!, $bookId: ID!) {
+    makeRec(friendId: $friendId, bookId: $bookId) {
+      book {
+        title
       }
-      friends {
-        _id
+      sender {
         username
-        email
+      }
+      timestamp
+      recipient {
+        username
       }
     }
   }
@@ -199,6 +182,22 @@ export const UPDATE_RATING = gql`
         title
       }
       ratingValue
+    }
+  }
+`;
+export const REMOVE_REC = gql`
+  mutation removeRec($friendId: ID!, $bookId: ID!) {
+    removeRec(friendId: $friendId, bookId: $bookId) {
+      book {
+        title
+      }
+      sender {
+        username
+      }
+      timestamp
+      recipient {
+        username
+      }
     }
   }
 `;

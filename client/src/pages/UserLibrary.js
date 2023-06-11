@@ -31,7 +31,8 @@ import { ADD_RATING, CHANGE_READSTATUS } from "../utils/mutations";
 import BookCard from "../components/cards/BookCard";
 
 import SearchBooksForm from "../components/SearchBooksForm";
-import FriendCard from "../components/cards/FriendCard";
+// import FriendCard from "../components/FriendCard";
+import RecCard from "../components/RecCard";
 
 const UserLibrary = () => {
   const { loading, data, error } = useQuery(QUERY_ME);
@@ -65,8 +66,6 @@ const UserLibrary = () => {
     }
   };
 
-  const authorsArr = [];
-
   useEffect(() => {
     if (!loading) {
       // At this point, loading is false, so the data is available.
@@ -75,6 +74,7 @@ const UserLibrary = () => {
   }, [loading, data]);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   const navigate = useNavigate();
   const initialRef = React.useRef(null);
 
@@ -142,7 +142,7 @@ const UserLibrary = () => {
                 key={userBook.book._id}
                 bookId={userBook.book._id}
                 img={userBook.book.cover_img_url}
-                authors={authorsArr.join(", ")}
+                authors={userBook.book.authors}
                 title={userBook.book.title}
                 ratingValue={userBook.rating?.ratingValue}
                 readStatus={userBook.readStatus}
@@ -156,7 +156,7 @@ const UserLibrary = () => {
       </div>
 
       {/* Friends Cards */}
-      <div className="flex-row justify-center">
+      {/* <div className="flex-row justify-center">
         <div
           className="col-12 col-md-10 mb-3 p-3"
           style={{ border: "1px dotted #1a1a1a" }}
@@ -175,8 +175,37 @@ const UserLibrary = () => {
                 <FriendCard
                   key={friend._id}
                   username={friend.username}
-                  // authors={book.book.author}
-                  // title={book.book.title}
+                  authors={book.book.author}
+                  title={book.book.title}
+                />
+              );
+            })
+          )}
+        </div>
+      </div> */}
+
+      <div className="flex-row justify-center">
+        <div
+          className="col-12 col-md-10 mb-3 p-3"
+          style={{ border: "1px dotted #1a1a1a" }}
+        ></div>
+
+        <Text fontSize="20px" align="center">
+          Your Recommendations
+        </Text>
+        <div className="col-12 col-md-8 mb-3">
+          {loading ? (
+            <div>Loading...</div>
+          ) : (
+            data.me.library.map((userBook) => {
+              return (
+                <RecCard
+                  key={userBook._id}
+                  user={userBook.book}
+                  rating={userBook?.rating?.ratingValue}
+                  img={userBook.book.cover_img_url}
+                  title={userBook.book.title}
+                  author={userBook.book.authors}
                 />
               );
             })

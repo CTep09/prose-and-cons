@@ -97,7 +97,7 @@ export default function WithSubnavigation() {
         >
           {isLoggedIn ? (
             <Button
-              as={"a"}
+              // as={"a"}
               fontSize={"sm"}
               fontWeight={400}
               variant={"link"}
@@ -108,7 +108,9 @@ export default function WithSubnavigation() {
           ) : (
             <>
               <RouteLink to={"/login"}>
-                <Button fontSize={"sm"} fontWeight={400} variant={"link"}>
+                <Button 
+                marginTop="3"
+                fontSize={"sm"} fontWeight={400} variant={"link"}>
                   Sign In
                 </Button>
               </RouteLink>

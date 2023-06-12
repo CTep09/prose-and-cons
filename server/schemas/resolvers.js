@@ -83,7 +83,6 @@ const resolvers = {
     },
 
     addBook: async (parent, args, context) => {
-      console.log(args);
 
       const bookData = {
         title: args.input.title,
@@ -96,13 +95,12 @@ const resolvers = {
       };
       const authorsArr = [...args.input.authors];
 
-      const newBook = await Book.findOneAndUpdate(
+      let newBook = await Book.findOneAndUpdate(
         { title: bookData.title, isbn: bookData.isbn },
         { ...bookData },
         { upsert: true, new: true }
       );
 
-      console.log(newBook);
 
       if (authorsArr) {
         // Use map to generate an array of promises
@@ -139,7 +137,7 @@ const resolvers = {
         user.library.push({ book: newBook._id });
         await user.save();
       }
-
+      newBook = await Book.findById(newBook._id).populate("authors");
       return newBook;
     },
 

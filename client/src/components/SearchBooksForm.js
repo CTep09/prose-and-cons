@@ -40,14 +40,19 @@ const SearchBooksForm = () => {
         const updatedLibrary = [...me.library];
         console.log(updatedLibrary);
         // Find the book in the library that matches the book in the addRating result
-        const bookIndex = updatedLibrary.findIndex(userBook => userBook.book._id === addBook._id);
+        const bookIndex = updatedLibrary.findIndex(
+          (userBook) => userBook.book._id === addBook._id
+        );
 
-          if (bookIndex === -1) {
+        if (bookIndex === -1) {
+          updatedLibrary.push({
+            book: addBook,
+            ratingStatus: "Unrated",
+            rating: null,
+            readStatus: null,
+          });
+        }
 
-              updatedLibrary.push({book: addBook, ratingStatus: "Unrated", rating: null, readStatus: null})
-}
-
-    
         // Then we update the cache by combining existing profile data with the newly updated library
         cache.writeQuery({
           query: QUERY_ME,
@@ -115,11 +120,7 @@ const SearchBooksForm = () => {
     const authorsArr = book.authors.map((author) => ({ displayName: author }));
     const payload = {
       title: book.title,
-      // authors: [
-      //   {
-      //     firstName: book.authors[0].firstName,
-      //   },
-      // ],
+
       authors: authorsArr,
       description: book.description,
       cover_img_url: book.image,
@@ -148,71 +149,71 @@ const SearchBooksForm = () => {
   const initialRef = React.useRef(null);
 
   return (
-<>
-  <Flex direction="column" align="center" marginTop="5">
-    <Button onClick={onOpen} colorScheme="green">
-      Add Book <Icon as={AddIcon} boxSize={3} ml={4} />
-    </Button>
-  </Flex>
-  <Modal initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
-    <ModalOverlay />
-    <form onSubmit={handleFormSubmit}>
-      <ModalContent>
-        <ModalHeader>Find your next adventure</ModalHeader>
-        <ModalCloseButton />
-        <ModalBody pb={3}>
-          <FormControl>
-            <FormLabel>Search by ...</FormLabel>
-            <InputGroup>
-              <Input
-                ref={initialRef}
-                placeholder="Book title"
-                name="searchInput"
-                value={searchInput}
-                onChange={(e) => setSearchInput(e.target.value)}
-                type="text"
-              />
-              <InputRightElement>
-                <Search2Icon />
-              </InputRightElement>
-            </InputGroup>
-          </FormControl>
-        </ModalBody>
-        <ModalFooter>
-          <Button colorScheme="blue" mr={3} type="submit">
-            Search
-          </Button>
-          <Button onClick={onClose}>Close</Button>
-        </ModalFooter>
-        <ModalBody pb={3}>
-          <Flex direction="column" align="center" justify="center">
-            {searchedBooks.map((book) => (
-              <div key={book.bookId}>
-                <SearchedBookCard
-                  title={book.title}
-                  author={book.authors.join(", ")}
-                  img={book.image}
-                  review={book.date_pub}
-                />
-                <Flex justify="center">
-                  <Box mb={100}>
-                    <Button
-                      colorScheme="teal"
-                      isLoading={loading}
-                      onClick={() => handleAddToLibrary(book)}
-                    >
-                      Add to Library
-                    </Button>
-                  </Box>
-                </Flex>
-              </div>
-            ))}
-          </Flex>
-        </ModalBody>
-      </ModalContent>
-    </form>
-  </Modal>
-</>
+    <>
+      <Flex direction="column" align="center" marginTop="5">
+        <Button onClick={onOpen} colorScheme="green">
+          Add Book <Icon as={AddIcon} boxSize={3} ml={4} />
+        </Button>
+      </Flex>
+      <Modal initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <form onSubmit={handleFormSubmit}>
+          <ModalContent>
+            <ModalHeader>Find your next adventure</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody pb={3}>
+              <FormControl>
+                <FormLabel>Search by ...</FormLabel>
+                <InputGroup>
+                  <Input
+                    ref={initialRef}
+                    placeholder="Book title"
+                    name="searchInput"
+                    value={searchInput}
+                    onChange={(e) => setSearchInput(e.target.value)}
+                    type="text"
+                  />
+                  <InputRightElement>
+                    <Search2Icon />
+                  </InputRightElement>
+                </InputGroup>
+              </FormControl>
+            </ModalBody>
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} type="submit">
+                Search
+              </Button>
+              <Button onClick={onClose}>Close</Button>
+            </ModalFooter>
+            <ModalBody pb={3}>
+              <Flex direction="column" align="center" justify="center">
+                {searchedBooks.map((book) => (
+                  <div key={book.bookId}>
+                    <SearchedBookCard
+                      title={book.title}
+                      author={book.authors.join(", ")}
+                      img={book.image}
+                      review={book.date_pub}
+                    />
+                    <Flex justify="center">
+                      <Box mb={100}>
+                        <Button
+                          colorScheme="teal"
+                          isLoading={loading}
+                          onClick={() => handleAddToLibrary(book)}
+                        >
+                          Add to Library
+                        </Button>
+                      </Box>
+                    </Flex>
+                  </div>
+                ))}
+              </Flex>
+            </ModalBody>
+          </ModalContent>
+        </form>
+      </Modal>
+    </>
   );
 };
 

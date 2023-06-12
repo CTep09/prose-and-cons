@@ -75,10 +75,6 @@ export default function FriendBookCard(props) {
               {props.title}
             </Heading>
             <Stack direction={"column"} align={"center"}>
-              {/* <Rating
-                rating={props.ratingValue}
-                // numReviews={props.numReviews}
-              /> */}
               <FriendStarRating
                 ratingValue={props.ratingValue}
                 bookId={props.bookId}

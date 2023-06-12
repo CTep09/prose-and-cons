@@ -1,29 +1,6 @@
 import React, { useState } from "react";
 
-import {
-  Button,
-  FormControl,
-  FormLabel,
-  Input,
-  InputGroup,
-  InputRightElement,
-  Flex,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalCloseButton,
-  ModalBody,
-  ModalFooter,
-  useDisclosure,
-  Icon,
-  Box,
-  Text,
-  Spacer,
-  SimpleGrid,
-  Grid,
-  useSafeLayoutEffect,
-} from "@chakra-ui/react";
+import { Button, Flex, Box, Spacer } from "@chakra-ui/react";
 
 import { CheckIcon } from "@chakra-ui/icons";
 

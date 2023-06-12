@@ -63,14 +63,14 @@ const Signup = () => {
   const toast = useToast();
 
   return (
-      <Flex justifyContent="center" alignItems="center" height="80vh">
+    <Flex justifyContent="center" alignItems="center" height="80vh">
       <Center>
         <Box maxW="sm" borderWidth="1px" borderRadius="lg" padding="25px">
           <Center>
             <Heading as="h4" size="md">
               Sign Up
-           </Heading>
-           </Center>
+            </Heading>
+          </Center>
           <div className="card-body">
             {data ? (
               <p>
@@ -88,7 +88,7 @@ const Signup = () => {
                     </Center>
 
                     <Input
-                    marginBottom="5"
+                      marginBottom="5"
                       w="250px"
                       className="form-input"
                       placeholder="Username"
@@ -99,7 +99,7 @@ const Signup = () => {
                     />
                     <Center>
                       <Input
-                      marginBottom="5"
+                        marginBottom="5"
                         w="250px"
                         className="form-input"
                         placeholder="Email"
@@ -112,7 +112,7 @@ const Signup = () => {
                     <Center>
                       <InputGroup w="250px">
                         <Input
-                        marginBottom="5"
+                          marginBottom="5"
                           pr="4.5rem"
                           type={show ? "text" : "password"}
                           placeholder="Password"
@@ -132,19 +132,19 @@ const Signup = () => {
                     </Center>
                     <Center>
                       <Button
-                      marginBottom="5"
+                        marginBottom="5"
                         w="250px"
                         colorScheme="teal"
                         style={{ cursor: "pointer" }}
                         type="submit"
-                        // onClick={() =>
-                        //   toast({
-                        //     title: "Account created.",
-                        //     status: "success",
-                        //     duration: 3000,
-                        //     isClosable: true,
-                        //   })
-                        // }
+                        onClick={() =>
+                          toast({
+                            title: "Account created.",
+                            status: "success",
+                            duration: 3000,
+                            isClosable: true,
+                          })
+                        }
                       >
                         Submit
                       </Button>

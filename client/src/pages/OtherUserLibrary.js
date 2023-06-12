@@ -3,27 +3,7 @@ import { useQuery } from "@apollo/client";
 import { useNavigate, useParams } from "react-router-dom";
 import Auth from "../utils/auth";
 
-import {
-  Button,
-  Grid,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalCloseButton,
-  ModalBody,
-  FormControl,
-  FormLabel,
-  Input,
-  InputGroup,
-  ModalFooter,
-  useDisclosure,
-  Flex,
-  Icon,
-  Text,
-  InputRightElement,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import { Text, SimpleGrid } from "@chakra-ui/react";
 
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
 

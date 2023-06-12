@@ -75,7 +75,7 @@ const Login = (props) => {
           ) : (
             <form onSubmit={handleFormSubmit}>
               <Input
-              marginBottom="5"
+                marginBottom="5"
                 w="250px"
                 placeholder="Your email"
                 name="email"
@@ -86,7 +86,7 @@ const Login = (props) => {
 
               <InputGroup w="250px">
                 <Input
-                marginBottom="5"
+                  marginBottom="5"
                   pr="4.5rem"
                   type={show ? "text" : "password"}
                   placeholder="Enter password"
@@ -101,7 +101,7 @@ const Login = (props) => {
                 </InputRightElement>
               </InputGroup>
               <Button
-              marginBottom="5"
+                marginBottom="5"
                 w="250px"
                 colorScheme="teal"
                 style={{ cursor: "pointer" }}
@@ -127,74 +127,6 @@ const Login = (props) => {
       </Box>
     </Flex>
   );
-  //   <Flex justifyContent="center" alignItems="center" height="80vh">
-  //     <Box maxW="sm" borderWidth="1px" borderRadius="lg" p="25px">
-  //       <Center>
-  //         <Heading as="h4" size="md" marginBottom="5">
-  //           Login
-  //         </Heading>
-  //       </Center>
-  //       <div className="card-body">
-  //         {data ? (
-  //           <p>
-  //             Success! You may now head <Link to="/">back to the homepage.</Link>
-  //           </p>
-  //         ) : (
-  //           <form onSubmit={handleFormSubmit}>
-  //             <Input
-  //             marginBottom="5"
-  //               w="250px"
-  //               placeholder="Enter email"
-  //               name="email"
-  //               type="email"
-  //               value={formState.email}
-  //               onChange={handleChange}
-  //             />
-
-  //             <InputGroup w="250px">
-  //               <Input
-  //                 pr="4.5rem"
-  //                 type={show ? "text" : "password"}
-  //                 placeholder="Enter password"
-  //                 name="password"
-  //                 value={formState.password}
-  //                 onChange={handleChange}
-  //               />
-  //               <InputRightElement width="4.5rem">
-  //                 <Button h="1.75rem" size="sm" onClick={handleClick}>
-  //                   {show ? "Hide" : "Show"}
-  //                 </Button>
-  //               </InputRightElement>
-  //             </InputGroup>
-  //             <Button
-  //             marginTop="5"
-  //             marginBottom="5"
-  //               w="250px"
-  //               colorScheme="teal"
-  //               style={{ cursor: "pointer" }}
-  //               type="submit"
-  //             >
-  //               Submit
-  //             </Button>
-  //           </form>
-  //         )}
-  //         {error && (
-  //           <div className="my-3 p-3 bg-danger text-white">
-  //             {error.message}
-  //           </div>
-  //         )}
-  //       </div>
-  //       <Center>
-  //         <Text>
-  //           Don't have an account?{" "}
-  //           <Link color="teal.500" href="/signup">
-  //             Sign up
-  //           </Link>
-  //         </Text>
-  //       </Center>
-  //     </Box>
-  //   </Flex>
-  // );
 };
 
 export default Login;

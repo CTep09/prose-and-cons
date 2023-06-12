@@ -120,15 +120,6 @@ const FriendLibraryRecForm = ({ meData, otherUserData }) => {
                   handleMakeRec={handleMakeRec}
                   handleRemoveRec={handleRemoveRec}
                 />
-                // <Box justify="center" padding={4} key={book._id}>
-                //   <Flex>
-                //     <Box width="240px">
-                //       <h2>{book.title}</h2>
-                //     </Box>
-                //     <Spacer />
-                //     <Button> Select </Button>
-                //   </Flex>
-                // </Box>
               );
             })}
           </ModalBody>

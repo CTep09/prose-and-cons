@@ -54,14 +54,6 @@ export const SearchUsersForm = () => {
     }
   }, [meQuery.data, searchInput, usersQuery.data]);
 
-  // const handleFormSubmit = async (event) => {
-  //   event.preventDefault();
-
-  //   if (!searchInput) {
-  //     return false;
-  //   }
-  // };
-
   const handleAddFriend = async (friendId) => {
     console.log(friendId);
     try {

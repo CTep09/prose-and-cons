@@ -39,6 +39,14 @@ If a user thinks a friend would enjoy a book they have read, they can easily sen
 
 ![Read Status and Rating](./images/reading-status-and-rating.gif)
 
+**Recommend to A Friend**
+
+![Recommend to A Friend](./images/recommend-to-friend.gif)
+
+**My Recommendations**
+
+![My Recommendations](./images/recommendations.gif)
+
 **Responsive Design**
 
 ![Resonsive Design](./images/responsive-design.gif)

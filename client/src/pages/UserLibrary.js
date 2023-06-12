@@ -38,14 +38,18 @@ const UserLibrary = () => {
           const updatedLibrary = [...me.library];
           console.log(updatedLibrary);
           // Find the book in the library that matches the book in the addRating result
-          const bookIndex = updatedLibrary.findIndex(userBook => userBook.book._id === addRating.book._id);
+          const bookIndex = updatedLibrary.findIndex(
+            (userBook) => userBook.book._id === addRating.book._id
+          );
 
-            if (bookIndex !== -1) {
-                const updatedBook = { ...updatedLibrary[bookIndex], rating: addRating};
-                updatedLibrary[bookIndex] = updatedBook;
-}
+          if (bookIndex !== -1) {
+            const updatedBook = {
+              ...updatedLibrary[bookIndex],
+              rating: addRating,
+            };
+            updatedLibrary[bookIndex] = updatedBook;
+          }
 
-      
           // Then we update the cache by combining existing profile data with the newly updated library
           cache.writeQuery({
             query: QUERY_ME,
@@ -110,18 +114,18 @@ const UserLibrary = () => {
         }
       } else if (sortOrder === "author") {
         // Assuming authors is an array and we're sorting by the first author
-        if (a.book.authors[0].sortName && b.book.authors[0].sortName) {
-          return a.book.authors[0].sortName.localeCompare(
-            b.book.authors[0].sortName
-          );
-        }
+        const authorA = a.book.authors[0]?.sortName || "";
+        const authorB = b.book.authors[0]?.sortName || "";
+        return authorA.localeCompare(authorB);
       } else if (sortOrder === "rating") {
         // Use 0 as a default rating for books without a rating
         const ratingA = a.rating?.ratingValue || 0;
         const ratingB = b.rating?.ratingValue || 0;
         return ratingB - ratingA; // Sorts in descending order
       } else if (sortOrder === "readStatus") {
-        return a.readStatus.localeCompare(b.readStatus);
+        const readStatusA = a.readStatus || "";
+        const readStatusB = b.readStatus || "";
+        return readStatusA.localeCompare(readStatusB);
       }
       return 0;
     });
@@ -145,18 +149,14 @@ const UserLibrary = () => {
           Your Collection
         </Text>
         {/* <Center> */}
-          <HStack spacing={4} flexWrap="wrap" justifyContent="center">
-            <Button onClick={() => setSortOrder("title")}>Sort by title</Button>
-            <Button onClick={() => setSortOrder("author")}>
-              Sort by author
-            </Button>
-            <Button onClick={() => setSortOrder("rating")}>
-              Sort by rating
-            </Button>
-            <Button onClick={() => setSortOrder("readStatus")}>
-              Sort by read status
-            </Button>
-          </HStack>
+        <HStack spacing={4} flexWrap="wrap" justifyContent="center">
+          <Button onClick={() => setSortOrder("title")}>Sort by title</Button>
+          <Button onClick={() => setSortOrder("author")}>Sort by author</Button>
+          <Button onClick={() => setSortOrder("rating")}>Sort by rating</Button>
+          <Button onClick={() => setSortOrder("readStatus")}>
+            Sort by read status
+          </Button>
+        </HStack>
         {/* </Center> */}
         <SearchBooksForm />
         <Box w="100%" p={8}>

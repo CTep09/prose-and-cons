@@ -45,10 +45,10 @@ const resolvers = {
       return User.findOne({ username: username }).populate(populateFields);
     },
     book: async (parent, { bookId }) => {
-      return Book.findOne({ _id: bookId });
+      return Book.findOne({ _id: bookId }).populate("authors");
     },
     books: async () => {
-      return Book.find();
+      return Book.find().populate("authors");
     },
     recs: async (parent, { recipientId }) => {
       return Recommendation.find({ recipient: recipientId })
@@ -83,7 +83,6 @@ const resolvers = {
     },
 
     addBook: async (parent, args, context) => {
-
       const bookData = {
         title: args.input.title,
         description: args.input.description,
@@ -100,7 +99,6 @@ const resolvers = {
         { ...bookData },
         { upsert: true, new: true }
       );
-
 
       if (authorsArr) {
         // Use map to generate an array of promises
@@ -213,8 +211,10 @@ const resolvers = {
             ratingValue: ratingValue,
           },
           { upsert: true, new: true }
-        ).populate("user").populate("book");
-        console.log(rating)
+        )
+          .populate("user")
+          .populate("book");
+        console.log(rating);
         // Locate the user by ID
         const user = await User.findById(context.user._id);
         // Find the book in the User's library
@@ -266,7 +266,7 @@ const resolvers = {
           );
         }
 
-        return rating ;
+        return rating;
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError("You need to be logged in!");

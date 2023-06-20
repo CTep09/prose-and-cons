@@ -1,5 +1,7 @@
+// Import React
 import * as React from "react";
 
+// Import necessary Apollo Client modules
 import {
   ApolloClient,
   InMemoryCache,
@@ -10,8 +12,7 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Auth from "./utils/auth";
-
+// Import components for routing
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -22,7 +23,9 @@ import Footer from "./components/Footer";
 import OtherUserLibrary from "./pages/OtherUserLibrary";
 import Homescreen from "./pages/Homescreen";
 
-import { ChakraProvider, Text, Link, Box } from "@chakra-ui/react";
+// Import context providers
+import { ChakraProvider, Box } from "@chakra-ui/react";
+import { UserProvider } from "./contexts/UserContext";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -54,29 +57,31 @@ function App() {
     <ApolloProvider client={client}>
       <ChakraProvider>
         <Router>
-          <Box minHeight="100vh" display="flex" flexDirection="column">
-            <Navbar />
-            <Box flex="1">
-              <main>
-                <Routes>
-                  <Route path="/" element={<Homescreen />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/signup" element={<Signup />} />
-                  <Route
-                    path="/recommendations"
-                    element={<Recommendations />}
-                  />
-                  <Route path="/friendLibrary" element={<FriendLibrary />} />
-                  <Route path="/userLibrary" element={<UserLibrary />} />
-                  <Route
-                    path="/friendLibrary/:username"
-                    element={<OtherUserLibrary />}
-                  />
-                </Routes>
-              </main>
+          <UserProvider>
+            <Box minHeight="100vh" display="flex" flexDirection="column">
+              <Navbar />
+              <Box flex="1">
+                <main>
+                  <Routes>
+                    <Route path="/" element={<Homescreen />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route
+                      path="/recommendations"
+                      element={<Recommendations />}
+                    />
+                    <Route path="/friendLibrary" element={<FriendLibrary />} />
+                    <Route path="/userLibrary" element={<UserLibrary />} />
+                    <Route
+                      path="/friendLibrary/:username"
+                      element={<OtherUserLibrary />}
+                    />
+                  </Routes>
+                </main>
+              </Box>
+              <Footer />
             </Box>
-            <Footer />
-          </Box>
+          </UserProvider>
         </Router>
       </ChakraProvider>
     </ApolloProvider>

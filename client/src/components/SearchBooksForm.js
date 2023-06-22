@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Button,
   FormControl,
@@ -22,48 +22,16 @@ import { searchGoogleBooks } from "../utils/api";
 import { useMutation } from "@apollo/client";
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
 import SearchedBookCard from "./cards/SearchedBookCard";
-import { ADD_BOOK, SAVE_BOOK } from "../utils/mutations";
-import { QUERY_ME } from "../utils/queries";
+import { ADD_BOOK } from "../utils/mutations";
+import { UserContext } from "../contexts/UserContext";
 
 const SearchBooksForm = () => {
   const [searchedBooks, setSearchedBooks] = useState([]);
   const [searchInput, setSearchInput] = useState("");
-  const [addBook, { loading }] = useMutation(ADD_BOOK, {
-    update(cache, { data: { addBook } }) {
-      try {
-        console.log(addBook);
-        // First we retrieve existing profile data that is stored in the cache under the `QUERY_ME` query
-        // Could potentially not exist yet, so wrap in a try/catch
-        const { me } = cache.readQuery({ query: QUERY_ME });
 
-        // Create a copy of the existing library array
-        const updatedLibrary = [...me.library];
-        console.log(updatedLibrary);
-        // Find the book in the library that matches the book in the addRating result
-        const bookIndex = updatedLibrary.findIndex(
-          (userBook) => userBook.book._id === addBook._id
-        );
+  const { updateUserLibraryWithBook } = useContext(UserContext);
 
-        if (bookIndex === -1) {
-          updatedLibrary.push({
-            book: addBook,
-            ratingStatus: "Unrated",
-            rating: null,
-            readStatus: null,
-          });
-        }
-
-        // Then we update the cache by combining existing profile data with the newly updated library
-        cache.writeQuery({
-          query: QUERY_ME,
-          // If we want new data to show up before or after existing data, adjust the order of this array
-          data: { me: { ...me, library: updatedLibrary } },
-        });
-      } catch (e) {
-        console.error(e);
-      }
-    },
-  });
+  const [addBook, { loading }] = useMutation(ADD_BOOK);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -131,12 +99,13 @@ const SearchBooksForm = () => {
     };
     // console.log(payload);
     try {
-      await addBook({
+      const { data } = await addBook({
         variables: {
           input: payload,
         },
       });
       console.log("book added!");
+      updateUserLibraryWithBook(data.addBook);
     } catch (error) {
       console.error(error);
       // Handle error, e.g., show an error message

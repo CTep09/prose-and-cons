@@ -26,7 +26,6 @@ const UserLibrary = () => {
 
   const {
     user,
-    loading,
     error,
     isDataLoaded,
     updateUserLibraryWithRating,

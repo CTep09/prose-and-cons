@@ -2,7 +2,70 @@ const { AuthenticationError } = require("apollo-server-express");
 const { User, Book, Rating, Recommendation, Author } = require("../models");
 const { signToken } = require("../utils/auth");
 
-const populateFields = [
+const populateFieldsMe = [
+  {
+    path: "library.book",
+    model: "Book",
+    populate: {
+      path: "authors",
+      model: "Author",
+    },
+  },
+  {
+    path: "library.rating",
+    model: "Rating",
+  },
+  {
+    path: "friends",
+    model: "User",
+  },
+  {
+    path: "receivedRecs",
+    model: "Recommendation",
+    populate: [
+      {
+        path: "sender",
+        model: "User",
+      },
+      {
+        path: "book",
+        model: "Book",
+        populate: {
+          path: "authors",
+          model: "Author",
+        },
+      },
+      {
+        path: "rating",
+        model: "Rating",
+      },
+    ],
+  },
+  {
+    path: "sentRecs",
+    model: "Recommendation",
+    populate: [
+      {
+        path: "recipient",
+        model: "User",
+      },
+      {
+        path: "book",
+        model: "Book",
+        populate: {
+          path: "authors",
+          model: "Author",
+        },
+      },
+      {
+        path: "rating",
+        model: "Rating",
+      },
+    ],
+  },
+];
+
+const populateFieldsUser = [
   {
     path: "library.book",
     populate: {
@@ -34,7 +97,9 @@ const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate(populateFields);
+        return User.findOne({ _id: context.user._id }).populate(
+          populateFieldsMe
+        );
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -42,7 +107,7 @@ const resolvers = {
       return User.find();
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username: username }).populate(populateFields);
+      return User.findOne({ username: username }).populate(populateFieldsUser);
     },
     book: async (parent, { bookId }) => {
       return Book.findOne({ _id: bookId }).populate("authors");
@@ -53,7 +118,8 @@ const resolvers = {
     recs: async (parent, { recipientId }) => {
       return Recommendation.find({ recipient: recipientId })
         .populate("sender")
-        .populate("book");
+        .populate("book")
+        .populate("rating");
     },
   },
 
@@ -293,7 +359,7 @@ const resolvers = {
         }
         await user.save();
 
-        return user.populate(populateFields);
+        return user.populate(populateFieldsMe);
       }
     },
 
@@ -328,7 +394,104 @@ const resolvers = {
       );
       return rec;
     },
+    // makeRec: async (parent, { friendId, bookId }, context) => {
+    //   const rec = await Recommendation.findOneAndUpdate(
+    //     {
+    //       sender: context.user._id,
+    //       recipient: friendId,
+    //       book: bookId,
+    //     },
+    //     {
+    //       sender: context.user._id,
+    //       recipient: friendId,
+    //       book: bookId,
+    //     },
+    //     {
+    //       upsert: true,
+    //       new: true,
+    //     }
+    //   )
+    //     .populate("sender")
+    //     .populate("recipient")
+    //     .populate("book");
+
+    //   const sender = await User.findOneAndUpdate(
+    //     {
+    //       _id: context.user._id,
+    //     },
+    //     {
+    //       $addToSet: { sentRecs: rec._id },
+    //     },
+    //     { new: true }
+    //   );
+
+    //   const recipientLibrary = await User.findById(friendId).populate([
+    //     {
+    //       path: "library.book",
+    //       model: "Book",
+    //       populate: {
+    //         path: "authors",
+    //         model: "Author",
+    //       },
+    //     },
+    //     {
+    //       path: "library.rating",
+    //       model: "Rating",
+    //     },
+    //   ]);
+
+    //   const bookExists = recipientLibrary.library.some(
+    //     (userBook) => userBook.book.toString() === bookId
+    //   );
+
+    //   if (bookExists) {
+    //     // Find the book in the recipient's library
+    //     const userBook = recipientLibrary.library.find(
+    //       (userBook) => userBook.book._id.toString() === bookId
+    //     );
+
+    //     // Check if the book has a rating and readStatus
+    //     if (userBook && userBook.rating && userBook.readStatus) {
+    //       // Update the Recommendation with the rating and readStatus from the user's library
+    //       await Recommendation.findByIdAndUpdate(
+    //         rec._id,
+    //         {
+    //           rating: userBook.rating._id,
+    //           readStatus: userBook.readStatus,
+    //         },
+    //         { new: true }
+    //       );
+    //     }
+    //   }
+
+    //   const recipient = await User.findOneAndUpdate(
+    //     {
+    //       _id: friendId,
+    //     },
+    //     {
+    //       $addToSet: { receivedRecs: rec._id },
+    //     },
+    //     { new: true }
+    //   );
+    //   return { rec, sender, recipient };
+    // },
     makeRec: async (parent, { friendId, bookId }, context) => {
+      // Find the relevant book in the recipient's library
+      const recipientLibraryBook = await User.findOne(
+        { _id: friendId, "library.book": bookId },
+        { "library.$": 1 }
+      );
+
+      let rating, readStatus;
+
+      // If the book is found, extract the rating and readStatus
+      if (recipientLibraryBook && recipientLibraryBook.library.length > 0) {
+        const userBook = recipientLibraryBook.library[0];
+        rating = userBook.rating;
+        readStatus = userBook.readStatus;
+      }
+
+      // Create or update the Recommendation
       const rec = await Recommendation.findOneAndUpdate(
         {
           sender: context.user._id,
@@ -339,35 +502,34 @@ const resolvers = {
           sender: context.user._id,
           recipient: friendId,
           book: bookId,
+          ...(rating && { rating }),
+          ...(readStatus && { readStatus }),
         },
         {
           upsert: true,
           new: true,
+          setDefaultsOnInsert: true,
         }
       )
         .populate("sender")
         .populate("recipient")
         .populate("book");
 
-      const sender = await User.findOneAndUpdate(
-        {
-          _id: context.user._id,
-        },
-        {
-          $addToSet: { sentRecs: rec._id },
-        },
+      // Update the sender's sentRecs
+      await User.findByIdAndUpdate(
+        context.user._id,
+        { $addToSet: { sentRecs: rec._id } },
         { new: true }
       );
-      const recipient = await User.findOneAndUpdate(
-        {
-          _id: friendId,
-        },
-        {
-          $addToSet: { receivedRecs: rec._id },
-        },
+
+      // Update the recipient's receivedRecs
+      await User.findByIdAndUpdate(
+        friendId,
+        { $addToSet: { receivedRecs: rec._id } },
         { new: true }
       );
-      return { rec, sender, recipient };
+
+      return rec;
     },
   },
 };

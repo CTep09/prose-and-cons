@@ -31,6 +31,36 @@ export const QUERY_ME = gql`
         username
         email
       }
+      sentRecs {
+        recipient {
+          _id
+          username
+        }
+        book {
+          _id
+          title
+        }
+        readStatus
+        rating {
+          ratingValue
+        }
+        timestamp
+      }
+      receivedRecs {
+        sender {
+          _id
+          username
+        }
+        book {
+          _id
+          title
+        }
+        readStatus
+        rating {
+          ratingValue
+        }
+        timestamp
+      }
     }
   }
 `;

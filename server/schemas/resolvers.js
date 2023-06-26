@@ -4,15 +4,7 @@ const { signToken } = require("../utils/auth");
 
 const populateFieldsMe = [
   {
-    path: "library.book",
-    model: "Book",
-    populate: {
-      path: "authors",
-      model: "Author",
-    },
-  },
-  {
-    path: "library.rating",
+    path: "library",
     model: "Rating",
   },
   {

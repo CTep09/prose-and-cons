@@ -1,19 +1,20 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { User, Book, Rating, Recommendation, Author } = require("../models");
 const { signToken } = require("../utils/auth");
+const newRatingResolver = require("./resolvers/RatingResolvers");
 
 const populateFieldsMe = [
   {
-    path: "library.book",
-    model: "Book",
-    populate: {
-      path: "authors",
-      model: "Author",
-    },
-  },
-  {
-    path: "library.rating",
+    path: "library",
     model: "Rating",
+    populate: {
+      path: "book",
+      model: "Book",
+      populate: {
+        path: "authors",
+        model: "Author",
+      },
+    },
   },
   {
     path: "friends",
@@ -67,24 +68,15 @@ const populateFieldsMe = [
 
 const populateFieldsUser = [
   {
-    path: "library.book",
-    populate: {
-      path: "authors",
-      model: "Author",
-    },
-  },
-  {
     path: "library",
+    model: "Rating",
     populate: {
       path: "book",
       model: "Book",
-    },
-  },
-  {
-    path: "library",
-    populate: {
-      path: "rating",
-      model: "Rating",
+      populate: {
+        path: "authors",
+        model: "Author",
+      },
     },
   },
   {
@@ -261,6 +253,7 @@ const resolvers = {
 
       throw new AuthenticationError("You need to be logged in!");
     },
+    ...newRatingResolver.Mutation,
     // addRating(ratingValue: Int!, bookId: ID!): Rating
     addRating: async (parent, { bookId, ratingValue }, context) => {
       if (context.user) {

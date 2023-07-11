@@ -88,7 +88,6 @@ const SearchBooksForm = () => {
     const authorsArr = book.authors.map((author) => ({ displayName: author }));
     const payload = {
       title: book.title,
-
       authors: authorsArr,
       description: book.description,
       cover_img_url: book.image,

@@ -27,17 +27,7 @@ const userSchema = new Schema(
       required: true,
       minlength: 8,
     },
-    library: [
-      {
-        book: { type: Schema.Types.ObjectId, ref: "Book" },
-        readStatus: {
-          type: String,
-          enum: ["Read", "Want to Read", "Not Interested"],
-        },
-        ratingStatus: { type: String, enum: ["Rated", "Unrated"] },
-        rating: { type: Schema.Types.ObjectId, ref: "Rating" },
-      },
-    ],
+    library: [{ type: Schema.Types.ObjectId, ref: "Rating" }],
     friends: [
       {
         type: Schema.Types.ObjectId,

@@ -5,18 +5,23 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
-    password: String
-    library: [UserBook]!
+    library: [Rating]!
     friends: [User]!
     sentRecs: [Recommendation]!
     receivedRecs: [Recommendation]!
   }
 
-  type UserBook {
+  type Rating {
+    _id: ID
+    user: User
     book: Book
+    ratingValue: Int
     readStatus: String
-    ratingStatus: String
-    rating: Rating
+  }
+
+  input RatingInput {
+    ratingValue: Int
+    readStatus: String
   }
 
   type Auth {
@@ -31,6 +36,7 @@ const typeDefs = gql`
     sortName: String
     displayName: String
   }
+
   type Book {
     _id: ID
     title: String
@@ -62,13 +68,6 @@ const typeDefs = gql`
     cover_img_url: String
   }
 
-  type Rating {
-    _id: ID
-    user: User
-    book: Book
-    ratingValue: Int
-  }
-
   type Recommendation {
     sender: User
     recipient: User
@@ -98,6 +97,7 @@ const typeDefs = gql`
     makeRec(friendId: ID!, bookId: ID!): Recommendation
     removeRec(friendId: ID!, bookId: ID!): Recommendation
     saveBook(bookId: ID!, readStatus: String): User
+    addOrUpdateRating(bookData: BookInput!, ratingData: RatingInput!): Rating
   }
 `;
 

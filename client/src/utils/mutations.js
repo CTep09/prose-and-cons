@@ -93,6 +93,33 @@ export const ADD_RATING = gql`
   }
 `;
 
+export const ADD_OR_UPDATE_RATING = gql`
+  mutation AddOrUpdateRating($bookData: BookInput!, $ratingData: RatingInput!) {
+    addOrUpdateRating(bookData: $bookData, ratingData: $ratingData) {
+      _id
+      user {
+        _id
+        username
+      }
+      book {
+        _id
+        title
+        authors {
+          displayName
+        }
+        description
+        isbn
+        isbn13
+        date_pub
+        num_pages
+        cover_img_url
+      }
+      ratingValue
+      readStatus
+    }
+  }
+`;
+
 export const CHANGE_READSTATUS = gql`
   mutation changeReadStatus($readStatus: String!, $bookId: ID!) {
     changeReadStatus(readStatus: $readStatus, bookId: $bookId) {

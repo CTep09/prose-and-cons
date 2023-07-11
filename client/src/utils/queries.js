@@ -20,11 +20,8 @@ export const QUERY_ME = gql`
           num_pages
           cover_img_url
         }
+        ratingValue
         readStatus
-        ratingStatus
-        rating {
-          ratingValue
-        }
       }
       friends {
         _id
@@ -40,9 +37,9 @@ export const QUERY_ME = gql`
           _id
           title
         }
-        readStatus
         rating {
           ratingValue
+          readStatus
         }
         timestamp
       }
@@ -55,9 +52,9 @@ export const QUERY_ME = gql`
           _id
           title
         }
-        readStatus
         rating {
           ratingValue
+          readStatus
         }
         timestamp
       }

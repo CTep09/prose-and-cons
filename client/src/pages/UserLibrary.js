@@ -135,8 +135,8 @@ const UserLibrary = () => {
         return authorA.localeCompare(authorB);
       } else if (sortOrder === "rating") {
         // Use 0 as a default rating for books without a rating
-        const ratingA = a.rating?.ratingValue || 0;
-        const ratingB = b.rating?.ratingValue || 0;
+        const ratingA = a.ratingValue || 0;
+        const ratingB = b.ratingValue || 0;
         return ratingB - ratingA; // Sorts in descending order
       } else if (sortOrder === "readStatus") {
         const readStatusA = a.readStatus || "";
@@ -185,7 +185,7 @@ const UserLibrary = () => {
                   img={userBook.book.cover_img_url}
                   authors={userBook.book.authors}
                   title={userBook.book.title}
-                  ratingValue={userBook.rating?.ratingValue}
+                  ratingValue={userBook.ratingValue}
                   readStatus={userBook.readStatus}
                   addRating={handleAddRating}
                   changeReadStatus={handleChangeReadStatus}

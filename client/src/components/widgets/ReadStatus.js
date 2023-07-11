@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import { Button, HStack, Tag } from "@chakra-ui/react";
+import { Button, Flex, HStack, Tag } from "@chakra-ui/react";
 
 export default function ReadStatus({ readStatus, bookId, changeReadStatus }) {
   const [currentStatus, setCurrentStatus] = useState(readStatus);
 
-  const statusOptions = ["Read", "Want to Read", "Not Interested"];
-  const statusColors = ["blue", "green", "red"];
+  const statusOptions = [
+    "Read",
+    "Want to Read",
+    "On the Fence",
+    "Not Interested",
+  ];
+  const statusColors = ["blue", "green", "yellow", "red"];
 
   const handleStatusChange = async (statusValue) => {
     setCurrentStatus(statusValue);
@@ -13,8 +18,9 @@ export default function ReadStatus({ readStatus, bookId, changeReadStatus }) {
   };
 
   return (
-    <HStack spacing={2} mt={4}>
-      {[...Array(3)].map((button, index) => {
+    <Flex wrap="wrap">
+      {/* <HStack spacing={2} mt={4}> */}
+      {[...Array(4)].map((button, index) => {
         const statusValue = statusOptions[index];
         const statusColor = statusColors[index];
 
@@ -29,6 +35,7 @@ export default function ReadStatus({ readStatus, bookId, changeReadStatus }) {
           </Button>
         );
       })}
-    </HStack>
+      {/* </HStack> */}
+    </Flex>
   );
 }

@@ -19,6 +19,11 @@ const typeDefs = gql`
     readStatus: String
   }
 
+  input RatingInput {
+    ratingValue: Int
+    readStatus: String
+  }
+
   type Auth {
     token: ID!
     user: User
@@ -92,6 +97,7 @@ const typeDefs = gql`
     makeRec(friendId: ID!, bookId: ID!): Recommendation
     removeRec(friendId: ID!, bookId: ID!): Recommendation
     saveBook(bookId: ID!, readStatus: String): User
+    addOrUpdateRating(bookData: BookInput!, ratingData: RatingInput!): Rating
   }
 `;
 

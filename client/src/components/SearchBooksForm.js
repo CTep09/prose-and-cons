@@ -22,6 +22,8 @@ import { searchGoogleBooks } from "../utils/api";
 import { useMutation } from "@apollo/client";
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
 import SearchedBookCard from "./cards/SearchedBookCard";
+import ReadStatus from "./widgets/ReadStatus";
+import StarRating from "./widgets/StarRating";
 import { ADD_BOOK } from "../utils/mutations";
 import { UserContext } from "../contexts/UserContext";
 
@@ -72,6 +74,8 @@ const SearchBooksForm = () => {
           date_pub: book.volumeInfo.publishedDate,
           isbn: isbn,
           isbn13: isbn13,
+          ratingValue: 0,
+          readStatus: null,
         };
         bookData.push(bookObject);
       }
@@ -163,6 +167,8 @@ const SearchBooksForm = () => {
                       img={book.image}
                       review={book.date_pub}
                     />
+                    <StarRating />
+                    <ReadStatus />
                     <Flex justify="center">
                       <Box mb={100}>
                         <Button

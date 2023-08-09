@@ -17,6 +17,16 @@ export const UserProvider = (props) => {
     }
   }, [loading, userData]);
 
+  const findBookInLibrary = (bookId) => {
+    if (user) {
+      const bookInLibrary = user.library.find(
+        (userBook) => userBook.book._id === bookId
+      );
+      return bookInLibrary || null;
+    }
+    return null;
+  };
+
   const updateUserLibraryWithBook = (book) => {
     if (user) {
       const updatedLibrary = [...user.library];
@@ -70,6 +80,7 @@ export const UserProvider = (props) => {
         error,
         isDataLoaded,
         setUser,
+        findBookInLibrary,
         updateUserLibraryWithBook,
         updateUserLibraryWithRating,
         updateUserWithReadStatus,
